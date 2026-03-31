@@ -3781,3 +3781,8 @@ html, body {
   display: block;
   object-fit: contain;
 }
+
+/* ── Blog ────────────────────────────────────────────────────────────────────
+   Styles for the blog index and blog post pages.                             */
+.tgc-page .blog-hero { background: var(--navy); padding: 80px 0 64px; text-align: center !important; }
+.tgc-page .blog-hero p { text-align: center !important; margin: 0 auto !important; max-width: 600px !important; color: #7A909F !important; font-size: 18px !important; line-height: 1.6 !important; }
