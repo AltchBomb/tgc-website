@@ -3,44 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Compliance Insights Blog | TecEx Global Compliance</title>
-<meta name="description" content="In-depth regulatory updates, compliance guides, and market intelligence for global product compliance teams. Covering cosmetics, chemicals, electronics, food, and medical devices.">
-<link rel="canonical" href="https://tecexglobalcompliance.com/blog/">
-<meta property="og:title" content="Compliance Insights Blog | TGC">
-<meta property="og:description" content="Regulatory updates and compliance guides across cosmetics, chemicals, electronics, food, and medical devices.">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
+<title>What's Changing in Food and Beverage Compliance 2025–2026 | TGC Insights</title>
+<meta name="description" content="EU mycotoxin and nickel limit updates, UK HFSS advertising restrictions, FSMA FSVP and traceability deadlines, and China's new GB labelling standards. A region-by-region breakdown of what's changing in food compliance in 2025 and 2026.">
+<link rel="canonical" href="https://tecexglobalcompliance.com/blog/food-beverage-regulation-updates-2025-2026/">
+<meta property="og:title" content="What's Changing in Food and Beverage Compliance 2025–2026 | TGC">
+<meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../global.css">
 <style>
-  .blog-hero { background: var(--navy); padding: 80px 0 64px; text-align: center; }
-  .blog-hero .ey { display: block; margin-bottom: 12px; }
-  .blog-hero h1 { font-family: 'Sora', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: #fff; margin: 0 0 16px; }
-  .blog-hero p { color: #7A909F; font-size: 18px; max-width: 560px; margin: 0 auto; }
-
-  .blog-filters { display: flex; gap: 10px; flex-wrap: wrap; margin: 0 0 40px; }
-  .blog-filter { padding: 6px 16px; border-radius: 999px; border: 1px solid var(--mist); background: transparent; color: var(--slate); font-size: 13px; font-weight: 500; cursor: pointer; transition: all .2s; font-family: 'DM Sans', sans-serif; }
-  .blog-filter.active, .blog-filter:hover { background: var(--gold); border-color: var(--gold); color: #fff; }
-
-  .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; }
-  .blog-card { background: #fff; border: 1px solid var(--mist); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow .2s, transform .2s; }
-  .blog-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,.10); transform: translateY(-2px); }
-  .blog-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
-  .blog-card-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .blog-post-hero { background: var(--navy); padding: 72px 0 56px; }
+  .blog-post-hero .wrap { max-width: 760px; }
+  .blog-post-meta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
+  .blog-post-hero h1 { font-family: 'Sora', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 800; color: #fff; margin: 0 0 20px; line-height: 1.2; }
+  .blog-post-hero .lead { color: #7A909F; font-size: 18px; line-height: 1.6; max-width: 680px; margin: 0; }
   .blog-tag { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; }
-  .blog-tag-cosmetics { background: #FFF3D4; color: #A07A00; }
-  .blog-tag-chemicals { background: #D4EEF5; color: #005F80; }
-  .blog-tag-electronics { background: #E8F4F0; color: #006B4E; }
-  .blog-tag-food { background: #F5E8D4; color: #7A4400; }
-  .blog-tag-medical { background: #EEE4F5; color: #5A006B; }
-  .blog-date { font-size: 12px; color: #7A909F; }
-  .blog-card h2 { font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700; color: var(--navy); margin: 0 0 10px; line-height: 1.35; }
-  .blog-card p { font-size: 14px; color: var(--slate); line-height: 1.6; margin: 0 0 20px; flex: 1; }
-  .blog-card-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--gold); text-decoration: none; margin-top: auto; }
-  .blog-card-link:hover { color: var(--navy); }
-  .blog-read-time { font-size: 12px; color: #7A909F; margin-left: auto; }
+  .blog-tag-food { background: rgba(180,110,30,0.18); color: #b46e1e; }
+  .blog-meta-item { font-size: 13px; color: #7A909F; }
+  .blog-related-industry { background: #F5F7FA; border-left: 3px solid var(--gold); border-radius: 0 10px 10px 0; padding: 20px 24px; margin: 40px 0; }
+  .blog-related-industry p { margin: 0 0 10px; font-size: 14px; color: var(--slate); }
+  .blog-related-industry a { font-weight: 600; color: var(--gold); text-decoration: none; font-size: 14px; }
+
+  /* Region section headers */
+  .region-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 52px 0 24px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #e8e3da;
+  }
+  .region-flag { font-size: 28px; line-height: 1; }
+  .region-header h2 { font-family: 'Sora', sans-serif; font-size: 1.35rem; font-weight: 700; color: var(--navy); margin: 0; }
+
+  /* Regulation update blocks */
+  .reg-update-block {
+    background: #faf9f7;
+    border: 1px solid #e8e3da;
+    border-left: 4px solid var(--gold);
+    border-radius: 0 10px 10px 0;
+    padding: 20px 24px;
+    margin: 20px 0;
+  }
+  .reg-update-block .reg-status {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
+  .reg-status-active { background: rgba(41,182,107,0.12); color: #1a8f53; }
+  .reg-status-urgent { background: rgba(211,60,30,0.12); color: #c0351a; }
+  .reg-status-monitor { background: rgba(211,169,17,0.15); color: #856800; }
+
+  .reg-update-block h3 { font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; color: var(--navy); margin: 0 0 10px; }
+  .reg-update-block p { font-size: 14px; color: #334; line-height: 1.65; margin: 0; }
+  .reg-update-block a { color: var(--gold); }
+
+  .article-body p { font-size: 15px; color: #334; line-height: 1.7; margin: 0 0 18px; }
+  .article-body a { color: var(--gold); }
+
+  .cta-inline {
+    background: var(--navy);
+    border-radius: 12px;
+    padding: 32px;
+    margin: 48px 0 0;
+    text-align: center;
+  }
+  .cta-inline h3 { font-family: 'Sora', sans-serif; color: #ffffff; font-size: 20px; margin: 0 0 12px; }
+  .cta-inline p { color: rgba(255,255,255,0.7); margin: 0 0 20px; font-size: 15px; }
+  .cta-inline .btn { margin: 4px; }
 </style>
 </head>
 <body>
@@ -181,146 +217,145 @@
     </script>
     <!-- HEADER:END -->
 
-<div id="tgc-blog" class="tgc-page" style="margin-top:64px">
+<div id="tgc-blog-post" class="tgc-page" style="margin-top:64px">
 
-  <div class="blog-hero">
+  <!-- Hero -->
+  <div class="blog-post-hero">
     <div class="wrap">
-      <span class="ey">Compliance Insights</span>
-      <h1>Regulatory Intelligence for Global Markets</h1>
-      <p>In-depth guides, deadline trackers, and market intelligence for compliance teams navigating global product regulations.</p>
+      <div class="blog-post-meta">
+        <span class="blog-tag blog-tag-food">Food &amp; Beverage</span>
+        <span class="blog-meta-item">April 2026</span>
+        <span class="blog-meta-item">· 9 min read</span>
+      </div>
+      <h1>What's Changing in Food and Beverage Compliance: EU Contaminants, UK HFSS, FSMA, and China's New GB Standards</h1>
+      <p class="lead">2025 and 2026 represent one of the most active regulatory periods for food exporters in years — new contaminant limits, advertising restrictions, traceability requirements, and mandatory label format changes all converging at once. Here is what you need to know by region.</p>
     </div>
   </div>
 
+  <!-- Body -->
   <section class="s-white">
     <div class="wrap">
+      <div class="blog-body">
 
-      <div class="blog-filters">
-        <button class="blog-filter active">All</button>
-        <button class="blog-filter">Cosmetics</button>
-        <button class="blog-filter">Chemicals</button>
-        <button class="blog-filter">Electronics</button>
-        <button class="blog-filter">Food &amp; Beverage</button>
-        <button class="blog-filter">Medical Devices</button>
-      </div>
+        <div class="blog-related-industry">
+          <p>This article is part of our food &amp; beverage compliance coverage.</p>
+          <a href="food-beverage-compliance.html">← View our Food &amp; Beverage Compliance services page</a>
+        </div>
 
-      <div class="blog-grid">
+        <div class="article-body">
 
-        <!-- Post 1 -->
-        <article class="blog-card fade">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-cosmetics">Cosmetics</span>
-              <span class="blog-date">March 2026</span>
-              <span class="blog-read-time">8 min read</span>
-            </div>
-            <h2>What's Changing in Cosmetic Compliance: MoCRA, Omnibus VII &amp; VIII, and APAC Updates</h2>
-            <p>2025 and 2026 represent one of the most active regulatory periods for cosmetics in decades. We break down the key changes by region — what's already in force, what's coming, and what to do now.</p>
-            <a href="blog-cosmetic-regulation-updates.html" class="blog-card-link">Read article →</a>
+          <p>Food and beverage compliance is rarely static, but 2025 and 2026 are unusually demanding years for exporters operating across multiple markets. In the EU, contaminant limits for mycotoxins and nickel are being progressively tightened. In the UK, HFSS advertising restrictions have come into force. In the US, FSMA continues to mature as an enforcement mechanism, with FSVP inspections increasing and the Food Traceability Rule approaching. And in China, a wholesale update to food labelling standards — including an entirely new allergen declaration requirement — becomes mandatory in March 2027, giving exporters with long packaging production cycles very little time.</p>
+          <p>This article sets out the key regulatory developments by jurisdiction, with references and practical notes on who they affect and when action is needed.</p>
+
+          <!-- EU -->
+          <div class="region-header">
+            <span class="region-flag" role="img" aria-label="European Union">🇪🇺</span>
+            <h2>European Union — General Food Law and Contaminant Limits</h2>
           </div>
-        </article>
 
-        <!-- Post 2 -->
-        <article class="blog-card fade d1">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-cosmetics">Cosmetics</span>
-              <span class="blog-date">March 2026</span>
-              <span class="blog-read-time">5 min read</span>
-            </div>
-            <h2>Critical Cosmetic Compliance Dates: 2025–2027 Enforcement Timeline</h2>
-            <p>The enforcement dates that should be driving reformulation, documentation updates, and label changes for any brand selling cosmetics in the EU or UK — with sources for each deadline.</p>
-            <a href="blog-cosmetic-compliance-dates.html" class="blog-card-link">Read article →</a>
+          <div class="reg-update-block">
+            <span class="reg-status reg-status-active">In force</span>
+            <h3>EU General Food Law — Regulation (EC) 178/2002</h3>
+            <p><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02002R0178-20240701" target="_blank" rel="noopener noreferrer">Regulation (EC) 178/2002</a> establishes the general principles of EU food law, including the farm-to-fork principle that food business operators at all stages of production are responsible for the safety of food they place on the market. The regulation was consolidated on 1 July 2024 following Amendment Regulation (EU) 2024/908. The EU food law framework requires all food on the EU market to be safe, with one-step-forward, one-step-back traceability obligations at every stage of the supply chain.</p>
           </div>
-        </article>
 
-        <!-- Post 3 -->
-        <article class="blog-card fade d2">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-cosmetics">Cosmetics</span>
-              <span class="blog-date">March 2026</span>
-              <span class="blog-read-time">6 min read</span>
-            </div>
-            <h2>Cosmetic Regulation Compared: EU, UK &amp; US Side-by-Side</h2>
-            <p>A structured comparison of the core compliance obligations in the EU, UK, and US — covering Responsible Person requirements, product registration, safety assessments, labelling, and key 2026 deadlines.</p>
-            <a href="blog-cosmetic-regulation-comparison.html" class="blog-card-link">Read article →</a>
+          <div class="reg-update-block">
+            <span class="reg-status reg-status-monitor">Active monitoring</span>
+            <h3>EU Food Information to Consumers — Regulation (EU) 1169/2011</h3>
+            <p><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02011R1169-20250408" target="_blank" rel="noopener noreferrer">Regulation (EU) 1169/2011</a> (FIC Regulation), consolidated April 2025, sets mandatory labelling requirements for food sold to consumers in the EU: the name of the food; a full ingredients list; emphasis on the 14 major allergens within the ingredients list; a nutrition declaration; net quantity; date marking; storage conditions; and the food business operator's name and address. No mandatory EU-wide front-of-pack nutrition labelling system has been adopted as of 2026. The Commission has been evaluating a harmonised approach under the Farm to Fork Strategy, but no binding proposal has been adopted.</p>
           </div>
-        </article>
 
-        <!-- Post 4 — Case Study -->
-        <article class="blog-card fade d3">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-cosmetics">Cosmetics</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">6 min read</span>
-            </div>
-            <h2>The €240,000 Allergen Mistake: What One Formulation Change Cost a Personal Care Brand</h2>
-            <p>A fragrance allergen above threshold, products pulled from three EU markets, and a retail contract lost — none of it deliberate, all of it preventable. A breakdown of how this failure unfolded and what a quarterly review would have caught.</p>
-            <a href="blog-cosmetic-allergen-case-study.html" class="blog-card-link">Read case study →</a>
+          <div class="reg-update-block">
+            <span class="reg-status reg-status-urgent">New limits 2025–2026</span>
+            <h3>EU Contaminant Limits — Updated Mycotoxin and Nickel Rules</h3>
+            <p>EU Regulation (EU) 2023/915 on maximum levels of contaminants in food is the principal contaminant framework, and it is actively being updated. <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1038" target="_blank" rel="noopener noreferrer">Regulation (EU) 2024/1038</a> (April 2024) set new maximum limits for T-2 and HT-2 mycotoxins across cereals, oats, and processed cereal products. DON (deoxynivalenol) limits were lowered in July 2024. Nickel maximum levels apply from July 2025 for seaweed and seaweed-derived products, and from <strong>July 2026</strong> for cereals and cereal-based foods. Food operators sourcing these ingredients must verify their supply chain against the updated limits before the relevant application dates — not after a border rejection has already occurred.</p>
           </div>
-        </article>
 
-        <article class="blog-card fade d5">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-food">Food &amp; Beverage</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">7 min read</span>
-            </div>
-            <h2>The $180,000 Supply Chain Failure: DON Mycotoxin Breach + FSVP Gap</h2>
-            <p>A mid-sized cereal exporter faced simultaneous EU border rejection and US importer suspension in Q1 2025 — both failures caused by regulatory changes the business hadn't tracked. A breakdown of what went wrong and what it cost.</p>
-            <a href="blog-food-beverage-case-study.html" class="blog-card-link">Read case study →</a>
+          <!-- UK -->
+          <div class="region-header">
+            <span class="region-flag" role="img" aria-label="United Kingdom">🇬🇧</span>
+            <h2>United Kingdom — Food Safety Act, FIC, and HFSS</h2>
           </div>
-        </article>
 
-        <article class="blog-card fade d1">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-food">Food &amp; Beverage</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">9 min read</span>
-            </div>
-            <h2>What's Changing in Food and Beverage Compliance: EU Contaminants, UK HFSS, FSMA, and China's New GB Standards</h2>
-            <p>A region-by-region breakdown of the key regulatory developments in 2025 and 2026 — covering EU mycotoxin and nickel limit updates, UK HFSS advertising restrictions, FSMA FSVP enforcement, and China's mandatory new labelling standards.</p>
-            <a href="blog-food-beverage-regulation-updates.html" class="blog-card-link">Read regulatory breakdown →</a>
+          <div class="reg-update-block">
+            <span class="reg-status reg-status-urgent">In force 5 Jan 2026</span>
+            <h3>HFSS Advertising Restrictions — TV Watershed and Online Ban</h3>
+            <p>From <strong>5 January 2026</strong>, the UK introduced a TV watershed restriction (pre-21:00) and a ban on paid-for online advertising for foods classified as high fat, salt, or sugar (HFSS) under the UK Nutrient Profile Model. Products exceeding the HFSS threshold cannot be promoted through the restricted channels. Food businesses must assess each product against the scoring model — misclassification, particularly around portion sizes and product formats, creates ongoing advertising compliance risk. The restrictions apply to any food business advertising in the UK through digital or broadcast channels, regardless of where the business is based. Source: <a href="https://www.gov.uk/government/publications/restricting-promotions-of-products-high-in-fat-sugar-and-salt-by-location-and-by-price" target="_blank" rel="noopener noreferrer">UK Government, 2024</a>.</p>
           </div>
-        </article>
 
-        <article class="blog-card fade d2">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-food">Food &amp; Beverage</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">6 min read</span>
-            </div>
-            <h2>Food Regulation Compared: EU vs UK vs US vs China</h2>
-            <p>A structured side-by-side comparison of the core food compliance obligations across the four largest target markets — covering labelling frameworks, allergen rules, import verification, traceability requirements, contaminant limits, and the key changes coming in 2026 and 2027.</p>
-            <a href="blog-food-beverage-regulation-comparison.html" class="blog-card-link">View comparison →</a>
+          <div class="reg-update-block">
+            <span class="reg-status reg-status-urgent">In force 1 Oct 2026</span>
+            <h3>Scotland HFSS In-Store Placement Restrictions</h3>
+            <p>Scotland's restrictions on the prominent in-store placement of HFSS products — at checkout areas, aisle ends, and store entrances — apply from <strong>1 October 2026</strong>. Similar in-store placement restrictions for England have been delayed beyond 2027. Food retailers and manufacturers supplying Scottish stores must review in-store placement agreements for products that may be classified as HFSS ahead of this date. Source: <a href="https://www.food.gov.uk/business-guidance/promotion-and-placement" target="_blank" rel="noopener noreferrer">Food Standards Agency, 2025</a>.</p>
           </div>
-        </article>
 
-      </div>
-    </div>
+          <div class="reg-update-block">
+            <span class="reg-status reg-status-monitor">Active monitoring</span>
+            <h3>UK-EU SPS Alignment and PAL Labelling Changes</h3>
+            <p>Under the UK-EU Sanitary and Phytosanitary (SPS) agreement, UK food businesses are required to progressively align with EU food safety, labelling, nutrition, organics, and compositional standards from <strong>May 2026</strong> onwards, with sector-specific guidance expected throughout 2026. The UK Food Standards Agency is also reviewing precautionary allergen labelling (PAL) standardisation — changes to how "may contain" and similar advisory labelling is handled are expected in late 2026. Source: <a href="https://www.osborneclarke.com/insights/regulatory-outlook-march-2026-food-law" target="_blank" rel="noopener noreferrer">Osborne Clarke, March 2026</a>.</p>
+          </div>
+
+          <!-- US -->
+          <div class="region-header">
+            <span class="region-flag" role="img" aria-label="United States">🇺🇸</span>
+            <h2>United States — FSMA</h2>
+          </div>
+
+          <div class="reg-update-block">
+            <span class="reg-status reg-status-active">Active enforcement</span>
+            <h3>FSMA — Foreign Supplier Verification Programme (FSVP)</h3>
+            <p>The <a href="https://www.fda.gov/food/food-safety-modernization-act-fsma/fsma-final-rule-foreign-supplier-verification-programs-importers-food-humans-and-animals" target="_blank" rel="noopener noreferrer">Foreign Supplier Verification Programme</a> requires US importers to verify that food imported into the United States is produced to a standard that provides the same public health protection as US domestic food. Importers must conduct hazard analyses, verify supplier compliance, and maintain records. For foreign food exporters, FSVP compliance is the US importer's obligation — but exporters must be able to provide documentation supporting that verification. Non-compliance by a foreign supplier can result in the US importer switching to an alternative source. FDA FSVP inspections of US importers have been increasing, and the documentation standard expected has risen materially since 2023.</p>
+          </div>
+
+          <div class="reg-update-block">
+            <span class="reg-status reg-status-urgent">Deadline 20 Jul 2028</span>
+            <h3>FSMA 204 — Food Traceability Rule</h3>
+            <p>The <a href="https://www.fda.gov/food/food-safety-modernization-act-fsma/fsma-final-rule-requirements-additional-traceability-records-certain-foods" target="_blank" rel="noopener noreferrer">FSMA Food Traceability Rule (Rule 204)</a> requires businesses that manufacture, process, pack, or hold foods on the Food Traceability List (FTL) — including fresh leafy greens, shell eggs, nut butters, soft cheeses, and certain ready-to-eat deli salads — to establish and maintain enhanced traceability records. The FDA extended the compliance deadline from 20 January 2026 to <strong>20 July 2028</strong>. Businesses should use this period to implement the required Critical Tracking Events (CTEs) and Key Data Elements (KDEs) record-keeping systems. The extension does not reduce the compliance obligation — it provides additional time to implement it correctly.</p>
+          </div>
+
+          <div class="reg-update-block">
+            <span class="reg-status reg-status-active">Active</span>
+            <h3>FSMA Produce Safety Rule — Updated Water Quality Requirements</h3>
+            <p>FSMA's <a href="https://www.fda.gov/food/food-safety-modernization-act-fsma/fsma-final-rule-produce-safety" target="_blank" rel="noopener noreferrer">Produce Safety Rule</a> governs the safe growing, harvesting, packing, and holding of produce for human consumption. Updated agricultural water quality requirements apply from <strong>April 2025</strong> for large farms and from <strong>April 2026</strong> for small and very small farms. These requirements govern water testing, inspection, assessment, and corrective actions. Imported produce sold in the US must meet the equivalent of these standards as assessed through FSVP.</p>
+          </div>
+
+          <!-- APAC -->
+          <div class="region-header">
+            <span class="region-flag" role="img" aria-label="Asia-Pacific">🌏</span>
+            <h2>Asia-Pacific — China, Australia/NZ, South Korea</h2>
+          </div>
+
+          <div class="reg-update-block">
+            <span class="reg-status reg-status-urgent">Mandatory from 16 Mar 2027</span>
+            <h3>China — New Food Labelling Standards GB 7718-2025 and GB 28050-2025</h3>
+            <p>China's National Health Commission and State Administration for Market Regulation jointly published two new national food labelling standards on <strong>27 March 2025</strong>: GB 7718-2025 (General Standard for the Labelling of Prepackaged Food) and GB 28050-2025 (General Standard for Nutrition Labelling of Prepackaged Food), replacing the 2011 versions. Key changes include: mandatory allergen declaration for the first time — a significant new requirement for imported food labels; permission for digital supplementary labelling; and updated nutritional reference values. A two-year transition period applies, with full enforcement from <strong>16 March 2027</strong>. Food exporters to China with long packaging production cycles should begin the label update process now. Source: <a href="https://food.chemlinked.com/news/food-news/china-releases-new-food-labeling-standards-gb-7718-2025-and-gb-28050-2025" target="_blank" rel="noopener noreferrer">ChemLinked, March 2025</a>.</p>
+          </div>
+
+          <div class="reg-update-block">
+            <span class="reg-status reg-status-active">Active</span>
+            <h3>Australia and New Zealand — FSANZ Food Standards Code</h3>
+            <p>Food Standards Australia New Zealand (FSANZ) administers the <a href="https://www.foodstandards.gov.au/food-standards-code" target="_blank" rel="noopener noreferrer">Australia New Zealand Food Standards Code</a>, which sets compositional, labelling, and contaminant standards for food sold in both countries. Maximum Residue Limits under Schedule 20 were updated in December 2024. New import risk requirements for several foods — including melons, fresh dates, and fresh enoki mushrooms — took effect from June 2025, requiring valid food safety management certificates for importation. Food operators exporting to Australia or New Zealand must verify compliance with the current Standards Code version for their product category.</p>
+          </div>
+
+          <div class="reg-update-block">
+            <span class="reg-status reg-status-active">Active</span>
+            <h3>South Korea — MFDS Import Procedures and Labelling Requirements</h3>
+            <p>South Korea's Ministry of Food and Drug Safety (<a href="https://www.mfds.go.kr/eng/brd/m_15/list.do" target="_blank" rel="noopener noreferrer">MFDS</a>) oversees food import declarations, labelling requirements, and food additive approvals. Korea operates a positive list of 638 approved food additives. All food labels must be provided in Korean, and country of origin labelling is mandatory for commercial shipments. In June 2024, MFDS Notice No. 2024-26 amended import declaration procedures to streamline applications for raw materials used in domestic production. GMO/biotech labelling rules are under active legislative review, with pending bills seeking to expand mandatory disclosure.</p>
+          </div>
+
+          <div class="cta-inline">
+            <h3>Need a Compliance Monitoring Programme?</h3>
+            <p>TGC tracks regulatory updates across EU, UK, US, China, and APAC — alerting you to limit changes, deadline shifts, and new requirements before they become enforcement issues at the border.</p>
+            <a href="food-beverage-compliance.html" class="btn btn-gold">See Our Food &amp; Beverage Services</a>
+            <a href="contact-us.html" class="btn btn-ghost">Talk to a Specialist</a>
+          </div>
+
+        </div><!-- /.article-body -->
+      </div><!-- /.blog-body -->
+    </div><!-- /.wrap -->
   </section>
 
-  <!-- CTA -->
-  <div class="cta-band" role="complementary">
-    <div class="wrap">
-      <div class="cta-inner fade">
-        <div>
-          <h2 class="cta-h2 fade">Need compliance support now?</h2>
-          <p class="cta-sub">Our team covers cosmetics, chemicals, electronics, food, and medical devices across every major market.</p>
-        </div>
-        <div class="cta-btns">
-          <a href="contact-us.html" class="btn btn-gold btn-lg">Get a quote →</a>
-          <a href="pricing.html" class="btn btn-ghost btn-lg">See pricing</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div><!-- /.tgc-page -->
+</div><!-- /#tgc-blog-post -->
 
 <!-- FOOTER:START -->
     <footer
@@ -743,5 +778,6 @@
     }());
     </script>
     <!-- FOOTER:END -->
+
 </body>
 </html>
