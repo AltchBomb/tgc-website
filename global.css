@@ -3782,6 +3782,44 @@ html, body {
   object-fit: contain;
 }
 
+/* ── Service Accordion ───────────────────────────────────────────────────────
+   Animated accordion for "How TGC Delivers" service rows.                    */
+.tgc-page .service-acc-trigger {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  cursor: pointer !important;
+  text-align: left !important;
+  gap: 12px !important;
+  font-family: inherit !important;
+}
+.tgc-page .service-acc-trigger > span {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  color: #ffffff !important;
+}
+.tgc-page .service-acc-chevron {
+  flex-shrink: 0 !important;
+  color: rgba(255,255,255,0.45) !important;
+  transition: transform 0.35s ease !important;
+}
+.tgc-page .service-row.open .service-acc-chevron {
+  transform: rotate(180deg) !important;
+}
+.tgc-page .service-acc-body {
+  max-height: 0 !important;
+  overflow: hidden !important;
+  transition: max-height 0.35s ease !important;
+}
+.tgc-page .service-row.open .service-acc-body {
+  max-height: 400px !important;
+}
+
 /* ── Blog ────────────────────────────────────────────────────────────────────
    Styles for the blog index and blog post pages.                             */
 .tgc-page .blog-hero { background: var(--navy); padding: 80px 0 64px; text-align: center !important; }
