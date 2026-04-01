@@ -3782,6 +3782,76 @@ html, body {
   object-fit: contain;
 }
 
+/* ── Enforcement Facts Row ───────────────────────────────────────────────────
+   3-column row of large enforcement numbers on a white panel.                */
+.tgc-page .enforce-facts {
+  display: flex !important; align-items: stretch !important;
+  background: #ffffff !important;
+  border-radius: var(--radius-md, 12px) !important;
+  margin-bottom: 20px !important;
+}
+.tgc-page .enforce-fact {
+  flex: 1 !important; padding: 36px 28px !important; text-align: center !important;
+}
+.tgc-page .enforce-num {
+  display: block !important;
+  font-family: 'Sora', sans-serif !important;
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem) !important;
+  font-weight: 800 !important; letter-spacing: -0.02em !important;
+  color: var(--navy, #0F1C3B) !important;
+  margin-bottom: 12px !important; line-height: 1 !important;
+}
+.tgc-page .enforce-label {
+  font-size: 13px !important; color: #556677 !important;
+  line-height: 1.55 !important; margin: 0 !important;
+}
+.tgc-page .enforce-rule {
+  flex-shrink: 0 !important; width: 1px !important;
+  background: #e8e3da !important; margin: 28px 0 !important;
+}
+
+/* ── Case Study Teaser ───────────────────────────────────────────────────────
+   Full-width dark clickable banner linking to a case study blog post.        */
+.tgc-page .case-teaser {
+  display: flex !important; align-items: center !important; gap: 28px !important;
+  background: var(--navy, #0F1C3B) !important;
+  border-radius: var(--radius-md, 12px) !important;
+  padding: 28px 36px !important;
+  text-decoration: none !important;
+  transition: background 0.2s !important;
+}
+.tgc-page .case-teaser:hover { background: #162447 !important; }
+.tgc-page .case-teaser-tag {
+  flex-shrink: 0 !important;
+  font-size: 10px !important; font-weight: 700 !important;
+  letter-spacing: 0.12em !important; text-transform: uppercase !important;
+  color: var(--gold, #C8A96E) !important;
+  background: rgba(200,169,110,0.12) !important;
+  border: 1px solid rgba(200,169,110,0.25) !important;
+  padding: 6px 14px !important; border-radius: 100px !important;
+  white-space: nowrap !important;
+}
+.tgc-page .case-teaser-body { flex: 1 !important; min-width: 0 !important; }
+.tgc-page .case-teaser-title {
+  font-size: 16px !important; font-weight: 700 !important;
+  color: #ffffff !important; margin: 0 0 6px !important; line-height: 1.35 !important;
+}
+.tgc-page .case-teaser-sub {
+  font-size: 13px !important; color: rgba(255,255,255,0.6) !important;
+  line-height: 1.55 !important; margin: 0 !important;
+}
+.tgc-page .case-teaser-arrow {
+  flex-shrink: 0 !important;
+  font-size: 13px !important; font-weight: 700 !important;
+  color: var(--gold, #C8A96E) !important; white-space: nowrap !important;
+}
+@media (max-width: 700px) {
+  .tgc-page .enforce-facts  { flex-direction: column !important; }
+  .tgc-page .enforce-rule   { width: auto !important; height: 1px !important; margin: 0 28px !important; }
+  .tgc-page .case-teaser    { flex-direction: column !important; align-items: flex-start !important; gap: 16px !important; }
+  .tgc-page .case-teaser-arrow { display: none !important; }
+}
+
 /* ── Pain Point Tiles ────────────────────────────────────────────────────────
    2-column mosaic grid for "Common Pain Points" sections. Horizontal tile
    layout: icon square left, number + heading + consequence tag right.
