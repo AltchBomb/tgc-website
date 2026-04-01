@@ -3795,18 +3795,23 @@ html, body {
   position: relative !important;
   transition: transform 0.42s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
 }
-/* Continuous horizontal line that runs through every dot */
-.tgc-page .tl-track::before {
+
+/* Individual card column — each item draws its own line segment so the
+   continuous line extends into overflow regardless of item count          */
+.tgc-page .tl-item {
+  flex: 0 0 33.333% !important;
+  box-sizing: border-box !important;
+  padding: 0 10px !important;
+  position: relative !important;
+}
+.tgc-page .tl-item::before {
   content: '' !important;
   position: absolute !important;
-  top: 27px !important;          /* half of 56px node height = 28px, minus 1px for line centre */
+  top: 27px !important;   /* centre of 56px node row */
   left: 0 !important; right: 0 !important; height: 2px !important;
   background: #e2dbd0 !important;
   z-index: 0 !important;
 }
-
-/* Individual card column */
-.tgc-page .tl-item { flex: 0 0 33.333% !important; box-sizing: border-box !important; padding: 0 10px !important; }
 
 /* Node row – contains the dot, sits above the card */
 .tgc-page .tl-node {
