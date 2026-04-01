@@ -3782,6 +3782,106 @@ html, body {
   object-fit: contain;
 }
 
+/* ── Timeline Carousel ───────────────────────────────────────────────────────
+   Horizontal linear timeline with prev/next navigation.                      */
+
+/* Outer wrapper – buttons + scrollable viewport sit side by side */
+.tgc-page .tl-carousel { display: flex !important; align-items: flex-start !important; gap: 8px !important; }
+.tgc-page .tl-viewport  { flex: 1 !important; overflow: hidden !important; }
+
+/* Scrolling track */
+.tgc-page .tl-track {
+  display: flex !important;
+  position: relative !important;
+  transition: transform 0.42s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+/* Continuous horizontal line that runs through every dot */
+.tgc-page .tl-track::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 27px !important;          /* half of 56px node height = 28px, minus 1px for line centre */
+  left: 0 !important; right: 0 !important; height: 2px !important;
+  background: #e2dbd0 !important;
+  z-index: 0 !important;
+}
+
+/* Individual card column */
+.tgc-page .tl-item { flex: 0 0 33.333% !important; box-sizing: border-box !important; padding: 0 10px !important; }
+
+/* Node row – contains the dot, sits above the card */
+.tgc-page .tl-node {
+  height: 56px !important;
+  display: flex !important; align-items: center !important; justify-content: center !important;
+  position: relative !important; z-index: 1 !important;
+}
+.tgc-page .tl-dot {
+  width: 14px !important; height: 14px !important;
+  border-radius: 50% !important;
+  background: var(--gold, #C8A96E) !important;
+  box-shadow: 0 0 0 5px rgba(200,169,110,0.18) !important;
+  display: block !important;
+}
+
+/* Card */
+.tgc-page .tl-card {
+  background: #fff !important;
+  border: 1px solid #e8e3da !important;
+  border-radius: var(--radius-md, 12px) !important;
+  padding: 20px 16px !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+}
+.tgc-page .tl-card:hover { border-color: var(--gold, #C8A96E) !important; box-shadow: 0 4px 18px rgba(0,0,0,0.07) !important; }
+
+/* Date */
+.tgc-page .tl-date {
+  display: block !important;
+  font-size: 11px !important; font-weight: 700 !important; letter-spacing: 0.06em !important;
+  color: #888 !important; text-transform: uppercase !important; margin-bottom: 6px !important;
+}
+
+/* Region badge */
+.tgc-page .tl-region {
+  display: inline-block !important;
+  font-size: 10px !important; font-weight: 700 !important; text-transform: uppercase !important;
+  letter-spacing: 0.1em !important; padding: 2px 8px !important;
+  border-radius: 100px !important; margin-bottom: 10px !important;
+}
+.tgc-page .tl-region-eu { background: rgba(0,60,140,0.08) !important; color: #003c8c !important; }
+.tgc-page .tl-region-uk { background: rgba(180,0,0,0.07) !important; color: #b40000 !important; }
+.tgc-page .tl-region-us { background: rgba(0,120,0,0.07) !important; color: #005a00 !important; }
+
+/* Card title & body */
+.tgc-page .tl-title { font-size: 14px !important; font-weight: 700 !important; color: var(--navy, #0F1C3B) !important; margin: 0 0 8px !important; line-height: 1.4 !important; }
+.tgc-page .tl-desc  { font-size: 13px !important; color: #555 !important; line-height: 1.55 !important; margin: 0 !important; }
+
+/* CTA card (last item) */
+.tgc-page .tl-item-cta .tl-dot        { background: var(--navy, #0F1C3B) !important; box-shadow: 0 0 0 5px rgba(15,28,59,0.12) !important; }
+.tgc-page .tl-card-cta                { background: var(--navy, #0F1C3B) !important; border-color: var(--navy, #0F1C3B) !important; text-align: center !important; padding: 28px 20px !important; }
+.tgc-page .tl-cta-text                { color: rgba(255,255,255,0.72) !important; font-size: 14px !important; line-height: 1.55 !important; margin: 0 0 16px !important; display: block !important; }
+
+/* Prev / Next buttons */
+.tgc-page .tl-btn {
+  flex-shrink: 0 !important;
+  width: 40px !important; height: 40px !important;
+  background: #fff !important;
+  border: 1px solid #e2dbd0 !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+  display: flex !important; align-items: center !important; justify-content: center !important;
+  color: var(--navy, #0F1C3B) !important;
+  margin-top: 8px !important;   /* centres button on dot line (28px dot-centre – 20px half-btn) */
+  transition: background 0.2s, border-color 0.2s, color 0.2s !important;
+  padding: 0 !important;
+}
+.tgc-page .tl-btn:hover:not(:disabled) { background: var(--navy, #0F1C3B) !important; border-color: var(--navy, #0F1C3B) !important; color: #fff !important; }
+.tgc-page .tl-btn:disabled { opacity: 0.28 !important; cursor: not-allowed !important; }
+.tgc-page .tl-prev svg { transform: rotate(90deg) !important; display: block !important; }
+.tgc-page .tl-next svg { transform: rotate(-90deg) !important; display: block !important; }
+
+/* Responsive item widths */
+@media (max-width: 820px)  { .tgc-page .tl-item { flex-basis: 50% !important; } }
+@media (max-width: 520px)  { .tgc-page .tl-item { flex-basis: 85% !important; } }
+
 /* ── Service Accordion ───────────────────────────────────────────────────────
    Animated accordion for "How TGC Delivers" service rows.                    */
 .tgc-page .service-acc-trigger {
