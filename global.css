@@ -3782,6 +3782,72 @@ html, body {
   object-fit: contain;
 }
 
+/* ── Why Pillars ─────────────────────────────────────────────────────────────
+   Clean 3-column infographic for "Why TGC" sections on dark industry pages.  */
+.tgc-page .why-pillars { display: flex !important; align-items: stretch !important; }
+
+.tgc-page .why-pillar {
+  flex: 1 !important;
+  text-align: center !important;
+  padding: 48px 36px !important;
+  position: relative !important;
+}
+/* Large decorative ghost number sits behind icon for depth */
+.tgc-page .why-num {
+  display: block !important;
+  font-size: 88px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.04em !important;
+  color: rgba(200,169,110,0.09) !important;
+  position: absolute !important;
+  top: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  pointer-events: none !important;
+  user-select: none !important;
+  white-space: nowrap !important;
+}
+/* Icon ring */
+.tgc-page .why-icon {
+  width: 68px !important; height: 68px !important;
+  background: rgba(200,169,110,0.12) !important;
+  border: 1px solid rgba(200,169,110,0.25) !important;
+  border-radius: 50% !important;
+  display: flex !important; align-items: center !important; justify-content: center !important;
+  margin: 0 auto 24px !important;
+  color: var(--gold, #C8A96E) !important;
+  position: relative !important; z-index: 1 !important;
+}
+.tgc-page .why-icon svg { width: 26px !important; height: 26px !important; }
+/* Heading */
+.tgc-page .why-title {
+  font-size: 18px !important; font-weight: 700 !important;
+  color: #ffffff !important;
+  margin: 0 0 14px !important;
+  line-height: 1.3 !important;
+  position: relative !important; z-index: 1 !important;
+}
+/* Short gold tag underneath */
+.tgc-page .why-sub {
+  font-size: 11px !important; font-weight: 700 !important;
+  text-transform: uppercase !important; letter-spacing: 0.1em !important;
+  color: var(--gold, #C8A96E) !important;
+  margin: 0 !important;
+  position: relative !important; z-index: 1 !important;
+}
+/* Vertical divider rule between pillars */
+.tgc-page .why-rule {
+  flex-shrink: 0 !important;
+  width: 1px !important;
+  background: rgba(255,255,255,0.10) !important;
+  margin: 40px 0 !important;
+}
+@media (max-width: 640px) {
+  .tgc-page .why-pillars { flex-direction: column !important; }
+  .tgc-page .why-rule    { width: auto !important; height: 1px !important; margin: 0 40px !important; }
+}
+
 /* ── Timeline Carousel ───────────────────────────────────────────────────────
    Horizontal linear timeline with prev/next navigation.                      */
 
