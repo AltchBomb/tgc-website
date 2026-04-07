@@ -30,7 +30,7 @@
   .article-body a  { color: var(--gold); }
 
   /* Comparison table */
-  .comp-table-wrap { overflow-x: auto; margin: 32px 0; -webkit-overflow-scrolling: touch; }
+  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .comp-table {
     width: 100%;
     min-width: 700px;
@@ -259,28 +259,26 @@
   <!-- Body -->
   <section class="s-white">
     <div class="wrap">
-      <div class="blog-body">
+      <div style="max-width:960px; margin:0 auto;" class="article-body">
 
         <div class="blog-related-industry">
           <p>This article is part of our food &amp; beverage compliance coverage.</p>
           <a href="food-beverage-compliance.html">← View our Food &amp; Beverage Compliance services page</a>
         </div>
 
-        <div class="article-body">
-
           <p>Food exporters targeting multiple markets simultaneously face a significant regulatory coordination challenge. The EU, UK, US, and China each operate independent food safety frameworks — with different primary legislation, labelling formats, allergen lists, import verification requirements, and enforcement bodies. Overlaps exist, but they are rarely complete, and the differences are exactly where compliance failures tend to occur.</p>
           <p>This reference table maps the core compliance obligations across all four markets. It is designed as a working document for food compliance teams, procurement managers, and regulatory affairs leads who need to understand how the frameworks interact — and where the most significant upcoming changes apply.</p>
           <p>The highlighted row at the bottom of the table shows the key 2026–2027 changes in each jurisdiction. These are the ones requiring action now.</p>
 
-          <div class="comp-table-wrap">
+          <div class="table-scroll">
             <table class="comp-table" aria-label="Food regulation comparison: EU, UK, US, China">
               <thead>
                 <tr>
                   <th scope="col">Requirement</th>
-                  <th scope="col">🇪🇺 European Union</th>
-                  <th scope="col">🇬🇧 United Kingdom</th>
-                  <th scope="col">🇺🇸 United States (FSMA / FDA)</th>
-                  <th scope="col">🇨🇳 China (GB standards)</th>
+                  <th scope="col"><span class="juris-pill juris-eu">EU</span></th>
+                  <th scope="col"><span class="juris-pill juris-uk">United Kingdom</span></th>
+                  <th scope="col"><span class="juris-pill juris-us">United States (FSMA / FDA)</span></th>
+                  <th scope="col"><span class="juris-pill juris-cn">China (GB standards)</span></th>
                 </tr>
               </thead>
               <tbody>
@@ -349,8 +347,7 @@
             <a href="contact-us.html" class="btn btn-ghost">Talk to a Specialist</a>
           </div>
 
-        </div><!-- /.article-body -->
-      </div><!-- /.blog-body -->
+      </div>
     </div><!-- /.wrap -->
   </section>
 

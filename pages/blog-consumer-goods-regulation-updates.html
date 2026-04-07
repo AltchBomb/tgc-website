@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What's Changing in Consumer Goods Compliance 2025-2026 | TecEx Global Compliance</title>
+  <meta name="description" content="GPSR, REACH SVHC, RoHS, ESPR, UK UKCA, CPSIA, CCC certification updates affecting consumer goods manufacturers, importers, and online sellers across EU, UK, US, and China.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: #334;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
+
+    :root {
+      --navy: #0a1826;
+      --slate: #667a86;
+      --gold: #d3a911;
+    }
+
+    .blog-post-hero { background: var(--navy); padding: 72px 0 56px; }
+    .blog-post-hero .wrap { max-width: 760px; }
+    .blog-post-meta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
+    .blog-post-hero h1 { font-family: 'Sora', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 800; color: #fff; margin: 0 0 20px; line-height: 1.2; }
+    .blog-post-hero .lead { color: #7A909F; font-size: 18px; line-height: 1.6; max-width: 680px; margin: 0; }
+    .blog-tag { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; }
+    .blog-tag-consumer-goods { background: rgba(20,120,90,0.12); color: #0d7a58; }
+    .blog-meta-item { font-size: 13px; color: #7A909F; }
+    .blog-related-industry { background: #F5F7FA; border-left: 3px solid var(--gold); border-radius: 0 10px 10px 0; padding: 20px 24px; margin: 40px 0; }
+    .blog-related-industry p { margin: 0 0 10px; font-size: 14px; color: var(--slate); }
+    .blog-related-industry a { font-weight: 600; color: var(--gold); text-decoration: none; font-size: 14px; }
+    .article-body h2 { font-family: 'Sora', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); margin: 48px 0 16px; }
+    .article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin: 32px 0 12px; }
+    .article-body p  { font-size: 15px; color: #334; line-height: 1.7; margin: 0 0 18px; }
+    .article-body a:not(.btn)  { color: var(--gold); }
+    .reg-status-active  { display:inline-block; padding:2px 10px; border-radius:4px; font-size:0.75rem; font-weight:600; background:rgba(16,140,120,0.15); color:#0a7566; margin-bottom:8px; }
+    .reg-status-urgent  { display:inline-block; padding:2px 10px; border-radius:4px; font-size:0.75rem; font-weight:600; background:rgba(200,50,50,0.12); color:#c44; margin-bottom:8px; }
+    .reg-status-monitor { display:inline-block; padding:2px 10px; border-radius:4px; font-size:0.75rem; font-weight:600; background:rgba(211,169,17,0.15); color:#b8900e; margin-bottom:8px; }
+    .reg-update-block { border-left:3px solid var(--gold); padding:18px 0 18px 20px; margin-bottom:28px; }
+    .reg-update-block h4 { font-family:'Sora',sans-serif; font-size:1rem; font-weight:600; color:var(--navy); margin:0 0 8px 0; }
+    .reg-update-block p { font-size:15px; color:#334; line-height:1.7; margin:0 0 10px; }
+    .cta-inline { background: var(--navy); border-radius: 12px; padding: 32px; margin: 48px 0 64px; text-align: center; }
+    .cta-inline h3 { font-family: 'Sora', sans-serif; color: #ffffff; font-size: 20px; margin: 0 0 12px; }
+    .cta-inline p { color: rgba(255,255,255,0.7); margin: 0 0 20px; font-size: 15px; }
+    .cta-inline .btn { margin: 4px; }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 24px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .btn-gold:hover {
+      background: #b8900e;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* Header styles */
+    #tgc-site-header {
+      background: var(--navy);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .tgc-hdr-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(20px, 4vw, 48px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+
+    .tgc-hdr-logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .tgc-hdr-nav {
+      display: flex;
+      gap: 40px;
+      flex: 1;
+      margin-left: 60px;
+    }
+
+    .tgc-hdr-item {
+      position: relative;
+    }
+
+    .tgc-hdr-link {
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+
+    .tgc-hdr-link:hover {
+      color: #fff;
+    }
+
+    .tgc-hdr-link.tgc-hdr-active {
+      color: var(--gold);
+    }
+
+    .tgc-hdr-chevron {
+      width: 12px;
+      height: 12px;
+    }
+
+    .tgc-hdr-drop {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #0f2437;
+      border-radius: 8px;
+      padding: 16px 0;
+      min-width: 220px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      display: none;
+      margin-top: 8px;
+    }
+
+    .tgc-hdr-item:hover .tgc-hdr-drop {
+      display: block;
+    }
+
+    .tgc-hdr-drop-label {
+      display: block;
+      padding: 8px 16px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #7a909f;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .tgc-hdr-drop-link {
+      display: block;
+      padding: 8px 16px;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+
+    .tgc-hdr-drop-link:hover {
+      color: #fff;
+    }
+
+    .tgc-hdr-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+      margin: 8px 0;
+    }
+
+    .tgc-hdr-cta {
+      background: var(--gold);
+      color: #fff;
+      padding: 9px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+
+    .tgc-hdr-cta:hover {
+      background: #b8900e;
+    }
+
+    .tgc-hdr-burger {
+      display: none;
+      background: none;
+      border: none;
+      width: 32px;
+      height: 32px;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .tgc-hdr-burger span {
+      width: 100%;
+      height: 2px;
+      background: #fff;
+      border-radius: 1px;
+      transition: all 0.3s;
+    }
+
+    .tgc-hdr-mobile {
+      display: none;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: #0f2437;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s;
+    }
+
+    .tgc-hdr-mobile.tgc-mob-open {
+      max-height: 500px;
+    }
+
+    .tgc-mob-section {
+      padding: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .tgc-mob-heading {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin: 0 0 12px;
+    }
+
+    .tgc-mob-link {
+      display: block;
+      padding: 8px 0;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+
+    .tgc-mob-link:hover {
+      color: #fff;
+    }
+
+    .tgc-mob-cta {
+      display: block;
+      background: var(--gold);
+      color: #fff;
+      padding: 11px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      text-align: center;
+      margin: 20px;
+      transition: background 0.2s;
+    }
+
+    .tgc-mob-cta:hover {
+      background: #b8900e;
+    }
+
+    @media (max-width: 900px) {
+      .tgc-hdr-nav { display: none; }
+      .tgc-hdr-burger { display: flex; }
+      .tgc-hdr-mobile { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+    <!-- HEADER:START -->
+    <header id="tgc-site-header" role="banner">
+      <div class="tgc-hdr-inner">
+
+        <!-- Logo -->
+        <a href="homepage.html" class="tgc-hdr-logo" aria-label="TecEx Global Compliance - Home">
+          <img src="../assets/images/tgc-logo.png" alt="TecEx Global Compliance" class="tgc-hdr-logo-img">
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="tgc-hdr-nav" aria-label="Main navigation">
+
+          <div class="tgc-hdr-item">
+            <button class="tgc-hdr-link" aria-haspopup="true" aria-expanded="false">
+              Services
+              <svg class="tgc-hdr-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="tgc-hdr-drop" role="menu">
+              <span class="tgc-hdr-drop-label">Fixed-Rate Services</span>
+              <a href="expedited-audit.html"            class="tgc-hdr-drop-link" role="menuitem">Expedited Audit</a>
+              <a href="label-reviews.html"              class="tgc-hdr-drop-link" role="menuitem">Label Reviews</a>
+              <a href="hs-code-review.html"             class="tgc-hdr-drop-link" role="menuitem">HS Code Reviews</a>
+              <div class="tgc-hdr-divider" aria-hidden="true"></div>
+              <span class="tgc-hdr-drop-label">Custom Programmes</span>
+              <a href="full-product-compliance.html"    class="tgc-hdr-drop-link" role="menuitem">Full Product Compliance</a>
+            </div>
+          </div>
+
+          <div class="tgc-hdr-item">
+            <button class="tgc-hdr-link" aria-haspopup="true" aria-expanded="false">
+              Industries
+              <svg class="tgc-hdr-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="tgc-hdr-drop" role="menu">
+              <a href="cosmetic-compliance.html"         class="tgc-hdr-drop-link" role="menuitem">Cosmetics</a>
+              <a href="food-beverage-compliance.html"    class="tgc-hdr-drop-link" role="menuitem">Food &amp; Beverage</a>
+              <a href="food-supplements-compliance.html" class="tgc-hdr-drop-link" role="menuitem">Food Supplements</a>
+              <a href="chemical-compliance.html"         class="tgc-hdr-drop-link" role="menuitem">Chemicals</a>
+              <a href="electronics-compliance.html"      class="tgc-hdr-drop-link" role="menuitem">Electronics</a>
+              <a href="consumer-goods-compliance.html"   class="tgc-hdr-drop-link" role="menuitem">Consumer Goods</a>
+              <a href="medical-devices-compliance.html"  class="tgc-hdr-drop-link" role="menuitem">Medical Devices</a>
+            </div>
+          </div>
+
+          <div class="tgc-hdr-item">
+            <a href="pricing.html" class="tgc-hdr-link">Pricing</a>
+          </div>
+          <div class="tgc-hdr-item">
+            <a href="blog.html" class="tgc-hdr-link">Blog</a>
+          </div>
+          <div class="tgc-hdr-item">
+            <a href="about-us.html" class="tgc-hdr-link">About</a>
+          </div>
+          <div class="tgc-hdr-item">
+            <a href="contact-us.html" class="tgc-hdr-link">Contact</a>
+          </div>
+
+        </nav>
+
+        <!-- CTA -->
+        <a href="contact-us.html" class="tgc-hdr-cta">Get a quote &rarr;</a>
+
+        <!-- Hamburger (mobile) -->
+        <button
+          class="tgc-hdr-burger"
+          id="tgc-hdr-burger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="tgc-hdr-mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="tgc-hdr-mobile" id="tgc-hdr-mobile-menu" aria-hidden="true">
+        <div class="tgc-mob-section">
+          <p class="tgc-mob-heading">Services</p>
+          <a href="expedited-audit.html"            class="tgc-mob-link">Expedited Audit</a>
+          <a href="label-reviews.html"              class="tgc-mob-link">Label Reviews</a>
+          <a href="hs-code-review.html"             class="tgc-mob-link">HS Code Reviews</a>
+          <a href="full-product-compliance.html"    class="tgc-mob-link">Full Product Compliance</a>
+        </div>
+        <div class="tgc-mob-section">
+          <p class="tgc-mob-heading">Industries</p>
+          <a href="cosmetic-compliance.html"         class="tgc-mob-link">Cosmetics</a>
+          <a href="food-beverage-compliance.html"    class="tgc-mob-link">Food &amp; Beverage</a>
+          <a href="food-supplements-compliance.html" class="tgc-mob-link">Food Supplements</a>
+          <a href="chemical-compliance.html"         class="tgc-mob-link">Chemicals</a>
+          <a href="electronics-compliance.html"      class="tgc-mob-link">Electronics</a>
+          <a href="consumer-goods-compliance.html"   class="tgc-mob-link">Consumer Goods</a>
+          <a href="medical-devices-compliance.html"  class="tgc-mob-link">Medical Devices</a>
+        </div>
+        <div class="tgc-mob-section">
+          <p class="tgc-mob-heading">Company</p>
+          <a href="pricing.html"    class="tgc-mob-link">Pricing</a>
+          <a href="blog.html"       class="tgc-mob-link">Blog</a>
+          <a href="about-us.html"   class="tgc-mob-link">About</a>
+          <a href="contact-us.html" class="tgc-mob-link">Contact</a>
+        </div>
+        <a href="contact-us.html" class="tgc-mob-cta">Get a quote &rarr;</a>
+      </div>
+    </header>
+    <script>
+      (function () {
+        var burger = document.getElementById('tgc-hdr-burger');
+        var menu = document.getElementById('tgc-hdr-mobile-menu');
+        if (burger && menu) {
+          burger.addEventListener('click', function () {
+            var open = menu.classList.toggle('tgc-mob-open');
+            burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+            menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+          });
+        }
+        var page = window.location.pathname.split('/').pop() || 'homepage.html';
+        document.querySelectorAll('#tgc-site-header a').forEach(function (a) {
+          if ((a.getAttribute('href') || '').split('/').pop() === page) {
+            a.classList.add('tgc-hdr-active');
+            var parentBtn = a.closest('.tgc-hdr-item')
+              ? a.closest('.tgc-hdr-item').querySelector('button.tgc-hdr-link')
+              : null;
+            if (parentBtn) parentBtn.classList.add('tgc-hdr-active');
+          }
+        });
+      })();
+    </script>
+    <!-- HEADER:END -->
+
+    <!-- Hero -->
+    <section class="blog-post-hero">
+      <div class="wrap">
+        <div class="blog-post-meta">
+          <span class="blog-tag blog-tag-consumer-goods">Consumer Goods</span>
+          <span class="blog-meta-item">April 2026</span>
+          <span class="blog-meta-item">· 10 min read</span>
+        </div>
+        <h1>What's Changing in Consumer Goods Compliance: GPSR, REACH, CPSIA and China CCC</h1>
+        <p class="lead">A region-by-region breakdown of the regulatory changes and active requirements that consumer goods manufacturers, importers, brand owners and online sellers need to understand across the EU, UK, US, and China in 2025–2026.</p>
+      </div>
+    </section>
+
+    <!-- Article -->
+    <div id="tgc-blog-consumer-updates" class="tgc-page" style="margin-top:64px">
+      <div class="wrap" style="max-width: 760px; margin: 0 auto;">
+
+        <div class="blog-related-industry">
+          <p>This article is part of our consumer goods compliance coverage.</p>
+          <a href="consumer-goods-compliance.html">View all consumer goods resources &rarr;</a>
+        </div>
+
+        <div class="article-body">
+
+          <p>The regulatory landscape for consumer goods has undergone more change in the past two years than in the previous decade. Product compliance requirements are now more complex, more interconnected, and more actively enforced than ever before. What follows is a working guide to the material requirements in each major market and how they interact.</p>
+
+          <p>For manufacturers, importers, brand owners, and online sellers, the challenge is no longer limited to individual market compliance. A single product may need to satisfy the EU's General Product Safety Regulation (GPSR), the UK's recognised CE marking framework, the US Consumer Product Safety Improvement Act (CPSIA), California's Proposition 65, China's CCC certification, and regional RoHS-equivalent restrictions simultaneously.</p>
+
+          <h2>European Union — GPSR, REACH, RoHS and ESPR</h2>
+
+          <div class="reg-update-block">
+            <span class="reg-status-urgent">In force 13 December 2024</span>
+            <h4>EU General Product Safety Regulation — Regulation (EU) 2023/988</h4>
+            <p>GPSR became binding on 13 December 2024, replacing the General Product Safety Directive 2001/95/EC. All consumer products not covered by more specific EU safety legislation now require a designated EU Responsible Person — a legal entity established in the EU whose full name and physical address must be displayed on or with the product. Online marketplaces are subject to new obligations under Article 22, including registration with the EU Safety Gate portal and active cooperation with market surveillance authorities to remove non-compliant listings. Internal complaint-handling and traceability systems are also required. Failure to designate an EU Responsible Person before placing a consumer product on the EU market is a direct violation of the GPSR — the absence of this information on a product listing is itself an enforcement trigger. Source: <a href="https://eur-lex.europa.eu/eli/reg/2023/988/oj/eng">Regulation (EU) 2023/988</a>.</p>
+          </div>
+
+          <div class="reg-update-block">
+            <span class="reg-status-urgent">Active monitoring required — updated twice yearly</span>
+            <h4>REACH SVHC Candidate List — 253 Substances as of February 2026</h4>
+            <p><a href="https://eur-lex.europa.eu/eli/reg/2006/1907/oj/eng">REACH Regulation (EC) 1907/2006</a> requires consumer goods manufacturers to monitor the <a href="https://echa.europa.eu/candidate-list-table">SVHC Candidate List maintained by ECHA</a>. If any article contains a listed SVHC above 0.1% by weight, the supplier must notify customers and inform consumers on request within 45 days. As of February 2026, the list contains 253 substances following the addition of n-Hexane and BPAF. ECHA updates the list twice per year — a product passing compliance review in January may have a new SVHC obligation by July with no change to the product itself. Manufacturers with complex supply chains must maintain active SVHC screening frameworks across all components and materials. Source: <a href="https://echa.europa.eu/-/echa-adds-two-hazardous-chemicals-to-the-candidate-list-1">ECHA, February 2026</a>.</p>
+          </div>
+
+          <div class="reg-update-block">
+            <span class="reg-status-active">In force</span>
+            <h4>RoHS Directive 2011/65/EU — 10 Restricted Substances in EEE</h4>
+            <p><a href="https://environment.ec.europa.eu/topics/waste-and-recycling/rohs-directive_en">RoHS Directive 2011/65/EU</a> restricts 10 hazardous substances in electrical and electronic equipment: lead, mercury, cadmium, hexavalent chromium, PBBs, PBDEs, and four phthalates added by amendment Directive (EU) 2015/863. Maximum concentrations are 1,000 ppm for most substances and 100 ppm for cadmium. CE marking for EEE includes RoHS conformity as a mandatory component. In 2024, further exemption amendments were published covering cadmium in quantum dots and lead/cadmium in recovered rigid PVC applications. Any consumer electronics product entering the EU market must include a RoHS Declaration of Conformity as part of the technical file.</p>
+          </div>
+
+          <div class="reg-update-block">
+            <span class="reg-status-urgent">In force July 2024 — product-specific obligations from 2026+</span>
+            <h4>ESPR — Ecodesign for Sustainable Products Regulation (EU) 2024/1781</h4>
+            <p><a href="https://eur-lex.europa.eu/eli/reg/2024/1781/oj/eng">Regulation (EU) 2024/1781</a> entered into force on 18 July 2024, replacing the Ecodesign Directive 2009/125/EC and extending sustainability requirements to almost all consumer and industrial goods. From July 2026, large enterprises are prohibited from destroying unsold consumer products. A Digital Product Passport (DPP) registry becomes operational from July 2026. Product-specific delegated acts covering textiles and steel among the earliest categories are anticipated from 2026, with transition periods of at least 18 months. Most sector-specific ESPR obligations are expected to take effect from 2027 or 2028.</p>
+          </div>
+
+          <h2>United Kingdom — CE Marking, UKCA, and the New Product Act</h2>
+
+          <div class="reg-update-block">
+            <span class="reg-status-urgent">In force 1 October 2024</span>
+            <h4>CE Marking Accepted Indefinitely — UK Amendment Regulations 2024</h4>
+            <p>The UK Product Safety and Metrology (Amendment) Regulations 2024, in force from 1 October 2024, removed the previous expiry deadline for CE marking and now recognise CE marking indefinitely for 21 product regulations in Great Britain — including toys, radio equipment, machinery, low voltage electrical equipment, pressure equipment, and EMC requirements. For the majority of consumer product categories, CE marking remains a valid route to GB market access without a separate UKCA conformity assessment. UKCA marking remains an alternative pathway through UK-approved bodies. Northern Ireland continues to follow EU product rules under the Windsor Framework. Source: <a href="https://www.gov.uk/government/publications/continued-recognition-of-eu-requirements-including-ce-marking-for-placing-products-on-the-gb-market">UK Government CE Marking Recognition</a>.</p>
+          </div>
+
+          <div class="reg-update-block">
+            <span class="reg-status-monitor">Royal Assent July 2025 — secondary legislation pending</span>
+            <h4>UK Product Regulation and Metrology Act 2025</h4>
+            <p>The <a href="https://www.legislation.gov.uk/ukpga/2025/20">Product Regulation and Metrology Act 2025</a> received Royal Assent on 21 July 2025. The Act is enabling legislation granting ministers delegated powers to set and update product safety and metrology rules, and to align UK requirements with EU product regulations or diverge where policy considerations require. The Act does not itself impose new requirements — those will come through future secondary legislation. Businesses should monitor secondary legislation under the Act for sector-specific changes to UK product safety requirements from 2026 onwards.</p>
+          </div>
+
+          <div class="reg-update-block">
+            <span class="reg-status-active">Active</span>
+            <h4>UK RoHS, UK REACH and Product-Specific Retained Legislation</h4>
+            <p>The UK retains equivalent legislation to EU RoHS (UK RoHS Regulations 2012, as amended) and UK REACH (via the Environment Act 2021 framework), administered by the <a href="https://www.hse.gov.uk/reach/">HSE</a>. The UK REACH SVHC list is maintained independently of the EU list — substances added to the EU Candidate List are not automatically added in the UK. As of 2026, the UK REACH SVHC list contains fewer entries than the EU list, creating divergence for businesses supplying both markets. The UK Toys (Safety) Regulations 2011 remain in force in parallel with the new EU Toy Safety Regulation 2025/2509, which applies only to the EU market.</p>
+          </div>
+
+          <h2>United States — CPSIA, FCC Equipment Authorization, and Proposition 65</h2>
+
+          <div class="reg-update-block">
+            <span class="reg-status-active">Active enforcement</span>
+            <h4>CPSIA — Children's Products Third-Party Testing and Certification</h4>
+            <p>The <a href="https://www.cpsc.gov/Regulations-Laws--Standards/Statutes/The-Consumer-Product-Safety-Improvement-Act">Consumer Product Safety Improvement Act 2008</a> requires that all consumer products primarily designed or intended for children aged 12 and under be tested by a CPSC-accepted accredited third-party laboratory before sale in the US. Manufacturers must issue a Children's Product Certificate (CPC) certifying compliance with all applicable safety rules. CPSIA imposes strict limits on lead content (100 ppm in surface coatings; 100 ppm total lead in substrate) and phthalate concentrations in toys and childcare articles. Tracking labels identifying the manufacturer, production location, and date of manufacture are required on children's products and their packaging. Re-testing is required whenever there is a material change in design, manufacturing process, or component sourcing. CPSIA applies equally to domestically manufactured and imported products.</p>
+          </div>
+
+          <div class="reg-update-block">
+            <span class="reg-status-active">Active</span>
+            <h4>FCC Equipment Authorization — Electronic Consumer Products</h4>
+            <p>Consumer electronic products that intentionally emit radio frequency signals — including Wi-Fi devices, Bluetooth products, cordless phones, remote controls, and wireless accessories — require <a href="https://www.fcc.gov/oet/ea/rfdevice">FCC equipment authorization</a> before they can be marketed or imported into the United States. Authorization is obtained through a Telecommunications Certification Body (TCB) and requires test reports from an FCC-recognised laboratory. Products with unintentional RF emissions must meet FCC Part 15 requirements but may use a Declaration of Conformity process rather than full certification. FCC authorization is product-model specific and must be repeated when design changes affect RF characteristics. The FCC ID must be displayed on the product.</p>
+          </div>
+
+          <div class="reg-update-block">
+            <span class="reg-status-urgent">Active — recent additions effective 2025</span>
+            <h4>California Proposition 65 — Over 1,000 Regulated Chemicals</h4>
+            <p>California's <a href="https://oehha.ca.gov/proposition-65/proposition-65-list">Safe Drinking Water and Toxic Enforcement Act of 1986 (Proposition 65)</a> requires businesses to provide a clear and reasonable warning before knowingly exposing consumers to chemicals listed as causing cancer or reproductive toxicity. The list currently contains over 1,000 chemicals. Recent additions include vinyl acetate (effective January 2025) and bisphenol S (BPS, reproductive toxicity, effective December 2025). Consumer goods sold in California — whether manufactured in the US or imported — must comply if they contain listed chemicals above safe harbour levels. Given California's market size, Prop 65 compliance is a practical requirement for most consumer goods exported to the US market.</p>
+          </div>
+
+          <h2>China — CCC Certification and RoHS-Equivalent Restrictions</h2>
+
+          <div class="reg-update-block">
+            <span class="reg-status-urgent">Pre-market certification required</span>
+            <h4>China Compulsory Certification (CCC) — 109 Products Across 17 Categories</h4>
+            <p>CCC is mandatory for 109 products across 17 categories listed in China's CCC Catalogue, including electrical appliances, wires and cables, audio and video equipment, IT and telecommunications equipment, lighting products, motor vehicles, children's products, fire products, and household gas appliances. Products in the catalogue must obtain a CCC certificate before they can be manufactured, sold, imported, or used commercially in China. The CCC mark must be affixed to each unit before sale. The certification process involves testing by a designated laboratory, factory inspection by an approved certification body, and ongoing annual surveillance audits. Lead times typically range from 3 to 9 months — planning must begin well before target market entry dates. Source: <a href="https://www.china-certification.com/en/list-of-ccc-mandatory-products/">China Certification, CCC Product List</a>.</p>
+          </div>
+
+          <div class="reg-update-block">
+            <span class="reg-status-active">Active</span>
+            <h4>China RoHS — Restriction of Hazardous Substances in EEE</h4>
+            <p>China's Management Methods for Restriction of the Use of Hazardous Substances in Electrical and Electronic Products (China RoHS) restricts the same six core substances as EU RoHS Phase 1 (lead, mercury, cadmium, hexavalent chromium, PBBs, PBDEs) in EEE. All EEE products sold in China must display a Materials Declaration and indicate whether hazardous substance limits are met, using the China RoHS marking system — a green circle for products meeting concentration limits, or an orange square showing the expected environmental use period for products exceeding them. EEE subject to CCC certification is also subject to China RoHS requirements as part of the certification process.</p>
+          </div>
+
+          <div class="reg-update-block">
+            <span class="reg-status-active">Active — GB 6675 mandatory</span>
+            <h4>China Toy Safety — GB 6675 and Children's Product Standards</h4>
+            <p>Toys sold in China must comply with mandatory national standard GB 6675, which sets safety requirements covering mechanical and physical properties, flammability, chemical properties (including migration limits for heavy metals and phthalate restrictions), and electrical safety for electronic toys. GB 6675 is a CCC-listed category — toys meeting the definition under the standard require CCC certification before importation and sale. Compliance requires testing by a CNCA-designated laboratory and factory audit. Standards are periodically revised by the Standardisation Administration of China (SAC) — manufacturers must verify their test reports reference the current version of the applicable GB standard.</p>
+          </div>
+
+          <h2>What This Means for Consumer Goods Businesses</h2>
+
+          <p>The regulatory landscape for consumer goods has undergone more change in the past two years than in the previous decade. The GPSR's introduction of a mandatory EU Responsible Person created a new structural compliance requirement for every non-EU manufacturer selling through EU online marketplaces or retail channels. The REACH SVHC list now exceeds 253 substances and grows twice annually — a compliance programme that was adequate in 2023 may not be adequate today. The 4,137 EU Safety Gate alerts recorded in 2024 — the highest annual total since the system launched — signal an enforcement environment that is both more active and more consequential than in prior years.</p>
+
+          <p>For businesses selling across the EU, UK, US, and China simultaneously, no single compliance framework satisfies all markets. CE marking for the EU does not automatically satisfy UK requirements (though it is recognised indefinitely). CCC certification for China has no equivalent recognition outside China. CPSIA testing obligations for the US market are independent of any EU conformity assessment. Proposition 65 obligations in California require substance screening independent of any EU REACH assessment. The common requirement across all four markets is a compliance programme that is maintained continuously — not reviewed once at market entry and left unchanged.</p>
+
+          <div class="cta-inline">
+            <h3>Need a compliance review for your consumer goods?</h3>
+            <p>TGC's team reviews your products against GPSR, REACH SVHC, RoHS, CE/UKCA marking, CPSIA, and CCC requirements — identifying gaps before they become enforcement actions.</p>
+            <div>
+              <a href="contact-us.html" class="btn btn-gold">Talk to a Specialist</a>
+              <a href="expedited-audit.html" class="btn btn-ghost">Learn about audits</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FOOTER:START -->
+    <footer
+      id="tgc-site-footer"
+      style="
+        display: block;
+        background: #0a1826;
+        border-top: 2px solid #1e3a52;
+        font-family: &quot;DM Sans&quot;, sans-serif;
+        box-sizing: border-box;
+      "
+      aria-label="Site footer"
+    >
+      <div
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 clamp(20px, 4vw, 48px);
+          width: 100%;
+          box-sizing: border-box;
+        "
+      >
+        <!-- grid -->
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding: 56px 0;
+            border-bottom: 1px solid #1e3a52;
+            box-sizing: border-box;
+          "
+        >
+          <!-- brand -->
+          <div>
+            <a href="homepage.html" style="display:inline-block;margin-bottom:14px;text-decoration:none;">
+              <img src="../assets/images/tgc-logo.png" alt="TecEx Global Compliance" style="height:96px;width:96px;border-radius:8px;display:block;">
+            </a>
+            <p
+              style="
+                font-size: 13px;
+                color: #7a909f;
+                line-height: 1.65;
+                margin: 0 0 18px;
+              "
+            >
+              Expert product compliance — label reviews, expedited audits, HS code
+              reviews, and end-to-end compliance programmes. Built by the team
+              behind TecEx.
+            </p>
+            <!-- social -->
+            <div style="display: flex; gap: 10px">
+              <a
+                href="https://www.linkedin.com/company/tecex-group/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TGC on LinkedIn"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 32px;
+                  height: 32px;
+                  border-radius: 50%;
+                  background: rgba(255, 255, 255, 0.08);
+                  color: #7a909f;
+                  text-decoration: none;
+                "
+                onmouseover="
+                  this.style.background = 'rgba(211,169,17,.2)';
+                  this.style.color = '#D3A911';
+                "
+                onmouseout="
+                  this.style.background = 'rgba(255,255,255,.08)';
+                  this.style.color = '#7A909F';
+                "
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://twitter.com/tecexglobal"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TGC on X"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 32px;
+                  height: 32px;
+                  border-radius: 50%;
+                  background: rgba(255, 255, 255, 0.08);
+                  color: #7a909f;
+                  text-decoration: none;
+                "
+                onmouseover="
+                  this.style.background = 'rgba(211,169,17,.2)';
+                  this.style.color = '#D3A911';
+                "
+                onmouseout="
+                  this.style.background = 'rgba(255,255,255,.08)';
+                  this.style.color = '#7A909F';
+                "
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- services -->
+          <div>
+            <p
+              style="
+                font-family: &quot;Sora&quot;, sans-serif;
+                font-size: 11px;
+                font-weight: 700;
+                color: #d3a911;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                margin: 0 0 16px;
+              "
+            >
+              Services
+            </p>
+            <a
+              href="label-reviews.html"
+              style="
+                display: block;
+                font-size: 13px;
+                color: #7a909f;
+                text-decoration: none;
+                margin-bottom: 10px;
+              "
+              onmouseover="this.style.color = '#fff'"
+              onmouseout="this.style.color = '#7A909F'"
+              >Label Reviews</a
+            >
+            <a
+              href="expedited-audit.html"
+              style="
+                display: block;
+                font-size: 13px;
+                color: #7a909f;
+                text-decoration: none;
+                margin-bottom: 10px;
+              "
+              onmouseover="this.style.color = '#fff'"
+              onmouseout="this.style.color = '#7A909F'"
+              >Expedited Audits</a
+            >
+            <a
+              href="hs-code-review.html"
+              style="
+                display: block;
+                font-size: 13px;
+                color: #7a909f;
+                text-decoration: none;
+                margin-bottom: 10px;
+              "
+              onmouseover="this.style.color = '#fff'"
+              onmouseout="this.style.color = '#7A909F'"
+              >HS Code Reviews</a
+            >
+            <a
+              href="full-product-compliance.html"
+              style="
+                display: block;
+                font-size: 13px;
+                color: #7a909f;
+                text-decoration: none;
+                margin-bottom: 10px;
+              "
+              onmouseover="this.style.color = '#fff'"
+              onmouseout="this.style.color = '#7A909F'"
+              >Full Product Compliance</a
+            >
+          </div>
+
+          <!-- industries -->
+          <div>
+            <p
+              style="
+                font-family: &quot;Sora&quot;, sans-serif;
+                font-size: 11px;
+                font-weight: 700;
+                color: #d3a911;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                margin: 0 0 16px;
+              "
+            >
+              Industries
+            </p>
+            <a
+              href="cosmetic-compliance.html"
+              style="
+                display: block;
+                font-size: 13px;
+                color: #7a909f;
+                text-decoration: none;
+                margin-bottom: 10px;
+              "
+              onmouseover="this.style.color = '#fff'"
+              onmouseout="this.style.color = '#7A909F'"
+              >Cosmetics</a
+            >
+            <a
+              href="food-supplements-compliance.html"
+              style="
+                display: block;
+                font-size: 13px;
+                color: #7a909f;
+                text-decoration: none;
+                margin-bottom: 10px;
+              "
+              onmouseover="this.style.color = '#fff'"
+              onmouseout="this.style.color = '#7A909F'"
+              >Food Supplements</a
+            >
+            <a
+              href="food-beverage-compliance.html"
+              style="
+                display: block;
+                font-size: 13px;
+                color: #7a909f;
+                text-decoration: none;
+                margin-bottom: 10px;
+              "
+              onmouseover="this.style.color = '#fff'"
+              onmouseout="this.style.color = '#7A909F'"
+              >Food &amp; Beverage</a
+            >
+            <a
+              href="chemical-compliance.html"
+              style="
+                display: block;
+                font-size: 13px;
+                color: #7a909f;
+                text-decoration: none;
+                margin-bottom: 10px;
+              "
+              onmouseover="this.style.color = '#fff'"
+              onmouseout="this.style.color = '#7A909F'"
+              >Chemicals</a
+            >
+            <a
+              href="electronics-compliance.html"
+              style="
+                display: block;
+                font-size: 13px;
+                color: #7a909f;
+                text-decoration: none;
+                margin-bottom: 10px;
+              "
+              onmouseover="this.style.color = '#fff'"
+              onmouseout="this.style.color = '#7A909F'"
+              >Electronics</a
+            >
+            <a
+              href="consumer-goods-compliance.html"
+              style="
+                display: block;
+                font-size: 13px;
+                color: #7a909f;
+                text-decoration: none;
+                margin-bottom: 10px;
+              "
+              onmouseover="this.style.color = '#fff'"
+              onmouseout="this.style.color = '#7A909F'"
+              >Consumer Goods</a
+            >
+            <a
+              href="medical-devices-compliance.html"
+              style="
+                display: block;
+                font-size: 13px;
+                color: #7a909f;
+                text-decoration: none;
+                margin-bottom: 10px;
+              "
+              onmouseover="this.style.color = '#fff'"
+              onmouseout="this.style.color = '#7A909F'"
+              >Medical Devices</a
+            >
+          </div>
+
+          <!-- company -->
+          <div>
+            <p
+              style="
+                font-family: &quot;Sora&quot;, sans-serif;
+                font-size: 11px;
+                font-weight: 700;
+                color: #d3a911;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                margin: 0 0 16px;
+              "
+            >
+              Company
+            </p>
+            <a
+              href="about-us.html"
+              style="
+                display: block;
+                font-size: 13px;
+                color: #7a909f;
+                text-decoration: none;
+                margin-bottom: 10px;
+              "
+              onmouseover="this.style.color = '#fff'"
+              onmouseout="this.style.color = '#7A909F'"
+              >About TGC</a
+            >
+            <a
+              href="pricing.html"
+              style="
+                display: block;
+                font-size: 13px;
+                color: #7a909f;
+                text-decoration: none;
+                margin-bottom: 10px;
+              "
+              onmouseover="this.style.color = '#fff'"
+              onmouseout="this.style.color = '#7A909F'"
+              >Pricing</a
+            >
+            <a
+              href="contact-us.html"
+              style="
+                display: block;
+                font-size: 13px;
+                color: #7a909f;
+                text-decoration: none;
+                margin-bottom: 10px;
+              "
+              onmouseover="this.style.color = '#fff'"
+              onmouseout="this.style.color = '#7A909F'"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+        <!-- /grid -->
+
+        <!-- bottom bar -->
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            font-size: 12px;
+            color: #7a909f;
+            flex-wrap: wrap;
+            gap: 12px;
+          "
+        >
+          <p style="margin: 0">
+            © 2026 TecEx Global Compliance. All rights reserved. Built by the team
+            behind TecEx.
+          </p>
+          <p style="margin: 0">
+            <a
+              href="contact-us.html"
+              style="color: #7a909f; text-decoration: none"
+              onmouseover="this.style.color = '#fff'"
+              onmouseout="this.style.color = '#7A909F'"
+              >Privacy Policy</a
+            >
+            &nbsp;·&nbsp;
+            <a
+              href="contact-us.html"
+              style="color: #7a909f; text-decoration: none"
+              onmouseover="this.style.color = '#fff'"
+              onmouseout="this.style.color = '#7A909F'"
+              >Terms</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+    (function () {
+      var fades = document.querySelectorAll('.fade');
+      if (!fades.length) return;
+      if (!window.IntersectionObserver) {
+        fades.forEach(function (el) { el.classList.add('vis'); });
+        return;
+      }
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('vis');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      fades.forEach(function (el) { obs.observe(el); });
+    }());
+    </script>
+    <!-- FOOTER:END -->
+
+</body>
+</html>

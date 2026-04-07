@@ -21,14 +21,23 @@
   .blog-tag { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; }
   .blog-tag-cosmetics { background: rgba(211,169,17,.15); color: var(--gold); }
   .blog-meta-item { font-size: 13px; color: #7A909F; }
-
-  .blog-body { max-width: 760px; margin: 0 auto; }
-  .blog-body .wrap { max-width: 760px; }
-  .blog-back { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--gold); text-decoration: none; margin-bottom: 40px; }
-  .blog-back:hover { color: var(--navy); }
   .blog-related-industry { background: #F5F7FA; border-left: 3px solid var(--gold); border-radius: 0 10px 10px 0; padding: 20px 24px; margin: 40px 0; }
   .blog-related-industry p { margin: 0 0 10px; font-size: 14px; color: var(--slate); }
   .blog-related-industry a { font-weight: 600; color: var(--gold); text-decoration: none; font-size: 14px; }
+  .article-body h2 { font-family: 'Sora', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); margin: 48px 0 16px; }
+  .article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin: 32px 0 12px; }
+  .article-body p  { font-size: 15px; color: #334; line-height: 1.7; margin: 0 0 18px; }
+  .article-body a  { color: var(--gold); }
+  .reg-status-active  { display:inline-block; padding:2px 10px; border-radius:4px; font-size:0.75rem; font-weight:600; background:rgba(16,140,120,0.15); color:#0a7566; margin-bottom:8px; }
+  .reg-status-urgent  { display:inline-block; padding:2px 10px; border-radius:4px; font-size:0.75rem; font-weight:600; background:rgba(200,50,50,0.12); color:#c44; margin-bottom:8px; }
+  .reg-status-monitor { display:inline-block; padding:2px 10px; border-radius:4px; font-size:0.75rem; font-weight:600; background:rgba(211,169,17,0.15); color:#b8900e; margin-bottom:8px; }
+  .reg-update-block { border-left:3px solid var(--gold); padding:18px 0 18px 20px; margin-bottom:28px; }
+  .reg-update-block h4 { font-family:'Sora',sans-serif; font-size:1rem; font-weight:600; color:var(--navy); margin:0 0 8px 0; }
+  .reg-update-block p { font-size:15px; color:#334; line-height:1.7; margin:0 0 10px; }
+  .cta-inline { background: var(--navy); border-radius: 12px; padding: 32px; margin: 48px 0 0; text-align: center; }
+  .cta-inline h3 { font-family: 'Sora', sans-serif; color: #ffffff; font-size: 20px; margin: 0 0 12px; }
+  .cta-inline p { color: rgba(255,255,255,0.7); margin: 0 0 20px; font-size: 15px; }
+  .cta-inline .btn { margin: 4px; }
 </style>
 </head>
 <body>
@@ -187,141 +196,112 @@
   <!-- Body -->
   <section class="s-white">
     <div class="wrap">
-      <div class="blog-body">
+      <div style="max-width:760px; margin:0 auto;" class="article-body">
 
         <div class="blog-related-industry">
           <p>This article is part of our cosmetics compliance coverage.</p>
-          <a href="cosmetic-compliance.html">← View our Cosmetic Compliance services page</a>
+          <a href="cosmetic-compliance.html">- View our Cosmetic Compliance services page</a>
         </div>
 
-        <div class="reg-grid">
+        <p>2025 and 2026 represent one of the most active regulatory periods for cosmetics in decades. The Modernization of Cosmetics Regulation Act (MoCRA) is now in active enforcement in the US. The EU has added 22 CMR substance bans with no transition period through Omnibus VII, and a further round of restrictions under Omnibus VIII applies from May 2026. The UK is diverging from EU timelines with its own ingredient bans. And APAC enforcement intensity is increasing significantly, particularly in South Korea and China.</p>
 
-          <!-- US - MoCRA -->
-          <div class="reg-card fade d1">
-            <div class="reg-card-header">
-              <span class="reg-flag" role="img" aria-label="United States">🇺🇸</span>
-              <h2 style="font-size:1.1rem;margin:0;">United States — MoCRA</h2>
-            </div>
-            <div class="reg-card-body">
-              <div class="reg-update">
-                <span class="reg-tag urgent">Active enforcement</span>
-                <h3>MoCRA — Registration, Listing &amp; Label Compliance Now Enforced</h3>
-                <p>The <a href="https://www.fda.gov/cosmetics/cosmetics-laws-regulations/modernization-cosmetics-regulation-act-2022-mocra" target="_blank" rel="noopener noreferrer">Modernization of Cosmetics Regulation Act of 2022 (MoCRA)</a> represents the most significant expansion of FDA cosmetics authority since 1938. Facility registration and product listing have been enforced since July 1, 2024. As of January 2025, there are 9,528 active facility registrations and 589,762 product listings in the FDA system. Contact information requirements on labels took effect December 29, 2024. MoCRA also gives FDA mandatory recall authority — the first time in US history the FDA can order a cosmetic recall without voluntary action.</p>
-              </div>
-              <div class="reg-update">
-                <span class="reg-tag">Active</span>
-                <h3>Adverse Event Reporting — Mandatory 15-Day Reporting</h3>
-                <p>Under MoCRA, any serious adverse event — defined as an adverse health event associated with cosmetic use that results in hospitalisation, disfigurement, disability, or death — must be reported to the FDA within 15 business days. Records of all adverse events must be maintained for six years (three years for small businesses). Responsible Persons and manufacturers both carry reporting obligations. In December 2025, the FDA published draft guidance on mandatory cosmetic recalls, clarifying how it will exercise its new recall authority under MoCRA.</p>
-              </div>
-              <div class="reg-update">
-                <span class="reg-tag">Approaching</span>
-                <h3>cGMP Final Rule &amp; State-Level Ingredient Bans</h3>
-                <p>MoCRA directed the FDA to finalise binding Good Manufacturing Practice (cGMP) regulations for cosmetics by December 29, 2025. As of early 2026, the final rule has not yet been published — companies should follow ISO 22716 as the operative GMP standard in the interim. Separately, over 39 US states have introduced legislation targeting hazardous ingredients — California's Toxic-Free Cosmetics Act bans over 20 substances already restricted in the EU. Compliance with federal MoCRA does not guarantee compliance with state-level ingredient bans.</p>
-              </div>
-            </div>
-          </div>
+        <p>The convergence of these changes across four jurisdictions simultaneously creates a compliance challenge that product teams and regulatory affairs functions cannot manage reactively. This is the current state, by region.</p>
 
-          <!-- EU -->
-          <div class="reg-card fade d2">
-            <div class="reg-card-header">
-              <span class="reg-flag" role="img" aria-label="European Union">🇪🇺</span>
-              <h2 style="font-size:1.1rem;margin:0;">European Union — EC 1223/2009</h2>
-            </div>
-            <div class="reg-card-body">
-              <div class="reg-update">
-                <span class="reg-tag urgent">In force from Sept 2025</span>
-                <h3>Omnibus VII — 22 CMR Substances Banned, No Transition Period</h3>
-                <p><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025R0877" target="_blank" rel="noopener noreferrer">Regulation (EU) 2025/877</a> (Omnibus VII) entered into force on 1 September 2025, adding 22 substances newly classified as CMR (carcinogenic, mutagenic, or reprotoxic) to Annex II of the EU Cosmetics Regulation. Notably, <strong>Trimethylbenzoyl Diphenylphosphine Oxide (TPO)</strong> — a common photoinitiator in UV-cured gel and nail products — was banned with no transition period.</p>
-              </div>
-              <div class="reg-update">
-                <span class="reg-tag urgent">Applies from May 2026</span>
-                <h3>Omnibus VIII — Further CMR Bans Including Perborate Derivatives</h3>
-                <p><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202600078" target="_blank" rel="noopener noreferrer">Regulation (EU) 2026/78</a>, published 13 January 2026, adds further CMR substance restrictions to Annexes II, III, IV, and V — including perboric acid and its salts. The regulation applies from <strong>1 May 2026</strong> with no sell-through allowance. A Commission proposal (WTO notification May 2025) would ban 15 further CMR substances including Triphenyl Phosphate, with application from January 2027.</p>
-              </div>
-              <div class="reg-update">
-                <span class="reg-tag">Active monitoring</span>
-                <h3>Ongoing SCCS Opinions — Butylparaben, CBD, Titanium Dioxide</h3>
-                <p>The SCCS has issued preliminary opinions flagging safety concerns for Butylparaben in products used by children under 10, and for CBD in cosmetics. A new SCCS mandate on Titanium Dioxide in oral care products is expected to drive further restrictions in 2026–2027. The EU is also evaluating a potential CMR reclassification of ethanol — a move that, if adopted, would have sweeping implications across fragrances, hand sanitisers, and personal care.</p>
-              </div>
-            </div>
-          </div>
+        <h2>United States — MoCRA</h2>
 
-          <!-- UK -->
-          <div class="reg-card fade d3">
-            <div class="reg-card-header">
-              <span class="reg-flag" role="img" aria-label="United Kingdom">🇬🇧</span>
-              <h2 style="font-size:1.1rem;margin:0;">United Kingdom — OPSS</h2>
-            </div>
-            <div class="reg-card-body">
-              <div class="reg-update">
-                <span class="reg-tag urgent">Deadline July 2026</span>
-                <h3>4-MBC Ban &amp; Formaldehyde-Releaser Labelling — July 15, 2026</h3>
-                <p><a href="https://www.legislation.gov.uk/uksi/2026/23/contents" target="_blank" rel="noopener noreferrer">UK Statutory Instrument 2026 No. 23</a> introduces a complete ban on 4-Methylbenzylidene Camphor (4-MBC / Enzacamene), a UV filter previously used in sunscreens — effective <strong>15 July 2026</strong>. Stricter labelling requirements for formaldehyde-releasing preservatives also apply from 15 July 2026 — the trigger threshold for mandatory warnings drops from 0.05% to 0.001%.</p>
-              </div>
-              <div class="reg-update">
-                <span class="reg-tag urgent">Deadline Aug 2026</span>
-                <h3>16 New CMR Substances Banned — August 15, 2026</h3>
-                <p>The UK's 2026 cosmetics amendments add 16 CMR substances to Annex II of the UK Cosmetics Regulation, effective <strong>15 August 2026</strong>. Banned substances include TPO, clothianidin, dimethyl propylphosphonate, dibutyltin maleate, and tetrabromobisphenol-A. Sell-through ends 15 February 2027.</p>
-              </div>
-              <div class="reg-update">
-                <span class="reg-tag">Divergence risk</span>
-                <h3>UK Operates Independently from EU — Separate RP &amp; Notifications Required</h3>
-                <p>Great Britain requires a separate UK-based Responsible Person, separate product notifications through the OPSS SCPN portal, and ongoing monitoring of UK-specific Statutory Instruments. Northern Ireland continues to follow EU cosmetics rules under the Windsor Framework.</p>
-              </div>
-            </div>
-          </div>
+        <div class="reg-update-block">
+          <span class="reg-status-urgent">Active enforcement</span>
+          <h4>MoCRA — Registration, Listing &amp; Label Compliance Now Enforced</h4>
+          <p>The <a href="https://www.fda.gov/cosmetics/cosmetics-laws-regulations/modernization-cosmetics-regulation-act-2022-mocra" target="_blank" rel="noopener noreferrer">Modernization of Cosmetics Regulation Act of 2022 (MoCRA)</a> represents the most significant expansion of FDA cosmetics authority since 1938. Facility registration and product listing have been enforced since July 1, 2024. As of January 2025, there are 9,528 active facility registrations and 589,762 product listings in the FDA system. Contact information requirements on labels took effect December 29, 2024. MoCRA also gives FDA mandatory recall authority — the first time in US history the FDA can order a cosmetic recall without voluntary action.</p>
+        </div>
 
-          <!-- APAC -->
-          <div class="reg-card fade d4">
-            <div class="reg-card-header">
-              <span class="reg-flag" role="img" aria-label="Asia-Pacific">🌏</span>
-              <h2 style="font-size:1.1rem;margin:0;">Asia-Pacific — China, Korea, ASEAN</h2>
-            </div>
-            <div class="reg-card-body">
-              <div class="reg-update">
-                <span class="reg-tag">Active</span>
-                <h3>China — NMPA Registration &amp; Safety Assessment</h3>
-                <p>China requires all cosmetic products to be registered or notified with the <a href="https://www.nmpa.gov.cn/" target="_blank" rel="noopener noreferrer">NMPA</a> before market entry. Ordinary cosmetics require notification; special cosmetics require full registration — a process that can take 6–18 months. Animal testing exemptions are available for ordinary cosmetics sold only through online channels when supported by compliant safety assessment documentation.</p>
-              </div>
-              <div class="reg-update">
-                <span class="reg-tag">Active enforcement</span>
-                <h3>South Korea — MFDS Ingredient Testing Expanded Tenfold</h3>
-                <p>South Korea's MFDS increased testing of online-sold cosmetics from 110 items in 2024 to 1,080 in 2025 — a nearly tenfold increase — with particular focus on colour, eye, and nail products. Non-compliant products face sales bans and customs restrictions. Products must comply with Korea's Cosmetics Act and the Korea Restricted Ingredient List.</p>
-              </div>
-              <div class="reg-update">
-                <span class="reg-tag">Ongoing</span>
-                <h3>ASEAN &amp; Australia — Harmonisation with Divergence</h3>
-                <p>ASEAN countries follow the ASEAN Cosmetic Directive, but national adoption and enforcement vary significantly. Thailand added 56 substances to its prohibited list in February 2025. In Australia, the TGA enforces stricter oversight for products making therapeutic claims — products marketed for anti-ageing or cellular repair may require TGA registration rather than cosmetics notification.</p>
-              </div>
-            </div>
-          </div>
+        <div class="reg-update-block">
+          <span class="reg-status-active">Active</span>
+          <h4>Adverse Event Reporting — Mandatory 15-Day Reporting</h4>
+          <p>Under MoCRA, any serious adverse event — defined as an adverse health event associated with cosmetic use that results in hospitalisation, disfigurement, disability, or death — must be reported to the FDA within 15 business days. Records of all adverse events must be maintained for six years (three years for small businesses). Responsible Persons and manufacturers both carry reporting obligations. In December 2025, the FDA published draft guidance on mandatory cosmetic recalls, clarifying how it will exercise its new recall authority under MoCRA.</p>
+        </div>
 
-        </div><!-- /.reg-grid -->
+        <div class="reg-update-block">
+          <span class="reg-status-monitor">Approaching</span>
+          <h4>cGMP Final Rule &amp; State-Level Ingredient Bans</h4>
+          <p>MoCRA directed the FDA to finalise binding Good Manufacturing Practice (cGMP) regulations for cosmetics by December 29, 2025. As of early 2026, the final rule has not yet been published — companies should follow <a href="https://www.iso.org/standard/36437.html" target="_blank" rel="noopener noreferrer">ISO 22716</a> as the operative GMP standard in the interim. Separately, over 39 US states have introduced legislation targeting hazardous ingredients — California's Toxic-Free Cosmetics Act bans over 20 substances already restricted in the EU. Compliance with federal MoCRA does not guarantee compliance with state-level ingredient bans.</p>
+        </div>
 
-        <div class="blog-related-industry" style="margin-top:48px;">
+        <h2>European Union — EC 1223/2009</h2>
+
+        <div class="reg-update-block">
+          <span class="reg-status-urgent">In force from Sept 2025</span>
+          <h4>Omnibus VII — 22 CMR Substances Banned, No Transition Period</h4>
+          <p><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025R0877" target="_blank" rel="noopener noreferrer">Regulation (EU) 2025/877</a> (Omnibus VII) entered into force on 1 September 2025, adding 22 substances newly classified as CMR (carcinogenic, mutagenic, or reprotoxic) to Annex II of the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32009R1223" target="_blank" rel="noopener noreferrer">EU Cosmetics Regulation (EC 1223/2009)</a>. Notably, <strong>Trimethylbenzoyl Diphenylphosphine Oxide (TPO)</strong> — a common photoinitiator in UV-cured gel and nail products — was banned with no transition period.</p>
+        </div>
+
+        <div class="reg-update-block">
+          <span class="reg-status-urgent">Applies from May 2026</span>
+          <h4>Omnibus VIII — Further CMR Bans Including Perborate Derivatives</h4>
+          <p><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202600078" target="_blank" rel="noopener noreferrer">Regulation (EU) 2026/78</a>, published 13 January 2026, adds further CMR substance restrictions to Annexes II, III, IV, and V — including perboric acid and its salts. The regulation applies from <strong>1 May 2026</strong> with no sell-through allowance. A Commission proposal (WTO notification May 2025) would ban 15 further CMR substances including Triphenyl Phosphate, with application from January 2027.</p>
+        </div>
+
+        <div class="reg-update-block">
+          <span class="reg-status-active">Active monitoring</span>
+          <h4>Ongoing SCCS Opinions — Butylparaben, CBD, Titanium Dioxide</h4>
+          <p>The <a href="https://health.ec.europa.eu/scientific-committees/scientific-committee-consumer-safety-sccs_en" target="_blank" rel="noopener noreferrer">SCCS</a> has issued preliminary opinions flagging safety concerns for Butylparaben in products used by children under 10, and for CBD in cosmetics. A new SCCS mandate on Titanium Dioxide in oral care products is expected to drive further restrictions in 2026–2027. The EU is also evaluating a potential CMR reclassification of ethanol — a move that, if adopted, would have sweeping implications across fragrances, hand sanitisers, and personal care.</p>
+        </div>
+
+        <h2>United Kingdom — OPSS</h2>
+
+        <div class="reg-update-block">
+          <span class="reg-status-urgent">Deadline July 2026</span>
+          <h4>4-MBC Ban &amp; Formaldehyde-Releaser Labelling — July 15, 2026</h4>
+          <p><a href="https://www.legislation.gov.uk/uksi/2026/23/contents" target="_blank" rel="noopener noreferrer">UK Statutory Instrument 2026 No. 23</a> introduces a complete ban on 4-Methylbenzylidene Camphor (4-MBC / Enzacamene), a UV filter previously used in sunscreens — effective <strong>15 July 2026</strong>. Stricter labelling requirements for formaldehyde-releasing preservatives also apply from 15 July 2026 — the trigger threshold for mandatory warnings drops from 0.05% to 0.001%.</p>
+        </div>
+
+        <div class="reg-update-block">
+          <span class="reg-status-urgent">Deadline Aug 2026</span>
+          <h4>16 New CMR Substances Banned — August 15, 2026</h4>
+          <p>The UK's 2026 cosmetics amendments add 16 CMR substances to Annex II of the <a href="https://www.legislation.gov.uk/uksi/2013/1478/contents" target="_blank" rel="noopener noreferrer">UK Cosmetics Regulation (SI 2013/1478)</a>, effective <strong>15 August 2026</strong>. Banned substances include TPO, clothianidin, dimethyl propylphosphonate, dibutyltin maleate, and tetrabromobisphenol-A. Sell-through ends 15 February 2027.</p>
+        </div>
+
+        <div class="reg-update-block">
+          <span class="reg-status-monitor">Divergence risk</span>
+          <h4>UK Operates Independently from EU — Separate RP &amp; Notifications Required</h4>
+          <p>Great Britain requires a separate UK-based Responsible Person, separate product notifications through the <a href="https://submit.cosmetic-product-notifications.service.gov.uk/" target="_blank" rel="noopener noreferrer">OPSS SCPN portal</a>, and ongoing monitoring of UK-specific Statutory Instruments. Northern Ireland continues to follow EU cosmetics rules under the <a href="https://www.gov.uk/government/publications/the-windsor-framework-a-new-way-forward" target="_blank" rel="noopener noreferrer">Windsor Framework</a>.</p>
+        </div>
+
+        <h2>Asia-Pacific — China, Korea, ASEAN</h2>
+
+        <div class="reg-update-block">
+          <span class="reg-status-active">Active</span>
+          <h4>China — NMPA Registration &amp; Safety Assessment</h4>
+          <p>China requires all cosmetic products to be registered or notified with the <a href="https://www.nmpa.gov.cn/" target="_blank" rel="noopener noreferrer">NMPA</a> before market entry. Ordinary cosmetics require notification; special cosmetics require full registration — a process that can take 6–18 months. Animal testing exemptions are available for ordinary cosmetics sold only through online channels when supported by compliant safety assessment documentation.</p>
+        </div>
+
+        <div class="reg-update-block">
+          <span class="reg-status-urgent">Active enforcement</span>
+          <h4>South Korea — MFDS Ingredient Testing Expanded Tenfold</h4>
+          <p>South Korea's <a href="https://www.mfds.go.kr/eng/index.do" target="_blank" rel="noopener noreferrer">MFDS</a> increased testing of online-sold cosmetics from 110 items in 2024 to 1,080 in 2025 — a nearly tenfold increase — with particular focus on colour, eye, and nail products. Non-compliant products face sales bans and customs restrictions. Products must comply with Korea's Cosmetics Act and the Korea Restricted Ingredient List.</p>
+        </div>
+
+        <div class="reg-update-block">
+          <span class="reg-status-active">Ongoing</span>
+          <h4>ASEAN &amp; Australia — Harmonisation with Divergence</h4>
+          <p>ASEAN countries follow the <a href="https://asean.org/asean-cosmetic-directive/" target="_blank" rel="noopener noreferrer">ASEAN Cosmetic Directive</a>, but national adoption and enforcement vary significantly. Thailand added 56 substances to its prohibited list in February 2025. In Australia, the <a href="https://www.tga.gov.au/" target="_blank" rel="noopener noreferrer">TGA</a> enforces stricter oversight for products making therapeutic claims — products marketed for anti-ageing or cellular repair may require TGA registration rather than cosmetics notification.</p>
+        </div>
+
+        <div class="blog-related-industry" style="margin-top:40px;">
           <p>Need help navigating these regulatory changes? Our cosmetics compliance team covers EU, UK, US, and APAC markets.</p>
-          <a href="cosmetic-compliance.html">View our Cosmetic Compliance services →</a>
+          <a href="cosmetic-compliance.html">View our Cosmetic Compliance services -></a>
+        </div>
+
+        <div class="cta-inline">
+          <h3>Unsure if your products are compliant?</h3>
+          <p>Our cosmetics team can review your ingredients, labelling, and documentation against the latest requirements across EU, UK, US, and APAC markets.</p>
+          <a href="contact-us.html" class="btn btn-gold">Talk to an expert -></a>
+          <a href="expedited-audit.html" class="btn btn-ghost">Book an audit</a>
         </div>
 
       </div>
     </div>
   </section>
-
-  <!-- CTA -->
-  <div class="cta-band">
-    <div class="wrap">
-      <div class="cta-inner fade">
-        <div>
-          <h2 class="cta-h2 fade">Unsure if your products are compliant?</h2>
-          <p class="cta-sub">Our cosmetics team can review your ingredients, labelling, and documentation against the latest requirements.</p>
-        </div>
-        <div class="cta-btns">
-          <a href="contact-us.html" class="btn btn-gold btn-lg">Talk to an expert →</a>
-          <a href="expedited-audit.html" class="btn btn-ghost btn-lg">Book an audit</a>
-        </div>
-      </div>
-    </div>
-  </div>
 
 </div><!-- /.tgc-page -->
 

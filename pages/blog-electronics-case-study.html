@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cosmetic Regulation Compared: EU vs UK vs US | TGC Insights</title>
-<meta name="description" content="A structured side-by-side comparison of cosmetic compliance obligations in the EU (EC 1223/2009), UK (OPSS), and US (MoCRA). Covers Responsible Person, product registration, safety assessments, labelling, and 2026 deadlines.">
-<link rel="canonical" href="https://tecexglobalcompliance.com/blog/cosmetic-regulation-comparison-eu-uk-us/">
-<meta property="og:title" content="Cosmetic Regulation Compared: EU vs UK vs US | TGC">
+<title>The 11-Week EU Market Suspension: RED Cybersecurity Gap in a Smart Home Device | TGC</title>
+<meta name="description" content="A consumer electronics brand launched a smart home gateway across four EU markets with valid CE marking — but without RED cybersecurity compliance. The result was an 11-week voluntary market suspension. A breakdown of what happened and what it cost.">
+<link rel="canonical" href="https://tecexglobalcompliance.com/blog/electronics-red-cybersecurity-case-study/">
+<meta property="og:title" content="The 11-Week EU Market Suspension: RED Cybersecurity Gap in a Smart Home Device | TGC">
 <meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,12 +14,12 @@
 <link rel="stylesheet" href="../global.css">
 <style>
   .blog-post-hero { background: var(--navy); padding: 72px 0 56px; }
-  .blog-post-hero .wrap { max-width: 900px; }
+  .blog-post-hero .wrap { max-width: 760px; }
   .blog-post-meta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
   .blog-post-hero h1 { font-family: 'Sora', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 800; color: #fff; margin: 0 0 20px; line-height: 1.2; }
-  .blog-post-hero .lead { color: #7A909F; font-size: 18px; line-height: 1.6; max-width: 700px; margin: 0; }
+  .blog-post-hero .lead { color: #7A909F; font-size: 18px; line-height: 1.6; max-width: 680px; margin: 0; }
   .blog-tag { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; }
-  .blog-tag-cosmetics { background: rgba(211,169,17,.15); color: var(--gold); }
+  .blog-tag-electronics { background: rgba(0,107,78,0.15); color: #006B4E; }
   .blog-meta-item { font-size: 13px; color: #7A909F; }
   .blog-related-industry { background: #F5F7FA; border-left: 3px solid var(--gold); border-radius: 0 10px 10px 0; padding: 20px 24px; margin: 40px 0; }
   .blog-related-industry p { margin: 0 0 10px; font-size: 14px; color: var(--slate); }
@@ -28,19 +28,18 @@
   .article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin: 32px 0 12px; }
   .article-body p  { font-size: 15px; color: #334; line-height: 1.7; margin: 0 0 18px; }
   .article-body a  { color: var(--gold); }
-  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .comp-table { width: 100%; min-width: 600px; border-collapse: collapse; font-size: 14px; }
-  .comp-table th { background: var(--navy); color: #fff; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .04em; text-align: left; padding: 14px 16px; }
-  .comp-table th:first-child { width: 160px; }
-  .comp-table td { padding: 14px 16px; border-bottom: 1px solid #e8e3da; color: #334; vertical-align: top; line-height: 1.55; }
-  .comp-table td:first-child { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 13px; color: var(--navy); background: #f9f7f4; border-right: 2px solid #e8e3da; }
-  .comp-table tr:nth-child(even) td:not(:first-child) { background: #faf9f7; }
-  .comp-table tr:last-child td { border-bottom: none; }
-  .juris-pill { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: 3px 10px; border-radius: 999px; margin-bottom: 6px; }
-  .juris-eu  { background: rgba(0,120,200,0.12); color: #005fa3; }
-  .juris-uk  { background: rgba(0,90,160,0.10); color: #003f7a; }
-  .juris-us  { background: rgba(180,30,30,0.10); color: #8b1a1a; }
-  .comp-table .row-highlight td:not(:first-child) { background: #fff8e6 !important; border-left: 3px solid var(--gold); }
+  .case-stat-row { display: flex; gap: 24px; margin: 32px 0; flex-wrap: wrap; }
+  .case-stat { flex: 1; min-width: 140px; background: #f8fafc; border: 1px solid #e8edf2; border-radius: 10px; padding: 20px; text-align: center; }
+  .case-stat-num { display: block; font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 800; color: var(--navy); line-height: 1.1; }
+  .case-stat-lbl { display: block; font-size: 12px; color: #7A909F; margin-top: 6px; line-height: 1.4; }
+  .case-highlight { background: rgba(0,107,78,0.06); border-left: 3px solid #006B4E; border-radius: 0 10px 10px 0; padding: 20px 24px; margin: 28px 0; }
+  .case-highlight p { margin: 0; font-size: 15px; color: #334; line-height: 1.7; }
+  .timeline-block { border-left: 2px solid var(--gold); padding-left: 20px; margin: 32px 0; }
+  .timeline-item { margin-bottom: 24px; position: relative; }
+  .timeline-item::before { content: ''; position: absolute; left: -25px; top: 6px; width: 8px; height: 8px; background: var(--gold); border-radius: 50%; }
+  .timeline-item h4 { font-family: 'Sora', sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--navy); margin: 0 0 4px; }
+  .timeline-item p { font-size: 14px; color: #556; margin: 0; line-height: 1.6; }
+  .timeline-item .tl-week { font-size: 11px; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; display: block; }
   .cta-inline { background: var(--navy); border-radius: 12px; padding: 32px; margin: 48px 0 0; text-align: center; }
   .cta-inline h3 { font-family: 'Sora', sans-serif; color: #ffffff; font-size: 20px; margin: 0 0 12px; }
   .cta-inline p { color: rgba(255,255,255,0.7); margin: 0 0 20px; font-size: 15px; }
@@ -185,128 +184,132 @@
     </script>
     <!-- HEADER:END -->
 
-<div id="tgc-blog-compare" class="tgc-page" style="margin-top:64px">
+<div id="tgc-blog-elec-case" class="tgc-page" style="margin-top:64px">
 
   <!-- Hero -->
   <div class="blog-post-hero">
     <div class="wrap">
       <div class="blog-post-meta">
-        <span class="blog-tag blog-tag-cosmetics">Cosmetics</span>
-        <span class="blog-meta-item">March 2026</span>
-        <span class="blog-meta-item">· 6 min read</span>
+        <span class="blog-tag blog-tag-electronics">Electronics</span>
+        <span class="blog-meta-item">April 2026</span>
+        <span class="blog-meta-item">· Case Study · 9 min read</span>
       </div>
-      <h1>Cosmetic Regulation Compared: EU, UK &amp; US Side-by-Side</h1>
-      <p class="lead">A structured overview of the core compliance obligations in each major market — useful for brands planning their first international expansion or reviewing multi-market compliance programmes.</p>
+      <h1>The 11-Week EU Market Suspension: RED Cybersecurity Gap in a Smart Home Gateway</h1>
+      <p class="lead">A consumer electronics brand launched a smart home gateway device across four EU markets in September 2025 with valid CE marking, accredited lab testing, and a completed Declaration of Conformity. None of it covered the cybersecurity requirements that had become mandatory five weeks earlier. What followed was an eleven-week voluntary suspension across all four markets.</p>
     </div>
   </div>
 
   <!-- Body -->
   <section class="s-white">
     <div class="wrap">
-      <div style="max-width:960px; margin:0 auto;" class="article-body">
+      <div style="max-width:760px; margin:0 auto;" class="article-body">
 
         <div class="blog-related-industry">
-          <p>This article is part of our cosmetics compliance coverage.</p>
-          <a href="cosmetic-compliance.html">← View our Cosmetic Compliance services page</a>
+          <p>This article is part of our electronics compliance coverage.</p>
+          <a href="electronics-compliance.html">- View our Electronics Compliance services page</a>
         </div>
 
-        <p>Cosmetic brands entering the EU, UK, and US for the first time frequently underestimate how different the three regulatory frameworks are in practice. The EU's Cosmetics Regulation (EC) 1223/2009 imposes a mandatory Responsible Person, a pre-market notification via CPNP, and a prescribed safety dossier structure. The UK has retained an equivalent framework post-Brexit but operates it independently — requiring a separate UK Responsible Person, a separate SCPN notification, and UK-specific documentation. The US Modernisation of Cosmetics Regulation Act (MoCRA), in force since 2022, has introduced mandatory product listing and facility registration obligations that did not previously exist at federal level.</p>
-
-        <p>These are not minor administrative differences. They create genuinely separate compliance programmes for each market. The table below maps the eight most operationally significant dimensions of cosmetic compliance across all three jurisdictions, with the key 2025–2026 changes highlighted in the final row.</p>
-
-        <h2>At a Glance: EU vs UK vs US Cosmetics Compliance</h2>
-
-        <div class="table-scroll">
-          <table class="comp-table" aria-label="Cosmetic regulation comparison by jurisdiction">
-            <thead>
-              <tr>
-                <th scope="col">Requirement</th>
-                <th scope="col"><span class="juris-pill juris-eu">EU (EC 1223/2009)</span></th>
-                <th scope="col"><span class="juris-pill juris-uk">UK (OPSS)</span></th>
-                <th scope="col"><span class="juris-pill juris-us">US (MoCRA / FDA)</span></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Responsible Person</td>
-                <td>Mandatory — EU-established legal or natural person; holds PIF and is accountable for safety</td>
-                <td>Mandatory — UK-based (GB) RP required separately from EU RP; OPSS enforced</td>
-                <td>"Responsible person" = manufacturer, packer, or distributor whose name appears on label</td>
-              </tr>
-              <tr>
-                <td>Product Registration / Listing</td>
-                <td>Notification via <a href="https://cpnp.ec.europa.eu/" target="_blank" rel="noopener noreferrer">CPNP portal</a> before placing on market</td>
-                <td>Notification via <a href="https://www.gov.uk/guidance/submit-cosmetic-product-notifications" target="_blank" rel="noopener noreferrer">SCPN portal</a> (separate from CPNP); mandatory before GB market placement</td>
-                <td>Product listing via <a href="https://www.fda.gov/cosmetics/cosmetics-registration-listing" target="_blank" rel="noopener noreferrer">FDA Cosmetics Direct portal</a> — enforced from July 1, 2024</td>
-              </tr>
-              <tr>
-                <td>Facility Registration</td>
-                <td>Not required under <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32009R1223" target="_blank" rel="noopener noreferrer">EU Cosmetics Regulation</a></td>
-                <td>Not required under UK Cosmetics Regulation</td>
-                <td>Mandatory under <a href="https://www.fda.gov/cosmetics/cosmetics-laws-regulations/modernization-cosmetics-regulation-act-2022" target="_blank" rel="noopener noreferrer">MoCRA</a> — each manufacturing/processing facility must register with FDA</td>
-              </tr>
-              <tr>
-                <td>Safety Assessment</td>
-                <td>Mandatory CPSR (Cosmetic Product Safety Report) by qualified safety assessor; part of PIF</td>
-                <td>Equivalent UK CPSR required; separate from EU CPSR</td>
-                <td>Safety substantiation records required; format not as prescribed as EU/UK</td>
-              </tr>
-              <tr>
-                <td>Product Information File (PIF)</td>
-                <td>Mandatory — includes CPSR, formula, GMP evidence, claims justification; kept 10 years</td>
-                <td>Equivalent UK PIF required — separate document maintained by UK RP</td>
-                <td>No equivalent PIF requirement; safety substantiation records must be maintained</td>
-              </tr>
-              <tr>
-                <td>Labelling — Key Requirements</td>
-                <td>INCI ingredient list (descending order); EU RP name &amp; address; warnings; function; net contents</td>
-                <td>UK RP name &amp; UK address; country of origin; INCI list; compliant warnings under UK SI</td>
-                <td>Ingredient list (INCI, descending order); RP contact information (from Dec 29, 2024)</td>
-              </tr>
-              <tr>
-                <td>Adverse Event Reporting</td>
-                <td>Serious Undesirable Effects (SUEs) reported to competent authorities within 20 days</td>
-                <td>SUEs reported to <a href="https://www.gov.uk/government/organisations/office-for-product-safety-and-standards" target="_blank" rel="noopener noreferrer">OPSS</a></td>
-                <td>Serious adverse events reported to <a href="https://www.fda.gov/cosmetics/reporting-cosmetics-problems/reporting-serious-adverse-events-cosmetics" target="_blank" rel="noopener noreferrer">FDA within 15 business days</a> under MoCRA</td>
-              </tr>
-              <tr class="row-highlight">
-                <td>Key 2025–2026 change</td>
-                <td><strong>1 May 2026:</strong> <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202600078" target="_blank" rel="noopener noreferrer">Omnibus VIII (Regulation EU 2026/78)</a> applies; further CMR bans from Jan 1, 2027</td>
-                <td><strong>15 Jul 2026:</strong> <a href="https://www.legislation.gov.uk/uksi/2026/23/contents" target="_blank" rel="noopener noreferrer">4-MBC ban (UK SI 2026/23)</a>; 16 CMR substances banned Aug 15, 2026</td>
-                <td>cGMP final rule pending; ongoing MoCRA facility registration enforcement build-out</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="case-stat-row">
+          <div class="case-stat">
+            <span class="case-stat-num">4</span>
+            <span class="case-stat-lbl">EU markets affected by voluntary suspension</span>
+          </div>
+          <div class="case-stat">
+            <span class="case-stat-num">11</span>
+            <span class="case-stat-lbl">Weeks from audit notification to product relisting</span>
+          </div>
+          <div class="case-stat">
+            <span class="case-stat-num">3</span>
+            <span class="case-stat-lbl">Articles of RED not assessed in original CE marking</span>
+          </div>
         </div>
 
-        <h2>The Responsible Person: Three Separate Appointments</h2>
+        <h2>The Context</h2>
 
-        <p>The single most operationally significant difference between the EU, UK, and US frameworks is how they define and assign the "Responsible Person." In the EU, the Responsible Person must be established within the EU — they hold the Product Information File, are responsible for safety compliance, and bear liability for the product in the EU market. Following Brexit, the UK operates an identical but entirely independent RP obligation for the GB market: a UK-based Responsible Person is required, holds the UK equivalent PIF, and is separately accountable to OPSS. These are not the same appointment and cannot be fulfilled by a single entity unless that entity has legal presence in both jurisdictions.</p>
+        <p>From 1 August 2025, all radio equipment newly placed on the EU market became subject to cybersecurity requirements under Articles 3.3(d), (e), and (f) of the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0053" target="_blank" rel="noopener noreferrer">Radio Equipment Directive (RED 2014/53/EU)</a>, activated by <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R0030" target="_blank" rel="noopener noreferrer">Delegated Regulation (EU) 2022/30</a>. Article 3.3(d) requires that radio equipment does not harm the network or misuse network resources. Article 3.3(e) requires protection of personal data and user privacy. Article 3.3(f) requires protection against fraud, particularly for payment-capable devices.</p>
 
-        <p>The US framework under MoCRA uses "responsible person" to mean something different — the manufacturer, packer, or distributor whose name appears on the label. This is not a compliance appointment in the EU/UK sense. However, MoCRA does impose facility registration and product listing obligations directly on the responsible person, and adverse event reporting obligations that did not previously exist at federal level. Brands entering the US market for the first time should treat MoCRA as a new compliance system requiring its own programme — not simply a lighter version of EU obligations.</p>
+        <p>The requirement had been signalled for years and the mandate was not unexpected. But the gap between regulatory awareness and operational implementation was significant for a large number of manufacturers - particularly those whose CE marking process had been established well before August 2025 and was not systematically reviewed when the new requirements entered into force.</p>
 
-        <h2>Substance Restrictions: Rolling Amendments vs Statutory Schedules</h2>
+        <h2>What Happened</h2>
 
-        <p>EU substance restrictions are managed through the Commission Regulation amendment process, which adds substances to Annexes II (banned), III (restricted), IV (colourants), V (preservatives), and VI (UV filters) on a rolling basis. The Omnibus programme has added CMR and other substances annually since 2019. Each amendment triggers a market placement deadline and a sell-through period — meaning brands must continuously track the Official Journal for changes affecting their formulations. The UK's post-Brexit position is to maintain an equivalent but independently administered substance list, which is beginning to diverge from the EU list — the UK's SI 2026/23 additions are similar to but not identical to EU Omnibus VII and VIII.</p>
+        <p>A consumer electronics brand launched a smart home gateway device across four EU member states in September 2025 - five weeks after the RED cybersecurity requirements entered into force. The product had undergone testing by an accredited laboratory. The Declaration of Conformity was complete and listed the relevant directives: <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011L0065" target="_blank" rel="noopener noreferrer">RoHS Directive</a>, <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0030" target="_blank" rel="noopener noreferrer">EMC Directive</a>, <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0035" target="_blank" rel="noopener noreferrer">Low Voltage Directive</a>, and the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0053" target="_blank" rel="noopener noreferrer">Radio Equipment Directive</a>. The Technical Construction File included the test reports supporting conformity with RED's radio performance and spectrum requirements.</p>
 
-        <p>The US currently has no statutory list of prohibited cosmetic ingredients equivalent to EU Annex II. The FDA can take enforcement action against unsafe products under the FD&amp;C Act, and California's Cosmetics Act includes some substance restrictions, but the federal framework does not impose the same pre-market substance assessment system. This creates a material asymmetry: formulations approved for EU and UK markets are not automatically compliant in the US, but the absence of a comprehensive US restriction list means separate US-specific substance review is less common in practice.</p>
+        <p>What the Declaration of Conformity did not include was any reference to Articles 3.3(d), (e), or (f) of RED - the cybersecurity provisions that became mandatory on 1 August 2025. The testing that formed the basis of the original CE marking had been completed before the harmonised standards for RED cybersecurity (<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500138" target="_blank" rel="noopener noreferrer">EN 18031-1/2/3:2024</a>) were published in January 2025, and the documentation had not been updated to address the new requirements before the product launched.</p>
 
-        <h2>Planning for Multi-Market Cosmetic Compliance</h2>
+        <div class="case-highlight">
+          <p>The product's CE marking was technically valid for radio performance, EMC, and LVD - but incomplete for RED cybersecurity. For a product with Wi-Fi and Bluetooth connectivity newly placed on the EU market after 1 August 2025, an incomplete Declaration of Conformity means the CE marking obligation is not fully satisfied.</p>
+        </div>
 
-        <p>Brands targeting EU, UK, and US simultaneously should plan for three distinct compliance programmes rather than one programme with regional adaptations. The CPNP and SCPN notifications are separate pre-market steps. The EU and UK PIFs must be maintained as separate documents under separate RP appointments. The MoCRA product listing and facility registration must be completed and kept current in the FDA Cosmetics Direct portal. Adverse event reporting timelines differ across the three jurisdictions. And the substance restriction calendars diverge annually.</p>
+        <p>On a routine documentation audit by a market surveillance authority in one of the four member states, it was identified that the product had not been assessed against Articles 3.3(d)(e)(f) of RED. The authority raised a formal query, requesting evidence of cybersecurity conformity assessment under the harmonised standards EN 18031-1, EN 18031-2, and EN 18031-3.</p>
 
-        <p>The most effective approach is to use the EU Cosmetics Regulation as the baseline — given its prescriptive requirements — and then layer on the UK-specific differences and the MoCRA-specific obligations as additional tracks. This reduces duplication while ensuring that each market's specific requirements are met by someone accountable for them.</p>
+        <h2>The Response</h2>
+
+        <p>The brand initiated a voluntary market suspension across all four EU member states to avoid escalation to a formal withdrawal order. A voluntary suspension, while commercially disruptive, allows the manufacturer to manage the resolution process and relisting timeline. A formal withdrawal order carries significantly heavier documentation obligations, mandatory reporting to the <a href="https://ec.europa.eu/safety-gate-alerts/screen/webReport" target="_blank" rel="noopener noreferrer">EU Safety Gate rapid alert system</a>, and a more complex reinstatement procedure.</p>
+
+        <div class="timeline-block">
+          <div class="timeline-item">
+            <span class="tl-week">Week 1</span>
+            <h4>Market Surveillance Notification Received</h4>
+            <p>A market surveillance authority in one of the four EU member states formally requested evidence of RED cybersecurity conformity. Voluntary suspension initiated across all four markets to prevent further stock entering the supply chain.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="tl-week">Weeks 1-2</span>
+            <h4>Gap Assessment and Conformity Pathway Scoped</h4>
+            <p>TGC conducted an expedited gap assessment against EN 18031-1 (network protection), EN 18031-2 (privacy and data), and EN 18031-3 (fraud prevention). The gateway's Wi-Fi and Bluetooth interfaces required assessment under all three standards. The gap assessment identified that EN 18031-3 (fraud prevention) required Notified Body involvement rather than self-declaration under Module A.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="tl-week">Weeks 2-7</span>
+            <h4>EN 18031 Assessment Completed</h4>
+            <p>Laboratory testing and Notified Body assessment completed against EN 18031-1/2/3. Several minor non-conformities identified in the firmware's network communication handling required software updates before the full conformity assessment could be signed off.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="tl-week">Weeks 7-9</span>
+            <h4>Technical File Updated and Declaration of Conformity Revised</h4>
+            <p>The Technical Construction File was updated to include the EN 18031 test reports and Notified Body certificate. The Declaration of Conformity was revised to reference Articles 3.3(d)(e)(f) and the harmonised standards under which conformity was assessed.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="tl-week">Weeks 9-11</span>
+            <h4>Relisting Across All Four Markets</h4>
+            <p>Updated documentation submitted to the market surveillance authority that had raised the initial query. Following confirmation, product relisting was processed across all four member states. Total time from notification to relisting: eleven weeks.</p>
+          </div>
+        </div>
+
+        <h2>The Commercial Impact</h2>
+
+        <p>Eleven weeks is a significant window for a product that had launched into four markets simultaneously. The direct commercial impact included lost sales revenue across the suspension period, warehouse holding costs for stock that could not be released into the supply chain, disrupted relationships with the distributors who had placed the product on shelf, and the cost of the expedited conformity assessment, Notified Body fees, and firmware update process.</p>
+
+        <p>The indirect impact was harder to quantify. The product's launch window - typically the highest-velocity sales period for consumer electronics - was largely consumed by the suspension. The distributors in two of the four markets required written confirmation of the updated compliance status before agreeing to relist the product, adding further timeline complexity. And the cost of the expedited assessment process was approximately three times what a pre-launch RED cybersecurity gap analysis would have cost at the design review stage.</p>
+
+        <div class="case-highlight">
+          <p>A pre-launch RED cybersecurity gap analysis - mapping the product's radio interfaces against the EN 18031 standards and identifying the Notified Body requirement before submission for testing - would have cost a fraction of the eleven-week suspension, the expedited assessment, and the commercial impact of losing the launch window across four markets.</p>
+        </div>
+
+        <h2>Why This Pattern Is Repeating</h2>
+
+        <p>The scenario above is not an isolated incident. The RED cybersecurity requirements created a structural gap for a specific category of manufacturer: those who had invested in CE marking before August 2025, whose products continued to be manufactured and placed on the EU market after that date, and whose compliance review process did not separately address the cybersecurity provisions when the mandatory date arrived.</p>
+
+        <p>The common factors across these cases are consistent. The CE marking process was treated as a one-time certification activity rather than a living documentation obligation that requires updating when new requirements enter into force for products already in production. The RED cybersecurity provisions were understood at a regulatory awareness level - the business knew they were coming - but the operational trigger to update existing documentation before continued placement on the market was not systematically managed. And the product's radio functionality - Wi-Fi and Bluetooth, standard in smart home devices - meant all three Article 3.3 sub-provisions applied, including the Notified Body pathway for 3.3(f).</p>
+
+        <h2>What to Do Now</h2>
+
+        <p>For manufacturers with connected products - IoT devices, smart home equipment, wearables, connected toys, or any product with radio functionality - that are currently on the EU market or in production for EU launch, the priority actions are:</p>
+
+        <p>First, review the Declaration of Conformity for all radio products currently being placed on the EU market. If it does not reference Articles 3.3(d)(e)(f) of <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0053" target="_blank" rel="noopener noreferrer">RED 2014/53/EU</a> and the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500138" target="_blank" rel="noopener noreferrer">EN 18031-1/2/3:2024 harmonised standards</a>, it is incomplete for products placed on the market after 1 August 2025.</p>
+
+        <p>Second, assess which conformity module applies to your product - whether self-declaration under Module A is available or whether Notified Body involvement is required. This depends on product functionality and the specific provisions of the EN 18031 standards that apply to your device type. Products with payment functionality, multi-user data environments, or certain network interfaces are more likely to require Notified Body certification.</p>
+
+        <p>Third, plan the CRA transition. The <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R2847" target="_blank" rel="noopener noreferrer">Cyber Resilience Act (Regulation EU 2024/2847)</a> will replace the RED cybersecurity requirements on 11 December 2027, expanding the scope from radio equipment to all products with digital elements. The compliance programme built for RED cybersecurity provides a foundation for CRA compliance, but the scope and lifecycle obligations under CRA are more extensive. Building the RED assessment with CRA transition in mind reduces duplication of effort.</p>
 
         <div class="blog-related-industry" style="margin-top:40px;">
-          <p>Operating across multiple markets? We can manage your Responsible Person appointments, notifications, and ongoing compliance monitoring across EU, UK, and US simultaneously.</p>
-          <a href="cosmetic-compliance.html">View our Cosmetic Compliance services →</a>
+          <p>Have connected products on the EU market that may not have been assessed against the RED cybersecurity requirements? Our team can run an expedited gap analysis and identify what needs to change before a market surveillance issue arises.</p>
+          <a href="electronics-compliance.html">View our Electronics Compliance services -></a>
         </div>
 
         <div class="cta-inline">
-          <h3>Selling Cosmetics in Multiple Markets?</h3>
-          <p>TGC manages multi-market cosmetic compliance across EU, UK, US, and APAC — from Responsible Person appointments and CPNP/SCPN notifications to PIF maintenance and substance restriction monitoring.</p>
-          <a href="cosmetic-compliance.html" class="btn btn-gold">See Our Cosmetics Services</a>
-          <a href="contact-us.html" class="btn btn-ghost">Talk to a Specialist</a>
+          <h3>Is your CE marking complete for RED cybersecurity?</h3>
+          <p>We assess radio equipment against EN 18031-1/2/3, identify Notified Body requirements, update Declarations of Conformity, and coordinate the full cybersecurity conformity process for EU market re-entry.</p>
+          <a href="contact-us.html" class="btn btn-gold">Talk to an expert -></a>
+          <a href="expedited-audit.html" class="btn btn-ghost">Book an expedited audit</a>
         </div>
 
       </div>
@@ -736,5 +739,6 @@
     }());
     </script>
     <!-- FOOTER:END -->
+
 </body>
 </html>

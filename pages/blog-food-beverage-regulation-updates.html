@@ -24,48 +24,16 @@
   .blog-related-industry { background: #F5F7FA; border-left: 3px solid var(--gold); border-radius: 0 10px 10px 0; padding: 20px 24px; margin: 40px 0; }
   .blog-related-industry p { margin: 0 0 10px; font-size: 14px; color: var(--slate); }
   .blog-related-industry a { font-weight: 600; color: var(--gold); text-decoration: none; font-size: 14px; }
-
-  /* Region section headers */
-  .region-header {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin: 52px 0 24px;
-    padding-bottom: 14px;
-    border-bottom: 2px solid #e8e3da;
-  }
-  .region-flag { font-size: 28px; line-height: 1; }
-  .region-header h2 { font-family: 'Sora', sans-serif; font-size: 1.35rem; font-weight: 700; color: var(--navy); margin: 0; }
-
-  /* Regulation update blocks */
-  .reg-update-block {
-    background: #faf9f7;
-    border: 1px solid #e8e3da;
-    border-left: 4px solid var(--gold);
-    border-radius: 0 10px 10px 0;
-    padding: 20px 24px;
-    margin: 20px 0;
-  }
-  .reg-update-block .reg-status {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .06em;
-    padding: 3px 10px;
-    border-radius: 999px;
-    margin-bottom: 10px;
-  }
-  .reg-status-active { background: rgba(41,182,107,0.12); color: #1a8f53; }
-  .reg-status-urgent { background: rgba(211,60,30,0.12); color: #c0351a; }
-  .reg-status-monitor { background: rgba(211,169,17,0.15); color: #856800; }
-
-  .reg-update-block h3 { font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; color: var(--navy); margin: 0 0 10px; }
-  .reg-update-block p { font-size: 14px; color: #334; line-height: 1.65; margin: 0; }
-  .reg-update-block a { color: var(--gold); }
-
-  .article-body p { font-size: 15px; color: #334; line-height: 1.7; margin: 0 0 18px; }
-  .article-body a { color: var(--gold); }
+  .article-body h2 { font-family: 'Sora', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); margin: 48px 0 16px; }
+  .article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin: 32px 0 12px; }
+  .article-body p  { font-size: 15px; color: #334; line-height: 1.7; margin: 0 0 18px; }
+  .article-body a  { color: var(--gold); }
+  .reg-status-active  { display:inline-block; padding:2px 10px; border-radius:4px; font-size:0.75rem; font-weight:600; background:rgba(16,140,120,0.15); color:#0a7566; margin-bottom:8px; }
+  .reg-status-urgent  { display:inline-block; padding:2px 10px; border-radius:4px; font-size:0.75rem; font-weight:600; background:rgba(200,50,50,0.12); color:#c44; margin-bottom:8px; }
+  .reg-status-monitor { display:inline-block; padding:2px 10px; border-radius:4px; font-size:0.75rem; font-weight:600; background:rgba(211,169,17,0.15); color:#b8900e; margin-bottom:8px; }
+  .reg-update-block { border-left:3px solid var(--gold); padding:18px 0 18px 20px; margin-bottom:28px; }
+  .reg-update-block h4 { font-family:'Sora',sans-serif; font-size:1rem; font-weight:600; color:var(--navy); margin:0 0 8px 0; }
+  .reg-update-block p { font-size:15px; color:#334; line-height:1.7; margin:0 0 10px; }
 
   .cta-inline {
     background: var(--navy);
@@ -235,111 +203,93 @@
   <!-- Body -->
   <section class="s-white">
     <div class="wrap">
-      <div class="blog-body">
+      <div style="max-width:760px; margin:0 auto;" class="article-body">
 
         <div class="blog-related-industry">
           <p>This article is part of our food &amp; beverage compliance coverage.</p>
           <a href="food-beverage-compliance.html">← View our Food &amp; Beverage Compliance services page</a>
         </div>
 
-        <div class="article-body">
-
           <p>Food and beverage compliance is rarely static, but 2025 and 2026 are unusually demanding years for exporters operating across multiple markets. In the EU, contaminant limits for mycotoxins and nickel are being progressively tightened. In the UK, HFSS advertising restrictions have come into force. In the US, FSMA continues to mature as an enforcement mechanism, with FSVP inspections increasing and the Food Traceability Rule approaching. And in China, a wholesale update to food labelling standards — including an entirely new allergen declaration requirement — becomes mandatory in March 2027, giving exporters with long packaging production cycles very little time.</p>
           <p>This article sets out the key regulatory developments by jurisdiction, with references and practical notes on who they affect and when action is needed.</p>
 
-          <!-- EU -->
-          <div class="region-header">
-            <span class="region-flag" role="img" aria-label="European Union">🇪🇺</span>
-            <h2>European Union — General Food Law and Contaminant Limits</h2>
-          </div>
+        <h2>European Union — General Food Law and Contaminant Limits</h2>
 
           <div class="reg-update-block">
-            <span class="reg-status reg-status-active">In force</span>
-            <h3>EU General Food Law — Regulation (EC) 178/2002</h3>
+            <span class="reg-status-active">In force</span>
+            <h4>EU General Food Law — Regulation (EC) 178/2002</h4>
             <p><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02002R0178-20240701" target="_blank" rel="noopener noreferrer">Regulation (EC) 178/2002</a> establishes the general principles of EU food law, including the farm-to-fork principle that food business operators at all stages of production are responsible for the safety of food they place on the market. The regulation was consolidated on 1 July 2024 following Amendment Regulation (EU) 2024/908. The EU food law framework requires all food on the EU market to be safe, with one-step-forward, one-step-back traceability obligations at every stage of the supply chain.</p>
           </div>
 
           <div class="reg-update-block">
-            <span class="reg-status reg-status-monitor">Active monitoring</span>
-            <h3>EU Food Information to Consumers — Regulation (EU) 1169/2011</h3>
+            <span class="reg-status-monitor">Active monitoring</span>
+            <h4>EU Food Information to Consumers — Regulation (EU) 1169/2011</h4>
             <p><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02011R1169-20250408" target="_blank" rel="noopener noreferrer">Regulation (EU) 1169/2011</a> (FIC Regulation), consolidated April 2025, sets mandatory labelling requirements for food sold to consumers in the EU: the name of the food; a full ingredients list; emphasis on the 14 major allergens within the ingredients list; a nutrition declaration; net quantity; date marking; storage conditions; and the food business operator's name and address. No mandatory EU-wide front-of-pack nutrition labelling system has been adopted as of 2026. The Commission has been evaluating a harmonised approach under the Farm to Fork Strategy, but no binding proposal has been adopted.</p>
           </div>
 
           <div class="reg-update-block">
-            <span class="reg-status reg-status-urgent">New limits 2025–2026</span>
-            <h3>EU Contaminant Limits — Updated Mycotoxin and Nickel Rules</h3>
+            <span class="reg-status-urgent">New limits 2025–2026</span>
+            <h4>EU Contaminant Limits — Updated Mycotoxin and Nickel Rules</h4>
             <p>EU Regulation (EU) 2023/915 on maximum levels of contaminants in food is the principal contaminant framework, and it is actively being updated. <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1038" target="_blank" rel="noopener noreferrer">Regulation (EU) 2024/1038</a> (April 2024) set new maximum limits for T-2 and HT-2 mycotoxins across cereals, oats, and processed cereal products. DON (deoxynivalenol) limits were lowered in July 2024. Nickel maximum levels apply from July 2025 for seaweed and seaweed-derived products, and from <strong>July 2026</strong> for cereals and cereal-based foods. Food operators sourcing these ingredients must verify their supply chain against the updated limits before the relevant application dates — not after a border rejection has already occurred.</p>
           </div>
 
-          <!-- UK -->
-          <div class="region-header">
-            <span class="region-flag" role="img" aria-label="United Kingdom">🇬🇧</span>
-            <h2>United Kingdom — Food Safety Act, FIC, and HFSS</h2>
-          </div>
+        <h2>United Kingdom — Food Safety Act, FIC, and HFSS</h2>
 
           <div class="reg-update-block">
-            <span class="reg-status reg-status-urgent">In force 5 Jan 2026</span>
-            <h3>HFSS Advertising Restrictions — TV Watershed and Online Ban</h3>
+            <span class="reg-status-urgent">In force 5 Jan 2026</span>
+            <h4>HFSS Advertising Restrictions — TV Watershed and Online Ban</h4>
             <p>From <strong>5 January 2026</strong>, the UK introduced a TV watershed restriction (pre-21:00) and a ban on paid-for online advertising for foods classified as high fat, salt, or sugar (HFSS) under the UK Nutrient Profile Model. Products exceeding the HFSS threshold cannot be promoted through the restricted channels. Food businesses must assess each product against the scoring model — misclassification, particularly around portion sizes and product formats, creates ongoing advertising compliance risk. The restrictions apply to any food business advertising in the UK through digital or broadcast channels, regardless of where the business is based. Source: <a href="https://www.gov.uk/government/publications/restricting-promotions-of-products-high-in-fat-sugar-and-salt-by-location-and-by-price" target="_blank" rel="noopener noreferrer">UK Government, 2024</a>.</p>
           </div>
 
           <div class="reg-update-block">
-            <span class="reg-status reg-status-urgent">In force 1 Oct 2026</span>
-            <h3>Scotland HFSS In-Store Placement Restrictions</h3>
+            <span class="reg-status-urgent">In force 1 Oct 2026</span>
+            <h4>Scotland HFSS In-Store Placement Restrictions</h4>
             <p>Scotland's restrictions on the prominent in-store placement of HFSS products — at checkout areas, aisle ends, and store entrances — apply from <strong>1 October 2026</strong>. Similar in-store placement restrictions for England have been delayed beyond 2027. Food retailers and manufacturers supplying Scottish stores must review in-store placement agreements for products that may be classified as HFSS ahead of this date. Source: <a href="https://www.food.gov.uk/business-guidance/promotion-and-placement" target="_blank" rel="noopener noreferrer">Food Standards Agency, 2025</a>.</p>
           </div>
 
           <div class="reg-update-block">
-            <span class="reg-status reg-status-monitor">Active monitoring</span>
-            <h3>UK-EU SPS Alignment and PAL Labelling Changes</h3>
+            <span class="reg-status-monitor">Active monitoring</span>
+            <h4>UK-EU SPS Alignment and PAL Labelling Changes</h4>
             <p>Under the UK-EU Sanitary and Phytosanitary (SPS) agreement, UK food businesses are required to progressively align with EU food safety, labelling, nutrition, organics, and compositional standards from <strong>May 2026</strong> onwards, with sector-specific guidance expected throughout 2026. The UK Food Standards Agency is also reviewing precautionary allergen labelling (PAL) standardisation — changes to how "may contain" and similar advisory labelling is handled are expected in late 2026. Source: <a href="https://www.osborneclarke.com/insights/regulatory-outlook-march-2026-food-law" target="_blank" rel="noopener noreferrer">Osborne Clarke, March 2026</a>.</p>
           </div>
 
-          <!-- US -->
-          <div class="region-header">
-            <span class="region-flag" role="img" aria-label="United States">🇺🇸</span>
-            <h2>United States — FSMA</h2>
-          </div>
+        <h2>United States — FSMA</h2>
 
           <div class="reg-update-block">
-            <span class="reg-status reg-status-active">Active enforcement</span>
-            <h3>FSMA — Foreign Supplier Verification Programme (FSVP)</h3>
+            <span class="reg-status-active">Active enforcement</span>
+            <h4>FSMA — Foreign Supplier Verification Programme (FSVP)</h4>
             <p>The <a href="https://www.fda.gov/food/food-safety-modernization-act-fsma/fsma-final-rule-foreign-supplier-verification-programs-importers-food-humans-and-animals" target="_blank" rel="noopener noreferrer">Foreign Supplier Verification Programme</a> requires US importers to verify that food imported into the United States is produced to a standard that provides the same public health protection as US domestic food. Importers must conduct hazard analyses, verify supplier compliance, and maintain records. For foreign food exporters, FSVP compliance is the US importer's obligation — but exporters must be able to provide documentation supporting that verification. Non-compliance by a foreign supplier can result in the US importer switching to an alternative source. FDA FSVP inspections of US importers have been increasing, and the documentation standard expected has risen materially since 2023.</p>
           </div>
 
           <div class="reg-update-block">
-            <span class="reg-status reg-status-urgent">Deadline 20 Jul 2028</span>
-            <h3>FSMA 204 — Food Traceability Rule</h3>
+            <span class="reg-status-urgent">Deadline 20 Jul 2028</span>
+            <h4>FSMA 204 — Food Traceability Rule</h4>
             <p>The <a href="https://www.fda.gov/food/food-safety-modernization-act-fsma/fsma-final-rule-requirements-additional-traceability-records-certain-foods" target="_blank" rel="noopener noreferrer">FSMA Food Traceability Rule (Rule 204)</a> requires businesses that manufacture, process, pack, or hold foods on the Food Traceability List (FTL) — including fresh leafy greens, shell eggs, nut butters, soft cheeses, and certain ready-to-eat deli salads — to establish and maintain enhanced traceability records. The FDA extended the compliance deadline from 20 January 2026 to <strong>20 July 2028</strong>. Businesses should use this period to implement the required Critical Tracking Events (CTEs) and Key Data Elements (KDEs) record-keeping systems. The extension does not reduce the compliance obligation — it provides additional time to implement it correctly.</p>
           </div>
 
           <div class="reg-update-block">
-            <span class="reg-status reg-status-active">Active</span>
-            <h3>FSMA Produce Safety Rule — Updated Water Quality Requirements</h3>
+            <span class="reg-status-active">Active</span>
+            <h4>FSMA Produce Safety Rule — Updated Water Quality Requirements</h4>
             <p>FSMA's <a href="https://www.fda.gov/food/food-safety-modernization-act-fsma/fsma-final-rule-produce-safety" target="_blank" rel="noopener noreferrer">Produce Safety Rule</a> governs the safe growing, harvesting, packing, and holding of produce for human consumption. Updated agricultural water quality requirements apply from <strong>April 2025</strong> for large farms and from <strong>April 2026</strong> for small and very small farms. These requirements govern water testing, inspection, assessment, and corrective actions. Imported produce sold in the US must meet the equivalent of these standards as assessed through FSVP.</p>
           </div>
 
-          <!-- APAC -->
-          <div class="region-header">
-            <span class="region-flag" role="img" aria-label="Asia-Pacific">🌏</span>
-            <h2>Asia-Pacific — China, Australia/NZ, South Korea</h2>
-          </div>
+        <h2>Asia-Pacific — China, Australia/NZ, South Korea</h2>
 
           <div class="reg-update-block">
-            <span class="reg-status reg-status-urgent">Mandatory from 16 Mar 2027</span>
-            <h3>China — New Food Labelling Standards GB 7718-2025 and GB 28050-2025</h3>
+            <span class="reg-status-urgent">Mandatory from 16 Mar 2027</span>
+            <h4>China — New Food Labelling Standards GB 7718-2025 and GB 28050-2025</h4>
             <p>China's National Health Commission and State Administration for Market Regulation jointly published two new national food labelling standards on <strong>27 March 2025</strong>: GB 7718-2025 (General Standard for the Labelling of Prepackaged Food) and GB 28050-2025 (General Standard for Nutrition Labelling of Prepackaged Food), replacing the 2011 versions. Key changes include: mandatory allergen declaration for the first time — a significant new requirement for imported food labels; permission for digital supplementary labelling; and updated nutritional reference values. A two-year transition period applies, with full enforcement from <strong>16 March 2027</strong>. Food exporters to China with long packaging production cycles should begin the label update process now. Source: <a href="https://food.chemlinked.com/news/food-news/china-releases-new-food-labeling-standards-gb-7718-2025-and-gb-28050-2025" target="_blank" rel="noopener noreferrer">ChemLinked, March 2025</a>.</p>
           </div>
 
           <div class="reg-update-block">
-            <span class="reg-status reg-status-active">Active</span>
-            <h3>Australia and New Zealand — FSANZ Food Standards Code</h3>
+            <span class="reg-status-active">Active</span>
+            <h4>Australia and New Zealand — FSANZ Food Standards Code</h4>
             <p>Food Standards Australia New Zealand (FSANZ) administers the <a href="https://www.foodstandards.gov.au/food-standards-code" target="_blank" rel="noopener noreferrer">Australia New Zealand Food Standards Code</a>, which sets compositional, labelling, and contaminant standards for food sold in both countries. Maximum Residue Limits under Schedule 20 were updated in December 2024. New import risk requirements for several foods — including melons, fresh dates, and fresh enoki mushrooms — took effect from June 2025, requiring valid food safety management certificates for importation. Food operators exporting to Australia or New Zealand must verify compliance with the current Standards Code version for their product category.</p>
           </div>
 
           <div class="reg-update-block">
-            <span class="reg-status reg-status-active">Active</span>
-            <h3>South Korea — MFDS Import Procedures and Labelling Requirements</h3>
+            <span class="reg-status-active">Active</span>
+            <h4>South Korea — MFDS Import Procedures and Labelling Requirements</h4>
             <p>South Korea's Ministry of Food and Drug Safety (<a href="https://www.mfds.go.kr/eng/brd/m_15/list.do" target="_blank" rel="noopener noreferrer">MFDS</a>) oversees food import declarations, labelling requirements, and food additive approvals. Korea operates a positive list of 638 approved food additives. All food labels must be provided in Korean, and country of origin labelling is mandatory for commercial shipments. In June 2024, MFDS Notice No. 2024-26 amended import declaration procedures to streamline applications for raw materials used in domestic production. GMO/biotech labelling rules are under active legislative review, with pending bills seeking to expand mandatory disclosure.</p>
           </div>
 
@@ -350,8 +300,7 @@
             <a href="contact-us.html" class="btn btn-ghost">Talk to a Specialist</a>
           </div>
 
-        </div><!-- /.article-body -->
-      </div><!-- /.blog-body -->
+      </div>
     </div><!-- /.wrap -->
   </section>
 

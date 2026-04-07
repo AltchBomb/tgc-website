@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cosmetic Regulation Compared: EU vs UK vs US | TGC Insights</title>
-<meta name="description" content="A structured side-by-side comparison of cosmetic compliance obligations in the EU (EC 1223/2009), UK (OPSS), and US (MoCRA). Covers Responsible Person, product registration, safety assessments, labelling, and 2026 deadlines.">
-<link rel="canonical" href="https://tecexglobalcompliance.com/blog/cosmetic-regulation-comparison-eu-uk-us/">
-<meta property="og:title" content="Cosmetic Regulation Compared: EU vs UK vs US | TGC">
+<title>Consumer Goods Regulation Compared: EU, UK, US and China | TGC Insights</title>
+<meta name="description" content="A detailed side-by-side comparison of the four major consumer goods regulatory frameworks — covering general product safety, market access marking, chemical substance restrictions, third-party testing obligations, online marketplace rules, and key 2026–2030 changes across the EU, UK, US, and China.">
+<link rel="canonical" href="https://tecexglobalcompliance.com/blog/consumer-goods-regulation-comparison/">
+<meta property="og:title" content="Consumer Goods Regulation Compared: EU, UK, US and China | TGC">
 <meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,12 +14,12 @@
 <link rel="stylesheet" href="../global.css">
 <style>
   .blog-post-hero { background: var(--navy); padding: 72px 0 56px; }
-  .blog-post-hero .wrap { max-width: 900px; }
+  .blog-post-hero .wrap { max-width: 760px; }
   .blog-post-meta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
   .blog-post-hero h1 { font-family: 'Sora', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 800; color: #fff; margin: 0 0 20px; line-height: 1.2; }
-  .blog-post-hero .lead { color: #7A909F; font-size: 18px; line-height: 1.6; max-width: 700px; margin: 0; }
+  .blog-post-hero .lead { color: #7A909F; font-size: 18px; line-height: 1.6; max-width: 680px; margin: 0; }
   .blog-tag { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; }
-  .blog-tag-cosmetics { background: rgba(211,169,17,.15); color: var(--gold); }
+  .blog-tag-consumer-goods { background: rgba(20,120,90,0.12); color: #0d7a58; }
   .blog-meta-item { font-size: 13px; color: #7A909F; }
   .blog-related-industry { background: #F5F7FA; border-left: 3px solid var(--gold); border-radius: 0 10px 10px 0; padding: 20px 24px; margin: 40px 0; }
   .blog-related-industry p { margin: 0 0 10px; font-size: 14px; color: var(--slate); }
@@ -27,21 +27,23 @@
   .article-body h2 { font-family: 'Sora', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); margin: 48px 0 16px; }
   .article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin: 32px 0 12px; }
   .article-body p  { font-size: 15px; color: #334; line-height: 1.7; margin: 0 0 18px; }
-  .article-body a  { color: var(--gold); }
+  .article-body a:not(.btn)  { color: var(--gold); }
   .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .comp-table { width: 100%; min-width: 600px; border-collapse: collapse; font-size: 14px; }
-  .comp-table th { background: var(--navy); color: #fff; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .04em; text-align: left; padding: 14px 16px; }
+  .comp-table { width: 100%; min-width: 700px; border-collapse: collapse; font-size: 14px; }
+  .comp-table th { background: var(--navy); color: #fff; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .04em; padding: 14px 16px; text-align: left; }
   .comp-table th:first-child { width: 160px; }
   .comp-table td { padding: 14px 16px; border-bottom: 1px solid #e8e3da; color: #334; vertical-align: top; line-height: 1.55; }
   .comp-table td:first-child { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 13px; color: var(--navy); background: #f9f7f4; border-right: 2px solid #e8e3da; }
   .comp-table tr:nth-child(even) td:not(:first-child) { background: #faf9f7; }
   .comp-table tr:last-child td { border-bottom: none; }
   .juris-pill { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: 3px 10px; border-radius: 999px; margin-bottom: 6px; }
-  .juris-eu  { background: rgba(0,120,200,0.12); color: #005fa3; }
-  .juris-uk  { background: rgba(0,90,160,0.10); color: #003f7a; }
-  .juris-us  { background: rgba(180,30,30,0.10); color: #8b1a1a; }
-  .comp-table .row-highlight td:not(:first-child) { background: #fff8e6 !important; border-left: 3px solid var(--gold); }
-  .cta-inline { background: var(--navy); border-radius: 12px; padding: 32px; margin: 48px 0 0; text-align: center; }
+  .juris-eu { background: rgba(0,120,200,0.12); color: #005fa3; }
+  .juris-uk { background: rgba(0,90,160,0.10); color: #003f7a; }
+  .juris-us { background: rgba(180,30,30,0.10); color: #8b1a1a; }
+  .juris-cn { background: rgba(180,30,0,0.10); color: #8b1500; }
+  .row-highlight { background: rgba(211,169,17,0.08) !important; }
+  .row-highlight td { background: rgba(211,169,17,0.08) !important; }
+  .cta-inline { background: var(--navy); border-radius: 12px; padding: 32px; margin: 48px 0 64px; text-align: center; }
   .cta-inline h3 { font-family: 'Sora', sans-serif; color: #ffffff; font-size: 20px; margin: 0 0 12px; }
   .cta-inline p { color: rgba(255,255,255,0.7); margin: 0 0 20px; font-size: 15px; }
   .cta-inline .btn { margin: 4px; }
@@ -51,15 +53,15 @@
 <!-- HEADER:START -->
     <header id="tgc-site-header" role="banner">
       <div class="tgc-hdr-inner">
-    
+
         <!-- Logo -->
         <a href="homepage.html" class="tgc-hdr-logo" aria-label="TecEx Global Compliance - Home">
           <img src="../assets/images/tgc-logo.png" alt="TecEx Global Compliance" class="tgc-hdr-logo-img">
         </a>
-    
+
         <!-- Desktop nav -->
         <nav class="tgc-hdr-nav" aria-label="Main navigation">
-    
+
           <div class="tgc-hdr-item">
             <button class="tgc-hdr-link" aria-haspopup="true" aria-expanded="false">
               Services
@@ -77,7 +79,7 @@
               <a href="full-product-compliance.html"    class="tgc-hdr-drop-link" role="menuitem">Full Product Compliance</a>
             </div>
           </div>
-    
+
           <div class="tgc-hdr-item">
             <button class="tgc-hdr-link" aria-haspopup="true" aria-expanded="false">
               Industries
@@ -95,7 +97,7 @@
               <a href="medical-devices-compliance.html"  class="tgc-hdr-drop-link" role="menuitem">Medical Devices</a>
             </div>
           </div>
-    
+
           <div class="tgc-hdr-item">
             <a href="pricing.html" class="tgc-hdr-link">Pricing</a>
           </div>
@@ -108,12 +110,12 @@
           <div class="tgc-hdr-item">
             <a href="contact-us.html" class="tgc-hdr-link">Contact</a>
           </div>
-    
+
         </nav>
-    
+
         <!-- CTA -->
         <a href="contact-us.html" class="tgc-hdr-cta">Get a quote &rarr;</a>
-    
+
         <!-- Hamburger (mobile) -->
         <button
           class="tgc-hdr-burger"
@@ -126,9 +128,9 @@
           <span></span>
           <span></span>
         </button>
-    
+
       </div>
-    
+
       <!-- Mobile menu -->
       <div class="tgc-hdr-mobile" id="tgc-hdr-mobile-menu" aria-hidden="true">
         <div class="tgc-mob-section">
@@ -185,135 +187,124 @@
     </script>
     <!-- HEADER:END -->
 
-<div id="tgc-blog-compare" class="tgc-page" style="margin-top:64px">
+<div id="tgc-blog-consumer-comparison" class="tgc-page" style="margin-top:64px">
 
   <!-- Hero -->
   <div class="blog-post-hero">
     <div class="wrap">
       <div class="blog-post-meta">
-        <span class="blog-tag blog-tag-cosmetics">Cosmetics</span>
-        <span class="blog-meta-item">March 2026</span>
-        <span class="blog-meta-item">· 6 min read</span>
+        <span class="blog-tag blog-tag-consumer-goods">Consumer Goods</span>
+        <span class="blog-meta-item">April 2026</span>
+        <span class="blog-meta-item">· 9 min read</span>
       </div>
-      <h1>Cosmetic Regulation Compared: EU, UK &amp; US Side-by-Side</h1>
-      <p class="lead">A structured overview of the core compliance obligations in each major market — useful for brands planning their first international expansion or reviewing multi-market compliance programmes.</p>
+      <h1>Consumer Goods Regulation Compared: EU, UK, US and China</h1>
+      <p class="lead">A detailed side-by-side comparison of the four major consumer goods regulatory frameworks — covering general product safety, market access marking, chemical substance restrictions, third-party testing obligations, online marketplace rules, and key 2026–2030 changes across the EU, UK, US, and China.</p>
     </div>
   </div>
 
-  <!-- Body -->
-  <section class="s-white">
-    <div class="wrap">
-      <div style="max-width:960px; margin:0 auto;" class="article-body">
+  <!-- Article body -->
+  <div style="max-width:960px; margin:0 auto;" class="article-body">
 
-        <div class="blog-related-industry">
-          <p>This article is part of our cosmetics compliance coverage.</p>
-          <a href="cosmetic-compliance.html">← View our Cosmetic Compliance services page</a>
-        </div>
-
-        <p>Cosmetic brands entering the EU, UK, and US for the first time frequently underestimate how different the three regulatory frameworks are in practice. The EU's Cosmetics Regulation (EC) 1223/2009 imposes a mandatory Responsible Person, a pre-market notification via CPNP, and a prescribed safety dossier structure. The UK has retained an equivalent framework post-Brexit but operates it independently — requiring a separate UK Responsible Person, a separate SCPN notification, and UK-specific documentation. The US Modernisation of Cosmetics Regulation Act (MoCRA), in force since 2022, has introduced mandatory product listing and facility registration obligations that did not previously exist at federal level.</p>
-
-        <p>These are not minor administrative differences. They create genuinely separate compliance programmes for each market. The table below maps the eight most operationally significant dimensions of cosmetic compliance across all three jurisdictions, with the key 2025–2026 changes highlighted in the final row.</p>
-
-        <h2>At a Glance: EU vs UK vs US Cosmetics Compliance</h2>
-
-        <div class="table-scroll">
-          <table class="comp-table" aria-label="Cosmetic regulation comparison by jurisdiction">
-            <thead>
-              <tr>
-                <th scope="col">Requirement</th>
-                <th scope="col"><span class="juris-pill juris-eu">EU (EC 1223/2009)</span></th>
-                <th scope="col"><span class="juris-pill juris-uk">UK (OPSS)</span></th>
-                <th scope="col"><span class="juris-pill juris-us">US (MoCRA / FDA)</span></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Responsible Person</td>
-                <td>Mandatory — EU-established legal or natural person; holds PIF and is accountable for safety</td>
-                <td>Mandatory — UK-based (GB) RP required separately from EU RP; OPSS enforced</td>
-                <td>"Responsible person" = manufacturer, packer, or distributor whose name appears on label</td>
-              </tr>
-              <tr>
-                <td>Product Registration / Listing</td>
-                <td>Notification via <a href="https://cpnp.ec.europa.eu/" target="_blank" rel="noopener noreferrer">CPNP portal</a> before placing on market</td>
-                <td>Notification via <a href="https://www.gov.uk/guidance/submit-cosmetic-product-notifications" target="_blank" rel="noopener noreferrer">SCPN portal</a> (separate from CPNP); mandatory before GB market placement</td>
-                <td>Product listing via <a href="https://www.fda.gov/cosmetics/cosmetics-registration-listing" target="_blank" rel="noopener noreferrer">FDA Cosmetics Direct portal</a> — enforced from July 1, 2024</td>
-              </tr>
-              <tr>
-                <td>Facility Registration</td>
-                <td>Not required under <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32009R1223" target="_blank" rel="noopener noreferrer">EU Cosmetics Regulation</a></td>
-                <td>Not required under UK Cosmetics Regulation</td>
-                <td>Mandatory under <a href="https://www.fda.gov/cosmetics/cosmetics-laws-regulations/modernization-cosmetics-regulation-act-2022" target="_blank" rel="noopener noreferrer">MoCRA</a> — each manufacturing/processing facility must register with FDA</td>
-              </tr>
-              <tr>
-                <td>Safety Assessment</td>
-                <td>Mandatory CPSR (Cosmetic Product Safety Report) by qualified safety assessor; part of PIF</td>
-                <td>Equivalent UK CPSR required; separate from EU CPSR</td>
-                <td>Safety substantiation records required; format not as prescribed as EU/UK</td>
-              </tr>
-              <tr>
-                <td>Product Information File (PIF)</td>
-                <td>Mandatory — includes CPSR, formula, GMP evidence, claims justification; kept 10 years</td>
-                <td>Equivalent UK PIF required — separate document maintained by UK RP</td>
-                <td>No equivalent PIF requirement; safety substantiation records must be maintained</td>
-              </tr>
-              <tr>
-                <td>Labelling — Key Requirements</td>
-                <td>INCI ingredient list (descending order); EU RP name &amp; address; warnings; function; net contents</td>
-                <td>UK RP name &amp; UK address; country of origin; INCI list; compliant warnings under UK SI</td>
-                <td>Ingredient list (INCI, descending order); RP contact information (from Dec 29, 2024)</td>
-              </tr>
-              <tr>
-                <td>Adverse Event Reporting</td>
-                <td>Serious Undesirable Effects (SUEs) reported to competent authorities within 20 days</td>
-                <td>SUEs reported to <a href="https://www.gov.uk/government/organisations/office-for-product-safety-and-standards" target="_blank" rel="noopener noreferrer">OPSS</a></td>
-                <td>Serious adverse events reported to <a href="https://www.fda.gov/cosmetics/reporting-cosmetics-problems/reporting-serious-adverse-events-cosmetics" target="_blank" rel="noopener noreferrer">FDA within 15 business days</a> under MoCRA</td>
-              </tr>
-              <tr class="row-highlight">
-                <td>Key 2025–2026 change</td>
-                <td><strong>1 May 2026:</strong> <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202600078" target="_blank" rel="noopener noreferrer">Omnibus VIII (Regulation EU 2026/78)</a> applies; further CMR bans from Jan 1, 2027</td>
-                <td><strong>15 Jul 2026:</strong> <a href="https://www.legislation.gov.uk/uksi/2026/23/contents" target="_blank" rel="noopener noreferrer">4-MBC ban (UK SI 2026/23)</a>; 16 CMR substances banned Aug 15, 2026</td>
-                <td>cGMP final rule pending; ongoing MoCRA facility registration enforcement build-out</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h2>The Responsible Person: Three Separate Appointments</h2>
-
-        <p>The single most operationally significant difference between the EU, UK, and US frameworks is how they define and assign the "Responsible Person." In the EU, the Responsible Person must be established within the EU — they hold the Product Information File, are responsible for safety compliance, and bear liability for the product in the EU market. Following Brexit, the UK operates an identical but entirely independent RP obligation for the GB market: a UK-based Responsible Person is required, holds the UK equivalent PIF, and is separately accountable to OPSS. These are not the same appointment and cannot be fulfilled by a single entity unless that entity has legal presence in both jurisdictions.</p>
-
-        <p>The US framework under MoCRA uses "responsible person" to mean something different — the manufacturer, packer, or distributor whose name appears on the label. This is not a compliance appointment in the EU/UK sense. However, MoCRA does impose facility registration and product listing obligations directly on the responsible person, and adverse event reporting obligations that did not previously exist at federal level. Brands entering the US market for the first time should treat MoCRA as a new compliance system requiring its own programme — not simply a lighter version of EU obligations.</p>
-
-        <h2>Substance Restrictions: Rolling Amendments vs Statutory Schedules</h2>
-
-        <p>EU substance restrictions are managed through the Commission Regulation amendment process, which adds substances to Annexes II (banned), III (restricted), IV (colourants), V (preservatives), and VI (UV filters) on a rolling basis. The Omnibus programme has added CMR and other substances annually since 2019. Each amendment triggers a market placement deadline and a sell-through period — meaning brands must continuously track the Official Journal for changes affecting their formulations. The UK's post-Brexit position is to maintain an equivalent but independently administered substance list, which is beginning to diverge from the EU list — the UK's SI 2026/23 additions are similar to but not identical to EU Omnibus VII and VIII.</p>
-
-        <p>The US currently has no statutory list of prohibited cosmetic ingredients equivalent to EU Annex II. The FDA can take enforcement action against unsafe products under the FD&amp;C Act, and California's Cosmetics Act includes some substance restrictions, but the federal framework does not impose the same pre-market substance assessment system. This creates a material asymmetry: formulations approved for EU and UK markets are not automatically compliant in the US, but the absence of a comprehensive US restriction list means separate US-specific substance review is less common in practice.</p>
-
-        <h2>Planning for Multi-Market Cosmetic Compliance</h2>
-
-        <p>Brands targeting EU, UK, and US simultaneously should plan for three distinct compliance programmes rather than one programme with regional adaptations. The CPNP and SCPN notifications are separate pre-market steps. The EU and UK PIFs must be maintained as separate documents under separate RP appointments. The MoCRA product listing and facility registration must be completed and kept current in the FDA Cosmetics Direct portal. Adverse event reporting timelines differ across the three jurisdictions. And the substance restriction calendars diverge annually.</p>
-
-        <p>The most effective approach is to use the EU Cosmetics Regulation as the baseline — given its prescriptive requirements — and then layer on the UK-specific differences and the MoCRA-specific obligations as additional tracks. This reduces duplication while ensuring that each market's specific requirements are met by someone accountable for them.</p>
-
-        <div class="blog-related-industry" style="margin-top:40px;">
-          <p>Operating across multiple markets? We can manage your Responsible Person appointments, notifications, and ongoing compliance monitoring across EU, UK, and US simultaneously.</p>
-          <a href="cosmetic-compliance.html">View our Cosmetic Compliance services →</a>
-        </div>
-
-        <div class="cta-inline">
-          <h3>Selling Cosmetics in Multiple Markets?</h3>
-          <p>TGC manages multi-market cosmetic compliance across EU, UK, US, and APAC — from Responsible Person appointments and CPNP/SCPN notifications to PIF maintenance and substance restriction monitoring.</p>
-          <a href="cosmetic-compliance.html" class="btn btn-gold">See Our Cosmetics Services</a>
-          <a href="contact-us.html" class="btn btn-ghost">Talk to a Specialist</a>
-        </div>
-
-      </div>
+    <div class="blog-related-industry">
+      <p>This article is part of our consumer goods compliance coverage.</p>
+      <a href="consumer-goods-compliance.html">View our consumer goods compliance programme →</a>
     </div>
-  </section>
 
-</div><!-- /.tgc-page -->
+    <p>The four major consumer goods markets — the EU, UK, US, and China — share a broad objective of ensuring that products placed on the market are safe for consumers and the environment, but differ significantly in their regulatory structures, pre-market obligations, and enforcement mechanisms. The EU operates through a combination of the GPSR general safety framework and product-specific directives and regulations (CE marking legislation, RoHS, REACH), each with its own conformity assessment and documentation requirements. The UK largely mirrors the EU approach but has diverged following Brexit — CE marking is now accepted indefinitely for most product categories, but the Product Regulation and Metrology Act 2025 creates a framework for further divergence. The US takes a more fragmented approach with category-specific legislation under CPSC authority (CPSIA for children's products, CPSA more broadly) alongside FCC requirements for electronic products and state-level Proposition 65 obligations in California. China's framework centres on mandatory pre-market CCC certification for listed product categories, with China RoHS requirements for EEE products running in parallel.</p>
+
+    <p>Understanding where these frameworks converge and diverge is essential for any business selling consumer goods across multiple markets. The table below sets out the core obligations side by side.</p>
+
+    <h2>Core Regulatory Comparison</h2>
+
+    <div class="table-scroll">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Requirement</th>
+            <th><span class="juris-pill juris-eu">EU</span></th>
+            <th><span class="juris-pill juris-uk">United Kingdom</span></th>
+            <th><span class="juris-pill juris-us">United States</span></th>
+            <th><span class="juris-pill juris-cn">China</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>General product safety</td>
+            <td><a href="https://eur-lex.europa.eu/eli/reg/2023/988/oj/eng">GPSR (EU) 2023/988</a> — binding from 13 Dec 2024. EU Responsible Person mandatory. Online marketplace obligations under Article 22.</td>
+            <td>General Product Safety Regulations 2005 (retained); Product Regulation and Metrology Act 2025 framework — secondary legislation pending. CE marking accepted indefinitely for most product categories from Oct 2024.</td>
+            <td>Consumer Product Safety Act (CPSA); CPSC oversight. <a href="https://www.cpsc.gov/Regulations-Laws--Standards/Statutes/The-Consumer-Product-Safety-Improvement-Act">CPSIA for children's products</a> — third-party testing and CPC mandatory. No single pre-market approval requirement for most non-children's categories.</td>
+            <td>Product Quality Law; Law on Protection of Consumer Rights and Interests. CCC certification mandatory for 109 product types across 17 categories before import, manufacture, or sale.</td>
+          </tr>
+          <tr>
+            <td>Market access marking</td>
+            <td>CE marking required for products covered by specific EU regulations (LVD, EMC, RED, Toy Safety, Machinery). Declaration of Conformity and technical file required.</td>
+            <td>CE marking accepted indefinitely for most categories (from 1 Oct 2024). UKCA marking available as alternative via UK-approved bodies. Northern Ireland follows EU rules under Windsor Framework.</td>
+            <td>No single mandatory product mark. FCC ID required for intentional RF emitters. UL mark voluntary but often required by retailers. No CPSC certification mark.</td>
+            <td>CCC mark (3C mark) mandatory on all CCC catalogue products — must be affixed before sale or import. China RoHS marking required for EEE products.</td>
+          </tr>
+          <tr>
+            <td>Chemical substance restrictions</td>
+            <td><a href="https://eur-lex.europa.eu/eli/reg/2006/1907/oj/eng">REACH</a> — 253 SVHC substances on Candidate List (Feb 2026); information obligations above 0.1% w/w. RoHS — 10 substances restricted in EEE. Toy chemicals under EN 71-3 and Toy Safety Regulation.</td>
+            <td><a href="https://www.hse.gov.uk/reach/">UK REACH</a> — independent SVHC list (fewer entries than EU; managed by HSE). UK RoHS — equivalent restrictions to EU. Businesses must check both lists for dual-market products.</td>
+            <td>CPSIA — lead (100 ppm) and phthalate limits for children's products. <a href="https://oehha.ca.gov/proposition-65/proposition-65-list">California Prop 65</a> — 1,000+ chemicals, warning required for California sales.</td>
+            <td>China RoHS — 6 restricted substances in EEE, materials declaration required. GB 6675 — chemical migration limits for toys. GB 9685 — food contact materials.</td>
+          </tr>
+          <tr>
+            <td>Third-party testing</td>
+            <td>Required for CE marking in regulated categories. Notified Body involvement mandatory for higher-risk products. Test reports form part of technical file.</td>
+            <td>CE marking test reports accepted. UKCA requires testing by UK Approved Bodies for higher-risk products. Broadly equivalent framework to EU.</td>
+            <td>Mandatory for children's products (CPSIA) by CPSC-accepted lab. <a href="https://www.fcc.gov/oet/ea/rfdevice">FCC testing by TCB for intentional RF emitters.</a> Voluntary for most other categories unless specifically required.</td>
+            <td>Mandatory for all CCC-listed products by CNCA-designated laboratory. Annual surveillance audits required to maintain CCC certificate.</td>
+          </tr>
+          <tr>
+            <td>Online marketplace obligations</td>
+            <td><a href="https://ec.europa.eu/safety-gate-alerts/screen/search">GPSR Article 22</a> — online marketplaces must register with Safety Gate, display Responsible Person details, cooperate with removal of unsafe products. Non-compliance is an Article 22 violation independent of product safety status.</td>
+            <td>UK Product Safety framework review ongoing under PRMA 2025. Current rules require marketplace compliance with general product safety obligations.</td>
+            <td>CPSC authority to require marketplaces to report and address unsafe products. INFORM Consumers Act 2023 requires high-volume third-party seller disclosures.</td>
+            <td>E-commerce platforms must verify sellers and products meet CCC requirements. Cross-border e-commerce subject to CBEC-specific import regulations.</td>
+          </tr>
+          <tr class="row-highlight">
+            <td>Key 2026–2030 change</td>
+            <td><a href="https://eur-lex.europa.eu/eli/reg/2024/1781/oj/eng">ESPR</a> — destruction of unsold goods ban July 2026; Digital Product Passport operational July 2026. New Toy Safety Regulation (EU) 2025/2509 fully applies August 2030.</td>
+            <td>Secondary legislation under PRMA 2025 expected from 2026 — scope of UK-EU alignment vs divergence to be determined.</td>
+            <td>CPSC ongoing rulemaking on e-bikes, lithium battery products, and button cell batteries. Prop 65 list continues to expand.</td>
+            <td>CCC catalogue review and potential expansion to new product categories; China RoHS evolution ongoing.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Product Safety Philosophy: GPSR vs CPSA vs China's Mandatory Certification</h2>
+
+    <p>The most fundamental difference between the EU GPSR and the US CPSA approach is the role of pre-market documentation. Under the GPSR, every consumer product that enters the EU market must have a designated Responsible Person who holds the required technical documentation — there is no formal pre-market approval, but there is a mandatory accountability structure. Under the US CPSA, most non-children's products can be marketed without pre-market testing or documentation submission to CPSC — enforcement is primarily reactive, triggered by incident reports, consumer complaints, or targeted surveillance. China's CCC regime sits at the other extreme: mandatory third-party certification by a CNCA-designated body is required before any CCC-catalogue product can enter the Chinese market, and no product may be sold without the physical CCC mark affixed.</p>
+
+    <p>The UK, following Brexit, has moved away from automatic alignment with the EU system while maintaining broadly comparable outcomes. CE marking is accepted indefinitely, meaning UK market access does not require separate conformity assessment for most product categories — but the Product Regulation and Metrology Act 2025 creates authority for the UK to diverge. Businesses should monitor secondary legislation under this Act carefully, particularly for sectors such as toys, electrical equipment, and machinery where the EU has significant ongoing regulatory activity under the ESPR and the new Toy Safety Regulation.</p>
+
+    <h2>Chemical Restrictions: REACH vs Prop 65 vs China RoHS</h2>
+
+    <p>The EU REACH SVHC Candidate List and California Proposition 65 serve broadly similar purposes — identifying substances of concern and requiring manufacturers to communicate their presence to customers or consumers — but they operate through entirely different mechanisms. REACH is a regulatory obligation that applies at the point of supply: if a substance is on the Candidate List above 0.1% in an article, the supplier must notify customers. Proposition 65 is an exposure warning requirement: if a product exposes consumers to a listed chemical above safe harbour levels, a warning must be provided at the point of sale. A business that complies with REACH SVHC notification requirements is not automatically compliant with Prop 65, and vice versa. Both lists are updated regularly — REACH twice yearly, Prop 65 throughout the year — requiring ongoing monitoring programmes rather than one-time assessments.</p>
+
+    <p>China RoHS applies to the same six restricted substances as EU RoHS Phase 1 but uses a distinct materials declaration and marking format that has no equivalent in the EU system. A CE-marked product with a valid EU RoHS declaration must still carry a separate China RoHS materials declaration and the appropriate China RoHS mark to enter the Chinese market legally. This is one of the most common documentation gaps for businesses entering China from the EU or UK market.</p>
+
+    <h2>Planning for Multi-Market Consumer Goods Compliance</h2>
+
+    <p>Businesses selling consumer goods across all four markets face a compliance programme that spans four distinct legal systems with limited mutual recognition. EU CE marking is accepted in the UK (for now), but GPSR Responsible Person obligations are EU-specific. CCC certification for China has no recognition outside China. CPSIA testing obligations for the US are independent of any EU conformity assessment. Proposition 65 screening in California requires independent substance mapping against a list that now exceeds 1,000 chemicals. The common thread across all four markets is that compliance requires maintenance — not just initial assessment — because substance lists, enforcement priorities, and legislative frameworks are all actively evolving.</p>
+
+    <div class="blog-related-industry">
+      <p>Selling consumer goods across the EU, UK, US, or China? Our team provides multi-market compliance assessments covering GPSR, REACH, RoHS, CE/UKCA marking, CPSIA, CCC, and Prop 65 obligations.</p>
+      <a href="consumer-goods-compliance.html">Get started with our consumer goods compliance programme →</a>
+    </div>
+
+    <div class="cta-inline">
+      <h3>Selling consumer goods across multiple markets?</h3>
+      <p>TGC's team provides multi-market consumer goods compliance assessments — covering GPSR Responsible Person requirements, REACH SVHC supply chain screening, CE and UKCA marking, CPSIA testing obligations, and China CCC management — with a prioritised action plan.</p>
+      <a href="contact-us.html" class="btn btn-gold">Talk to a Specialist</a>
+      <a href="expedited-audit.html" class="btn btn-ghost">Learn about audits</a>
+    </div>
+
+  </div>
+
+</div>
 
 <!-- FOOTER:START -->
     <footer
@@ -442,7 +433,7 @@
               </a>
             </div>
           </div>
-    
+
           <!-- services -->
           <div>
             <p
@@ -511,7 +502,7 @@
               >Full Product Compliance</a
             >
           </div>
-    
+
           <!-- industries -->
           <div>
             <p
@@ -619,7 +610,7 @@
               >Medical Devices</a
             >
           </div>
-    
+
           <!-- company -->
           <div>
             <p
@@ -677,7 +668,7 @@
           </div>
         </div>
         <!-- /grid -->
-    
+
         <!-- bottom bar -->
         <div
           style="
@@ -715,7 +706,7 @@
         </div>
       </div>
     </footer>
-    
+
     <script>
     (function () {
       var fades = document.querySelectorAll('.fade');
@@ -736,5 +727,6 @@
     }());
     </script>
     <!-- FOOTER:END -->
+
 </body>
 </html>
