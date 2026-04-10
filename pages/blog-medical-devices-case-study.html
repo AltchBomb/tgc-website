@@ -19,614 +19,56 @@
     />
     <link rel="stylesheet" href="../global.css" />
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: "DM Sans", sans-serif;
-        color: #334;
-        background: #fff;
-        -webkit-font-smoothing: antialiased;
-      }
-      :root {
-        --navy: #0a1826;
-        --slate: #667a86;
-        --gold: #d3a911;
-      }
-
-      .blog-post-hero {
-        background: var(--navy);
-        padding: 72px 0 56px;
-      }
-      .blog-post-hero .wrap {
-        max-width: 760px;
-      }
-      .blog-post-meta {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        flex-wrap: wrap;
-        margin-bottom: 20px;
-      }
-      .blog-post-hero h1 {
-        font-family: "Sora", sans-serif;
-        font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-        font-weight: 800;
-        color: #fff;
-        margin: 0 0 20px;
-        line-height: 1.2;
-      }
-      .blog-post-hero .lead {
-        color: #7a909f;
-        font-size: 18px;
-        line-height: 1.6;
-        max-width: 680px;
-        margin: 0;
-      }
-      .blog-tag {
-        display: inline-block;
-        padding: 3px 10px;
-        border-radius: 999px;
-        font-size: 11px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.07em;
-      }
-      .blog-tag-medical {
-        background: #eee4f5;
-        color: #5a006b;
-      }
-      .blog-meta-item {
-        font-size: 13px;
-        color: #7a909f;
-      }
-      .blog-related-industry {
-        background: #f5f7fa;
-        border-left: 3px solid var(--gold);
-        border-radius: 0 10px 10px 0;
-        padding: 20px 24px;
-        margin: 40px 0;
-      }
-      .blog-related-industry p {
-        margin: 0 0 10px;
-        font-size: 14px;
-        color: var(--slate);
-      }
-      .blog-related-industry a {
-        font-weight: 600;
-        color: var(--gold);
-        text-decoration: none;
-        font-size: 14px;
-      }
-      .article-body h2 {
-        font-family: "Sora", sans-serif;
-        font-size: 1.4rem;
-        font-weight: 700;
-        color: var(--navy);
-        margin: 48px 0 16px;
-      }
-      .article-body h3 {
-        font-size: 1.05rem;
-        font-weight: 700;
-        color: var(--navy);
-        margin: 32px 0 12px;
-      }
-      .article-body p {
-        font-size: 15px;
-        color: #334;
-        line-height: 1.7;
-        margin: 0 0 18px;
-      }
-      .article-body a:not(.btn) {
-        color: var(--gold);
-      }
-
-      /* Chain of events */
-      .chain {
-        border-left: 3px solid var(--gold);
-        padding-left: 28px;
-        margin: 32px 0 40px;
-      }
-      .chain-step {
-        position: relative;
-        margin-bottom: 28px;
-      }
-      .chain-step:last-child {
-        margin-bottom: 0;
-      }
-      .chain-num {
-        position: absolute;
-        left: -42px;
-        top: 0;
-        width: 28px;
-        height: 28px;
-        border-radius: 50%;
-        background: var(--gold);
-        color: var(--navy);
-        font-family: "Sora", sans-serif;
-        font-size: 12px;
-        font-weight: 800;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .chain-text {
-        font-size: 15px;
-        color: #334;
-        line-height: 1.7;
-      }
-      .chain-text strong {
-        color: var(--navy);
-      }
-
-      /* Cost table */
-      .cost-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 28px 0 36px;
-        font-size: 14px;
-      }
-      .cost-table th {
-        background: var(--navy);
-        color: #fff;
-        font-family: "Sora", sans-serif;
-        font-weight: 700;
-        font-size: 13px;
-        padding: 12px 16px;
-        text-align: left;
-      }
-      .cost-table td {
-        padding: 12px 16px;
-        border-bottom: 1px solid #e8e3da;
-        color: #334;
-        vertical-align: top;
-      }
-      .cost-table td:last-child {
-        font-weight: 600;
-        text-align: right;
-        font-family: "Sora", sans-serif;
-      }
-      .cost-table tr:last-child td {
-        border-bottom: none;
-        font-weight: 700;
-        color: var(--navy);
-        background: rgba(211, 169, 17, 0.07);
-      }
-      .cost-table tr:nth-child(even) td {
-        background: #faf9f7;
-      }
-
-      /* Prevent list */
-      .prevent-list {
-        list-style: none;
-        padding: 0;
-        margin: 20px 0 32px;
-      }
-      .prevent-list li {
-        display: flex;
-        gap: 14px;
-        align-items: flex-start;
-        padding: 14px 0;
-        border-bottom: 1px solid #ece8e2;
-        font-size: 15px;
-        color: #334;
-        line-height: 1.65;
-      }
-      .prevent-list li:last-child {
-        border-bottom: none;
-      }
-      .prevent-list li::before {
-        content: "✓";
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 22px;
-        height: 22px;
-        background: rgba(211, 169, 17, 0.15);
-        color: var(--gold);
-        border-radius: 50%;
-        font-size: 11px;
-        font-weight: 800;
-        flex-shrink: 0;
-        margin-top: 2px;
-      }
-
-      .reg-update-block {
-        border-left: 3px solid var(--gold);
-        padding: 18px 0 18px 20px;
-        margin-bottom: 28px;
-      }
-      .reg-update-block h4 {
-        font-family: "Sora", sans-serif;
-        font-size: 1rem;
-        font-weight: 600;
-        color: var(--navy);
-        margin: 0 0 8px 0;
-      }
-      .reg-update-block p {
-        font-size: 15px;
-        color: #334;
-        line-height: 1.7;
-        margin: 0 0 10px;
-      }
-
-      .cta-inline {
-        background: var(--navy);
-        border-radius: 12px;
-        padding: 32px;
-        margin: 48px 0 64px;
-        text-align: center;
-      }
-      .cta-inline h3 {
-        font-family: "Sora", sans-serif;
-        color: #ffffff;
-        font-size: 20px;
-        margin: 0 0 12px;
-      }
-      .cta-inline p {
-        color: rgba(255, 255, 255, 0.7);
-        margin: 0 0 20px;
-        font-size: 15px;
-      }
-      .cta-inline .btn {
-        margin: 4px;
-      }
-
-      .btn {
-        display: inline-block;
-        padding: 11px 24px;
-        border-radius: 6px;
-        font-size: 14px;
-        font-weight: 600;
-        text-decoration: none;
-        cursor: pointer;
-        border: none;
-        transition: all 0.2s ease;
-      }
-      .btn-gold {
-        background: var(--gold);
-        color: var(--navy);
-      }
-      .btn-gold:hover {
-        background: #b8900e;
-      }
-      .btn-ghost {
-        background: transparent;
-        color: #fff;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-      }
-      .btn-ghost:hover {
-        background: rgba(255, 255, 255, 0.1);
-      }
-
-      #tgc-site-header {
-        background: var(--navy);
-        position: sticky;
-        top: 0;
-        z-index: 999;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      }
-      .tgc-hdr-inner {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 clamp(20px, 4vw, 48px);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 70px;
-      }
-      .tgc-hdr-logo img {
-        height: 40px;
-        width: auto;
-      }
-      .tgc-hdr-nav {
-        display: flex;
-        gap: 40px;
-        flex: 1;
-        margin-left: 60px;
-      }
-      .tgc-hdr-item {
-        position: relative;
-      }
-      .tgc-hdr-link {
-        background: none;
-        border: none;
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 14px;
-        font-weight: 500;
-        cursor: pointer;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        transition: color 0.2s;
-      }
-      .tgc-hdr-link:hover {
-        color: #fff;
-      }
-      .tgc-hdr-link.tgc-hdr-active {
-        color: var(--gold);
-      }
-      .tgc-hdr-chevron {
-        width: 12px;
-        height: 12px;
-      }
-      .tgc-hdr-drop {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background: #0f2437;
-        border-radius: 8px;
-        padding: 16px 0;
-        min-width: 220px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        display: none;
-        margin-top: 8px;
-      }
-      .tgc-hdr-item:hover .tgc-hdr-drop {
-        display: block;
-      }
-      .tgc-hdr-drop-label {
-        display: block;
-        padding: 8px 16px;
-        font-size: 11px;
-        font-weight: 700;
-        color: #7a909f;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-      }
-      .tgc-hdr-drop-link {
-        display: block;
-        padding: 8px 16px;
-        color: rgba(255, 255, 255, 0.7);
-        text-decoration: none;
-        font-size: 13px;
-        transition: color 0.2s;
-      }
-      .tgc-hdr-drop-link:hover {
-        color: #fff;
-      }
-      .tgc-hdr-divider {
-        height: 1px;
-        background: rgba(255, 255, 255, 0.08);
-        margin: 8px 0;
-      }
-      .tgc-hdr-cta {
-        background: var(--gold);
-        color: #fff;
-        padding: 9px 20px;
-        border-radius: 6px;
-        text-decoration: none;
-        font-size: 13px;
-        font-weight: 600;
-        white-space: nowrap;
-        transition: background 0.2s;
-      }
-      .tgc-hdr-cta:hover {
-        background: #b8900e;
-      }
-      .tgc-hdr-burger {
-        display: none;
-        background: none;
-        border: none;
-        width: 32px;
-        height: 32px;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-      }
-      .tgc-hdr-burger span {
-        width: 100%;
-        height: 2px;
-        background: #fff;
-        border-radius: 1px;
-        transition: all 0.3s;
-      }
-      .tgc-hdr-mobile {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background: #0f2437;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s;
-      }
-      .tgc-hdr-mobile.tgc-mob-open {
-        max-height: 500px;
-      }
-      .tgc-mob-section {
-        padding: 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      }
-      .tgc-mob-heading {
-        font-size: 11px;
-        font-weight: 700;
-        color: var(--gold);
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        margin: 0 0 12px;
-      }
-      .tgc-mob-link {
-        display: block;
-        padding: 8px 0;
-        color: rgba(255, 255, 255, 0.7);
-        text-decoration: none;
-        font-size: 13px;
-        transition: color 0.2s;
-      }
-      .tgc-mob-link:hover {
-        color: #fff;
-      }
-      .tgc-mob-cta {
-        display: block;
-        background: var(--gold);
-        color: #fff;
-        padding: 11px 24px;
-        border-radius: 6px;
-        text-decoration: none;
-        font-size: 13px;
-        font-weight: 600;
-        text-align: center;
-        margin: 20px;
-        transition: background 0.2s;
-      }
-      .tgc-mob-cta:hover {
-        background: #b8900e;
-      }
-      @media (max-width: 900px) {
-        .tgc-hdr-nav {
-          display: none;
-        }
-        .tgc-hdr-burger {
-          display: flex;
-        }
-        .tgc-hdr-mobile {
-          display: block;
-        }
-      }
-    </style>
   </head>
   <body>
     <!-- HEADER:START -->
     <header id="tgc-site-header" role="banner">
       <div class="tgc-hdr-inner">
-        <a
-          href="homepage.html"
-          class="tgc-hdr-logo"
-          aria-label="TecEx Global Compliance - Home"
-        >
-          <img
-            src="../assets/images/tgc-logo.png"
-            alt="TecEx Global Compliance"
-            class="tgc-hdr-logo-img"
-          />
+    
+        <!-- Logo -->
+        <a href="homepage.html" class="tgc-hdr-logo" aria-label="TecEx Global Compliance - Home">
+          <img src="../assets/images/tgc-logo.png" alt="TecEx Global Compliance" class="tgc-hdr-logo-img">
         </a>
+    
+        <!-- Desktop nav -->
         <nav class="tgc-hdr-nav" aria-label="Main navigation">
+    
           <div class="tgc-hdr-item">
-            <button
-              class="tgc-hdr-link"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
+            <button class="tgc-hdr-link" aria-haspopup="true" aria-expanded="false">
               Services
-              <svg
-                class="tgc-hdr-chevron"
-                viewBox="0 0 12 12"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="M2 4.5l4 4 4-4"
-                  stroke="currentColor"
-                  stroke-width="1.6"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+              <svg class="tgc-hdr-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
             <div class="tgc-hdr-drop" role="menu">
               <span class="tgc-hdr-drop-label">Fixed-Rate Services</span>
-              <a
-                href="expedited-audit.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >Expedited Audit</a
-              >
-              <a
-                href="label-reviews.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >Label Reviews</a
-              >
-              <a
-                href="hs-code-review.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >HS Code Reviews</a
-              >
+              <a href="expedited-audit.html"            class="tgc-hdr-drop-link" role="menuitem">Expedited Audit</a>
+              <a href="label-reviews.html"              class="tgc-hdr-drop-link" role="menuitem">Label Reviews</a>
+              <a href="hs-code-review.html"             class="tgc-hdr-drop-link" role="menuitem">HS Code Reviews</a>
               <div class="tgc-hdr-divider" aria-hidden="true"></div>
               <span class="tgc-hdr-drop-label">Custom Programmes</span>
-              <a
-                href="full-product-compliance.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >Full Product Compliance</a
-              >
+              <a href="full-product-compliance.html"    class="tgc-hdr-drop-link" role="menuitem">Full Product Compliance</a>
             </div>
           </div>
+    
           <div class="tgc-hdr-item">
-            <button
-              class="tgc-hdr-link"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
+            <button class="tgc-hdr-link" aria-haspopup="true" aria-expanded="false">
               Industries
-              <svg
-                class="tgc-hdr-chevron"
-                viewBox="0 0 12 12"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="M2 4.5l4 4 4-4"
-                  stroke="currentColor"
-                  stroke-width="1.6"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+              <svg class="tgc-hdr-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
             <div class="tgc-hdr-drop" role="menu">
-              <a
-                href="cosmetic-compliance.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >Cosmetics</a
-              >
-              <a
-                href="food-beverage-compliance.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >Food &amp; Beverage</a
-              >
-              <a
-                href="food-supplements-compliance.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >Food Supplements</a
-              >
-              <a
-                href="chemical-compliance.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >Chemicals</a
-              >
-              <a
-                href="electronics-compliance.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >Electronics</a
-              >
-              <a
-                href="consumer-goods-compliance.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >Consumer Goods</a
-              >
-              <a
-                href="medical-devices-compliance.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >Medical Devices</a
-              >
+              <a href="cosmetic-compliance.html"         class="tgc-hdr-drop-link" role="menuitem">Cosmetics</a>
+              <a href="food-beverage-compliance.html"    class="tgc-hdr-drop-link" role="menuitem">Food &amp; Beverage</a>
+              <a href="food-supplements-compliance.html" class="tgc-hdr-drop-link" role="menuitem">Food Supplements</a>
+              <a href="chemical-compliance.html"         class="tgc-hdr-drop-link" role="menuitem">Chemicals</a>
+              <a href="electronics-compliance.html"      class="tgc-hdr-drop-link" role="menuitem">Electronics</a>
+              <a href="consumer-goods-compliance.html"   class="tgc-hdr-drop-link" role="menuitem">Consumer Goods</a>
+              <a href="medical-devices-compliance.html"  class="tgc-hdr-drop-link" role="menuitem">Medical Devices</a>
             </div>
           </div>
+    
           <div class="tgc-hdr-item">
             <a href="pricing.html" class="tgc-hdr-link">Pricing</a>
           </div>
@@ -639,8 +81,13 @@
           <div class="tgc-hdr-item">
             <a href="contact-us.html" class="tgc-hdr-link">Contact</a>
           </div>
+    
         </nav>
+    
+        <!-- CTA -->
         <a href="contact-us.html" class="tgc-hdr-cta">Get a quote &rarr;</a>
+    
+        <!-- Hamburger (mobile) -->
         <button
           class="tgc-hdr-burger"
           id="tgc-hdr-burger"
@@ -648,46 +95,37 @@
           aria-expanded="false"
           aria-controls="tgc-hdr-mobile-menu"
         >
-          <span></span><span></span><span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
+    
       </div>
+    
+      <!-- Mobile menu -->
       <div class="tgc-hdr-mobile" id="tgc-hdr-mobile-menu" aria-hidden="true">
         <div class="tgc-mob-section">
           <p class="tgc-mob-heading">Services</p>
-          <a href="expedited-audit.html" class="tgc-mob-link"
-            >Expedited Audit</a
-          >
-          <a href="label-reviews.html" class="tgc-mob-link">Label Reviews</a>
-          <a href="hs-code-review.html" class="tgc-mob-link">HS Code Reviews</a>
-          <a href="full-product-compliance.html" class="tgc-mob-link"
-            >Full Product Compliance</a
-          >
+          <a href="expedited-audit.html"            class="tgc-mob-link">Expedited Audit</a>
+          <a href="label-reviews.html"              class="tgc-mob-link">Label Reviews</a>
+          <a href="hs-code-review.html"             class="tgc-mob-link">HS Code Reviews</a>
+          <a href="full-product-compliance.html"    class="tgc-mob-link">Full Product Compliance</a>
         </div>
         <div class="tgc-mob-section">
           <p class="tgc-mob-heading">Industries</p>
-          <a href="cosmetic-compliance.html" class="tgc-mob-link">Cosmetics</a>
-          <a href="food-beverage-compliance.html" class="tgc-mob-link"
-            >Food &amp; Beverage</a
-          >
-          <a href="food-supplements-compliance.html" class="tgc-mob-link"
-            >Food Supplements</a
-          >
-          <a href="chemical-compliance.html" class="tgc-mob-link">Chemicals</a>
-          <a href="electronics-compliance.html" class="tgc-mob-link"
-            >Electronics</a
-          >
-          <a href="consumer-goods-compliance.html" class="tgc-mob-link"
-            >Consumer Goods</a
-          >
-          <a href="medical-devices-compliance.html" class="tgc-mob-link"
-            >Medical Devices</a
-          >
+          <a href="cosmetic-compliance.html"         class="tgc-mob-link">Cosmetics</a>
+          <a href="food-beverage-compliance.html"    class="tgc-mob-link">Food &amp; Beverage</a>
+          <a href="food-supplements-compliance.html" class="tgc-mob-link">Food Supplements</a>
+          <a href="chemical-compliance.html"         class="tgc-mob-link">Chemicals</a>
+          <a href="electronics-compliance.html"      class="tgc-mob-link">Electronics</a>
+          <a href="consumer-goods-compliance.html"   class="tgc-mob-link">Consumer Goods</a>
+          <a href="medical-devices-compliance.html"  class="tgc-mob-link">Medical Devices</a>
         </div>
         <div class="tgc-mob-section">
           <p class="tgc-mob-heading">Company</p>
-          <a href="pricing.html" class="tgc-mob-link">Pricing</a>
-          <a href="blog.html" class="tgc-mob-link">Blog</a>
-          <a href="about-us.html" class="tgc-mob-link">About</a>
+          <a href="pricing.html"    class="tgc-mob-link">Pricing</a>
+          <a href="blog.html"       class="tgc-mob-link">Blog</a>
+          <a href="about-us.html"   class="tgc-mob-link">About</a>
           <a href="contact-us.html" class="tgc-mob-link">Contact</a>
         </div>
         <a href="contact-us.html" class="tgc-mob-cta">Get a quote &rarr;</a>
@@ -695,23 +133,25 @@
     </header>
     <script>
       (function () {
-        var burger = document.getElementById("tgc-hdr-burger");
-        var menu = document.getElementById("tgc-hdr-mobile-menu");
+        /* Mobile burger toggle */
+        var burger = document.getElementById('tgc-hdr-burger');
+        var menu = document.getElementById('tgc-hdr-mobile-menu');
         if (burger && menu) {
-          burger.addEventListener("click", function () {
-            var open = menu.classList.toggle("tgc-mob-open");
-            burger.setAttribute("aria-expanded", open ? "true" : "false");
-            menu.setAttribute("aria-hidden", open ? "false" : "true");
+          burger.addEventListener('click', function () {
+            var open = menu.classList.toggle('tgc-mob-open');
+            burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+            menu.setAttribute('aria-hidden', open ? 'false' : 'true');
           });
         }
-        var page = window.location.pathname.split("/").pop() || "homepage.html";
-        document.querySelectorAll("#tgc-site-header a").forEach(function (a) {
-          if ((a.getAttribute("href") || "").split("/").pop() === page) {
-            a.classList.add("tgc-hdr-active");
-            var parentBtn = a.closest(".tgc-hdr-item")
-              ? a.closest(".tgc-hdr-item").querySelector("button.tgc-hdr-link")
+        /* Active state — highlight the link matching the current page */
+        var page = window.location.pathname.split('/').pop() || 'homepage.html';
+        document.querySelectorAll('#tgc-site-header a').forEach(function (a) {
+          if ((a.getAttribute('href') || '').split('/').pop() === page) {
+            a.classList.add('tgc-hdr-active');
+            var parentBtn = a.closest('.tgc-hdr-item')
+              ? a.closest('.tgc-hdr-item').querySelector('button.tgc-hdr-link')
               : null;
-            if (parentBtn) parentBtn.classList.add("tgc-hdr-active");
+            if (parentBtn) parentBtn.classList.add('tgc-hdr-active');
           }
         });
       })();
@@ -1275,6 +715,7 @@
           box-sizing: border-box;
         "
       >
+        <!-- grid -->
         <div
           style="
             display: grid;
@@ -1285,6 +726,7 @@
             box-sizing: border-box;
           "
         >
+          <!-- brand -->
           <div>
             <a
               href="homepage.html"
@@ -1313,10 +755,11 @@
                 margin: 0 0 18px;
               "
             >
-              Expert product compliance — label reviews, expedited audits, HS
-              code reviews, and end-to-end compliance programmes. Built by the
-              team behind TecEx.
+              Expert product compliance — label reviews, expedited audits, HS code
+              reviews, and end-to-end compliance programmes. Built by the team
+              behind TecEx.
             </p>
+            <!-- social -->
             <div style="display: flex; gap: 10px">
               <a
                 href="https://www.linkedin.com/company/tecex-group/"
@@ -1394,6 +837,8 @@
               </a>
             </div>
           </div>
+    
+          <!-- services -->
           <div>
             <p
               style="
@@ -1461,6 +906,8 @@
               >Full Product Compliance</a
             >
           </div>
+    
+          <!-- industries -->
           <div>
             <p
               style="
@@ -1567,6 +1014,8 @@
               >Medical Devices</a
             >
           </div>
+    
+          <!-- company -->
           <div>
             <p
               style="
@@ -1622,6 +1071,9 @@
             >
           </div>
         </div>
+        <!-- /grid -->
+    
+        <!-- bottom bar -->
         <div
           style="
             display: flex;
@@ -1635,8 +1087,8 @@
           "
         >
           <p style="margin: 0">
-            © 2026 TecEx Global Compliance. All rights reserved. Built by the
-            team behind TecEx.
+            © 2026 TecEx Global Compliance. All rights reserved. Built by the team
+            behind TecEx.
           </p>
           <p style="margin: 0">
             <a
@@ -1658,7 +1110,7 @@
         </div>
       </div>
     </footer>
-
+    
     <script>
       (function () {
         var fades = document.querySelectorAll(".fade");

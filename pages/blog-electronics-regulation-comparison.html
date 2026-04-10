@@ -24,341 +24,56 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../global.css" />
-    <style>
-      .blog-post-hero {
-        background: var(--navy);
-        padding: 72px 0 56px;
-      }
-      .blog-post-hero .wrap {
-        max-width: 760px;
-      }
-      .blog-post-meta {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        flex-wrap: wrap;
-        margin-bottom: 20px;
-      }
-      .blog-post-hero h1 {
-        font-family: "Sora", sans-serif;
-        font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-        font-weight: 800;
-        color: #fff;
-        margin: 0 0 20px;
-        line-height: 1.2;
-      }
-      .blog-post-hero .lead {
-        color: #7a909f;
-        font-size: 18px;
-        line-height: 1.6;
-        max-width: 680px;
-        margin: 0;
-      }
-      .blog-tag {
-        display: inline-block;
-        padding: 3px 10px;
-        border-radius: 999px;
-        font-size: 11px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.07em;
-      }
-      .blog-tag-electronics {
-        background: rgba(0, 107, 78, 0.15);
-        color: #006b4e;
-      }
-      .blog-meta-item {
-        font-size: 13px;
-        color: #7a909f;
-      }
-      .blog-related-industry {
-        background: #f5f7fa;
-        border-left: 3px solid var(--gold);
-        border-radius: 0 10px 10px 0;
-        padding: 20px 24px;
-        margin: 40px 0;
-      }
-      .blog-related-industry p {
-        margin: 0 0 10px;
-        font-size: 14px;
-        color: var(--slate);
-      }
-      .blog-related-industry a {
-        font-weight: 600;
-        color: var(--gold);
-        text-decoration: none;
-        font-size: 14px;
-      }
-      .article-body h2 {
-        font-family: "Sora", sans-serif;
-        font-size: 1.4rem;
-        font-weight: 700;
-        color: var(--navy);
-        margin: 48px 0 16px;
-      }
-      .article-body h3 {
-        font-size: 1.05rem;
-        font-weight: 700;
-        color: var(--navy);
-        margin: 32px 0 12px;
-      }
-      .article-body p {
-        font-size: 15px;
-        color: #334;
-        line-height: 1.7;
-        margin: 0 0 18px;
-      }
-      .article-body a {
-        color: var(--gold);
-      }
-      .cta-inline {
-        background: var(--navy);
-        border-radius: 12px;
-        padding: 32px;
-        margin: 48px 0 0;
-        text-align: center;
-      }
-      .cta-inline h3 {
-        font-family: "Sora", sans-serif;
-        color: #ffffff;
-        font-size: 20px;
-        margin: 0 0 12px;
-      }
-      .cta-inline p {
-        color: rgba(255, 255, 255, 0.7);
-        margin: 0 0 20px;
-        font-size: 15px;
-      }
-      .cta-inline .btn {
-        margin: 4px;
-      }
-      .table-scroll {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-      }
-      .comp-table {
-        width: 100%;
-        min-width: 600px;
-        border-collapse: collapse;
-        font-size: 14px;
-      }
-      .comp-table th {
-        background: var(--navy);
-        color: #fff;
-        font-family: "Sora", sans-serif;
-        font-weight: 700;
-        font-size: 13px;
-        letter-spacing: 0.04em;
-        padding: 14px 16px;
-        text-align: left;
-      }
-      .comp-table th:first-child {
-        width: 160px;
-      }
-      .comp-table td {
-        padding: 14px 16px;
-        border-bottom: 1px solid #e8e3da;
-        color: #334;
-        vertical-align: top;
-        line-height: 1.55;
-      }
-      .comp-table td:first-child {
-        font-family: "Sora", sans-serif;
-        font-weight: 700;
-        font-size: 13px;
-        color: var(--navy);
-        background: #f9f7f4;
-        border-right: 2px solid #e8e3da;
-      }
-      .comp-table tr:nth-child(even) td:not(:first-child) {
-        background: #faf9f7;
-      }
-      .comp-table tr:last-child td {
-        border-bottom: none;
-      }
-      .juris-pill {
-        display: inline-block;
-        font-size: 11px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        padding: 3px 10px;
-        border-radius: 999px;
-        margin-bottom: 6px;
-      }
-      .juris-eu {
-        background: rgba(0, 120, 200, 0.12);
-        color: #005fa3;
-      }
-      .juris-uk {
-        background: rgba(0, 90, 160, 0.1);
-        color: #003f7a;
-      }
-      .juris-us {
-        background: rgba(180, 30, 30, 0.1);
-        color: #8b1a1a;
-      }
-      .badge {
-        display: inline-block;
-        padding: 2px 8px;
-        border-radius: 4px;
-        font-size: 11px;
-        font-weight: 600;
-      }
-      .badge-man {
-        background: rgba(200, 50, 50, 0.1);
-        color: #c44;
-      }
-      .badge-vol {
-        background: rgba(211, 169, 17, 0.12);
-        color: #b8900e;
-      }
-      .badge-sep {
-        background: rgba(14, 99, 166, 0.1);
-        color: #0e5fa3;
-      }
-    </style>
   </head>
   <body>
     <!-- HEADER:START -->
     <header id="tgc-site-header" role="banner">
       <div class="tgc-hdr-inner">
+    
         <!-- Logo -->
-        <a
-          href="homepage.html"
-          class="tgc-hdr-logo"
-          aria-label="TecEx Global Compliance - Home"
-        >
-          <img
-            src="../assets/images/tgc-logo.png"
-            alt="TecEx Global Compliance"
-            class="tgc-hdr-logo-img"
-          />
+        <a href="homepage.html" class="tgc-hdr-logo" aria-label="TecEx Global Compliance - Home">
+          <img src="../assets/images/tgc-logo.png" alt="TecEx Global Compliance" class="tgc-hdr-logo-img">
         </a>
-
+    
         <!-- Desktop nav -->
         <nav class="tgc-hdr-nav" aria-label="Main navigation">
+    
           <div class="tgc-hdr-item">
-            <button
-              class="tgc-hdr-link"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
+            <button class="tgc-hdr-link" aria-haspopup="true" aria-expanded="false">
               Services
-              <svg
-                class="tgc-hdr-chevron"
-                viewBox="0 0 12 12"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="M2 4.5l4 4 4-4"
-                  stroke="currentColor"
-                  stroke-width="1.6"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+              <svg class="tgc-hdr-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
             <div class="tgc-hdr-drop" role="menu">
               <span class="tgc-hdr-drop-label">Fixed-Rate Services</span>
-              <a
-                href="expedited-audit.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >Expedited Audit</a
-              >
-              <a
-                href="label-reviews.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >Label Reviews</a
-              >
-              <a
-                href="hs-code-review.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >HS Code Reviews</a
-              >
+              <a href="expedited-audit.html"            class="tgc-hdr-drop-link" role="menuitem">Expedited Audit</a>
+              <a href="label-reviews.html"              class="tgc-hdr-drop-link" role="menuitem">Label Reviews</a>
+              <a href="hs-code-review.html"             class="tgc-hdr-drop-link" role="menuitem">HS Code Reviews</a>
               <div class="tgc-hdr-divider" aria-hidden="true"></div>
               <span class="tgc-hdr-drop-label">Custom Programmes</span>
-              <a
-                href="full-product-compliance.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >Full Product Compliance</a
-              >
+              <a href="full-product-compliance.html"    class="tgc-hdr-drop-link" role="menuitem">Full Product Compliance</a>
             </div>
           </div>
-
+    
           <div class="tgc-hdr-item">
-            <button
-              class="tgc-hdr-link"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
+            <button class="tgc-hdr-link" aria-haspopup="true" aria-expanded="false">
               Industries
-              <svg
-                class="tgc-hdr-chevron"
-                viewBox="0 0 12 12"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="M2 4.5l4 4 4-4"
-                  stroke="currentColor"
-                  stroke-width="1.6"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+              <svg class="tgc-hdr-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
             <div class="tgc-hdr-drop" role="menu">
-              <a
-                href="cosmetic-compliance.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >Cosmetics</a
-              >
-              <a
-                href="food-beverage-compliance.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >Food &amp; Beverage</a
-              >
-              <a
-                href="food-supplements-compliance.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >Food Supplements</a
-              >
-              <a
-                href="chemical-compliance.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >Chemicals</a
-              >
-              <a
-                href="electronics-compliance.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >Electronics</a
-              >
-              <a
-                href="consumer-goods-compliance.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >Consumer Goods</a
-              >
-              <a
-                href="medical-devices-compliance.html"
-                class="tgc-hdr-drop-link"
-                role="menuitem"
-                >Medical Devices</a
-              >
+              <a href="cosmetic-compliance.html"         class="tgc-hdr-drop-link" role="menuitem">Cosmetics</a>
+              <a href="food-beverage-compliance.html"    class="tgc-hdr-drop-link" role="menuitem">Food &amp; Beverage</a>
+              <a href="food-supplements-compliance.html" class="tgc-hdr-drop-link" role="menuitem">Food Supplements</a>
+              <a href="chemical-compliance.html"         class="tgc-hdr-drop-link" role="menuitem">Chemicals</a>
+              <a href="electronics-compliance.html"      class="tgc-hdr-drop-link" role="menuitem">Electronics</a>
+              <a href="consumer-goods-compliance.html"   class="tgc-hdr-drop-link" role="menuitem">Consumer Goods</a>
+              <a href="medical-devices-compliance.html"  class="tgc-hdr-drop-link" role="menuitem">Medical Devices</a>
             </div>
           </div>
-
+    
           <div class="tgc-hdr-item">
             <a href="pricing.html" class="tgc-hdr-link">Pricing</a>
           </div>
@@ -371,11 +86,12 @@
           <div class="tgc-hdr-item">
             <a href="contact-us.html" class="tgc-hdr-link">Contact</a>
           </div>
+    
         </nav>
-
+    
         <!-- CTA -->
         <a href="contact-us.html" class="tgc-hdr-cta">Get a quote &rarr;</a>
-
+    
         <!-- Hamburger (mobile) -->
         <button
           class="tgc-hdr-burger"
@@ -388,46 +104,33 @@
           <span></span>
           <span></span>
         </button>
+    
       </div>
-
+    
       <!-- Mobile menu -->
       <div class="tgc-hdr-mobile" id="tgc-hdr-mobile-menu" aria-hidden="true">
         <div class="tgc-mob-section">
           <p class="tgc-mob-heading">Services</p>
-          <a href="expedited-audit.html" class="tgc-mob-link"
-            >Expedited Audit</a
-          >
-          <a href="label-reviews.html" class="tgc-mob-link">Label Reviews</a>
-          <a href="hs-code-review.html" class="tgc-mob-link">HS Code Reviews</a>
-          <a href="full-product-compliance.html" class="tgc-mob-link"
-            >Full Product Compliance</a
-          >
+          <a href="expedited-audit.html"            class="tgc-mob-link">Expedited Audit</a>
+          <a href="label-reviews.html"              class="tgc-mob-link">Label Reviews</a>
+          <a href="hs-code-review.html"             class="tgc-mob-link">HS Code Reviews</a>
+          <a href="full-product-compliance.html"    class="tgc-mob-link">Full Product Compliance</a>
         </div>
         <div class="tgc-mob-section">
           <p class="tgc-mob-heading">Industries</p>
-          <a href="cosmetic-compliance.html" class="tgc-mob-link">Cosmetics</a>
-          <a href="food-beverage-compliance.html" class="tgc-mob-link"
-            >Food &amp; Beverage</a
-          >
-          <a href="food-supplements-compliance.html" class="tgc-mob-link"
-            >Food Supplements</a
-          >
-          <a href="chemical-compliance.html" class="tgc-mob-link">Chemicals</a>
-          <a href="electronics-compliance.html" class="tgc-mob-link"
-            >Electronics</a
-          >
-          <a href="consumer-goods-compliance.html" class="tgc-mob-link"
-            >Consumer Goods</a
-          >
-          <a href="medical-devices-compliance.html" class="tgc-mob-link"
-            >Medical Devices</a
-          >
+          <a href="cosmetic-compliance.html"         class="tgc-mob-link">Cosmetics</a>
+          <a href="food-beverage-compliance.html"    class="tgc-mob-link">Food &amp; Beverage</a>
+          <a href="food-supplements-compliance.html" class="tgc-mob-link">Food Supplements</a>
+          <a href="chemical-compliance.html"         class="tgc-mob-link">Chemicals</a>
+          <a href="electronics-compliance.html"      class="tgc-mob-link">Electronics</a>
+          <a href="consumer-goods-compliance.html"   class="tgc-mob-link">Consumer Goods</a>
+          <a href="medical-devices-compliance.html"  class="tgc-mob-link">Medical Devices</a>
         </div>
         <div class="tgc-mob-section">
           <p class="tgc-mob-heading">Company</p>
-          <a href="pricing.html" class="tgc-mob-link">Pricing</a>
-          <a href="blog.html" class="tgc-mob-link">Blog</a>
-          <a href="about-us.html" class="tgc-mob-link">About</a>
+          <a href="pricing.html"    class="tgc-mob-link">Pricing</a>
+          <a href="blog.html"       class="tgc-mob-link">Blog</a>
+          <a href="about-us.html"   class="tgc-mob-link">About</a>
           <a href="contact-us.html" class="tgc-mob-link">Contact</a>
         </div>
         <a href="contact-us.html" class="tgc-mob-cta">Get a quote &rarr;</a>
@@ -436,24 +139,24 @@
     <script>
       (function () {
         /* Mobile burger toggle */
-        var burger = document.getElementById("tgc-hdr-burger");
-        var menu = document.getElementById("tgc-hdr-mobile-menu");
+        var burger = document.getElementById('tgc-hdr-burger');
+        var menu = document.getElementById('tgc-hdr-mobile-menu');
         if (burger && menu) {
-          burger.addEventListener("click", function () {
-            var open = menu.classList.toggle("tgc-mob-open");
-            burger.setAttribute("aria-expanded", open ? "true" : "false");
-            menu.setAttribute("aria-hidden", open ? "false" : "true");
+          burger.addEventListener('click', function () {
+            var open = menu.classList.toggle('tgc-mob-open');
+            burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+            menu.setAttribute('aria-hidden', open ? 'false' : 'true');
           });
         }
         /* Active state — highlight the link matching the current page */
-        var page = window.location.pathname.split("/").pop() || "homepage.html";
-        document.querySelectorAll("#tgc-site-header a").forEach(function (a) {
-          if ((a.getAttribute("href") || "").split("/").pop() === page) {
-            a.classList.add("tgc-hdr-active");
-            var parentBtn = a.closest(".tgc-hdr-item")
-              ? a.closest(".tgc-hdr-item").querySelector("button.tgc-hdr-link")
+        var page = window.location.pathname.split('/').pop() || 'homepage.html';
+        document.querySelectorAll('#tgc-site-header a').forEach(function (a) {
+          if ((a.getAttribute('href') || '').split('/').pop() === page) {
+            a.classList.add('tgc-hdr-active');
+            var parentBtn = a.closest('.tgc-hdr-item')
+              ? a.closest('.tgc-hdr-item').querySelector('button.tgc-hdr-link')
               : null;
-            if (parentBtn) parentBtn.classList.add("tgc-hdr-active");
+            if (parentBtn) parentBtn.classList.add('tgc-hdr-active');
           }
         });
       })();
@@ -1011,9 +714,9 @@
                 margin: 0 0 18px;
               "
             >
-              Expert product compliance — label reviews, expedited audits, HS
-              code reviews, and end-to-end compliance programmes. Built by the
-              team behind TecEx.
+              Expert product compliance — label reviews, expedited audits, HS code
+              reviews, and end-to-end compliance programmes. Built by the team
+              behind TecEx.
             </p>
             <!-- social -->
             <div style="display: flex; gap: 10px">
@@ -1093,7 +796,7 @@
               </a>
             </div>
           </div>
-
+    
           <!-- services -->
           <div>
             <p
@@ -1162,7 +865,7 @@
               >Full Product Compliance</a
             >
           </div>
-
+    
           <!-- industries -->
           <div>
             <p
@@ -1270,7 +973,7 @@
               >Medical Devices</a
             >
           </div>
-
+    
           <!-- company -->
           <div>
             <p
@@ -1328,7 +1031,7 @@
           </div>
         </div>
         <!-- /grid -->
-
+    
         <!-- bottom bar -->
         <div
           style="
@@ -1343,8 +1046,8 @@
           "
         >
           <p style="margin: 0">
-            © 2026 TecEx Global Compliance. All rights reserved. Built by the
-            team behind TecEx.
+            © 2026 TecEx Global Compliance. All rights reserved. Built by the team
+            behind TecEx.
           </p>
           <p style="margin: 0">
             <a
@@ -1366,7 +1069,7 @@
         </div>
       </div>
     </footer>
-
+    
     <script>
       (function () {
         var fades = document.querySelectorAll(".fade");
