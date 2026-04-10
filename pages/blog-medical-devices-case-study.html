@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      What's Changing in Consumer Goods Compliance 2025-2026 | TecEx Global
-      Compliance
+      The €380,000 EU Market Withdrawal: A Medical Device MDR Non-Conformity
+      Case Study | TecEx Global Compliance
     </title>
     <meta
       name="description"
-      content="GPSR, REACH SVHC, RoHS, ESPR, UK UKCA, CPSIA, CCC certification updates affecting consumer goods manufacturers, importers, and online sellers across EU, UK, US, and China."
+      content="A case study examining how a South Korean surgical instrument manufacturer faced EU market withdrawal and FDA inspection findings from three compounding compliance failures across the EU MDR, EUDAMED, and FDA QMSR."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,14 +25,12 @@
         padding: 0;
         box-sizing: border-box;
       }
-
       body {
         font-family: "DM Sans", sans-serif;
         color: #334;
         background: #fff;
         -webkit-font-smoothing: antialiased;
       }
-
       :root {
         --navy: #0a1826;
         --slate: #667a86;
@@ -77,9 +75,9 @@
         text-transform: uppercase;
         letter-spacing: 0.07em;
       }
-      .blog-tag-consumer-goods {
-        background: rgba(20, 120, 90, 0.12);
-        color: #0d7a58;
+      .blog-tag-medical {
+        background: #eee4f5;
+        color: #5a006b;
       }
       .blog-meta-item {
         font-size: 13px;
@@ -125,36 +123,117 @@
       .article-body a:not(.btn) {
         color: var(--gold);
       }
-      .reg-status-active {
-        display: inline-block;
-        padding: 2px 10px;
-        border-radius: 4px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        background: rgba(16, 140, 120, 0.15);
-        color: #0a7566;
-        margin-bottom: 8px;
+
+      /* Chain of events */
+      .chain {
+        border-left: 3px solid var(--gold);
+        padding-left: 28px;
+        margin: 32px 0 40px;
       }
-      .reg-status-urgent {
-        display: inline-block;
-        padding: 2px 10px;
-        border-radius: 4px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        background: rgba(200, 50, 50, 0.12);
-        color: #c44;
-        margin-bottom: 8px;
+      .chain-step {
+        position: relative;
+        margin-bottom: 28px;
       }
-      .reg-status-monitor {
-        display: inline-block;
-        padding: 2px 10px;
-        border-radius: 4px;
-        font-size: 0.75rem;
+      .chain-step:last-child {
+        margin-bottom: 0;
+      }
+      .chain-num {
+        position: absolute;
+        left: -42px;
+        top: 0;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: var(--gold);
+        color: var(--navy);
+        font-family: "Sora", sans-serif;
+        font-size: 12px;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .chain-text {
+        font-size: 15px;
+        color: #334;
+        line-height: 1.7;
+      }
+      .chain-text strong {
+        color: var(--navy);
+      }
+
+      /* Cost table */
+      .cost-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 28px 0 36px;
+        font-size: 14px;
+      }
+      .cost-table th {
+        background: var(--navy);
+        color: #fff;
+        font-family: "Sora", sans-serif;
+        font-weight: 700;
+        font-size: 13px;
+        padding: 12px 16px;
+        text-align: left;
+      }
+      .cost-table td {
+        padding: 12px 16px;
+        border-bottom: 1px solid #e8e3da;
+        color: #334;
+        vertical-align: top;
+      }
+      .cost-table td:last-child {
         font-weight: 600;
+        text-align: right;
+        font-family: "Sora", sans-serif;
+      }
+      .cost-table tr:last-child td {
+        border-bottom: none;
+        font-weight: 700;
+        color: var(--navy);
+        background: rgba(211, 169, 17, 0.07);
+      }
+      .cost-table tr:nth-child(even) td {
+        background: #faf9f7;
+      }
+
+      /* Prevent list */
+      .prevent-list {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0 32px;
+      }
+      .prevent-list li {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        padding: 14px 0;
+        border-bottom: 1px solid #ece8e2;
+        font-size: 15px;
+        color: #334;
+        line-height: 1.65;
+      }
+      .prevent-list li:last-child {
+        border-bottom: none;
+      }
+      .prevent-list li::before {
+        content: "✓";
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 22px;
+        height: 22px;
         background: rgba(211, 169, 17, 0.15);
-        color: #b8900e;
-        margin-bottom: 8px;
+        color: var(--gold);
+        border-radius: 50%;
+        font-size: 11px;
+        font-weight: 800;
+        flex-shrink: 0;
+        margin-top: 2px;
       }
+
       .reg-update-block {
         border-left: 3px solid var(--gold);
         padding: 18px 0 18px 20px;
@@ -173,6 +252,7 @@
         line-height: 1.7;
         margin: 0 0 10px;
       }
+
       .cta-inline {
         background: var(--navy);
         border-radius: 12px;
@@ -206,27 +286,22 @@
         border: none;
         transition: all 0.2s ease;
       }
-
       .btn-gold {
         background: var(--gold);
         color: var(--navy);
       }
-
       .btn-gold:hover {
         background: #b8900e;
       }
-
       .btn-ghost {
         background: transparent;
         color: #fff;
         border: 1px solid rgba(255, 255, 255, 0.3);
       }
-
       .btn-ghost:hover {
         background: rgba(255, 255, 255, 0.1);
       }
 
-      /* Header styles */
       #tgc-site-header {
         background: var(--navy);
         position: sticky;
@@ -234,7 +309,6 @@
         z-index: 999;
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       }
-
       .tgc-hdr-inner {
         max-width: 1200px;
         margin: 0 auto;
@@ -244,23 +318,19 @@
         justify-content: space-between;
         height: 70px;
       }
-
       .tgc-hdr-logo img {
         height: 40px;
         width: auto;
       }
-
       .tgc-hdr-nav {
         display: flex;
         gap: 40px;
         flex: 1;
         margin-left: 60px;
       }
-
       .tgc-hdr-item {
         position: relative;
       }
-
       .tgc-hdr-link {
         background: none;
         border: none;
@@ -274,20 +344,16 @@
         gap: 8px;
         transition: color 0.2s;
       }
-
       .tgc-hdr-link:hover {
         color: #fff;
       }
-
       .tgc-hdr-link.tgc-hdr-active {
         color: var(--gold);
       }
-
       .tgc-hdr-chevron {
         width: 12px;
         height: 12px;
       }
-
       .tgc-hdr-drop {
         position: absolute;
         top: 100%;
@@ -300,11 +366,9 @@
         display: none;
         margin-top: 8px;
       }
-
       .tgc-hdr-item:hover .tgc-hdr-drop {
         display: block;
       }
-
       .tgc-hdr-drop-label {
         display: block;
         padding: 8px 16px;
@@ -314,7 +378,6 @@
         text-transform: uppercase;
         letter-spacing: 0.08em;
       }
-
       .tgc-hdr-drop-link {
         display: block;
         padding: 8px 16px;
@@ -323,17 +386,14 @@
         font-size: 13px;
         transition: color 0.2s;
       }
-
       .tgc-hdr-drop-link:hover {
         color: #fff;
       }
-
       .tgc-hdr-divider {
         height: 1px;
         background: rgba(255, 255, 255, 0.08);
         margin: 8px 0;
       }
-
       .tgc-hdr-cta {
         background: var(--gold);
         color: #fff;
@@ -345,11 +405,9 @@
         white-space: nowrap;
         transition: background 0.2s;
       }
-
       .tgc-hdr-cta:hover {
         background: #b8900e;
       }
-
       .tgc-hdr-burger {
         display: none;
         background: none;
@@ -360,7 +418,6 @@
         gap: 5px;
         cursor: pointer;
       }
-
       .tgc-hdr-burger span {
         width: 100%;
         height: 2px;
@@ -368,7 +425,6 @@
         border-radius: 1px;
         transition: all 0.3s;
       }
-
       .tgc-hdr-mobile {
         display: none;
         position: absolute;
@@ -381,16 +437,13 @@
         overflow: hidden;
         transition: max-height 0.3s;
       }
-
       .tgc-hdr-mobile.tgc-mob-open {
         max-height: 500px;
       }
-
       .tgc-mob-section {
         padding: 20px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       }
-
       .tgc-mob-heading {
         font-size: 11px;
         font-weight: 700;
@@ -399,7 +452,6 @@
         letter-spacing: 0.1em;
         margin: 0 0 12px;
       }
-
       .tgc-mob-link {
         display: block;
         padding: 8px 0;
@@ -408,11 +460,9 @@
         font-size: 13px;
         transition: color 0.2s;
       }
-
       .tgc-mob-link:hover {
         color: #fff;
       }
-
       .tgc-mob-cta {
         display: block;
         background: var(--gold);
@@ -426,11 +476,9 @@
         margin: 20px;
         transition: background 0.2s;
       }
-
       .tgc-mob-cta:hover {
         background: #b8900e;
       }
-
       @media (max-width: 900px) {
         .tgc-hdr-nav {
           display: none;
@@ -448,7 +496,6 @@
     <!-- HEADER:START -->
     <header id="tgc-site-header" role="banner">
       <div class="tgc-hdr-inner">
-        <!-- Logo -->
         <a
           href="homepage.html"
           class="tgc-hdr-logo"
@@ -460,8 +507,6 @@
             class="tgc-hdr-logo-img"
           />
         </a>
-
-        <!-- Desktop nav -->
         <nav class="tgc-hdr-nav" aria-label="Main navigation">
           <div class="tgc-hdr-item">
             <button
@@ -515,7 +560,6 @@
               >
             </div>
           </div>
-
           <div class="tgc-hdr-item">
             <button
               class="tgc-hdr-link"
@@ -583,7 +627,6 @@
               >
             </div>
           </div>
-
           <div class="tgc-hdr-item">
             <a href="pricing.html" class="tgc-hdr-link">Pricing</a>
           </div>
@@ -597,11 +640,7 @@
             <a href="contact-us.html" class="tgc-hdr-link">Contact</a>
           </div>
         </nav>
-
-        <!-- CTA -->
         <a href="contact-us.html" class="tgc-hdr-cta">Get a quote &rarr;</a>
-
-        <!-- Hamburger (mobile) -->
         <button
           class="tgc-hdr-burger"
           id="tgc-hdr-burger"
@@ -609,13 +648,9 @@
           aria-expanded="false"
           aria-controls="tgc-hdr-mobile-menu"
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
       </div>
-
-      <!-- Mobile menu -->
       <div class="tgc-hdr-mobile" id="tgc-hdr-mobile-menu" aria-hidden="true">
         <div class="tgc-mob-section">
           <p class="tgc-mob-heading">Services</p>
@@ -660,7 +695,6 @@
     </header>
     <script>
       (function () {
-        /* Mobile burger toggle */
         var burger = document.getElementById("tgc-hdr-burger");
         var menu = document.getElementById("tgc-hdr-mobile-menu");
         if (burger && menu) {
@@ -670,7 +704,6 @@
             menu.setAttribute("aria-hidden", open ? "false" : "true");
           });
         }
-        /* Active state — highlight the link matching the current page */
         var page = window.location.pathname.split("/").pop() || "homepage.html";
         document.querySelectorAll("#tgc-site-header a").forEach(function (a) {
           if ((a.getAttribute("href") || "").split("/").pop() === page) {
@@ -690,26 +723,27 @@
       <section class="blog-post-hero">
         <div class="wrap">
           <div class="blog-post-meta">
-            <span class="blog-tag blog-tag-consumer-goods">Consumer Goods</span>
+            <span class="blog-tag blog-tag-medical">Medical Devices</span>
             <span class="blog-meta-item">April 2026</span>
-            <span class="blog-meta-item">· 10 min read</span>
+            <span class="blog-meta-item">· 12 min read</span>
           </div>
           <h1>
-            What's Changing in Consumer Goods Compliance: GPSR, REACH, CPSIA and
-            China CCC
+            The €380,000 EU Market Withdrawal: How Three Overlooked MDR
+            Requirements Compounded Into a Multi-Market Crisis
           </h1>
           <p class="lead">
-            A region-by-region breakdown of the regulatory changes and active
-            requirements that consumer goods manufacturers, importers, brand
-            owners and online sellers need to understand across the EU, UK, US,
-            and China in 2025–2026.
+            A case study of how a South Korean surgical instrument
+            manufacturer's failure to address EU MDR transition, EUDAMED
+            registration, and FDA QMSR obligations simultaneously resulted in EU
+            market withdrawal, US inspection findings, and a remediation
+            programme that cost far more than it should have.
           </p>
         </div>
       </section>
 
       <!-- Article -->
       <div
-        id="tgc-blog-consumer-updates"
+        id="tgc-blog-md-case-study"
         class="tgc-page"
         style="margin-top: 64px"
       >
@@ -717,424 +751,500 @@
           <div style="max-width: 760px; margin: 0 auto" class="article-body">
             <div class="blog-related-industry">
               <p>
-                This article is part of our consumer goods compliance coverage.
+                This article is part of our medical devices compliance coverage.
               </p>
-              <a href="consumer-goods-compliance.html"
-                >View all consumer goods resources &rarr;</a
+              <a href="medical-devices-compliance.html"
+                >View all medical device resources &rarr;</a
               >
             </div>
 
             <div class="article-body">
               <p>
-                The regulatory landscape for consumer goods has undergone more
-                change in the past two years than in the previous decade.
-                Product compliance requirements are now more complex, more
-                interconnected, and more actively enforced than ever before.
-                What follows is a working guide to the material requirements in
-                each major market and how they interact.
+                This case study is a composite illustration based on the types
+                of compliance failures TGC regularly encounters when working
+                with medical device manufacturers entering or maintaining access
+                to EU, UK, US, and Chinese markets. The company, market
+                scenario, and financial figures are fictionalised for
+                instructional purposes, but every regulatory failure described
+                reflects a real pattern of non-conformity seen across the
+                industry during the EU MDR transition period.
               </p>
 
               <p>
-                For manufacturers, importers, brand owners, and online sellers,
-                the challenge is no longer limited to individual market
-                compliance. A single product may need to satisfy the EU's
-                General Product Safety Regulation (GPSR), the UK's recognised CE
-                marking framework, the US Consumer Product Safety Improvement
-                Act (CPSIA), California's Proposition 65, China's CCC
-                certification, and regional RoHS-equivalent restrictions
-                simultaneously.
+                The manufacturer in question — Hansung Surgical Technologies, a
+                South Korean producer of Class IIa reusable surgical instruments
+                — had been selling into the EU market successfully for nine
+                years under MDD 93/42/EEC certification. When the EU Medical
+                Device Regulation replaced the MDD, the company's EU distributor
+                reassured them that their existing certificate "still had time."
+                That assessment was technically accurate in 2021. By 2026, it
+                was not.
               </p>
 
-              <h2>European Union — GPSR, REACH, RoHS and ESPR</h2>
-
-              <div class="reg-update-block">
-                <span class="reg-status-urgent">In force 13 December 2024</span>
-                <h4>
-                  EU General Product Safety Regulation — Regulation (EU)
-                  2023/988
-                </h4>
-                <p>
-                  GPSR became binding on 13 December 2024, replacing the General
-                  Product Safety Directive 2001/95/EC. All consumer products not
-                  covered by more specific EU safety legislation now require a
-                  designated EU Responsible Person — a legal entity established
-                  in the EU whose full name and physical address must be
-                  displayed on or with the product. Online marketplaces are
-                  subject to new obligations under Article 22, including
-                  registration with the EU Safety Gate portal and active
-                  cooperation with market surveillance authorities to remove
-                  non-compliant listings. Internal complaint-handling and
-                  traceability systems are also required. Failure to designate
-                  an EU Responsible Person before placing a consumer product on
-                  the EU market is a direct violation of the GPSR — the absence
-                  of this information on a product listing is itself an
-                  enforcement trigger. Source:
-                  <a href="https://eur-lex.europa.eu/eli/reg/2023/988/oj/eng"
-                    >Regulation (EU) 2023/988</a
-                  >.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-urgent"
-                  >Active monitoring required — updated twice yearly</span
-                >
-                <h4>
-                  REACH SVHC Candidate List — 253 Substances as of February 2026
-                </h4>
-                <p>
-                  <a href="https://eur-lex.europa.eu/eli/reg/2006/1907/oj/eng"
-                    >REACH Regulation (EC) 1907/2006</a
-                  >
-                  requires consumer goods manufacturers to monitor the
-                  <a href="https://echa.europa.eu/candidate-list-table"
-                    >SVHC Candidate List maintained by ECHA</a
-                  >. If any article contains a listed SVHC above 0.1% by weight,
-                  the supplier must notify customers and inform consumers on
-                  request within 45 days. As of February 2026, the list contains
-                  253 substances following the addition of n-Hexane and BPAF.
-                  ECHA updates the list twice per year — a product passing
-                  compliance review in January may have a new SVHC obligation by
-                  July with no change to the product itself. Manufacturers with
-                  complex supply chains must maintain active SVHC screening
-                  frameworks across all components and materials. Source:
-                  <a
-                    href="https://echa.europa.eu/-/echa-adds-two-hazardous-chemicals-to-the-candidate-list-1"
-                    >ECHA, February 2026</a
-                  >.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-active">In force</span>
-                <h4>
-                  RoHS Directive 2011/65/EU — 10 Restricted Substances in EEE
-                </h4>
-                <p>
-                  <a
-                    href="https://environment.ec.europa.eu/topics/waste-and-recycling/rohs-directive_en"
-                    >RoHS Directive 2011/65/EU</a
-                  >
-                  restricts 10 hazardous substances in electrical and electronic
-                  equipment: lead, mercury, cadmium, hexavalent chromium, PBBs,
-                  PBDEs, and four phthalates added by amendment Directive (EU)
-                  2015/863. Maximum concentrations are 1,000 ppm for most
-                  substances and 100 ppm for cadmium. CE marking for EEE
-                  includes RoHS conformity as a mandatory component. In 2024,
-                  further exemption amendments were published covering cadmium
-                  in quantum dots and lead/cadmium in recovered rigid PVC
-                  applications. Any consumer electronics product entering the EU
-                  market must include a RoHS Declaration of Conformity as part
-                  of the technical file.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-urgent"
-                  >In force July 2024 — product-specific obligations from
-                  2026+</span
-                >
-                <h4>
-                  ESPR — Ecodesign for Sustainable Products Regulation (EU)
-                  2024/1781
-                </h4>
-                <p>
-                  <a href="https://eur-lex.europa.eu/eli/reg/2024/1781/oj/eng"
-                    >Regulation (EU) 2024/1781</a
-                  >
-                  entered into force on 18 July 2024, replacing the Ecodesign
-                  Directive 2009/125/EC and extending sustainability
-                  requirements to almost all consumer and industrial goods. From
-                  July 2026, large enterprises are prohibited from destroying
-                  unsold consumer products. A Digital Product Passport (DPP)
-                  registry becomes operational from July 2026. Product-specific
-                  delegated acts covering textiles and steel among the earliest
-                  categories are anticipated from 2026, with transition periods
-                  of at least 18 months. Most sector-specific ESPR obligations
-                  are expected to take effect from 2027 or 2028.
-                </p>
-              </div>
-
-              <h2>
-                United Kingdom — CE Marking, UKCA, and the New Product Act
-              </h2>
-
-              <div class="reg-update-block">
-                <span class="reg-status-urgent">In force 1 October 2024</span>
-                <h4>
-                  CE Marking Accepted Indefinitely — UK Amendment Regulations
-                  2024
-                </h4>
-                <p>
-                  The UK Product Safety and Metrology (Amendment) Regulations
-                  2024, in force from 1 October 2024, removed the previous
-                  expiry deadline for CE marking and now recognise CE marking
-                  indefinitely for 21 product regulations in Great Britain —
-                  including toys, radio equipment, machinery, low voltage
-                  electrical equipment, pressure equipment, and EMC
-                  requirements. For the majority of consumer product categories,
-                  CE marking remains a valid route to GB market access without a
-                  separate UKCA conformity assessment. UKCA marking remains an
-                  alternative pathway through UK-approved bodies. Northern
-                  Ireland continues to follow EU product rules under the Windsor
-                  Framework. Source:
-                  <a
-                    href="https://www.gov.uk/government/publications/continued-recognition-of-eu-requirements-including-ce-marking-for-placing-products-on-the-gb-market"
-                    >UK Government CE Marking Recognition</a
-                  >.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-monitor"
-                  >Royal Assent July 2025 — secondary legislation pending</span
-                >
-                <h4>UK Product Regulation and Metrology Act 2025</h4>
-                <p>
-                  The
-                  <a href="https://www.legislation.gov.uk/ukpga/2025/20"
-                    >Product Regulation and Metrology Act 2025</a
-                  >
-                  received Royal Assent on 21 July 2025. The Act is enabling
-                  legislation granting ministers delegated powers to set and
-                  update product safety and metrology rules, and to align UK
-                  requirements with EU product regulations or diverge where
-                  policy considerations require. The Act does not itself impose
-                  new requirements — those will come through future secondary
-                  legislation. Businesses should monitor secondary legislation
-                  under the Act for sector-specific changes to UK product safety
-                  requirements from 2026 onwards.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-active">Active</span>
-                <h4>
-                  UK RoHS, UK REACH and Product-Specific Retained Legislation
-                </h4>
-                <p>
-                  The UK retains equivalent legislation to EU RoHS (UK RoHS
-                  Regulations 2012, as amended) and UK REACH (via the
-                  Environment Act 2021 framework), administered by the
-                  <a href="https://www.hse.gov.uk/reach/">HSE</a>. The UK REACH
-                  SVHC list is maintained independently of the EU list —
-                  substances added to the EU Candidate List are not
-                  automatically added in the UK. As of 2026, the UK REACH SVHC
-                  list contains fewer entries than the EU list, creating
-                  divergence for businesses supplying both markets. The UK Toys
-                  (Safety) Regulations 2011 remain in force in parallel with the
-                  new EU Toy Safety Regulation 2025/2509, which applies only to
-                  the EU market.
-                </p>
-              </div>
-
-              <h2>
-                United States — CPSIA, FCC Equipment Authorization, and
-                Proposition 65
-              </h2>
-
-              <div class="reg-update-block">
-                <span class="reg-status-active">Active enforcement</span>
-                <h4>
-                  CPSIA — Children's Products Third-Party Testing and
-                  Certification
-                </h4>
-                <p>
-                  The
-                  <a
-                    href="https://www.cpsc.gov/Regulations-Laws--Standards/Statutes/The-Consumer-Product-Safety-Improvement-Act"
-                    >Consumer Product Safety Improvement Act 2008</a
-                  >
-                  requires that all consumer products primarily designed or
-                  intended for children aged 12 and under be tested by a
-                  CPSC-accepted accredited third-party laboratory before sale in
-                  the US. Manufacturers must issue a Children's Product
-                  Certificate (CPC) certifying compliance with all applicable
-                  safety rules. CPSIA imposes strict limits on lead content (100
-                  ppm in surface coatings; 100 ppm total lead in substrate) and
-                  phthalate concentrations in toys and childcare articles.
-                  Tracking labels identifying the manufacturer, production
-                  location, and date of manufacture are required on children's
-                  products and their packaging. Re-testing is required whenever
-                  there is a material change in design, manufacturing process,
-                  or component sourcing. CPSIA applies equally to domestically
-                  manufactured and imported products.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-active">Active</span>
-                <h4>
-                  FCC Equipment Authorization — Electronic Consumer Products
-                </h4>
-                <p>
-                  Consumer electronic products that intentionally emit radio
-                  frequency signals — including Wi-Fi devices, Bluetooth
-                  products, cordless phones, remote controls, and wireless
-                  accessories — require
-                  <a href="https://www.fcc.gov/oet/ea/rfdevice"
-                    >FCC equipment authorization</a
-                  >
-                  before they can be marketed or imported into the United
-                  States. Authorization is obtained through a Telecommunications
-                  Certification Body (TCB) and requires test reports from an
-                  FCC-recognised laboratory. Products with unintentional RF
-                  emissions must meet FCC Part 15 requirements but may use a
-                  Declaration of Conformity process rather than full
-                  certification. FCC authorization is product-model specific and
-                  must be repeated when design changes affect RF
-                  characteristics. The FCC ID must be displayed on the product.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-urgent"
-                  >Active — recent additions effective 2025</span
-                >
-                <h4>
-                  California Proposition 65 — Over 1,000 Regulated Chemicals
-                </h4>
-                <p>
-                  California's
-                  <a
-                    href="https://oehha.ca.gov/proposition-65/proposition-65-list"
-                    >Safe Drinking Water and Toxic Enforcement Act of 1986
-                    (Proposition 65)</a
-                  >
-                  requires businesses to provide a clear and reasonable warning
-                  before knowingly exposing consumers to chemicals listed as
-                  causing cancer or reproductive toxicity. The list currently
-                  contains over 1,000 chemicals. Recent additions include vinyl
-                  acetate (effective January 2025) and bisphenol S (BPS,
-                  reproductive toxicity, effective December 2025). Consumer
-                  goods sold in California — whether manufactured in the US or
-                  imported — must comply if they contain listed chemicals above
-                  safe harbour levels. Given California's market size, Prop 65
-                  compliance is a practical requirement for most consumer goods
-                  exported to the US market.
-                </p>
-              </div>
-
-              <h2>
-                China — CCC Certification and RoHS-Equivalent Restrictions
-              </h2>
-
-              <div class="reg-update-block">
-                <span class="reg-status-urgent"
-                  >Pre-market certification required</span
-                >
-                <h4>
-                  China Compulsory Certification (CCC) — 109 Products Across 17
-                  Categories
-                </h4>
-                <p>
-                  CCC is mandatory for 109 products across 17 categories listed
-                  in China's CCC Catalogue, including electrical appliances,
-                  wires and cables, audio and video equipment, IT and
-                  telecommunications equipment, lighting products, motor
-                  vehicles, children's products, fire products, and household
-                  gas appliances. Products in the catalogue must obtain a CCC
-                  certificate before they can be manufactured, sold, imported,
-                  or used commercially in China. The CCC mark must be affixed to
-                  each unit before sale. The certification process involves
-                  testing by a designated laboratory, factory inspection by an
-                  approved certification body, and ongoing annual surveillance
-                  audits. Lead times typically range from 3 to 9 months —
-                  planning must begin well before target market entry dates.
-                  Source:
-                  <a
-                    href="https://www.china-certification.com/en/list-of-ccc-mandatory-products/"
-                    >China Certification, CCC Product List</a
-                  >.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-active">Active</span>
-                <h4>China RoHS — Restriction of Hazardous Substances in EEE</h4>
-                <p>
-                  China's Management Methods for Restriction of the Use of
-                  Hazardous Substances in Electrical and Electronic Products
-                  (China RoHS) restricts the same six core substances as EU RoHS
-                  Phase 1 (lead, mercury, cadmium, hexavalent chromium, PBBs,
-                  PBDEs) in EEE. All EEE products sold in China must display a
-                  Materials Declaration and indicate whether hazardous substance
-                  limits are met, using the China RoHS marking system — a green
-                  circle for products meeting concentration limits, or an orange
-                  square showing the expected environmental use period for
-                  products exceeding them. EEE subject to CCC certification is
-                  also subject to China RoHS requirements as part of the
-                  certification process.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-active"
-                  >Active — GB 6675 mandatory</span
-                >
-                <h4>
-                  China Toy Safety — GB 6675 and Children's Product Standards
-                </h4>
-                <p>
-                  Toys sold in China must comply with mandatory national
-                  standard GB 6675, which sets safety requirements covering
-                  mechanical and physical properties, flammability, chemical
-                  properties (including migration limits for heavy metals and
-                  phthalate restrictions), and electrical safety for electronic
-                  toys. GB 6675 is a CCC-listed category — toys meeting the
-                  definition under the standard require CCC certification before
-                  importation and sale. Compliance requires testing by a
-                  CNCA-designated laboratory and factory audit. Standards are
-                  periodically revised by the Standardisation Administration of
-                  China (SAC) — manufacturers must verify their test reports
-                  reference the current version of the applicable GB standard.
-                </p>
-              </div>
-
-              <h2>What This Means for Consumer Goods Businesses</h2>
+              <h2>The Product and Its Markets</h2>
 
               <p>
-                The regulatory landscape for consumer goods has undergone more
-                change in the past two years than in the previous decade. The
-                GPSR's introduction of a mandatory EU Responsible Person created
-                a new structural compliance requirement for every non-EU
-                manufacturer selling through EU online marketplaces or retail
-                channels. The REACH SVHC list now exceeds 253 substances and
-                grows twice annually — a compliance programme that was adequate
-                in 2023 may not be adequate today. The 4,137 EU Safety Gate
-                alerts recorded in 2024 — the highest annual total since the
-                system launched — signal an enforcement environment that is both
-                more active and more consequential than in prior years.
+                Hansung's flagship product line — a range of Class IIa reusable
+                laparoscopic graspers and scissors — was certified under MDD
+                Annex II (full quality assurance) by a Dutch Notified Body in
+                2019, with a certificate valid until 2024. The product was
+                distributed in Germany, the Netherlands, and Belgium through a
+                single European distributor. Simultaneously, the same product
+                line was cleared by the US FDA under a 510(k) submission and
+                sold in the US through a separate distributor. Hansung had no
+                direct relationship with either market authority — all
+                regulatory filings had historically been managed by their
+                distributors.
               </p>
 
               <p>
-                For businesses selling across the EU, UK, US, and China
-                simultaneously, no single compliance framework satisfies all
-                markets. CE marking for the EU does not automatically satisfy UK
-                requirements (though it is recognised indefinitely). CCC
-                certification for China has no equivalent recognition outside
-                China. CPSIA testing obligations for the US market are
-                independent of any EU conformity assessment. Proposition 65
-                obligations in California require substance screening
-                independent of any EU REACH assessment. The common requirement
-                across all four markets is a compliance programme that is
-                maintained continuously — not reviewed once at market entry and
-                left unchanged.
+                This distributor-led compliance model — common among mid-sized
+                Asian device manufacturers — is the first structural risk that
+                this case study examines. When it breaks down, it breaks down
+                completely.
               </p>
+
+              <h2>
+                Failure One: The MDD Certificate Was Not Transitioned to MDR
+              </h2>
+
+              <p>
+                Hansung's MDD certificate expired in March 2024. In the period
+                leading up to expiry, the Dutch Notified Body — under
+                significant pressure from a dramatically increased MDR workload
+                — had communicated that Hansung would need to submit a full MDR
+                conformity assessment application to continue on the EU market.
+                The distributor acknowledged the communication but did not
+                escalate it to Hansung's regulatory affairs team in Seoul.
+              </p>
+
+              <p>
+                When the certificate lapsed, the European distributor continued
+                placing the product on the market, relying on existing stock in
+                the EU supply chain. This is a practice that market surveillance
+                authorities had been monitoring closely since 2024, and the
+                German Federal Institute for Drugs and Medical Devices (BfArM) —
+                which maintains active import surveillance at major distribution
+                centres — flagged the product during a routine check in October
+                2025.
+              </p>
+
+              <p>
+                Under
+                <a href="https://eur-lex.europa.eu/eli/reg/2017/745/oj/eng"
+                  >EU MDR 2017/745</a
+                >, Article 10 places the obligation to ensure conformity
+                squarely on the manufacturer. Placing a Class IIa device on the
+                EU market without a valid MDR certificate — after the relevant
+                transitional provisions under
+                <a
+                  href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0607"
+                  >Regulation (EU) 2023/607</a
+                >
+                had been exhausted for that certificate — constitutes a direct
+                violation of the MDR. BfArM initiated a formal non-conformity
+                procedure, requiring the distributor to cease placing the
+                product on the market immediately and to account for all units
+                in the supply chain.
+              </p>
+
+              <h2>Failure Two: No EUDAMED Registration</h2>
+
+              <p>
+                While investigating the certificate lapse, BfArM also identified
+                that neither Hansung nor their EU distributor had completed
+                EUDAMED registration for either the manufacturer or the device.
+                <a href="https://eur-lex.europa.eu/eli/dec/2025/2371/oj/eng"
+                  >Commission Decision (EU) 2025/2371</a
+                >
+                had established EUDAMED registration as mandatory from 28 May
+                2026 — and Hansung's situation was discovered in October 2025,
+                giving them some technical time before that deadline. However,
+                the absence of an EU Authorised Representative registered in
+                EUDAMED was a separate and already-actionable issue.
+              </p>
+
+              <p>
+                Hansung had never formally appointed an EU Authorised
+                Representative as required under Article 13 of the MDR. Their
+                Dutch distributor had been acting as an informal point of
+                contact for regulatory matters — a practice that was technically
+                compliant under the old MDD model (where an EC Authorised
+                Representative was not required in the same formal sense) but is
+                not compliant under the MDR. The MDR requires the EU AR to be a
+                formally designated legal entity, with written mandate,
+                registered in EUDAMED, and with their name and address appearing
+                on the device label. None of these elements were in place.
+              </p>
+
+              <p>
+                This meant that even if Hansung had been able to resolve the MDR
+                certificate issue rapidly, they would still have been unable to
+                legally place the product on the EU market without first
+                appointing and registering an EU AR in EUDAMED. These are
+                sequential requirements — a device cannot be placed on the EU
+                market without a registered EU AR — and the appointment and
+                EUDAMED registration process takes time that Hansung did not
+                have.
+              </p>
+
+              <h2>Failure Three: The QMSR Gap in the US</h2>
+
+              <p>
+                Hansung's US 510(k) clearance was current. However, when the
+                FDA's revised
+                <a
+                  href="https://www.fda.gov/medical-devices/quality-management-system-regulation-qmsr/quality-management-system-regulation-qmsr"
+                  >Quality Management System Regulation (QMSR)</a
+                >
+                became effective on 2 February 2026 — incorporating ISO
+                13485:2016 by reference into the revised 21 CFR Part 820 —
+                Hansung's QMS documentation remained written against the legacy
+                21 CFR Part 820 format from their original 510(k) submission in
+                2016.
+              </p>
+
+              <p>
+                A routine FDA inspection of Hansung's US distributor's facility
+                in March 2026 included a review of Hansung's quality system
+                documentation as part of the distributed device assessment. The
+                inspector identified that the QMS documentation did not reflect
+                the QMSR requirements — specifically, the ISO 13485:2016
+                management review structure, the supplier qualification records
+                in the format required under QMSR, and the CAPA documentation
+                that had not been updated to reflect the QMSR's more explicit
+                requirements. These were issued as Form 483 observations,
+                requiring a written response within 15 days and a remediation
+                plan.
+              </p>
+
+              <p>
+                At this point, Hansung was simultaneously managing an EU market
+                withdrawal, an EU AR appointment process, an EUDAMED
+                registration backlog, and a US FDA inspection response — without
+                a dedicated regulatory affairs resource capable of handling any
+                of the four simultaneously.
+              </p>
+
+              <h2>The Chain of Events</h2>
+
+              <div class="chain">
+                <div class="chain-step">
+                  <span class="chain-num">1</span>
+                  <p class="chain-text">
+                    <strong>March 2024 — MDD certificate expires.</strong> Dutch
+                    Notified Body notifies distributor that MDR submission is
+                    required to continue. Distributor fails to escalate to
+                    Hansung's regulatory affairs team in Seoul.
+                  </p>
+                </div>
+                <div class="chain-step">
+                  <span class="chain-num">2</span>
+                  <p class="chain-text">
+                    <strong
+                      >March 2024 – October 2025 — products continue to be
+                      placed on the EU market</strong
+                    >
+                    from existing stock. Distributor treats remaining inventory
+                    as already-compliant and continues shipping from their
+                    warehouse.
+                  </p>
+                </div>
+                <div class="chain-step">
+                  <span class="chain-num">3</span>
+                  <p class="chain-text">
+                    <strong
+                      >October 2025 — BfArM market surveillance identifies the
+                      lapsed MDD certificate</strong
+                    >
+                    during a customs documentation check at a Hamburg
+                    distribution centre. Non-conformity procedure initiated
+                    under
+                    <a href="https://eur-lex.europa.eu/eli/reg/2017/745/oj/eng"
+                      >EU MDR Article 95</a
+                    >.
+                  </p>
+                </div>
+                <div class="chain-step">
+                  <span class="chain-num">4</span>
+                  <p class="chain-text">
+                    <strong
+                      >October 2025 — BfArM also identifies the absence of a
+                      registered EU Authorised Representative</strong
+                    >
+                    and the absence of any EUDAMED registration. The
+                    distributor's role as informal point of contact is found to
+                    be insufficient under MDR Article 13.
+                  </p>
+                </div>
+                <div class="chain-step">
+                  <span class="chain-num">5</span>
+                  <p class="chain-text">
+                    <strong
+                      >November 2025 — Hansung initiates an emergency EU AR
+                      appointment process</strong
+                    >
+                    and begins EUDAMED registration. MDR Notified Body
+                    application submitted. All EU market supply suspended during
+                    remediation.
+                  </p>
+                </div>
+                <div class="chain-step">
+                  <span class="chain-num">6</span>
+                  <p class="chain-text">
+                    <strong
+                      >February 2026 — FDA QMSR effective date passes</strong
+                    >
+                    with Hansung's QMS documentation not yet updated. The QMS
+                    was written against the legacy 21 CFR Part 820 format from
+                    the 2016 510(k) submission.
+                  </p>
+                </div>
+                <div class="chain-step">
+                  <span class="chain-num">7</span>
+                  <p class="chain-text">
+                    <strong
+                      >March 2026 — FDA inspection of US distributor
+                      facility</strong
+                    >
+                    surfaces QMSR non-conformance in Hansung's quality system
+                    documentation. Form 483 observations issued. 15-day written
+                    response required.
+                  </p>
+                </div>
+                <div class="chain-step">
+                  <span class="chain-num">8</span>
+                  <p class="chain-text">
+                    <strong
+                      >April 2026 — Hansung's EU AR is registered in
+                      EUDAMED;</strong
+                    >
+                    MDR Notified Body assessment is underway but expected to
+                    take 14–18 months given current Notified Body queues. EU
+                    market re-entry not expected before late 2027.
+                  </p>
+                </div>
+              </div>
+
+              <h2>The Cost of Non-Compliance</h2>
+
+              <table class="cost-table">
+                <thead>
+                  <tr>
+                    <th>Cost Category</th>
+                    <th>Description</th>
+                    <th>Estimated Cost</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>EU market revenue loss</td>
+                    <td>
+                      Estimated 18–24 months of EU market suspension during MDR
+                      Notified Body assessment and EUDAMED remediation
+                    </td>
+                    <td>€210,000</td>
+                  </tr>
+                  <tr>
+                    <td>Stock withdrawal and destruction</td>
+                    <td>
+                      Recall and withdrawal of non-compliant units from EU
+                      distribution chain; destruction of expired stock
+                    </td>
+                    <td>€48,000</td>
+                  </tr>
+                  <tr>
+                    <td>Emergency EU AR appointment</td>
+                    <td>
+                      Expedited EU AR service, formal mandate drafting, legal
+                      review, EUDAMED registration management
+                    </td>
+                    <td>€22,000</td>
+                  </tr>
+                  <tr>
+                    <td>MDR Notified Body assessment</td>
+                    <td>
+                      Notified Body application fees, technical documentation
+                      preparation, clinical evaluation report update, gap
+                      assessment
+                    </td>
+                    <td>€65,000</td>
+                  </tr>
+                  <tr>
+                    <td>FDA QMSR gap remediation</td>
+                    <td>
+                      QMS documentation update to QMSR format, management review
+                      restructuring, CAPA documentation revision, FDA response
+                      preparation
+                    </td>
+                    <td>€28,000</td>
+                  </tr>
+                  <tr>
+                    <td>External regulatory counsel</td>
+                    <td>
+                      Legal and regulatory advice across EU and US enforcement
+                      matters; coordinating parallel responses
+                    </td>
+                    <td>€18,000</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Total estimated cost</strong></td>
+                    <td>
+                      <strong
+                        >Revenue loss plus direct remediation
+                        expenditure</strong
+                      >
+                    </td>
+                    <td><strong>€391,000</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h2>The Regulatory Facts Behind Each Failure</h2>
+
+              <div class="reg-update-block">
+                <h4>
+                  MDR Transition —
+                  <a
+                    href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0607"
+                    >Regulation (EU) 2023/607</a
+                  >
+                </h4>
+                <p>
+                  The MDR transitional provisions allow devices with valid MDD
+                  certificates on 26 May 2021 to continue on the EU market until
+                  the transition cut-off dates — but only if the certificate
+                  remains valid and has not expired. Hansung's MDD certificate
+                  expired in March 2024. At that point, the transitional
+                  provisions ceased to apply. The device could not legally be
+                  placed on the EU market after certificate expiry without a
+                  valid MDR certificate. This is a common misunderstanding: the
+                  transition deadlines of December 2027 and December 2028 are
+                  cut-off dates for valid MDD certificates — they do not extend
+                  certificates that have already lapsed.
+                </p>
+              </div>
+
+              <div class="reg-update-block">
+                <h4>
+                  EU Authorised Representative —
+                  <a href="https://eur-lex.europa.eu/eli/reg/2017/745/oj/eng"
+                    >MDR Article 13</a
+                  >
+                  and EUDAMED
+                </h4>
+                <p>
+                  Article 13 of the MDR requires non-EU manufacturers to
+                  designate a single EU Authorised Representative by means of a
+                  written mandate. The EU AR must be registered in EUDAMED and
+                  their name and address must appear on or with the device. The
+                  distributor — even one that has historically handled
+                  regulatory matters — is not an EU AR unless they have been
+                  formally designated under a written Article 13 mandate.
+                  <a href="https://eur-lex.europa.eu/eli/dec/2025/2371/oj/eng"
+                    >Commission Decision (EU) 2025/2371</a
+                  >
+                  made EUDAMED registration mandatory from 28 May 2026, but the
+                  EU AR requirement under Article 13 of the MDR has been active
+                  since the MDR's date of application on 26 May 2021.
+                </p>
+              </div>
+
+              <div class="reg-update-block">
+                <h4>
+                  FDA QMSR — Revised
+                  <a
+                    href="https://www.fda.gov/medical-devices/quality-management-system-regulation-qmsr/quality-management-system-regulation-qmsr"
+                    >21 CFR Part 820</a
+                  >
+                  Effective 2 February 2026
+                </h4>
+                <p>
+                  The QMSR became effective on 2 February 2026, incorporating
+                  ISO 13485:2016 by reference. All FDA-registered establishments
+                  must now operate under a QMSR-compliant quality system. QMS
+                  documentation written against the legacy 21 CFR Part 820 QSR
+                  format — which predated ISO 13485 incorporation — does not
+                  satisfy QMSR requirements. The transition period of two years
+                  (from publication of the
+                  <a
+                    href="https://www.federalregister.gov/documents/2024/02/02/2024-01709/medical-devices-quality-system-regulation-amendments"
+                    >final rule on 2 February 2024</a
+                  >) was provided specifically to allow manufacturers time to
+                  update their QMS documentation. Manufacturers who did not use
+                  that period are now operating out of compliance.
+                </p>
+              </div>
+
+              <h2>What Could Have Prevented This</h2>
+
+              <ul class="prevent-list">
+                <li>
+                  A proactive MDR gap assessment in 2022 or 2023 — before the
+                  MDD certificate expired — would have identified the need to
+                  initiate a Notified Body application and EU AR appointment at
+                  a time when Notified Body capacity was more accessible and the
+                  cost of remediation was a fraction of the eventual total.
+                </li>
+                <li>
+                  A formal EU Authorised Representative appointment under a
+                  written Article 13 mandate from the date the MDR became
+                  applicable (26 May 2021) would have satisfied the EU AR
+                  requirement and eliminated that enforcement exposure entirely.
+                </li>
+                <li>
+                  A QMSR readiness assessment in 2024 or 2025 — during the
+                  two-year transition period — would have identified the QMS
+                  documentation gaps against ISO 13485:2016 requirements and
+                  allowed remediation before the effective date, avoiding the
+                  Form 483 findings entirely.
+                </li>
+                <li>
+                  A centralised, manufacturer-owned compliance calendar — rather
+                  than distributor-delegated regulatory management — would have
+                  ensured that certificate expiry dates, EUDAMED registration
+                  deadlines, and QMSR transition milestones were tracked by a
+                  party with direct accountability to Hansung's regulatory
+                  obligations.
+                </li>
+                <li>
+                  A multi-market compliance review in early 2026 — recognising
+                  that the EU, UK, US, and China obligations were all
+                  simultaneously active — would have allowed Hansung to
+                  coordinate their response to the EUDAMED mandate, the QMSR
+                  effective date, and the MDR transition cut-offs in a planned
+                  sequence rather than as a reactive crisis.
+                </li>
+              </ul>
+
+              <div class="blog-related-industry">
+                <p>
+                  For a full overview of EU MDR classification rules, EUDAMED
+                  registration, FDA QMSR requirements, and service options
+                  across all four markets.
+                </p>
+                <a href="medical-devices-compliance.html"
+                  >View the medical devices compliance hub &rarr;</a
+                >
+              </div>
 
               <div class="cta-inline">
-                <h3>Need a compliance review for your consumer goods?</h3>
+                <h3>
+                  Don't let overlooked deadlines become a multi-market crisis
+                </h3>
                 <p>
-                  TGC's team reviews your products against GPSR, REACH SVHC,
-                  RoHS, CE/UKCA marking, CPSIA, and CCC requirements —
-                  identifying gaps before they become enforcement actions.
+                  TGC's expedited audit identifies your EU MDR transition
+                  status, EUDAMED registration gaps, QMSR documentation
+                  readiness, and UK/China representative obligations — before
+                  they become enforcement actions. Fixed-rate, delivered in
+                  days.
                 </p>
                 <div>
-                  <a href="contact-us.html" class="btn btn-gold"
-                    >Talk to a Specialist</a
+                  <a href="expedited-audit.html" class="btn btn-gold"
+                    >Get an expedited audit</a
                   >
-                  <a href="expedited-audit.html" class="btn btn-ghost"
-                    >Learn about audits</a
+                  <a href="contact-us.html" class="btn btn-ghost"
+                    >Talk to a Specialist</a
                   >
                 </div>
               </div>
@@ -1165,7 +1275,6 @@
           box-sizing: border-box;
         "
       >
-        <!-- grid -->
         <div
           style="
             display: grid;
@@ -1176,7 +1285,6 @@
             box-sizing: border-box;
           "
         >
-          <!-- brand -->
           <div>
             <a
               href="homepage.html"
@@ -1209,7 +1317,6 @@
               code reviews, and end-to-end compliance programmes. Built by the
               team behind TecEx.
             </p>
-            <!-- social -->
             <div style="display: flex; gap: 10px">
               <a
                 href="https://www.linkedin.com/company/tecex-group/"
@@ -1287,8 +1394,6 @@
               </a>
             </div>
           </div>
-
-          <!-- services -->
           <div>
             <p
               style="
@@ -1356,8 +1461,6 @@
               >Full Product Compliance</a
             >
           </div>
-
-          <!-- industries -->
           <div>
             <p
               style="
@@ -1464,8 +1567,6 @@
               >Medical Devices</a
             >
           </div>
-
-          <!-- company -->
           <div>
             <p
               style="
@@ -1521,9 +1622,6 @@
             >
           </div>
         </div>
-        <!-- /grid -->
-
-        <!-- bottom bar -->
         <div
           style="
             display: flex;

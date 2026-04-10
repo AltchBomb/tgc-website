@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      What's Changing in Consumer Goods Compliance 2025-2026 | TecEx Global
-      Compliance
+      Medical Device Regulation Compared: EU MDR, UK MDR, FDA, and China NMPA |
+      TecEx Global Compliance
     </title>
     <meta
       name="description"
-      content="GPSR, REACH SVHC, RoHS, ESPR, UK UKCA, CPSIA, CCC certification updates affecting consumer goods manufacturers, importers, and online sellers across EU, UK, US, and China."
+      content="A side-by-side comparison of the four major medical device regulatory frameworks — covering classification systems, market access routes, quality system requirements, local representative obligations, and key 2026–2029 changes across the EU, UK, US, and China."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,14 +25,12 @@
         padding: 0;
         box-sizing: border-box;
       }
-
       body {
         font-family: "DM Sans", sans-serif;
         color: #334;
         background: #fff;
         -webkit-font-smoothing: antialiased;
       }
-
       :root {
         --navy: #0a1826;
         --slate: #667a86;
@@ -77,9 +75,9 @@
         text-transform: uppercase;
         letter-spacing: 0.07em;
       }
-      .blog-tag-consumer-goods {
-        background: rgba(20, 120, 90, 0.12);
-        color: #0d7a58;
+      .blog-tag-medical {
+        background: #eee4f5;
+        color: #5a006b;
       }
       .blog-meta-item {
         font-size: 13px;
@@ -125,54 +123,84 @@
       .article-body a:not(.btn) {
         color: var(--gold);
       }
-      .reg-status-active {
-        display: inline-block;
-        padding: 2px 10px;
-        border-radius: 4px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        background: rgba(16, 140, 120, 0.15);
-        color: #0a7566;
-        margin-bottom: 8px;
+
+      .table-scroll {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
       }
-      .reg-status-urgent {
-        display: inline-block;
-        padding: 2px 10px;
-        border-radius: 4px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        background: rgba(200, 50, 50, 0.12);
-        color: #c44;
-        margin-bottom: 8px;
+      .comp-table {
+        width: 100%;
+        min-width: 720px;
+        border-collapse: collapse;
+        font-size: 14px;
       }
-      .reg-status-monitor {
-        display: inline-block;
-        padding: 2px 10px;
-        border-radius: 4px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        background: rgba(211, 169, 17, 0.15);
-        color: #b8900e;
-        margin-bottom: 8px;
-      }
-      .reg-update-block {
-        border-left: 3px solid var(--gold);
-        padding: 18px 0 18px 20px;
-        margin-bottom: 28px;
-      }
-      .reg-update-block h4 {
+      .comp-table th {
+        background: var(--navy);
+        color: #fff;
         font-family: "Sora", sans-serif;
-        font-size: 1rem;
-        font-weight: 600;
-        color: var(--navy);
-        margin: 0 0 8px 0;
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 0.04em;
+        padding: 14px 16px;
+        text-align: left;
       }
-      .reg-update-block p {
-        font-size: 15px;
+      .comp-table th:first-child {
+        width: 160px;
+      }
+      .comp-table td {
+        padding: 14px 16px;
+        border-bottom: 1px solid #e8e3da;
         color: #334;
-        line-height: 1.7;
-        margin: 0 0 10px;
+        vertical-align: top;
+        line-height: 1.55;
       }
+      .comp-table td:first-child {
+        font-family: "Sora", sans-serif;
+        font-weight: 700;
+        font-size: 13px;
+        color: var(--navy);
+        background: #f9f7f4;
+        border-right: 2px solid #e8e3da;
+      }
+      .comp-table tr:nth-child(even) td:not(:first-child) {
+        background: #faf9f7;
+      }
+      .comp-table tr:last-child td {
+        border-bottom: none;
+      }
+      .comp-table a {
+        color: var(--gold);
+      }
+      .juris-pill {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        padding: 3px 10px;
+        border-radius: 999px;
+        margin-bottom: 6px;
+      }
+      .juris-eu {
+        background: rgba(0, 120, 200, 0.12);
+        color: #005fa3;
+      }
+      .juris-uk {
+        background: rgba(0, 90, 160, 0.1);
+        color: #003f7a;
+      }
+      .juris-us {
+        background: rgba(180, 30, 30, 0.1);
+        color: #8b1a1a;
+      }
+      .juris-cn {
+        background: rgba(180, 30, 0, 0.1);
+        color: #8b1500;
+      }
+      .row-highlight td {
+        background: rgba(211, 169, 17, 0.08) !important;
+      }
+
       .cta-inline {
         background: var(--navy);
         border-radius: 12px;
@@ -206,27 +234,22 @@
         border: none;
         transition: all 0.2s ease;
       }
-
       .btn-gold {
         background: var(--gold);
         color: var(--navy);
       }
-
       .btn-gold:hover {
         background: #b8900e;
       }
-
       .btn-ghost {
         background: transparent;
         color: #fff;
         border: 1px solid rgba(255, 255, 255, 0.3);
       }
-
       .btn-ghost:hover {
         background: rgba(255, 255, 255, 0.1);
       }
 
-      /* Header styles */
       #tgc-site-header {
         background: var(--navy);
         position: sticky;
@@ -234,7 +257,6 @@
         z-index: 999;
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       }
-
       .tgc-hdr-inner {
         max-width: 1200px;
         margin: 0 auto;
@@ -244,23 +266,19 @@
         justify-content: space-between;
         height: 70px;
       }
-
       .tgc-hdr-logo img {
         height: 40px;
         width: auto;
       }
-
       .tgc-hdr-nav {
         display: flex;
         gap: 40px;
         flex: 1;
         margin-left: 60px;
       }
-
       .tgc-hdr-item {
         position: relative;
       }
-
       .tgc-hdr-link {
         background: none;
         border: none;
@@ -274,20 +292,16 @@
         gap: 8px;
         transition: color 0.2s;
       }
-
       .tgc-hdr-link:hover {
         color: #fff;
       }
-
       .tgc-hdr-link.tgc-hdr-active {
         color: var(--gold);
       }
-
       .tgc-hdr-chevron {
         width: 12px;
         height: 12px;
       }
-
       .tgc-hdr-drop {
         position: absolute;
         top: 100%;
@@ -300,11 +314,9 @@
         display: none;
         margin-top: 8px;
       }
-
       .tgc-hdr-item:hover .tgc-hdr-drop {
         display: block;
       }
-
       .tgc-hdr-drop-label {
         display: block;
         padding: 8px 16px;
@@ -314,7 +326,6 @@
         text-transform: uppercase;
         letter-spacing: 0.08em;
       }
-
       .tgc-hdr-drop-link {
         display: block;
         padding: 8px 16px;
@@ -323,17 +334,14 @@
         font-size: 13px;
         transition: color 0.2s;
       }
-
       .tgc-hdr-drop-link:hover {
         color: #fff;
       }
-
       .tgc-hdr-divider {
         height: 1px;
         background: rgba(255, 255, 255, 0.08);
         margin: 8px 0;
       }
-
       .tgc-hdr-cta {
         background: var(--gold);
         color: #fff;
@@ -345,11 +353,9 @@
         white-space: nowrap;
         transition: background 0.2s;
       }
-
       .tgc-hdr-cta:hover {
         background: #b8900e;
       }
-
       .tgc-hdr-burger {
         display: none;
         background: none;
@@ -360,7 +366,6 @@
         gap: 5px;
         cursor: pointer;
       }
-
       .tgc-hdr-burger span {
         width: 100%;
         height: 2px;
@@ -368,7 +373,6 @@
         border-radius: 1px;
         transition: all 0.3s;
       }
-
       .tgc-hdr-mobile {
         display: none;
         position: absolute;
@@ -381,16 +385,13 @@
         overflow: hidden;
         transition: max-height 0.3s;
       }
-
       .tgc-hdr-mobile.tgc-mob-open {
         max-height: 500px;
       }
-
       .tgc-mob-section {
         padding: 20px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       }
-
       .tgc-mob-heading {
         font-size: 11px;
         font-weight: 700;
@@ -399,7 +400,6 @@
         letter-spacing: 0.1em;
         margin: 0 0 12px;
       }
-
       .tgc-mob-link {
         display: block;
         padding: 8px 0;
@@ -408,11 +408,9 @@
         font-size: 13px;
         transition: color 0.2s;
       }
-
       .tgc-mob-link:hover {
         color: #fff;
       }
-
       .tgc-mob-cta {
         display: block;
         background: var(--gold);
@@ -426,11 +424,9 @@
         margin: 20px;
         transition: background 0.2s;
       }
-
       .tgc-mob-cta:hover {
         background: #b8900e;
       }
-
       @media (max-width: 900px) {
         .tgc-hdr-nav {
           display: none;
@@ -448,7 +444,6 @@
     <!-- HEADER:START -->
     <header id="tgc-site-header" role="banner">
       <div class="tgc-hdr-inner">
-        <!-- Logo -->
         <a
           href="homepage.html"
           class="tgc-hdr-logo"
@@ -460,8 +455,6 @@
             class="tgc-hdr-logo-img"
           />
         </a>
-
-        <!-- Desktop nav -->
         <nav class="tgc-hdr-nav" aria-label="Main navigation">
           <div class="tgc-hdr-item">
             <button
@@ -515,7 +508,6 @@
               >
             </div>
           </div>
-
           <div class="tgc-hdr-item">
             <button
               class="tgc-hdr-link"
@@ -583,7 +575,6 @@
               >
             </div>
           </div>
-
           <div class="tgc-hdr-item">
             <a href="pricing.html" class="tgc-hdr-link">Pricing</a>
           </div>
@@ -597,11 +588,7 @@
             <a href="contact-us.html" class="tgc-hdr-link">Contact</a>
           </div>
         </nav>
-
-        <!-- CTA -->
         <a href="contact-us.html" class="tgc-hdr-cta">Get a quote &rarr;</a>
-
-        <!-- Hamburger (mobile) -->
         <button
           class="tgc-hdr-burger"
           id="tgc-hdr-burger"
@@ -609,13 +596,9 @@
           aria-expanded="false"
           aria-controls="tgc-hdr-mobile-menu"
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
       </div>
-
-      <!-- Mobile menu -->
       <div class="tgc-hdr-mobile" id="tgc-hdr-mobile-menu" aria-hidden="true">
         <div class="tgc-mob-section">
           <p class="tgc-mob-heading">Services</p>
@@ -660,7 +643,6 @@
     </header>
     <script>
       (function () {
-        /* Mobile burger toggle */
         var burger = document.getElementById("tgc-hdr-burger");
         var menu = document.getElementById("tgc-hdr-mobile-menu");
         if (burger && menu) {
@@ -670,7 +652,6 @@
             menu.setAttribute("aria-hidden", open ? "false" : "true");
           });
         }
-        /* Active state — highlight the link matching the current page */
         var page = window.location.pathname.split("/").pop() || "homepage.html";
         document.querySelectorAll("#tgc-site-header a").forEach(function (a) {
           if ((a.getAttribute("href") || "").split("/").pop() === page) {
@@ -686,460 +667,429 @@
     <!-- HEADER:END -->
 
     <div class="tgc-page" style="margin-top: 64px">
-      <!-- Hero -->
-      <section class="blog-post-hero">
-        <div class="wrap">
-          <div class="blog-post-meta">
-            <span class="blog-tag blog-tag-consumer-goods">Consumer Goods</span>
-            <span class="blog-meta-item">April 2026</span>
-            <span class="blog-meta-item">· 10 min read</span>
-          </div>
-          <h1>
-            What's Changing in Consumer Goods Compliance: GPSR, REACH, CPSIA and
-            China CCC
-          </h1>
-          <p class="lead">
-            A region-by-region breakdown of the regulatory changes and active
-            requirements that consumer goods manufacturers, importers, brand
-            owners and online sellers need to understand across the EU, UK, US,
-            and China in 2025–2026.
-          </p>
+    <!-- Hero -->
+    <section class="blog-post-hero">
+      <div class="wrap">
+        <div class="blog-post-meta">
+          <span class="blog-tag blog-tag-medical">Medical Devices</span>
+          <span class="blog-meta-item">April 2026</span>
+          <span class="blog-meta-item">· 11 min read</span>
         </div>
-      </section>
+        <h1>
+          Medical Device Regulation Compared: EU MDR, UK MDR, US FDA, and China
+          NMPA
+        </h1>
+        <p class="lead">
+          A side-by-side comparison of the four major medical device regulatory
+          frameworks — covering classification, market access marking, quality
+          system requirements, local representative obligations, premarket
+          pathways, and the key changes coming in 2026–2029.
+        </p>
+      </div>
+    </section>
 
-      <!-- Article -->
-      <div
-        id="tgc-blog-consumer-updates"
-        class="tgc-page"
-        style="margin-top: 64px"
-      >
-        <div class="wrap" style="max-width: 760px; margin: 0 auto">
-          <div style="max-width: 760px; margin: 0 auto" class="article-body">
-            <div class="blog-related-industry">
-              <p>
-                This article is part of our consumer goods compliance coverage.
-              </p>
-              <a href="consumer-goods-compliance.html"
-                >View all consumer goods resources &rarr;</a
+    <!-- Article -->
+    <div id="tgc-blog-md-comparison" class="tgc-page" style="margin-top: 64px">
+      <div class="wrap" style="max-width: 900px; margin: 0 auto">
+        <div style="max-width: 760px; margin: 0 auto" class="article-body">
+        <div class="blog-related-industry">
+          <p>
+            This article is part of our medical devices compliance coverage.
+          </p>
+          <a href="medical-devices-compliance.html"
+            >View all medical device resources &rarr;</a
+          >
+        </div>
+
+        <div class="article-body">
+          <p>
+            Medical device manufacturers entering multiple markets
+            simultaneously must navigate four fundamentally different regulatory
+            systems. The EU MDR and IVDR operate under a risk-based
+            classification scheme with mandatory Notified Body involvement for
+            most non-lowest-risk devices. The US FDA uses a three-tier system
+            centred on substantial equivalence for the majority of devices. The
+            UK has maintained a broadly EU-aligned framework but with distinct
+            local representative requirements and an evolving relationship with
+            CE marking. China's NMPA system requires national-level registration
+            for all imported devices regardless of class, with a mandatory
+            single China agent whose name appears on the registration
+            certificate itself.
+          </p>
+
+          <p>
+            The table below compares these four systems across seven key
+            dimensions. The narrative sections that follow analyse the most
+            material differences in practice.
+          </p>
+
+          <h2>Quick Reference: EU MDR vs UK MDR vs US FDA vs China NMPA</h2>
+
+          <div class="table-scroll" style="margin: 32px 0 40px">
+            <table class="comp-table">
+              <thead>
+                <tr>
+                  <th>Dimension</th>
+                  <th>
+                    <span class="juris-pill juris-eu">EU</span><br />EU MDR
+                    2017/745 / IVDR 2017/746
+                  </th>
+                  <th>
+                    <span class="juris-pill juris-uk">UK</span><br />UK MDR 2002
+                    (SI 2002/618)
+                  </th>
+                  <th>
+                    <span class="juris-pill juris-us">US</span><br />FDA 21 CFR
+                    Part 820 / QMSR
+                  </th>
+                  <th>
+                    <span class="juris-pill juris-cn">China</span><br />NMPA
+                    Order 739
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Risk classification</td>
+                  <td>
+                    4 classes (I, IIa, IIb, III) for devices; 4 classes (A, B,
+                    C, D) for IVDs. 22 classification rules under Annex VIII of
+                    MDR. Class I mostly self-certified; Class IIa and above
+                    require Notified Body.
+                  </td>
+                  <td>
+                    Same 4-class system as EU MDR (adopted from MDD framework).
+                    CE marking under EU MDR/IVDR accepted until 30 Jun 2030 for
+                    GB market access without separate UK conformity assessment.
+                  </td>
+                  <td>
+                    3 classes (I, II, III). Class I ~47% of device types (mostly
+                    exempt from premarket review). Class II ~43% (510(k)
+                    clearance). Class III ~10% (PMA approval required).
+                  </td>
+                  <td>
+                    3 classes (I, II, III). All imported devices subject to
+                    national NMPA registration regardless of class — unlike EU,
+                    even Class I imports require NMPA approval at the national
+                    level.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Market access route</td>
+                  <td>
+                    CE marking with EU Declaration of Conformity. Non-EU
+                    manufacturers must appoint an EU Authorised Representative
+                    (Article 13 MDR). EUDAMED SRN must appear on device label
+                    from 28 May 2026.
+                  </td>
+                  <td>
+                    CE marking (MDR/IVDR) accepted until 30 Jun 2030. Legacy
+                    MDD/AIMDD CE accepted until 30 Jun 2028. UK Responsible
+                    Person (UKRP) mandatory for all non-GB manufacturers.
+                  </td>
+                  <td>
+                    510(k) clearance (substantial equivalence to predicate), PMA
+                    approval (Class III), or De Novo classification (novel
+                    low/moderate risk).
+                    <a
+                      href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-807"
+                      >21 CFR Part 807</a
+                    >
+                    establishment registration and device listing required for
+                    all.
+                  </td>
+                  <td>
+                    NMPA registration certificate — issued nationally for all
+                    classes. Single China agent mandatory; agent name appears on
+                    the certificate and all labelling.
+                    <a
+                      href="https://english.nmpa.gov.cn/2021-05/31/c_655121.htm"
+                      >CMDE technical evaluation</a
+                    >
+                    conducted for all import registrations.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Quality system requirement</td>
+                  <td>
+                    <a href="https://eur-lex.europa.eu/eli/reg/2017/745/oj/eng"
+                      >EU MDR Annex IX</a
+                    >
+                    — based on ISO 13485:2016. Notified Body audits of QMS
+                    mandatory for Class IIa and above. Post-market surveillance
+                    and PSUR requirements active.
+                  </td>
+                  <td>
+                    UK MDR 2002 QMS requirements broadly equivalent to EU MDR.
+                    PMS amendment regulations in force June 2025 strengthened
+                    PSUR and PMCF obligations for GB market.
+                  </td>
+                  <td>
+                    <a
+                      href="https://www.fda.gov/medical-devices/quality-management-system-regulation-qmsr/quality-management-system-regulation-qmsr"
+                      >FDA QMSR</a
+                    >
+                    (revised 21 CFR Part 820, effective 2 Feb 2026) incorporates
+                    ISO 13485:2016 by reference. FDA inspection regime actively
+                    assesses QMSR conformance.
+                  </td>
+                  <td>
+                    ISO 13485 (implemented as YY/T 0287) required for all
+                    registered devices. NMPA and provincial authorities conduct
+                    GMP inspections of manufacturing sites. Quality system
+                    documentation must be filed as part of the registration
+                    dossier.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Local representative obligation</td>
+                  <td>
+                    EU Authorised Representative (EU AR) mandatory for all
+                    non-EU manufacturers under Article 11 MDR. EU AR registered
+                    in EUDAMED; SRN on device label. Single EU AR per
+                    manufacturer per device category.
+                  </td>
+                  <td>
+                    UK Responsible Person (UKRP) mandatory for all non-GB
+                    manufacturers. Must be a legal entity established in Great
+                    Britain (not EU). Name and address on or with the device.
+                    Northern Ireland follows EU rules (no UKRP required).
+                  </td>
+                  <td>
+                    US Agent mandatory for all foreign establishments under
+                    <a
+                      href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-807"
+                      >21 CFR Part 807</a
+                    >. US Agent registered with FDA; acts as point of contact
+                    for FDA communications. Does not appear on device labelling.
+                  </td>
+                  <td>
+                    Single China agent mandatory under
+                    <a
+                      href="https://english.nmpa.gov.cn/2021-05/31/c_655121.htm"
+                      >Order 739</a
+                    >. Agent name appears on NMPA registration certificate and
+                    all device labelling. Changing the China agent requires
+                    certificate amendment — a significant operational
+                    constraint.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Premarket pathway</td>
+                  <td>
+                    Conformity assessment with Notified Body for Class IIa and
+                    above. Technical documentation, clinical evaluation, and
+                    post-market surveillance plan required. Class I
+                    (non-sterile, non-measuring) self-certified with EU AR.
+                  </td>
+                  <td>
+                    Same conformity assessment approach as EU MDR while CE
+                    recognition is in place. MHRA UKCA route via UK Approved
+                    Bodies available but not widely used. Consultation on future
+                    post-2030 route open as of early 2026.
+                  </td>
+                  <td>
+                    510(k) Premarket Notification for Class II (demonstrates
+                    substantial equivalence to a legally marketed predicate).
+                    PMA for Class III (clinical data required).
+                    <a
+                      href="https://www.fda.gov/medical-devices/premarket-submissions-selecting-and-preparing-correct-submission/de-novo-classification-request"
+                      >De Novo</a
+                    >
+                    for novel devices. FDA clears ~3,000 devices/year via
+                    510(k).
+                  </td>
+                  <td>
+                    NMPA registration via CMDE technical evaluation for all
+                    classes. Registration certificates valid 5 years. Class I
+                    registration is simpler but still nationally required for
+                    imports. No concept of substantial equivalence — each device
+                    is evaluated independently.
+                  </td>
+                </tr>
+                <tr>
+                  <td>UDI requirement</td>
+                  <td>
+                    UDI mandatory as part of EUDAMED device registration. UDI-DI
+                    and UDI-PI required on device labelling by class. EUDAMED
+                    UDI module mandatory from 28 May 2026.
+                  </td>
+                  <td>
+                    UK UDI system currently aligned with EU approach for devices
+                    accepted under CE recognition. MHRA monitoring UDI
+                    implementation as part of wider framework review.
+                  </td>
+                  <td>
+                    FDA UDI mandatory for all device classes — Class III from
+                    2014, Class II from 2016, Class I (labelled) from 2020.
+                    <a
+                      href="https://www.fda.gov/medical-devices/unique-device-identification-system-udi-system/udi-basics"
+                      >UDI must appear</a
+                    >
+                    on device label and in the Global UDI Database (GUDID).
+                  </td>
+                  <td>
+                    China UDI phased in from 2021. Class III mandatory since
+                    2021. Class II and Class I implementation on rolling
+                    schedule per NMPA. Separate national UDI Data Repository
+                    from EU/US systems.
+                  </td>
+                </tr>
+                <tr class="row-highlight">
+                  <td>Key 2026–2029 change</td>
+                  <td>
+                    EUDAMED mandatory 28 May 2026. MDR transition cut-offs:
+                    Class III &amp; IIb implantable Dec 2027; remaining classes
+                    Dec 2028. IVDR cut-offs: Class D Dec 2027, Class C Dec 2028,
+                    Class B/A sterile Dec 2029.
+                  </td>
+                  <td>
+                    CE MDR/IVDR recognition window runs to 30 Jun 2030. MHRA
+                    consultation on indefinite CE recognition open Feb 2026 —
+                    outcome will determine post-2030 route. PMS amendments
+                    already in force (June 2025).
+                  </td>
+                  <td>
+                    QMSR (revised 21 CFR Part 820) effective 2 Feb 2026 — all
+                    FDA-registered establishments must operate under QMSR now.
+                    Ongoing FDA review of digital health software and AI/ML
+                    device guidance.
+                  </td>
+                  <td>
+                    NMPA certificate renewals at 5-year intervals ongoing. UDI
+                    phase-in for lower classes continues. Manufacturers should
+                    initiate renewal at least 12 months before certificate
+                    expiry.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>
+            Classification Philosophy: MDR Risk Classes vs FDA's Three-Tier
+            System
+          </h2>
+
+          <p>
+            The EU MDR's four-class system for devices and four-class system for
+            IVDs (applied separately under the IVDR) creates a more granular
+            risk stratification than the FDA's three-tier approach. In practice,
+            the most significant divergence is at the lower end of the risk
+            spectrum. A Class I measuring or sterile device under the EU MDR
+            requires Notified Body involvement — there is no equivalent FDA
+            pathway that would require a 510(k) or PMA for a comparable device
+            category. Conversely, a US Class II 510(k)-cleared device may face a
+            Class IIa or IIb classification in the EU, triggering a Notified
+            Body conformity assessment that was not required for the US
+            approval. Manufacturers cannot assume that classification in one
+            system maps directly to classification in another; a classification
+            mapping exercise is a necessary first step for any multi-market
+            strategy.
+          </p>
+
+          <p>
+            China's three-class system has a further distinguishing feature: the
+            requirement for national NMPA registration at all class levels for
+            imported devices. This is the most significant structural difference
+            between China and the other three markets. A Class I device that is
+            self-certified under the EU MDR, exempt from premarket review in the
+            US, and accepted under CE marking in the UK will still require a
+            full NMPA national registration before it can be placed on the
+            Chinese market. This adds time and cost to the China market entry
+            process that has no equivalent in the other three systems.
+          </p>
+
+          <h2>Quality System Requirements: ISO 13485 as the Common Thread</h2>
+
+          <p>
+            The most significant area of convergence across all four markets is
+            the adoption of ISO 13485:2016 as the foundational quality
+            management system standard. The EU MDR Annex IX references ISO 13485
+            as the basis for QMS conformity assessment by Notified Bodies. The
+            FDA QMSR, effective 2 February 2026, incorporates ISO 13485:2016
+            directly into revised
+            <a
+              href="https://www.fda.gov/medical-devices/quality-management-system-regulation-qmsr/quality-management-system-regulation-qmsr"
+              >21 CFR Part 820</a
+            >. China's NMPA requires ISO 13485 (implemented nationally as YY/T
+            0287) as part of the registration dossier. The UK PMS amendments in
+            force from June 2025 aligned UK requirements more closely with the
+            EU MDR PMS framework, which is itself ISO 13485-based.
+          </p>
+
+          <p>
+            The practical implication is that a well-implemented ISO 13485:2016
+            QMS provides a credible foundation for compliance in all four
+            markets — but it is not sufficient on its own. The QMSR adds
+            FDA-specific requirements on complaint files and CAPA documentation
+            that go beyond the ISO 13485 text. The EU MDR Annex IX adds
+            requirements for clinical evaluation and post-market surveillance
+            that are not present in the FDA QMSR. China requires QMS
+            documentation to be translated and filed as part of the NMPA
+            dossier, with specific formatting expectations. A single QMS must be
+            structured to accommodate all of these overlay requirements
+            simultaneously.
+          </p>
+
+          <h2>
+            Local Representatives: Four Different Structures, Four Different
+            Risks
+          </h2>
+
+          <p>
+            The local representative obligation is present in all four markets
+            but is structured very differently. The EU Authorised Representative
+            under Article 13 of the MDR is the most operationally significant:
+            the EU AR's name must appear on device labelling, their EUDAMED SRN
+            must be registered and displayed, and they bear legal liability for
+            the device in the EU market. A manufacturer who terminates their EU
+            AR relationship mid-certificate cycle faces an immediate market
+            access problem — the device cannot be placed on the EU market
+            without a registered EU AR, and EUDAMED registration must be updated
+            before the device can continue to be distributed.
+          </p>
+
+          <p>
+            The China agent creates a different but comparably significant risk.
+            Because the China agent's name appears on the NMPA registration
+            certificate itself — not just on the labelling — any change to the
+            China agent requires a formal certificate amendment through the
+            CMDE. This is a process that takes significant time and cannot be
+            done reactively in response to a commercial dispute or service
+            failure. Manufacturers entering the Chinese market must treat the
+            China agent appointment as a long-term structural commitment, not a
+            vendor relationship that can be changed with a notice period.
+          </p>
+
+          <div class="blog-related-industry">
+            <p>
+              For a full overview of classification rules, registration
+              timelines, and service options across all four markets.
+            </p>
+            <a href="medical-devices-compliance.html"
+              >View the medical devices compliance hub &rarr;</a
+            >
+          </div>
+
+          <div class="cta-inline">
+            <h3>Selling medical devices across multiple markets?</h3>
+            <p>
+              TGC supports manufacturers with EU MDR/IVDR conformity
+              preparation, EUDAMED registration, QMSR gap assessments, UK
+              Responsible Person appointments, and NMPA registration management
+              — coordinated across all four markets.
+            </p>
+            <div>
+              <a href="contact-us.html" class="btn btn-gold"
+                >Talk to a Specialist</a
+              >
+              <a href="expedited-audit.html" class="btn btn-ghost"
+                >Learn about audits</a
               >
             </div>
-
-            <div class="article-body">
-              <p>
-                The regulatory landscape for consumer goods has undergone more
-                change in the past two years than in the previous decade.
-                Product compliance requirements are now more complex, more
-                interconnected, and more actively enforced than ever before.
-                What follows is a working guide to the material requirements in
-                each major market and how they interact.
-              </p>
-
-              <p>
-                For manufacturers, importers, brand owners, and online sellers,
-                the challenge is no longer limited to individual market
-                compliance. A single product may need to satisfy the EU's
-                General Product Safety Regulation (GPSR), the UK's recognised CE
-                marking framework, the US Consumer Product Safety Improvement
-                Act (CPSIA), California's Proposition 65, China's CCC
-                certification, and regional RoHS-equivalent restrictions
-                simultaneously.
-              </p>
-
-              <h2>European Union — GPSR, REACH, RoHS and ESPR</h2>
-
-              <div class="reg-update-block">
-                <span class="reg-status-urgent">In force 13 December 2024</span>
-                <h4>
-                  EU General Product Safety Regulation — Regulation (EU)
-                  2023/988
-                </h4>
-                <p>
-                  GPSR became binding on 13 December 2024, replacing the General
-                  Product Safety Directive 2001/95/EC. All consumer products not
-                  covered by more specific EU safety legislation now require a
-                  designated EU Responsible Person — a legal entity established
-                  in the EU whose full name and physical address must be
-                  displayed on or with the product. Online marketplaces are
-                  subject to new obligations under Article 22, including
-                  registration with the EU Safety Gate portal and active
-                  cooperation with market surveillance authorities to remove
-                  non-compliant listings. Internal complaint-handling and
-                  traceability systems are also required. Failure to designate
-                  an EU Responsible Person before placing a consumer product on
-                  the EU market is a direct violation of the GPSR — the absence
-                  of this information on a product listing is itself an
-                  enforcement trigger. Source:
-                  <a href="https://eur-lex.europa.eu/eli/reg/2023/988/oj/eng"
-                    >Regulation (EU) 2023/988</a
-                  >.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-urgent"
-                  >Active monitoring required — updated twice yearly</span
-                >
-                <h4>
-                  REACH SVHC Candidate List — 253 Substances as of February 2026
-                </h4>
-                <p>
-                  <a href="https://eur-lex.europa.eu/eli/reg/2006/1907/oj/eng"
-                    >REACH Regulation (EC) 1907/2006</a
-                  >
-                  requires consumer goods manufacturers to monitor the
-                  <a href="https://echa.europa.eu/candidate-list-table"
-                    >SVHC Candidate List maintained by ECHA</a
-                  >. If any article contains a listed SVHC above 0.1% by weight,
-                  the supplier must notify customers and inform consumers on
-                  request within 45 days. As of February 2026, the list contains
-                  253 substances following the addition of n-Hexane and BPAF.
-                  ECHA updates the list twice per year — a product passing
-                  compliance review in January may have a new SVHC obligation by
-                  July with no change to the product itself. Manufacturers with
-                  complex supply chains must maintain active SVHC screening
-                  frameworks across all components and materials. Source:
-                  <a
-                    href="https://echa.europa.eu/-/echa-adds-two-hazardous-chemicals-to-the-candidate-list-1"
-                    >ECHA, February 2026</a
-                  >.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-active">In force</span>
-                <h4>
-                  RoHS Directive 2011/65/EU — 10 Restricted Substances in EEE
-                </h4>
-                <p>
-                  <a
-                    href="https://environment.ec.europa.eu/topics/waste-and-recycling/rohs-directive_en"
-                    >RoHS Directive 2011/65/EU</a
-                  >
-                  restricts 10 hazardous substances in electrical and electronic
-                  equipment: lead, mercury, cadmium, hexavalent chromium, PBBs,
-                  PBDEs, and four phthalates added by amendment Directive (EU)
-                  2015/863. Maximum concentrations are 1,000 ppm for most
-                  substances and 100 ppm for cadmium. CE marking for EEE
-                  includes RoHS conformity as a mandatory component. In 2024,
-                  further exemption amendments were published covering cadmium
-                  in quantum dots and lead/cadmium in recovered rigid PVC
-                  applications. Any consumer electronics product entering the EU
-                  market must include a RoHS Declaration of Conformity as part
-                  of the technical file.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-urgent"
-                  >In force July 2024 — product-specific obligations from
-                  2026+</span
-                >
-                <h4>
-                  ESPR — Ecodesign for Sustainable Products Regulation (EU)
-                  2024/1781
-                </h4>
-                <p>
-                  <a href="https://eur-lex.europa.eu/eli/reg/2024/1781/oj/eng"
-                    >Regulation (EU) 2024/1781</a
-                  >
-                  entered into force on 18 July 2024, replacing the Ecodesign
-                  Directive 2009/125/EC and extending sustainability
-                  requirements to almost all consumer and industrial goods. From
-                  July 2026, large enterprises are prohibited from destroying
-                  unsold consumer products. A Digital Product Passport (DPP)
-                  registry becomes operational from July 2026. Product-specific
-                  delegated acts covering textiles and steel among the earliest
-                  categories are anticipated from 2026, with transition periods
-                  of at least 18 months. Most sector-specific ESPR obligations
-                  are expected to take effect from 2027 or 2028.
-                </p>
-              </div>
-
-              <h2>
-                United Kingdom — CE Marking, UKCA, and the New Product Act
-              </h2>
-
-              <div class="reg-update-block">
-                <span class="reg-status-urgent">In force 1 October 2024</span>
-                <h4>
-                  CE Marking Accepted Indefinitely — UK Amendment Regulations
-                  2024
-                </h4>
-                <p>
-                  The UK Product Safety and Metrology (Amendment) Regulations
-                  2024, in force from 1 October 2024, removed the previous
-                  expiry deadline for CE marking and now recognise CE marking
-                  indefinitely for 21 product regulations in Great Britain —
-                  including toys, radio equipment, machinery, low voltage
-                  electrical equipment, pressure equipment, and EMC
-                  requirements. For the majority of consumer product categories,
-                  CE marking remains a valid route to GB market access without a
-                  separate UKCA conformity assessment. UKCA marking remains an
-                  alternative pathway through UK-approved bodies. Northern
-                  Ireland continues to follow EU product rules under the Windsor
-                  Framework. Source:
-                  <a
-                    href="https://www.gov.uk/government/publications/continued-recognition-of-eu-requirements-including-ce-marking-for-placing-products-on-the-gb-market"
-                    >UK Government CE Marking Recognition</a
-                  >.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-monitor"
-                  >Royal Assent July 2025 — secondary legislation pending</span
-                >
-                <h4>UK Product Regulation and Metrology Act 2025</h4>
-                <p>
-                  The
-                  <a href="https://www.legislation.gov.uk/ukpga/2025/20"
-                    >Product Regulation and Metrology Act 2025</a
-                  >
-                  received Royal Assent on 21 July 2025. The Act is enabling
-                  legislation granting ministers delegated powers to set and
-                  update product safety and metrology rules, and to align UK
-                  requirements with EU product regulations or diverge where
-                  policy considerations require. The Act does not itself impose
-                  new requirements — those will come through future secondary
-                  legislation. Businesses should monitor secondary legislation
-                  under the Act for sector-specific changes to UK product safety
-                  requirements from 2026 onwards.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-active">Active</span>
-                <h4>
-                  UK RoHS, UK REACH and Product-Specific Retained Legislation
-                </h4>
-                <p>
-                  The UK retains equivalent legislation to EU RoHS (UK RoHS
-                  Regulations 2012, as amended) and UK REACH (via the
-                  Environment Act 2021 framework), administered by the
-                  <a href="https://www.hse.gov.uk/reach/">HSE</a>. The UK REACH
-                  SVHC list is maintained independently of the EU list —
-                  substances added to the EU Candidate List are not
-                  automatically added in the UK. As of 2026, the UK REACH SVHC
-                  list contains fewer entries than the EU list, creating
-                  divergence for businesses supplying both markets. The UK Toys
-                  (Safety) Regulations 2011 remain in force in parallel with the
-                  new EU Toy Safety Regulation 2025/2509, which applies only to
-                  the EU market.
-                </p>
-              </div>
-
-              <h2>
-                United States — CPSIA, FCC Equipment Authorization, and
-                Proposition 65
-              </h2>
-
-              <div class="reg-update-block">
-                <span class="reg-status-active">Active enforcement</span>
-                <h4>
-                  CPSIA — Children's Products Third-Party Testing and
-                  Certification
-                </h4>
-                <p>
-                  The
-                  <a
-                    href="https://www.cpsc.gov/Regulations-Laws--Standards/Statutes/The-Consumer-Product-Safety-Improvement-Act"
-                    >Consumer Product Safety Improvement Act 2008</a
-                  >
-                  requires that all consumer products primarily designed or
-                  intended for children aged 12 and under be tested by a
-                  CPSC-accepted accredited third-party laboratory before sale in
-                  the US. Manufacturers must issue a Children's Product
-                  Certificate (CPC) certifying compliance with all applicable
-                  safety rules. CPSIA imposes strict limits on lead content (100
-                  ppm in surface coatings; 100 ppm total lead in substrate) and
-                  phthalate concentrations in toys and childcare articles.
-                  Tracking labels identifying the manufacturer, production
-                  location, and date of manufacture are required on children's
-                  products and their packaging. Re-testing is required whenever
-                  there is a material change in design, manufacturing process,
-                  or component sourcing. CPSIA applies equally to domestically
-                  manufactured and imported products.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-active">Active</span>
-                <h4>
-                  FCC Equipment Authorization — Electronic Consumer Products
-                </h4>
-                <p>
-                  Consumer electronic products that intentionally emit radio
-                  frequency signals — including Wi-Fi devices, Bluetooth
-                  products, cordless phones, remote controls, and wireless
-                  accessories — require
-                  <a href="https://www.fcc.gov/oet/ea/rfdevice"
-                    >FCC equipment authorization</a
-                  >
-                  before they can be marketed or imported into the United
-                  States. Authorization is obtained through a Telecommunications
-                  Certification Body (TCB) and requires test reports from an
-                  FCC-recognised laboratory. Products with unintentional RF
-                  emissions must meet FCC Part 15 requirements but may use a
-                  Declaration of Conformity process rather than full
-                  certification. FCC authorization is product-model specific and
-                  must be repeated when design changes affect RF
-                  characteristics. The FCC ID must be displayed on the product.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-urgent"
-                  >Active — recent additions effective 2025</span
-                >
-                <h4>
-                  California Proposition 65 — Over 1,000 Regulated Chemicals
-                </h4>
-                <p>
-                  California's
-                  <a
-                    href="https://oehha.ca.gov/proposition-65/proposition-65-list"
-                    >Safe Drinking Water and Toxic Enforcement Act of 1986
-                    (Proposition 65)</a
-                  >
-                  requires businesses to provide a clear and reasonable warning
-                  before knowingly exposing consumers to chemicals listed as
-                  causing cancer or reproductive toxicity. The list currently
-                  contains over 1,000 chemicals. Recent additions include vinyl
-                  acetate (effective January 2025) and bisphenol S (BPS,
-                  reproductive toxicity, effective December 2025). Consumer
-                  goods sold in California — whether manufactured in the US or
-                  imported — must comply if they contain listed chemicals above
-                  safe harbour levels. Given California's market size, Prop 65
-                  compliance is a practical requirement for most consumer goods
-                  exported to the US market.
-                </p>
-              </div>
-
-              <h2>
-                China — CCC Certification and RoHS-Equivalent Restrictions
-              </h2>
-
-              <div class="reg-update-block">
-                <span class="reg-status-urgent"
-                  >Pre-market certification required</span
-                >
-                <h4>
-                  China Compulsory Certification (CCC) — 109 Products Across 17
-                  Categories
-                </h4>
-                <p>
-                  CCC is mandatory for 109 products across 17 categories listed
-                  in China's CCC Catalogue, including electrical appliances,
-                  wires and cables, audio and video equipment, IT and
-                  telecommunications equipment, lighting products, motor
-                  vehicles, children's products, fire products, and household
-                  gas appliances. Products in the catalogue must obtain a CCC
-                  certificate before they can be manufactured, sold, imported,
-                  or used commercially in China. The CCC mark must be affixed to
-                  each unit before sale. The certification process involves
-                  testing by a designated laboratory, factory inspection by an
-                  approved certification body, and ongoing annual surveillance
-                  audits. Lead times typically range from 3 to 9 months —
-                  planning must begin well before target market entry dates.
-                  Source:
-                  <a
-                    href="https://www.china-certification.com/en/list-of-ccc-mandatory-products/"
-                    >China Certification, CCC Product List</a
-                  >.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-active">Active</span>
-                <h4>China RoHS — Restriction of Hazardous Substances in EEE</h4>
-                <p>
-                  China's Management Methods for Restriction of the Use of
-                  Hazardous Substances in Electrical and Electronic Products
-                  (China RoHS) restricts the same six core substances as EU RoHS
-                  Phase 1 (lead, mercury, cadmium, hexavalent chromium, PBBs,
-                  PBDEs) in EEE. All EEE products sold in China must display a
-                  Materials Declaration and indicate whether hazardous substance
-                  limits are met, using the China RoHS marking system — a green
-                  circle for products meeting concentration limits, or an orange
-                  square showing the expected environmental use period for
-                  products exceeding them. EEE subject to CCC certification is
-                  also subject to China RoHS requirements as part of the
-                  certification process.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-active"
-                  >Active — GB 6675 mandatory</span
-                >
-                <h4>
-                  China Toy Safety — GB 6675 and Children's Product Standards
-                </h4>
-                <p>
-                  Toys sold in China must comply with mandatory national
-                  standard GB 6675, which sets safety requirements covering
-                  mechanical and physical properties, flammability, chemical
-                  properties (including migration limits for heavy metals and
-                  phthalate restrictions), and electrical safety for electronic
-                  toys. GB 6675 is a CCC-listed category — toys meeting the
-                  definition under the standard require CCC certification before
-                  importation and sale. Compliance requires testing by a
-                  CNCA-designated laboratory and factory audit. Standards are
-                  periodically revised by the Standardisation Administration of
-                  China (SAC) — manufacturers must verify their test reports
-                  reference the current version of the applicable GB standard.
-                </p>
-              </div>
-
-              <h2>What This Means for Consumer Goods Businesses</h2>
-
-              <p>
-                The regulatory landscape for consumer goods has undergone more
-                change in the past two years than in the previous decade. The
-                GPSR's introduction of a mandatory EU Responsible Person created
-                a new structural compliance requirement for every non-EU
-                manufacturer selling through EU online marketplaces or retail
-                channels. The REACH SVHC list now exceeds 253 substances and
-                grows twice annually — a compliance programme that was adequate
-                in 2023 may not be adequate today. The 4,137 EU Safety Gate
-                alerts recorded in 2024 — the highest annual total since the
-                system launched — signal an enforcement environment that is both
-                more active and more consequential than in prior years.
-              </p>
-
-              <p>
-                For businesses selling across the EU, UK, US, and China
-                simultaneously, no single compliance framework satisfies all
-                markets. CE marking for the EU does not automatically satisfy UK
-                requirements (though it is recognised indefinitely). CCC
-                certification for China has no equivalent recognition outside
-                China. CPSIA testing obligations for the US market are
-                independent of any EU conformity assessment. Proposition 65
-                obligations in California require substance screening
-                independent of any EU REACH assessment. The common requirement
-                across all four markets is a compliance programme that is
-                maintained continuously — not reviewed once at market entry and
-                left unchanged.
-              </p>
-
-              <div class="cta-inline">
-                <h3>Need a compliance review for your consumer goods?</h3>
-                <p>
-                  TGC's team reviews your products against GPSR, REACH SVHC,
-                  RoHS, CE/UKCA marking, CPSIA, and CCC requirements —
-                  identifying gaps before they become enforcement actions.
-                </p>
-                <div>
-                  <a href="contact-us.html" class="btn btn-gold"
-                    >Talk to a Specialist</a
-                  >
-                  <a href="expedited-audit.html" class="btn btn-ghost"
-                    >Learn about audits</a
-                  >
-                </div>
-              </div>
-            </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -1165,7 +1115,6 @@
           box-sizing: border-box;
         "
       >
-        <!-- grid -->
         <div
           style="
             display: grid;
@@ -1176,7 +1125,6 @@
             box-sizing: border-box;
           "
         >
-          <!-- brand -->
           <div>
             <a
               href="homepage.html"
@@ -1209,7 +1157,6 @@
               code reviews, and end-to-end compliance programmes. Built by the
               team behind TecEx.
             </p>
-            <!-- social -->
             <div style="display: flex; gap: 10px">
               <a
                 href="https://www.linkedin.com/company/tecex-group/"
@@ -1286,9 +1233,8 @@
                 </svg>
               </a>
             </div>
+            </div>
           </div>
-
-          <!-- services -->
           <div>
             <p
               style="
@@ -1356,8 +1302,6 @@
               >Full Product Compliance</a
             >
           </div>
-
-          <!-- industries -->
           <div>
             <p
               style="
@@ -1464,8 +1408,6 @@
               >Medical Devices</a
             >
           </div>
-
-          <!-- company -->
           <div>
             <p
               style="
@@ -1521,9 +1463,6 @@
             >
           </div>
         </div>
-        <!-- /grid -->
-
-        <!-- bottom bar -->
         <div
           style="
             display: flex;

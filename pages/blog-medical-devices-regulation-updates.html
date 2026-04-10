@@ -4,15 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      What's Changing in Consumer Goods Compliance 2025-2026 | TecEx Global
+      What's Changing in Medical Device Regulation 2025–2026 | TecEx Global
       Compliance
     </title>
     <meta
       name="description"
-      content="GPSR, REACH SVHC, RoHS, ESPR, UK UKCA, CPSIA, CCC certification updates affecting consumer goods manufacturers, importers, and online sellers across EU, UK, US, and China."
+      content="EU MDR transition deadlines, EUDAMED mandatory activation, UK CE recognition extension, FDA QMSR, and China NMPA Order 739 updates for medical device manufacturers in 2025–2026."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
       rel="stylesheet"
@@ -77,9 +75,9 @@
         text-transform: uppercase;
         letter-spacing: 0.07em;
       }
-      .blog-tag-consumer-goods {
-        background: rgba(20, 120, 90, 0.12);
-        color: #0d7a58;
+      .blog-tag-medical {
+        background: #eee4f5;
+        color: #5a006b;
       }
       .blog-meta-item {
         font-size: 13px;
@@ -660,7 +658,6 @@
     </header>
     <script>
       (function () {
-        /* Mobile burger toggle */
         var burger = document.getElementById("tgc-hdr-burger");
         var menu = document.getElementById("tgc-hdr-mobile-menu");
         if (burger && menu) {
@@ -670,7 +667,6 @@
             menu.setAttribute("aria-hidden", open ? "false" : "true");
           });
         }
-        /* Active state — highlight the link matching the current page */
         var page = window.location.pathname.split("/").pop() || "homepage.html";
         document.querySelectorAll("#tgc-site-header a").forEach(function (a) {
           if ((a.getAttribute("href") || "").split("/").pop() === page) {
@@ -685,449 +681,420 @@
     </script>
     <!-- HEADER:END -->
 
+    <!-- Hero -->
     <div class="tgc-page" style="margin-top: 64px">
-      <!-- Hero -->
       <section class="blog-post-hero">
         <div class="wrap">
           <div class="blog-post-meta">
-            <span class="blog-tag blog-tag-consumer-goods">Consumer Goods</span>
+            <span class="blog-tag blog-tag-medical">Medical Devices</span>
             <span class="blog-meta-item">April 2026</span>
-            <span class="blog-meta-item">· 10 min read</span>
+            <span class="blog-meta-item">· 12 min read</span>
           </div>
           <h1>
-            What's Changing in Consumer Goods Compliance: GPSR, REACH, CPSIA and
-            China CCC
+            What's Changing in Medical Device Regulation: EU MDR, UK MHRA, FDA
+            QMSR, and China NMPA
           </h1>
           <p class="lead">
-            A region-by-region breakdown of the regulatory changes and active
-            requirements that consumer goods manufacturers, importers, brand
-            owners and online sellers need to understand across the EU, UK, US,
-            and China in 2025–2026.
+            A region-by-region breakdown of the regulatory changes that medical
+            device manufacturers, importers, EU Authorised Representatives, and
+            UK Responsible Persons need to understand for 2025–2026 and beyond.
           </p>
         </div>
       </section>
 
       <!-- Article -->
-      <div
-        id="tgc-blog-consumer-updates"
-        class="tgc-page"
-        style="margin-top: 64px"
-      >
+      <div id="tgc-blog-md-updates" class="tgc-page" style="margin-top: 64px">
         <div class="wrap" style="max-width: 760px; margin: 0 auto">
-          <div style="max-width: 760px; margin: 0 auto" class="article-body">
+          <div class="article-body" style="max-width: 760px; margin: 0 auto">
             <div class="blog-related-industry">
               <p>
-                This article is part of our consumer goods compliance coverage.
+                This article is part of our medical devices compliance coverage.
               </p>
-              <a href="consumer-goods-compliance.html"
-                >View all consumer goods resources &rarr;</a
+              <a href="medical-devices-compliance.html"
+                >View all medical device resources &rarr;</a
               >
             </div>
 
             <div class="article-body">
               <p>
-                The regulatory landscape for consumer goods has undergone more
-                change in the past two years than in the previous decade.
-                Product compliance requirements are now more complex, more
-                interconnected, and more actively enforced than ever before.
-                What follows is a working guide to the material requirements in
-                each major market and how they interact.
+                The medical device regulatory landscape has experienced a wave
+                of structural change since 2021 that shows no sign of slowing.
+                The EU's shift from directives to full regulations under the MDR
+                and IVDR, the UK's post-Brexit regulatory realignment, the FDA's
+                alignment of its quality system requirements with ISO 13485, and
+                China's overhaul of its NMPA approval process have each
+                independently raised the bar for market access. What follows is
+                a working guide to the active requirements and the material
+                changes manufacturers must track in each major jurisdiction.
               </p>
 
               <p>
-                For manufacturers, importers, brand owners, and online sellers,
-                the challenge is no longer limited to individual market
-                compliance. A single product may need to satisfy the EU's
-                General Product Safety Regulation (GPSR), the UK's recognised CE
-                marking framework, the US Consumer Product Safety Improvement
-                Act (CPSIA), California's Proposition 65, China's CCC
-                certification, and regional RoHS-equivalent restrictions
-                simultaneously.
+                For manufacturers seeking access to multiple markets
+                simultaneously, the challenge is no longer simply meeting each
+                set of requirements in isolation. Compliance timelines in the
+                EU, UK, US, and China are now running in parallel — and in some
+                cases interacting. A QMS transition required for the US FDA may
+                affect documentation that is simultaneously under review for an
+                EU Notified Body. An EU Authorised Representative appointment
+                required for EUDAMED registration also affects whether a
+                CE-marked device can enter the UK market under the current
+                recognition framework.
               </p>
 
-              <h2>European Union — GPSR, REACH, RoHS and ESPR</h2>
+              <h2>European Union — EU MDR, EUDAMED, and IVDR</h2>
 
               <div class="reg-update-block">
-                <span class="reg-status-urgent">In force 13 December 2024</span>
+                <span class="reg-status-urgent"
+                  >Transition deadline: 31 December 2027 (Class III &amp; IIb
+                  implantable)</span
+                >
                 <h4>
-                  EU General Product Safety Regulation — Regulation (EU)
-                  2023/988
+                  EU MDR 2017/745 — Transition Deadlines Under Regulation (EU)
+                  2023/607
                 </h4>
                 <p>
-                  GPSR became binding on 13 December 2024, replacing the General
-                  Product Safety Directive 2001/95/EC. All consumer products not
-                  covered by more specific EU safety legislation now require a
-                  designated EU Responsible Person — a legal entity established
-                  in the EU whose full name and physical address must be
-                  displayed on or with the product. Online marketplaces are
-                  subject to new obligations under Article 22, including
-                  registration with the EU Safety Gate portal and active
-                  cooperation with market surveillance authorities to remove
-                  non-compliant listings. Internal complaint-handling and
-                  traceability systems are also required. Failure to designate
-                  an EU Responsible Person before placing a consumer product on
-                  the EU market is a direct violation of the GPSR — the absence
-                  of this information on a product listing is itself an
-                  enforcement trigger. Source:
-                  <a href="https://eur-lex.europa.eu/eli/reg/2023/988/oj/eng"
-                    >Regulation (EU) 2023/988</a
-                  >.
+                  <a href="https://eur-lex.europa.eu/eli/reg/2017/745/oj/eng"
+                    >Regulation (EU) 2017/745</a
+                  >
+                  (the EU Medical Device Regulation) has been fully applicable
+                  since 26 May 2021, replacing both the Medical Devices
+                  Directive (MDD 93/42/EEC) and the Active Implantable Medical
+                  Devices Directive (AIMDD 90/385/EEC). However,
+                  <a
+                    href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0607"
+                    >Regulation (EU) 2023/607</a
+                  >
+                  introduced extended transitional arrangements for devices that
+                  were lawfully on the market under MDD or AIMDD certificates
+                  that had not yet been transitioned to MDR conformity. Under
+                  these arrangements, Class III devices and Class IIb
+                  implantable devices must be covered by an MDR certificate by
+                  31 December 2027. Class IIb (non-implantable), Class IIa, and
+                  Class I devices requiring Notified Body involvement must
+                  follow by 31 December 2028. These deadlines apply provided the
+                  manufacturer had a valid MDD/AIMDD certificate on 26 May 2021,
+                  has not made substantial changes to device design or intended
+                  purpose, and the device continues to not present an
+                  unacceptable risk to patient safety. Manufacturers who have
+                  not begun the transition process should be aware that Notified
+                  Body capacity is a real constraint — the number of
+                  EU-recognised Notified Bodies has contracted significantly
+                  since the start of the MDR transition.
                 </p>
               </div>
 
               <div class="reg-update-block">
                 <span class="reg-status-urgent"
-                  >Active monitoring required — updated twice yearly</span
+                  >Mandatory from 28 May 2026</span
                 >
-                <h4>
-                  REACH SVHC Candidate List — 253 Substances as of February 2026
-                </h4>
+                <h4>EUDAMED — Commission Decision (EU) 2025/2371</h4>
                 <p>
-                  <a href="https://eur-lex.europa.eu/eli/reg/2006/1907/oj/eng"
-                    >REACH Regulation (EC) 1907/2006</a
+                  <a href="https://eur-lex.europa.eu/eli/dec/2025/2371/oj/eng"
+                    >Commission Decision (EU) 2025/2371</a
                   >
-                  requires consumer goods manufacturers to monitor the
-                  <a href="https://echa.europa.eu/candidate-list-table"
-                    >SVHC Candidate List maintained by ECHA</a
-                  >. If any article contains a listed SVHC above 0.1% by weight,
-                  the supplier must notify customers and inform consumers on
-                  request within 45 days. As of February 2026, the list contains
-                  253 substances following the addition of n-Hexane and BPAF.
-                  ECHA updates the list twice per year — a product passing
-                  compliance review in January may have a new SVHC obligation by
-                  July with no change to the product itself. Manufacturers with
-                  complex supply chains must maintain active SVHC screening
-                  frameworks across all components and materials. Source:
-                  <a
-                    href="https://echa.europa.eu/-/echa-adds-two-hazardous-chemicals-to-the-candidate-list-1"
-                    >ECHA, February 2026</a
-                  >.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-active">In force</span>
-                <h4>
-                  RoHS Directive 2011/65/EU — 10 Restricted Substances in EEE
-                </h4>
-                <p>
-                  <a
-                    href="https://environment.ec.europa.eu/topics/waste-and-recycling/rohs-directive_en"
-                    >RoHS Directive 2011/65/EU</a
-                  >
-                  restricts 10 hazardous substances in electrical and electronic
-                  equipment: lead, mercury, cadmium, hexavalent chromium, PBBs,
-                  PBDEs, and four phthalates added by amendment Directive (EU)
-                  2015/863. Maximum concentrations are 1,000 ppm for most
-                  substances and 100 ppm for cadmium. CE marking for EEE
-                  includes RoHS conformity as a mandatory component. In 2024,
-                  further exemption amendments were published covering cadmium
-                  in quantum dots and lead/cadmium in recovered rigid PVC
-                  applications. Any consumer electronics product entering the EU
-                  market must include a RoHS Declaration of Conformity as part
-                  of the technical file.
+                  established that EUDAMED — the European Database on Medical
+                  Devices — becomes mandatory for registration of EU Authorised
+                  Representatives, manufacturers, and devices from 28 May 2026.
+                  The UDI module and device registration module are the first to
+                  become compulsory at that date. Devices already on the EU
+                  market at 28 May 2026 have until 28 November 2026 to complete
+                  EUDAMED registration. Non-EU manufacturers are required under
+                  Article 13 of the MDR to appoint a single EU Authorised
+                  Representative, and that representative's details — including
+                  their EUDAMED Single Registration Number (SRN) — must appear
+                  on the device label and in all registration records. Failure
+                  to be registered in EUDAMED by the applicable deadline will
+                  constitute non-compliance with the MDR, regardless of whether
+                  the device itself holds a valid CE certificate. Market
+                  surveillance authorities across EU member states are expected
+                  to use EUDAMED registration status as a primary enforcement
+                  check at the point of import.
                 </p>
               </div>
 
               <div class="reg-update-block">
                 <span class="reg-status-urgent"
-                  >In force July 2024 — product-specific obligations from
-                  2026+</span
+                  >IVDR transition: Class D Dec 2027 · Class C Dec 2028 · Class
+                  B &amp; A sterile Dec 2029</span
                 >
                 <h4>
-                  ESPR — Ecodesign for Sustainable Products Regulation (EU)
-                  2024/1781
+                  EU IVDR 2017/746 — Extended Transitional Periods Under
+                  Regulation (EU) 2024/1860
                 </h4>
                 <p>
-                  <a href="https://eur-lex.europa.eu/eli/reg/2024/1781/oj/eng"
-                    >Regulation (EU) 2024/1781</a
+                  <a href="https://eur-lex.europa.eu/eli/reg/2017/746/oj/eng"
+                    >Regulation (EU) 2017/746</a
                   >
-                  entered into force on 18 July 2024, replacing the Ecodesign
-                  Directive 2009/125/EC and extending sustainability
-                  requirements to almost all consumer and industrial goods. From
-                  July 2026, large enterprises are prohibited from destroying
-                  unsold consumer products. A Digital Product Passport (DPP)
-                  registry becomes operational from July 2026. Product-specific
-                  delegated acts covering textiles and steel among the earliest
-                  categories are anticipated from 2026, with transition periods
-                  of at least 18 months. Most sector-specific ESPR obligations
-                  are expected to take effect from 2027 or 2028.
+                  (the In Vitro Diagnostic Regulation) introduced a complete
+                  reclassification of IVDs, moving the majority of diagnostics
+                  into higher risk classes that now require Notified Body
+                  involvement for the first time.
+                  <a
+                    href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1860"
+                    >Regulation (EU) 2024/1860</a
+                  >
+                  extended the transitional period for legacy IVD Directive
+                  (IVDD 98/79/EC) devices, with new cut-off dates by risk class:
+                  Class D (highest risk, including blood screening and HIV
+                  diagnostics) must hold an IVDR certificate by December 2027;
+                  Class C (including HbA1c, PSA, and self-test products) by
+                  December 2028; Class B and Class A sterile devices by December
+                  2029. Manufacturers of IVDs that were previously
+                  self-certified under the IVDD and that now fall into Class C
+                  or above are facing their first mandatory Notified Body
+                  conformity assessment — a process that can take 18 months or
+                  more depending on the complexity of the device and the current
+                  backlog at IVDR-designated Notified Bodies.
                 </p>
               </div>
 
               <h2>
-                United Kingdom — CE Marking, UKCA, and the New Product Act
+                United Kingdom — MHRA Regulatory Framework and CE Recognition
               </h2>
 
               <div class="reg-update-block">
-                <span class="reg-status-urgent">In force 1 October 2024</span>
-                <h4>
-                  CE Marking Accepted Indefinitely — UK Amendment Regulations
-                  2024
-                </h4>
+                <span class="reg-status-active"
+                  >In force — CE MDR/IVDR accepted until 30 June 2030</span
+                >
+                <h4>UK MDR 2002 and Ongoing CE Marking Recognition</h4>
                 <p>
-                  The UK Product Safety and Metrology (Amendment) Regulations
-                  2024, in force from 1 October 2024, removed the previous
-                  expiry deadline for CE marking and now recognise CE marking
-                  indefinitely for 21 product regulations in Great Britain —
-                  including toys, radio equipment, machinery, low voltage
-                  electrical equipment, pressure equipment, and EMC
-                  requirements. For the majority of consumer product categories,
-                  CE marking remains a valid route to GB market access without a
-                  separate UKCA conformity assessment. UKCA marking remains an
-                  alternative pathway through UK-approved bodies. Northern
-                  Ireland continues to follow EU product rules under the Windsor
-                  Framework. Source:
+                  The
+                  <a href="https://www.legislation.gov.uk/uksi/2002/618"
+                    >UK Medical Devices Regulations 2002 (SI 2002/618)</a
+                  >
+                  remain the primary legislative framework for medical devices
+                  in Great Britain. The MHRA has provided transitional routes
+                  that allow CE-marked devices — certified under EU MDR 2017/745
+                  or EU IVDR 2017/746 — to continue to be placed on the Great
+                  Britain market until 30 June 2030 without a separate UK
+                  Conformity Assessment. Devices bearing a legacy CE mark under
+                  the MDD or AIMDD are accepted until 30 June 2028, or until the
+                  CE certificate expires, whichever is sooner. A UK Responsible
+                  Person (UKRP) — a legal entity established in Great Britain —
+                  is mandatory for all non-GB manufacturers placing devices on
+                  the GB market. The UKRP's name and address must appear on or
+                  with the device. MHRA guidance on the full requirements is
+                  maintained at
                   <a
-                    href="https://www.gov.uk/government/publications/continued-recognition-of-eu-requirements-including-ce-marking-for-placing-products-on-the-gb-market"
-                    >UK Government CE Marking Recognition</a
+                    href="https://www.gov.uk/guidance/regulating-medical-devices-in-the-uk"
+                    >GOV.UK</a
                   >.
                 </p>
               </div>
 
               <div class="reg-update-block">
                 <span class="reg-status-monitor"
-                  >Royal Assent July 2025 — secondary legislation pending</span
+                  >Consultation opened 16 February 2026</span
                 >
-                <h4>UK Product Regulation and Metrology Act 2025</h4>
+                <h4>MHRA Consultation on Indefinite CE Recognition</h4>
                 <p>
-                  The
-                  <a href="https://www.legislation.gov.uk/ukpga/2025/20"
-                    >Product Regulation and Metrology Act 2025</a
-                  >
-                  received Royal Assent on 21 July 2025. The Act is enabling
-                  legislation granting ministers delegated powers to set and
-                  update product safety and metrology rules, and to align UK
-                  requirements with EU product regulations or diverge where
-                  policy considerations require. The Act does not itself impose
-                  new requirements — those will come through future secondary
-                  legislation. Businesses should monitor secondary legislation
-                  under the Act for sector-specific changes to UK product safety
-                  requirements from 2026 onwards.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-active">Active</span>
-                <h4>
-                  UK RoHS, UK REACH and Product-Specific Retained Legislation
-                </h4>
-                <p>
-                  The UK retains equivalent legislation to EU RoHS (UK RoHS
-                  Regulations 2012, as amended) and UK REACH (via the
-                  Environment Act 2021 framework), administered by the
-                  <a href="https://www.hse.gov.uk/reach/">HSE</a>. The UK REACH
-                  SVHC list is maintained independently of the EU list —
-                  substances added to the EU Candidate List are not
-                  automatically added in the UK. As of 2026, the UK REACH SVHC
-                  list contains fewer entries than the EU list, creating
-                  divergence for businesses supplying both markets. The UK Toys
-                  (Safety) Regulations 2011 remain in force in parallel with the
-                  new EU Toy Safety Regulation 2025/2509, which applies only to
-                  the EU market.
-                </p>
-              </div>
-
-              <h2>
-                United States — CPSIA, FCC Equipment Authorization, and
-                Proposition 65
-              </h2>
-
-              <div class="reg-update-block">
-                <span class="reg-status-active">Active enforcement</span>
-                <h4>
-                  CPSIA — Children's Products Third-Party Testing and
-                  Certification
-                </h4>
-                <p>
-                  The
+                  The MHRA
                   <a
-                    href="https://www.cpsc.gov/Regulations-Laws--Standards/Statutes/The-Consumer-Product-Safety-Improvement-Act"
-                    >Consumer Product Safety Improvement Act 2008</a
+                    href="https://www.gov.uk/government/news/mhra-launches-a-consultation-on-indefinite-recognition-of-ce-marked-medical-devices"
+                    >launched a formal consultation on 16 February 2026</a
                   >
-                  requires that all consumer products primarily designed or
-                  intended for children aged 12 and under be tested by a
-                  CPSC-accepted accredited third-party laboratory before sale in
-                  the US. Manufacturers must issue a Children's Product
-                  Certificate (CPC) certifying compliance with all applicable
-                  safety rules. CPSIA imposes strict limits on lead content (100
-                  ppm in surface coatings; 100 ppm total lead in substrate) and
-                  phthalate concentrations in toys and childcare articles.
-                  Tracking labels identifying the manufacturer, production
-                  location, and date of manufacture are required on children's
-                  products and their packaging. Re-testing is required whenever
-                  there is a material change in design, manufacturing process,
-                  or component sourcing. CPSIA applies equally to domestically
-                  manufactured and imported products.
+                  examining the case for indefinite recognition of CE-marked
+                  medical devices on the Great Britain market, beyond the
+                  current 2030 deadline. The consultation reflects the practical
+                  reality that many manufacturers — particularly those outside
+                  the EU and UK — hold CE certificates as their primary route to
+                  GB market access and would face significant additional costs
+                  if required to pursue a separate UK conformity assessment
+                  pathway. Stakeholders were invited to submit responses by the
+                  close of the consultation period. Manufacturers supplying the
+                  GB market should monitor the outcome of this consultation, as
+                  it will determine whether the current CE recognition framework
+                  is extended or replaced with a distinct UK conformity route.
+                  Northern Ireland continues to follow EU product rules under
+                  the Windsor Framework and is not affected by these
+                  transitional arrangements.
                 </p>
               </div>
 
               <div class="reg-update-block">
-                <span class="reg-status-active">Active</span>
-                <h4>
-                  FCC Equipment Authorization — Electronic Consumer Products
-                </h4>
+                <span class="reg-status-active">In force June 2025</span>
+                <h4>UK Post-Market Surveillance Amendment Regulations 2025</h4>
                 <p>
-                  Consumer electronic products that intentionally emit radio
-                  frequency signals — including Wi-Fi devices, Bluetooth
-                  products, cordless phones, remote controls, and wireless
-                  accessories — require
-                  <a href="https://www.fcc.gov/oet/ea/rfdevice"
-                    >FCC equipment authorization</a
-                  >
-                  before they can be marketed or imported into the United
-                  States. Authorization is obtained through a Telecommunications
-                  Certification Body (TCB) and requires test reports from an
-                  FCC-recognised laboratory. Products with unintentional RF
-                  emissions must meet FCC Part 15 requirements but may use a
-                  Declaration of Conformity process rather than full
-                  certification. FCC authorization is product-model specific and
-                  must be repeated when design changes affect RF
-                  characteristics. The FCC ID must be displayed on the product.
-                </p>
-              </div>
-
-              <div class="reg-update-block">
-                <span class="reg-status-urgent"
-                  >Active — recent additions effective 2025</span
-                >
-                <h4>
-                  California Proposition 65 — Over 1,000 Regulated Chemicals
-                </h4>
-                <p>
-                  California's
+                  Amendments to the UK MDR 2002 relating to post-market
+                  surveillance (PMS) obligations came into force in June 2025.
+                  The amendments strengthened requirements for systematic
+                  collection and review of post-market data, including Periodic
+                  Safety Update Reports (PSURs) for higher-risk devices and
+                  post-market clinical follow-up (PMCF) for implantables. These
+                  requirements align the UK framework more closely with the PMS
+                  obligations introduced under EU MDR 2017/745, reducing — but
+                  not eliminating — the regulatory divergence between the two
+                  regimes. Manufacturers supplying both EU and UK markets will
+                  find that a robust MDR-compliant PMS system provides a strong
+                  foundation for UK compliance, though the specific reporting
+                  timelines and formats may differ. MHRA has published updated
+                  guidance on its
                   <a
-                    href="https://oehha.ca.gov/proposition-65/proposition-65-list"
-                    >Safe Drinking Water and Toxic Enforcement Act of 1986
-                    (Proposition 65)</a
-                  >
-                  requires businesses to provide a clear and reasonable warning
-                  before knowingly exposing consumers to chemicals listed as
-                  causing cancer or reproductive toxicity. The list currently
-                  contains over 1,000 chemicals. Recent additions include vinyl
-                  acetate (effective January 2025) and bisphenol S (BPS,
-                  reproductive toxicity, effective December 2025). Consumer
-                  goods sold in California — whether manufactured in the US or
-                  imported — must comply if they contain listed chemicals above
-                  safe harbour levels. Given California's market size, Prop 65
-                  compliance is a practical requirement for most consumer goods
-                  exported to the US market.
-                </p>
-              </div>
-
-              <h2>
-                China — CCC Certification and RoHS-Equivalent Restrictions
-              </h2>
-
-              <div class="reg-update-block">
-                <span class="reg-status-urgent"
-                  >Pre-market certification required</span
-                >
-                <h4>
-                  China Compulsory Certification (CCC) — 109 Products Across 17
-                  Categories
-                </h4>
-                <p>
-                  CCC is mandatory for 109 products across 17 categories listed
-                  in China's CCC Catalogue, including electrical appliances,
-                  wires and cables, audio and video equipment, IT and
-                  telecommunications equipment, lighting products, motor
-                  vehicles, children's products, fire products, and household
-                  gas appliances. Products in the catalogue must obtain a CCC
-                  certificate before they can be manufactured, sold, imported,
-                  or used commercially in China. The CCC mark must be affixed to
-                  each unit before sale. The certification process involves
-                  testing by a designated laboratory, factory inspection by an
-                  approved certification body, and ongoing annual surveillance
-                  audits. Lead times typically range from 3 to 9 months —
-                  planning must begin well before target market entry dates.
-                  Source:
-                  <a
-                    href="https://www.china-certification.com/en/list-of-ccc-mandatory-products/"
-                    >China Certification, CCC Product List</a
+                    href="https://www.gov.uk/guidance/regulating-medical-devices-in-the-uk"
+                    >regulatory guidance pages</a
                   >.
                 </p>
               </div>
 
+              <h2>United States — FDA QMSR and Premarket Pathways</h2>
+
               <div class="reg-update-block">
-                <span class="reg-status-active">Active</span>
-                <h4>China RoHS — Restriction of Hazardous Substances in EEE</h4>
+                <span class="reg-status-urgent">Effective 2 February 2026</span>
+                <h4>
+                  FDA Quality Management System Regulation (QMSR) — Revised 21
+                  CFR Part 820
+                </h4>
                 <p>
-                  China's Management Methods for Restriction of the Use of
-                  Hazardous Substances in Electrical and Electronic Products
-                  (China RoHS) restricts the same six core substances as EU RoHS
-                  Phase 1 (lead, mercury, cadmium, hexavalent chromium, PBBs,
-                  PBDEs) in EEE. All EEE products sold in China must display a
-                  Materials Declaration and indicate whether hazardous substance
-                  limits are met, using the China RoHS marking system — a green
-                  circle for products meeting concentration limits, or an orange
-                  square showing the expected environmental use period for
-                  products exceeding them. EEE subject to CCC certification is
-                  also subject to China RoHS requirements as part of the
-                  certification process.
+                  The
+                  <a
+                    href="https://www.fda.gov/medical-devices/quality-management-system-regulation-qmsr/quality-management-system-regulation-qmsr"
+                    >FDA Quality Management System Regulation (QMSR)</a
+                  >, which became effective on 2 February 2026, replaces the
+                  previous Quality System Regulation (QSR) under 21 CFR Part 820
+                  with a framework that incorporates ISO 13485:2016 by
+                  reference. This is the most significant change to FDA device
+                  quality requirements in decades. Under the QMSR, manufacturers
+                  must comply with the requirements of ISO 13485:2016 as
+                  incorporated into the regulation, along with additional
+                  FDA-specific requirements on complaint files, corrective and
+                  preventive action (CAPA), and unique device identification
+                  (UDI). Manufacturers who had implemented QMS systems against
+                  the legacy 21 CFR Part 820 — which predated ISO 13485 — will
+                  need to conduct a gap assessment and update their documented
+                  systems, procedures, and records accordingly. The
+                  <a
+                    href="https://www.federalregister.gov/documents/2024/02/02/2024-01709/medical-devices-quality-system-regulation-amendments"
+                    >QMSR final rule</a
+                  >
+                  was published in the Federal Register on 2 February 2024,
+                  providing a two-year transition period. All FDA-registered
+                  establishments must now be operating under a QMSR-compliant
+                  system.
                 </p>
               </div>
 
               <div class="reg-update-block">
                 <span class="reg-status-active"
-                  >Active — GB 6675 mandatory</span
+                  >Active — ~3,000 clearances per year</span
                 >
-                <h4>
-                  China Toy Safety — GB 6675 and Children's Product Standards
-                </h4>
+                <h4>FDA Premarket Pathways — 510(k), PMA, and De Novo</h4>
                 <p>
-                  Toys sold in China must comply with mandatory national
-                  standard GB 6675, which sets safety requirements covering
-                  mechanical and physical properties, flammability, chemical
-                  properties (including migration limits for heavy metals and
-                  phthalate restrictions), and electrical safety for electronic
-                  toys. GB 6675 is a CCC-listed category — toys meeting the
-                  definition under the standard require CCC certification before
-                  importation and sale. Compliance requires testing by a
-                  CNCA-designated laboratory and factory audit. Standards are
-                  periodically revised by the Standardisation Administration of
-                  China (SAC) — manufacturers must verify their test reports
-                  reference the current version of the applicable GB standard.
+                  The three main pathways for device market authorisation in the
+                  US remain the
+                  <a
+                    href="https://www.fda.gov/medical-devices/premarket-submissions-selecting-and-preparing-correct-submission/premarket-notification-510k"
+                    >Premarket Notification (510(k))</a
+                  >
+                  for Class II devices demonstrating substantial equivalence to
+                  a predicate device, the
+                  <a
+                    href="https://www.fda.gov/medical-devices/device-approvals-and-clearances/pma-approvals"
+                    >Premarket Approval (PMA)</a
+                  >
+                  for Class III devices requiring clinical evidence of safety
+                  and effectiveness, and the
+                  <a
+                    href="https://www.fda.gov/medical-devices/premarket-submissions-selecting-and-preparing-correct-submission/de-novo-classification-request"
+                    >De Novo Classification Request</a
+                  >
+                  for novel devices of low to moderate risk that lack a valid
+                  predicate. Class I devices (approximately 47% of all device
+                  types) are generally exempt from premarket review, though they
+                  remain subject to general controls including establishment
+                  registration under
+                  <a
+                    href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-807"
+                    >21 CFR Part 807</a
+                  >
+                  and device listing. The FDA clears approximately 3,000 devices
+                  per year through the 510(k) pathway. All establishments
+                  manufacturing, distributing, or re-labelling devices for the
+                  US market must be registered with the FDA annually. The QMSR
+                  requirement applies to all device classes above Class I
+                  exempt.
                 </p>
               </div>
 
-              <h2>What This Means for Consumer Goods Businesses</h2>
+              <h2>China — NMPA Order 739 and the Single Agent Requirement</h2>
 
-              <p>
-                The regulatory landscape for consumer goods has undergone more
-                change in the past two years than in the previous decade. The
-                GPSR's introduction of a mandatory EU Responsible Person created
-                a new structural compliance requirement for every non-EU
-                manufacturer selling through EU online marketplaces or retail
-                channels. The REACH SVHC list now exceeds 253 substances and
-                grows twice annually — a compliance programme that was adequate
-                in 2023 may not be adequate today. The 4,137 EU Safety Gate
-                alerts recorded in 2024 — the highest annual total since the
-                system launched — signal an enforcement environment that is both
-                more active and more consequential than in prior years.
-              </p>
+              <div class="reg-update-block">
+                <span class="reg-status-active"
+                  >In force since 1 June 2021</span
+                >
+                <h4>
+                  NMPA Order 739 — Imported Medical Device Registration
+                  Requirements
+                </h4>
+                <p>
+                  <a href="https://english.nmpa.gov.cn/2021-05/31/c_655121.htm"
+                    >NMPA Order 739</a
+                  >, the Regulations for the Supervision and Administration of
+                  Medical Devices, came into force on 1 June 2021 and
+                  establishes the current framework for imported device
+                  registration in China. All imported medical devices —
+                  regardless of risk class — must be registered with the
+                  National Medical Products Administration (NMPA) at the
+                  national level. China applies a three-class risk
+                  classification system (Class I, II, III), and all imported
+                  devices are subject to national-level NMPA registration
+                  irrespective of class. This is a significant distinction from
+                  the EU system, where Class I devices may be self-certified.
+                  The Centre for Medical Device Evaluation (CMDE) conducts
+                  technical evaluation of registration dossiers. Certificates
+                  are valid for five years and must be renewed before expiry.
+                  China's UDI system is being phased in, with Class III devices
+                  required to carry a UDI since 2021, and lower-class devices
+                  following on a rolling schedule.
+                </p>
+              </div>
 
-              <p>
-                For businesses selling across the EU, UK, US, and China
-                simultaneously, no single compliance framework satisfies all
-                markets. CE marking for the EU does not automatically satisfy UK
-                requirements (though it is recognised indefinitely). CCC
-                certification for China has no equivalent recognition outside
-                China. CPSIA testing obligations for the US market are
-                independent of any EU conformity assessment. Proposition 65
-                obligations in California require substance screening
-                independent of any EU REACH assessment. The common requirement
-                across all four markets is a compliance programme that is
-                maintained continuously — not reviewed once at market entry and
-                left unchanged.
-              </p>
+              <div class="reg-update-block">
+                <span class="reg-status-active"
+                  >Mandatory — name must appear on certificate and all
+                  labelling</span
+                >
+                <h4>China Single Agent Requirement for Imported Devices</h4>
+                <p>
+                  Non-Chinese manufacturers must appoint a single China agent —
+                  a legal entity established in China — who acts as the local
+                  responsible party for the registered device. This requirement
+                  is distinct from the EU Authorised Representative model in one
+                  important respect: the China agent's name must appear on the
+                  NMPA registration certificate itself, and on all device
+                  labelling. Changing the China agent requires amending the
+                  registration certificate — a process that takes significant
+                  time and resources and cannot be done on short notice. This
+                  creates a structural dependency between the manufacturer and
+                  their China agent that requires careful commercial and legal
+                  due diligence before appointment. The
+                  <a href="https://english.nmpa.gov.cn">NMPA official portal</a>
+                  and
+                  <a href="https://english.nmpa.gov.cn/2024-06/05/c_1049323.htm"
+                    >NMPA agent guidance</a
+                  >
+                  set out the specific obligations. Manufacturers should ensure
+                  their China agent agreement addresses the obligations
+                  associated with post-market surveillance reporting, adverse
+                  event handling, and registration renewal in China.
+                </p>
+              </div>
+
+              <div class="blog-related-industry">
+                <p>
+                  For a full overview of registration timelines, classification
+                  rules, and service options across all four markets.
+                </p>
+                <a href="medical-devices-compliance.html"
+                  >View the medical devices compliance hub &rarr;</a
+                >
+              </div>
 
               <div class="cta-inline">
-                <h3>Need a compliance review for your consumer goods?</h3>
+                <h3>Need help navigating medical device regulatory changes?</h3>
                 <p>
-                  TGC's team reviews your products against GPSR, REACH SVHC,
-                  RoHS, CE/UKCA marking, CPSIA, and CCC requirements —
-                  identifying gaps before they become enforcement actions.
+                  TGC's team supports manufacturers through EU MDR/IVDR
+                  transition, EUDAMED registration, QMSR gap assessments, and
+                  NMPA agent appointments — across all four major markets.
                 </p>
                 <div>
                   <a href="contact-us.html" class="btn btn-gold"
@@ -1209,7 +1176,6 @@
               code reviews, and end-to-end compliance programmes. Built by the
               team behind TecEx.
             </p>
-            <!-- social -->
             <div style="display: flex; gap: 10px">
               <a
                 href="https://www.linkedin.com/company/tecex-group/"

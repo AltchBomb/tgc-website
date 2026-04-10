@@ -1,104 +1,364 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Electronics Regulation Compared: EU vs UK vs US | TGC</title>
-<meta name="description" content="A structured side-by-side comparison of electronics compliance obligations in the EU, UK, and US - covering conformity marks, hazardous substances, EMC, radio certification, cybersecurity, e-waste, and authorised representatives.">
-<link rel="canonical" href="https://tecexglobalcompliance.com/blog/electronics-regulation-comparison/">
-<meta property="og:title" content="Electronics Regulation Compared: EU vs UK vs US | TGC">
-<meta property="og:type" content="article">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../global.css">
-<style>
-  .blog-post-hero { background: var(--navy); padding: 72px 0 56px; }
-  .blog-post-hero .wrap { max-width: 760px; }
-  .blog-post-meta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
-  .blog-post-hero h1 { font-family: 'Sora', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 800; color: #fff; margin: 0 0 20px; line-height: 1.2; }
-  .blog-post-hero .lead { color: #7A909F; font-size: 18px; line-height: 1.6; max-width: 680px; margin: 0; }
-  .blog-tag { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; }
-  .blog-tag-electronics { background: rgba(0,107,78,0.15); color: #006B4E; }
-  .blog-meta-item { font-size: 13px; color: #7A909F; }
-  .blog-related-industry { background: #F5F7FA; border-left: 3px solid var(--gold); border-radius: 0 10px 10px 0; padding: 20px 24px; margin: 40px 0; }
-  .blog-related-industry p { margin: 0 0 10px; font-size: 14px; color: var(--slate); }
-  .blog-related-industry a { font-weight: 600; color: var(--gold); text-decoration: none; font-size: 14px; }
-  .article-body h2 { font-family: 'Sora', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); margin: 48px 0 16px; }
-  .article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin: 32px 0 12px; }
-  .article-body p  { font-size: 15px; color: #334; line-height: 1.7; margin: 0 0 18px; }
-  .article-body a  { color: var(--gold); }
-  .cta-inline { background: var(--navy); border-radius: 12px; padding: 32px; margin: 48px 0 0; text-align: center; }
-  .cta-inline h3 { font-family: 'Sora', sans-serif; color: #ffffff; font-size: 20px; margin: 0 0 12px; }
-  .cta-inline p { color: rgba(255,255,255,0.7); margin: 0 0 20px; font-size: 15px; }
-  .cta-inline .btn { margin: 4px; }
-  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .comp-table { width: 100%; min-width: 600px; border-collapse: collapse; font-size: 14px; }
-  .comp-table th { background: var(--navy); color: #fff; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .04em; padding: 14px 16px; text-align: left; }
-  .comp-table th:first-child { width: 160px; }
-  .comp-table td { padding: 14px 16px; border-bottom: 1px solid #e8e3da; color: #334; vertical-align: top; line-height: 1.55; }
-  .comp-table td:first-child { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 13px; color: var(--navy); background: #f9f7f4; border-right: 2px solid #e8e3da; }
-  .comp-table tr:nth-child(even) td:not(:first-child) { background: #faf9f7; }
-  .comp-table tr:last-child td { border-bottom: none; }
-  .juris-pill { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: 3px 10px; border-radius: 999px; margin-bottom: 6px; }
-  .juris-eu { background: rgba(0,120,200,0.12); color: #005fa3; }
-  .juris-uk { background: rgba(0,90,160,0.10); color: #003f7a; }
-  .juris-us { background: rgba(180,30,30,0.10); color: #8b1a1a; }
-  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
-  .badge-man { background: rgba(200,50,50,0.1); color: #c44; }
-  .badge-vol { background: rgba(211,169,17,0.12); color: #b8900e; }
-  .badge-sep { background: rgba(14,99,166,0.1); color: #0e5fa3; }
-</style>
-</head>
-<body>
-<!-- HEADER:START -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electronics Regulation Compared: EU vs UK vs US | TGC</title>
+    <meta
+      name="description"
+      content="A structured side-by-side comparison of electronics compliance obligations in the EU, UK, and US - covering conformity marks, hazardous substances, EMC, radio certification, cybersecurity, e-waste, and authorised representatives."
+    />
+    <link
+      rel="canonical"
+      href="https://tecexglobalcompliance.com/blog/electronics-regulation-comparison/"
+    />
+    <meta
+      property="og:title"
+      content="Electronics Regulation Compared: EU vs UK vs US | TGC"
+    />
+    <meta property="og:type" content="article" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../global.css" />
+    <style>
+      .blog-post-hero {
+        background: var(--navy);
+        padding: 72px 0 56px;
+      }
+      .blog-post-hero .wrap {
+        max-width: 760px;
+      }
+      .blog-post-meta {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+      }
+      .blog-post-hero h1 {
+        font-family: "Sora", sans-serif;
+        font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+        font-weight: 800;
+        color: #fff;
+        margin: 0 0 20px;
+        line-height: 1.2;
+      }
+      .blog-post-hero .lead {
+        color: #7a909f;
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 680px;
+        margin: 0;
+      }
+      .blog-tag {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 999px;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+      }
+      .blog-tag-electronics {
+        background: rgba(0, 107, 78, 0.15);
+        color: #006b4e;
+      }
+      .blog-meta-item {
+        font-size: 13px;
+        color: #7a909f;
+      }
+      .blog-related-industry {
+        background: #f5f7fa;
+        border-left: 3px solid var(--gold);
+        border-radius: 0 10px 10px 0;
+        padding: 20px 24px;
+        margin: 40px 0;
+      }
+      .blog-related-industry p {
+        margin: 0 0 10px;
+        font-size: 14px;
+        color: var(--slate);
+      }
+      .blog-related-industry a {
+        font-weight: 600;
+        color: var(--gold);
+        text-decoration: none;
+        font-size: 14px;
+      }
+      .article-body h2 {
+        font-family: "Sora", sans-serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin: 48px 0 16px;
+      }
+      .article-body h3 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin: 32px 0 12px;
+      }
+      .article-body p {
+        font-size: 15px;
+        color: #334;
+        line-height: 1.7;
+        margin: 0 0 18px;
+      }
+      .article-body a {
+        color: var(--gold);
+      }
+      .cta-inline {
+        background: var(--navy);
+        border-radius: 12px;
+        padding: 32px;
+        margin: 48px 0 0;
+        text-align: center;
+      }
+      .cta-inline h3 {
+        font-family: "Sora", sans-serif;
+        color: #ffffff;
+        font-size: 20px;
+        margin: 0 0 12px;
+      }
+      .cta-inline p {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0 0 20px;
+        font-size: 15px;
+      }
+      .cta-inline .btn {
+        margin: 4px;
+      }
+      .table-scroll {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .comp-table {
+        width: 100%;
+        min-width: 600px;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+      .comp-table th {
+        background: var(--navy);
+        color: #fff;
+        font-family: "Sora", sans-serif;
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 0.04em;
+        padding: 14px 16px;
+        text-align: left;
+      }
+      .comp-table th:first-child {
+        width: 160px;
+      }
+      .comp-table td {
+        padding: 14px 16px;
+        border-bottom: 1px solid #e8e3da;
+        color: #334;
+        vertical-align: top;
+        line-height: 1.55;
+      }
+      .comp-table td:first-child {
+        font-family: "Sora", sans-serif;
+        font-weight: 700;
+        font-size: 13px;
+        color: var(--navy);
+        background: #f9f7f4;
+        border-right: 2px solid #e8e3da;
+      }
+      .comp-table tr:nth-child(even) td:not(:first-child) {
+        background: #faf9f7;
+      }
+      .comp-table tr:last-child td {
+        border-bottom: none;
+      }
+      .juris-pill {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        padding: 3px 10px;
+        border-radius: 999px;
+        margin-bottom: 6px;
+      }
+      .juris-eu {
+        background: rgba(0, 120, 200, 0.12);
+        color: #005fa3;
+      }
+      .juris-uk {
+        background: rgba(0, 90, 160, 0.1);
+        color: #003f7a;
+      }
+      .juris-us {
+        background: rgba(180, 30, 30, 0.1);
+        color: #8b1a1a;
+      }
+      .badge {
+        display: inline-block;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 11px;
+        font-weight: 600;
+      }
+      .badge-man {
+        background: rgba(200, 50, 50, 0.1);
+        color: #c44;
+      }
+      .badge-vol {
+        background: rgba(211, 169, 17, 0.12);
+        color: #b8900e;
+      }
+      .badge-sep {
+        background: rgba(14, 99, 166, 0.1);
+        color: #0e5fa3;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER:START -->
     <header id="tgc-site-header" role="banner">
       <div class="tgc-hdr-inner">
-    
         <!-- Logo -->
-        <a href="homepage.html" class="tgc-hdr-logo" aria-label="TecEx Global Compliance - Home">
-          <img src="../assets/images/tgc-logo.png" alt="TecEx Global Compliance" class="tgc-hdr-logo-img">
+        <a
+          href="homepage.html"
+          class="tgc-hdr-logo"
+          aria-label="TecEx Global Compliance - Home"
+        >
+          <img
+            src="../assets/images/tgc-logo.png"
+            alt="TecEx Global Compliance"
+            class="tgc-hdr-logo-img"
+          />
         </a>
-    
+
         <!-- Desktop nav -->
         <nav class="tgc-hdr-nav" aria-label="Main navigation">
-    
           <div class="tgc-hdr-item">
-            <button class="tgc-hdr-link" aria-haspopup="true" aria-expanded="false">
+            <button
+              class="tgc-hdr-link"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
               Services
-              <svg class="tgc-hdr-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                <path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <svg
+                class="tgc-hdr-chevron"
+                viewBox="0 0 12 12"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M2 4.5l4 4 4-4"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
               </svg>
             </button>
             <div class="tgc-hdr-drop" role="menu">
               <span class="tgc-hdr-drop-label">Fixed-Rate Services</span>
-              <a href="expedited-audit.html"            class="tgc-hdr-drop-link" role="menuitem">Expedited Audit</a>
-              <a href="label-reviews.html"              class="tgc-hdr-drop-link" role="menuitem">Label Reviews</a>
-              <a href="hs-code-review.html"             class="tgc-hdr-drop-link" role="menuitem">HS Code Reviews</a>
+              <a
+                href="expedited-audit.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >Expedited Audit</a
+              >
+              <a
+                href="label-reviews.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >Label Reviews</a
+              >
+              <a
+                href="hs-code-review.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >HS Code Reviews</a
+              >
               <div class="tgc-hdr-divider" aria-hidden="true"></div>
               <span class="tgc-hdr-drop-label">Custom Programmes</span>
-              <a href="full-product-compliance.html"    class="tgc-hdr-drop-link" role="menuitem">Full Product Compliance</a>
+              <a
+                href="full-product-compliance.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >Full Product Compliance</a
+              >
             </div>
           </div>
-    
+
           <div class="tgc-hdr-item">
-            <button class="tgc-hdr-link" aria-haspopup="true" aria-expanded="false">
+            <button
+              class="tgc-hdr-link"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
               Industries
-              <svg class="tgc-hdr-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                <path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <svg
+                class="tgc-hdr-chevron"
+                viewBox="0 0 12 12"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M2 4.5l4 4 4-4"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
               </svg>
             </button>
             <div class="tgc-hdr-drop" role="menu">
-              <a href="cosmetic-compliance.html"         class="tgc-hdr-drop-link" role="menuitem">Cosmetics</a>
-              <a href="food-beverage-compliance.html"    class="tgc-hdr-drop-link" role="menuitem">Food &amp; Beverage</a>
-              <a href="food-supplements-compliance.html" class="tgc-hdr-drop-link" role="menuitem">Food Supplements</a>
-              <a href="chemical-compliance.html"         class="tgc-hdr-drop-link" role="menuitem">Chemicals</a>
-              <a href="electronics-compliance.html"      class="tgc-hdr-drop-link" role="menuitem">Electronics</a>
-              <a href="consumer-goods-compliance.html"   class="tgc-hdr-drop-link" role="menuitem">Consumer Goods</a>
-              <a href="medical-devices-compliance.html"  class="tgc-hdr-drop-link" role="menuitem">Medical Devices</a>
+              <a
+                href="cosmetic-compliance.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >Cosmetics</a
+              >
+              <a
+                href="food-beverage-compliance.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >Food &amp; Beverage</a
+              >
+              <a
+                href="food-supplements-compliance.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >Food Supplements</a
+              >
+              <a
+                href="chemical-compliance.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >Chemicals</a
+              >
+              <a
+                href="electronics-compliance.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >Electronics</a
+              >
+              <a
+                href="consumer-goods-compliance.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >Consumer Goods</a
+              >
+              <a
+                href="medical-devices-compliance.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >Medical Devices</a
+              >
             </div>
           </div>
-    
+
           <div class="tgc-hdr-item">
             <a href="pricing.html" class="tgc-hdr-link">Pricing</a>
           </div>
@@ -111,12 +371,11 @@
           <div class="tgc-hdr-item">
             <a href="contact-us.html" class="tgc-hdr-link">Contact</a>
           </div>
-    
         </nav>
-    
+
         <!-- CTA -->
         <a href="contact-us.html" class="tgc-hdr-cta">Get a quote &rarr;</a>
-    
+
         <!-- Hamburger (mobile) -->
         <button
           class="tgc-hdr-burger"
@@ -129,33 +388,46 @@
           <span></span>
           <span></span>
         </button>
-    
       </div>
-    
+
       <!-- Mobile menu -->
       <div class="tgc-hdr-mobile" id="tgc-hdr-mobile-menu" aria-hidden="true">
         <div class="tgc-mob-section">
           <p class="tgc-mob-heading">Services</p>
-          <a href="expedited-audit.html"            class="tgc-mob-link">Expedited Audit</a>
-          <a href="label-reviews.html"              class="tgc-mob-link">Label Reviews</a>
-          <a href="hs-code-review.html"             class="tgc-mob-link">HS Code Reviews</a>
-          <a href="full-product-compliance.html"    class="tgc-mob-link">Full Product Compliance</a>
+          <a href="expedited-audit.html" class="tgc-mob-link"
+            >Expedited Audit</a
+          >
+          <a href="label-reviews.html" class="tgc-mob-link">Label Reviews</a>
+          <a href="hs-code-review.html" class="tgc-mob-link">HS Code Reviews</a>
+          <a href="full-product-compliance.html" class="tgc-mob-link"
+            >Full Product Compliance</a
+          >
         </div>
         <div class="tgc-mob-section">
           <p class="tgc-mob-heading">Industries</p>
-          <a href="cosmetic-compliance.html"         class="tgc-mob-link">Cosmetics</a>
-          <a href="food-beverage-compliance.html"    class="tgc-mob-link">Food &amp; Beverage</a>
-          <a href="food-supplements-compliance.html" class="tgc-mob-link">Food Supplements</a>
-          <a href="chemical-compliance.html"         class="tgc-mob-link">Chemicals</a>
-          <a href="electronics-compliance.html"      class="tgc-mob-link">Electronics</a>
-          <a href="consumer-goods-compliance.html"   class="tgc-mob-link">Consumer Goods</a>
-          <a href="medical-devices-compliance.html"  class="tgc-mob-link">Medical Devices</a>
+          <a href="cosmetic-compliance.html" class="tgc-mob-link">Cosmetics</a>
+          <a href="food-beverage-compliance.html" class="tgc-mob-link"
+            >Food &amp; Beverage</a
+          >
+          <a href="food-supplements-compliance.html" class="tgc-mob-link"
+            >Food Supplements</a
+          >
+          <a href="chemical-compliance.html" class="tgc-mob-link">Chemicals</a>
+          <a href="electronics-compliance.html" class="tgc-mob-link"
+            >Electronics</a
+          >
+          <a href="consumer-goods-compliance.html" class="tgc-mob-link"
+            >Consumer Goods</a
+          >
+          <a href="medical-devices-compliance.html" class="tgc-mob-link"
+            >Medical Devices</a
+          >
         </div>
         <div class="tgc-mob-section">
           <p class="tgc-mob-heading">Company</p>
-          <a href="pricing.html"    class="tgc-mob-link">Pricing</a>
-          <a href="blog.html"       class="tgc-mob-link">Blog</a>
-          <a href="about-us.html"   class="tgc-mob-link">About</a>
+          <a href="pricing.html" class="tgc-mob-link">Pricing</a>
+          <a href="blog.html" class="tgc-mob-link">Blog</a>
+          <a href="about-us.html" class="tgc-mob-link">About</a>
           <a href="contact-us.html" class="tgc-mob-link">Contact</a>
         </div>
         <a href="contact-us.html" class="tgc-mob-cta">Get a quote &rarr;</a>
@@ -164,163 +436,521 @@
     <script>
       (function () {
         /* Mobile burger toggle */
-        var burger = document.getElementById('tgc-hdr-burger');
-        var menu = document.getElementById('tgc-hdr-mobile-menu');
+        var burger = document.getElementById("tgc-hdr-burger");
+        var menu = document.getElementById("tgc-hdr-mobile-menu");
         if (burger && menu) {
-          burger.addEventListener('click', function () {
-            var open = menu.classList.toggle('tgc-mob-open');
-            burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-            menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+          burger.addEventListener("click", function () {
+            var open = menu.classList.toggle("tgc-mob-open");
+            burger.setAttribute("aria-expanded", open ? "true" : "false");
+            menu.setAttribute("aria-hidden", open ? "false" : "true");
           });
         }
         /* Active state — highlight the link matching the current page */
-        var page = window.location.pathname.split('/').pop() || 'homepage.html';
-        document.querySelectorAll('#tgc-site-header a').forEach(function (a) {
-          if ((a.getAttribute('href') || '').split('/').pop() === page) {
-            a.classList.add('tgc-hdr-active');
-            var parentBtn = a.closest('.tgc-hdr-item')
-              ? a.closest('.tgc-hdr-item').querySelector('button.tgc-hdr-link')
+        var page = window.location.pathname.split("/").pop() || "homepage.html";
+        document.querySelectorAll("#tgc-site-header a").forEach(function (a) {
+          if ((a.getAttribute("href") || "").split("/").pop() === page) {
+            a.classList.add("tgc-hdr-active");
+            var parentBtn = a.closest(".tgc-hdr-item")
+              ? a.closest(".tgc-hdr-item").querySelector("button.tgc-hdr-link")
               : null;
-            if (parentBtn) parentBtn.classList.add('tgc-hdr-active');
+            if (parentBtn) parentBtn.classList.add("tgc-hdr-active");
           }
         });
       })();
     </script>
     <!-- HEADER:END -->
 
-<div id="tgc-blog-elec-compare" class="tgc-page" style="margin-top:64px">
-
-  <!-- Hero -->
-  <div class="blog-post-hero">
-    <div class="wrap">
-      <div class="blog-post-meta">
-        <span class="blog-tag blog-tag-electronics">Electronics</span>
-        <span class="blog-meta-item">April 2026</span>
-        <span class="blog-meta-item">· 8 min read</span>
+    <div id="tgc-blog-elec-compare" class="tgc-page" style="margin-top: 64px">
+      <!-- Hero -->
+      <div class="blog-post-hero">
+        <div class="wrap">
+          <div class="blog-post-meta">
+            <span class="blog-tag blog-tag-electronics">Electronics</span>
+            <span class="blog-meta-item">April 2026</span>
+            <span class="blog-meta-item">· 8 min read</span>
+          </div>
+          <h1>Electronics Regulation Compared: EU vs UK vs US</h1>
+          <p class="lead">
+            A structured side-by-side comparison of core electronics compliance
+            obligations in the three largest Western markets - covering
+            conformity marks, hazardous substance restrictions, EMC, radio
+            certification, cybersecurity frameworks, e-waste, and authorised
+            representative requirements. Updated for 2025-2026 regulatory
+            changes.
+          </p>
+        </div>
       </div>
-      <h1>Electronics Regulation Compared: EU vs UK vs US</h1>
-      <p class="lead">A structured side-by-side comparison of core electronics compliance obligations in the three largest Western markets - covering conformity marks, hazardous substance restrictions, EMC, radio certification, cybersecurity frameworks, e-waste, and authorised representative requirements. Updated for 2025-2026 regulatory changes.</p>
+
+      <!-- Body -->
+      <section class="s-white">
+        <div class="wrap">
+          <div style="max-width: 960px; margin: 0 auto" class="article-body">
+            <div class="blog-related-industry">
+              <p>
+                This article is part of our electronics compliance coverage.
+              </p>
+              <a href="electronics-compliance.html"
+                >- View our Electronics Compliance services page</a
+              >
+            </div>
+
+            <p>
+              One of the most consistent sources of electronics compliance risk
+              is the assumption that certification or approval in one market
+              transfers to another. It does not. The EU's CE marking framework,
+              the UK's post-Brexit regulatory landscape, and the US
+              <a
+                href="https://www.fcc.gov/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >FCC</a
+              >
+              and
+              <a
+                href="https://www.cpsc.gov/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >CPSC</a
+              >
+              regime are built on fundamentally different legal structures,
+              conformity assessment procedures, and enforcement mechanisms.
+              Understanding the distinctions before market entry is considerably
+              less expensive than resolving them after a market surveillance
+              action or border rejection.
+            </p>
+
+            <p>
+              The comparison below covers the eight most commercially
+              significant compliance dimensions for electronics manufacturers
+              entering or already operating across the EU, UK, and US. Where the
+              2025-2026 regulatory changes materially affect a category, these
+              are noted.
+            </p>
+
+            <h2>At a Glance: EU vs UK vs US Electronics Compliance</h2>
+
+            <div class="table-scroll">
+              <table
+                class="comp-table"
+                aria-label="Electronics compliance comparison by jurisdiction"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col">Requirement</th>
+                    <th scope="col">
+                      <span class="juris-pill juris-eu">EU</span>
+                    </th>
+                    <th scope="col">
+                      <span class="juris-pill juris-uk"
+                        >UK (Great Britain)</span
+                      >
+                    </th>
+                    <th scope="col">
+                      <span class="juris-pill juris-us">United States</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Conformity mark</td>
+                    <td>
+                      <span class="badge badge-man">Mandatory</span> CE marking
+                      under all applicable directives - RoHS, EMC, LVD, RED, and
+                      others depending on product type
+                    </td>
+                    <td>
+                      UKCA or CE marking - CE indefinitely accepted for GB
+                      market as of 2024, with no announced end date
+                    </td>
+                    <td>
+                      No single conformity mark - FCC ID mandatory for certified
+                      intentional radiators; FCC logo optional for SDoC devices
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Hazardous substance restriction</td>
+                    <td>
+                      <a
+                        href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011L0065"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >RoHS Directive 2011/65/EU</a
+                      >
+                      - 10 restricted substances; Annex III exemptions; part of
+                      CE marking
+                    </td>
+                    <td>
+                      <a
+                        href="https://www.legislation.gov.uk/uksi/2012/3032/contents"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >UK RoHS (SI 2012/3032 as amended)</a
+                      >
+                      - parallel framework enforced by OPSS; broadly mirrors EU
+                      RoHS
+                    </td>
+                    <td>
+                      No federal RoHS equivalent - state-level restrictions only
+                      (<a
+                        href="https://oehha.ca.gov/proposition-65"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >California Prop 65</a
+                      >, electronic waste rules)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>EMC compliance</td>
+                    <td>
+                      <a
+                        href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0030"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >EMC Directive 2014/30/EU</a
+                      >
+                      - tested against EN 55032 / EN 55035 harmonised standards;
+                      mandatory CE marking element
+                    </td>
+                    <td>
+                      <a
+                        href="https://www.legislation.gov.uk/uksi/2016/1091/contents"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >UK EMC Regulations (SI 2016/1091)</a
+                      >
+                      - identical standards in most cases; separate UK
+                      Declaration of Conformity
+                    </td>
+                    <td>
+                      <a
+                        href="https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-15"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >FCC Part 15</a
+                      >
+                      Subpart B - Class A (industrial) or Class B (consumer);
+                      Supplier's Declaration of Conformity (SDoC) procedure
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Radio / wireless certification</td>
+                    <td>
+                      <a
+                        href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0053"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >RED 2014/53/EU</a
+                      >
+                      - covers safety, EMC, radio spectrum efficiency;
+                      cybersecurity from August 2025 under Articles 3.3(d)(e)(f)
+                    </td>
+                    <td>
+                      <a
+                        href="https://www.legislation.gov.uk/uksi/2017/1206/contents"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >UK Radio Equipment Regulations 2017</a
+                      >
+                      - technically mirrors RED; CE marking accepted in place of
+                      UKCA
+                    </td>
+                    <td>
+                      <a
+                        href="https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-15"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >FCC Part 15</a
+                      >
+                      Subpart C/D and Part 22/24/27 - full FCC certification via
+                      TCB; FCC ID permanently affixed to product
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Cybersecurity</td>
+                    <td>
+                      RED Articles 3.3(d)(e)(f) mandatory from August 2025;
+                      Cyber Resilience Act (CRA) replaces RED cybersecurity from
+                      December 2027
+                    </td>
+                    <td>
+                      <a
+                        href="https://www.legislation.gov.uk/ukpga/2022/46/contents"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >PSTI Act 2022</a
+                      >
+                      product security requirements - in force April 2024; three
+                      baseline requirements for connectable products
+                    </td>
+                    <td>
+                      <a
+                        href="https://www.fcc.gov/cybersecurity-certification-mark"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >FCC Cyber Trust Mark</a
+                      >
+                      - voluntary for consumer IoT;
+                      <a
+                        href="https://www.nist.gov/cybersecurity"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >NIST framework</a
+                      >
+                      referenced; no mandatory federal IoT cybersecurity as of
+                      early 2026
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>E-waste / WEEE</td>
+                    <td>
+                      <a
+                        href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32012L0019"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >WEEE Directive 2012/19/EU</a
+                      >
+                      - producer registration per member state; collection
+                      targets; under Commission evaluation for revision
+                    </td>
+                    <td>
+                      <a
+                        href="https://www.legislation.gov.uk/uksi/2013/3113/contents"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >UK WEEE Regulations</a
+                      >
+                      - separate producer registration with approved compliance
+                      scheme; parallel to EU WEEE
+                    </td>
+                    <td>
+                      No federal e-waste law - state programmes only (<a
+                        href="https://www.calrecycle.ca.gov/electronics/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >California EWRA</a
+                      >, 25+ state recycling schemes)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Authorised representative</td>
+                    <td>
+                      Non-EU manufacturers must appoint an EU Authorised
+                      Representative before CE-marked products are placed on the
+                      EU market
+                    </td>
+                    <td>
+                      Non-UK manufacturers must appoint a UK Responsible Person
+                      for UKCA-covered products placed on the GB market
+                    </td>
+                    <td>
+                      No equivalent requirement - responsible party must be
+                      identifiable via FCC records for certified devices
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Technical documentation</td>
+                    <td>
+                      Technical Construction File (TCF) + Declaration of
+                      Conformity; retained for 10 years; must cover all
+                      applicable directives
+                    </td>
+                    <td>
+                      UK equivalent Technical Documentation + UK Declaration of
+                      Conformity; mirrored obligations to EU TCF
+                    </td>
+                    <td>
+                      FCC lab reports + compliance information statement;
+                      retained for ongoing verification; no DoC equivalent
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2>The Critical Differences That Create Compliance Risk</h2>
+
+            <h3>
+              CE Marking Does Not Satisfy FCC Requirements - and Vice Versa
+            </h3>
+            <p>
+              The most common structural misunderstanding in electronics market
+              entry planning is treating CE marking and FCC authorisation as
+              equivalent or interchangeable. They are not. CE marking under EU
+              directives certifies conformity with European harmonised
+              standards. FCC authorisation under
+              <a
+                href="https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-15"
+                target="_blank"
+                rel="noopener noreferrer"
+                >47 CFR Part 15</a
+              >
+              certifies conformity with US radiofrequency emission limits and,
+              for intentional radiators, requires pre-market approval through an
+              FCC-recognised Telecommunications Certification Body. A product
+              with CE marking cannot be placed on the US market without separate
+              FCC authorisation. A product with FCC certification cannot be CE
+              marked on that basis. Both processes must be completed
+              independently, typically in parallel during product development.
+            </p>
+
+            <h3>
+              UK CE Recognition Has No Guaranteed End Date - But Is Not
+              Permanent
+            </h3>
+            <p>
+              The UK government's indefinite extension of CE mark recognition
+              for Great Britain is pragmatic but carries risk for long-term
+              planning. "Indefinitely extended" does not mean permanently
+              guaranteed - the government can change its position, and
+              manufacturers who have relied entirely on CE marking without
+              maintaining UKCA-compatible technical documentation could face a
+              compliance gap if the policy changes. Northern Ireland requires CE
+              marking under the
+              <a
+                href="https://www.gov.uk/government/publications/the-windsor-framework-a-new-way-forward"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Windsor Framework</a
+              >
+              regardless of any GB policy changes. The safest approach is to
+              maintain documentation that satisfies both CE and UKCA
+              requirements simultaneously, even if only CE marking is currently
+              required for the GB market.
+            </p>
+
+            <h3>
+              Cybersecurity Is Now Mandatory in the EU and UK, Voluntary in the
+              US
+            </h3>
+            <p>
+              The EU RED cybersecurity requirements (<a
+                href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R0030"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Articles 3.3(d)(e)(f), activated by Delegated Regulation (EU)
+                2022/30</a
+              >) entered into force on 1 August 2025 and are mandatory for all
+              radio equipment newly placed on the EU market. The UK's
+              <a
+                href="https://www.legislation.gov.uk/ukpga/2022/46/contents"
+                target="_blank"
+                rel="noopener noreferrer"
+                >PSTI Act 2022</a
+              >
+              has imposed three baseline cybersecurity requirements on
+              connectable consumer products since April 2024. By contrast, US
+              federal IoT cybersecurity requirements remain largely voluntary as
+              of early 2026 - the FCC Cyber Trust Mark is a market
+              differentiation tool, not a compliance obligation. Manufacturers
+              targeting the EU and UK markets must plan and budget for mandatory
+              cybersecurity conformity assessment; those targeting only the US
+              have significantly less prescriptive obligations at federal level.
+            </p>
+
+            <h3>RoHS Has No US Federal Equivalent</h3>
+            <p>
+              <a
+                href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011L0065"
+                target="_blank"
+                rel="noopener noreferrer"
+                >EU RoHS (2011/65/EU)</a
+              >
+              restricts 10 hazardous substances in EEE, with mandatory
+              compliance as part of CE marking.
+              <a
+                href="https://www.legislation.gov.uk/uksi/2012/3032/contents"
+                target="_blank"
+                rel="noopener noreferrer"
+                >UK RoHS (SI 2012/3032)</a
+              >
+              mirrors the EU framework with independent enforcement by OPSS. The
+              United States has no equivalent federal legislation. California's
+              Proposition 65 requires consumer warnings for products containing
+              listed chemicals, and state-level electronic waste schemes impose
+              take-back obligations, but there is no national RoHS-equivalent
+              mandatory substance restriction. Manufacturers exporting to the EU
+              and UK must maintain full RoHS compliance documentation; those
+              selling only into the US do not face the same federal substance
+              restriction framework, though state-level rules require
+              monitoring.
+            </p>
+
+            <h2>What Changes in 2025-2026</h2>
+
+            <p>
+              The August 2025 RED cybersecurity enforcement date is the most
+              significant recent change to the EU compliance landscape. Products
+              with any radio functionality - Wi-Fi, Bluetooth, Zigbee, cellular,
+              or other - that are newly placed on the EU market must now have
+              cybersecurity conformity assessed and documented against
+              harmonised standards
+              <a
+                href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500138"
+                target="_blank"
+                rel="noopener noreferrer"
+                >EN 18031-1/2/3, published January 2025</a
+              >. Products CE-marked before August 2025 that continue to be
+              manufactured and sold require updated Declarations of Conformity
+              to include the cybersecurity provisions.
+            </p>
+
+            <p>
+              The RoHS exemption non-renewals (<a
+                href="https://eur-lex.europa.eu/eli/dir_del/2025/2364/oj/eng"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Delegated Directive EU 2025/2364</a
+              >
+              — 6(a) for lead in steel, expiring December 2026; 6(b) for lead in
+              aluminium, expiring through to June 2027) are the second most
+              significant change, creating reformulation obligations for
+              manufacturers using these materials in mainstream EEE product
+              categories. The
+              <a
+                href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R2847"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Cyber Resilience Act (Regulation EU 2024/2847)</a
+              >'s December 2027 applicability date means that manufacturers
+              investing in RED cybersecurity compliance now should plan that
+              compliance programme with CRA transition in mind - the scope
+              expands from radio equipment to all products with digital
+              elements.
+            </p>
+
+            <div class="blog-related-industry" style="margin-top: 40px">
+              <p>
+                Planning entry into EU, UK, or US electronics markets and need a
+                compliance roadmap mapped to your specific product? Our team can
+                scope the obligations and sequence the work.
+              </p>
+              <a href="electronics-compliance.html"
+                >View our Electronics Compliance services -></a
+              >
+            </div>
+
+            <div class="cta-inline">
+              <h3>Entering a new market?</h3>
+              <p>
+                We map the full compliance requirements for your electronics
+                product across EU, UK, US, and APAC - identifying every
+                applicable directive, standard, and registration obligation
+                before you launch.
+              </p>
+              <a href="contact-us.html" class="btn btn-gold"
+                >Talk to an expert -></a
+              >
+              <a href="expedited-audit.html" class="btn btn-ghost"
+                >Book an audit</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  </div>
+    <!-- /.tgc-page -->
 
-  <!-- Body -->
-  <section class="s-white">
-    <div class="wrap">
-      <div style="max-width:960px; margin:0 auto;" class="article-body">
-
-        <div class="blog-related-industry">
-          <p>This article is part of our electronics compliance coverage.</p>
-          <a href="electronics-compliance.html">- View our Electronics Compliance services page</a>
-        </div>
-
-        <p>One of the most consistent sources of electronics compliance risk is the assumption that certification or approval in one market transfers to another. It does not. The EU's CE marking framework, the UK's post-Brexit regulatory landscape, and the US <a href="https://www.fcc.gov/" target="_blank" rel="noopener noreferrer">FCC</a> and <a href="https://www.cpsc.gov/" target="_blank" rel="noopener noreferrer">CPSC</a> regime are built on fundamentally different legal structures, conformity assessment procedures, and enforcement mechanisms. Understanding the distinctions before market entry is considerably less expensive than resolving them after a market surveillance action or border rejection.</p>
-
-        <p>The comparison below covers the eight most commercially significant compliance dimensions for electronics manufacturers entering or already operating across the EU, UK, and US. Where the 2025-2026 regulatory changes materially affect a category, these are noted.</p>
-
-        <h2>At a Glance: EU vs UK vs US Electronics Compliance</h2>
-
-        <div class="table-scroll">
-          <table class="comp-table" aria-label="Electronics compliance comparison by jurisdiction">
-            <thead>
-              <tr>
-                <th scope="col">Requirement</th>
-                <th scope="col"><span class="juris-pill juris-eu">EU</span></th>
-                <th scope="col"><span class="juris-pill juris-uk">UK (Great Britain)</span></th>
-                <th scope="col"><span class="juris-pill juris-us">United States</span></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Conformity mark</td>
-                <td><span class="badge badge-man">Mandatory</span> CE marking under all applicable directives - RoHS, EMC, LVD, RED, and others depending on product type</td>
-                <td>UKCA or CE marking - CE indefinitely accepted for GB market as of 2024, with no announced end date</td>
-                <td>No single conformity mark - FCC ID mandatory for certified intentional radiators; FCC logo optional for SDoC devices</td>
-              </tr>
-              <tr>
-                <td>Hazardous substance restriction</td>
-                <td><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011L0065" target="_blank" rel="noopener noreferrer">RoHS Directive 2011/65/EU</a> - 10 restricted substances; Annex III exemptions; part of CE marking</td>
-                <td><a href="https://www.legislation.gov.uk/uksi/2012/3032/contents" target="_blank" rel="noopener noreferrer">UK RoHS (SI 2012/3032 as amended)</a> - parallel framework enforced by OPSS; broadly mirrors EU RoHS</td>
-                <td>No federal RoHS equivalent - state-level restrictions only (<a href="https://oehha.ca.gov/proposition-65" target="_blank" rel="noopener noreferrer">California Prop 65</a>, electronic waste rules)</td>
-              </tr>
-              <tr>
-                <td>EMC compliance</td>
-                <td><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0030" target="_blank" rel="noopener noreferrer">EMC Directive 2014/30/EU</a> - tested against EN 55032 / EN 55035 harmonised standards; mandatory CE marking element</td>
-                <td><a href="https://www.legislation.gov.uk/uksi/2016/1091/contents" target="_blank" rel="noopener noreferrer">UK EMC Regulations (SI 2016/1091)</a> - identical standards in most cases; separate UK Declaration of Conformity</td>
-                <td><a href="https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-15" target="_blank" rel="noopener noreferrer">FCC Part 15</a> Subpart B - Class A (industrial) or Class B (consumer); Supplier's Declaration of Conformity (SDoC) procedure</td>
-              </tr>
-              <tr>
-                <td>Radio / wireless certification</td>
-                <td><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0053" target="_blank" rel="noopener noreferrer">RED 2014/53/EU</a> - covers safety, EMC, radio spectrum efficiency; cybersecurity from August 2025 under Articles 3.3(d)(e)(f)</td>
-                <td><a href="https://www.legislation.gov.uk/uksi/2017/1206/contents" target="_blank" rel="noopener noreferrer">UK Radio Equipment Regulations 2017</a> - technically mirrors RED; CE marking accepted in place of UKCA</td>
-                <td><a href="https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-15" target="_blank" rel="noopener noreferrer">FCC Part 15</a> Subpart C/D and Part 22/24/27 - full FCC certification via TCB; FCC ID permanently affixed to product</td>
-              </tr>
-              <tr>
-                <td>Cybersecurity</td>
-                <td>RED Articles 3.3(d)(e)(f) mandatory from August 2025; Cyber Resilience Act (CRA) replaces RED cybersecurity from December 2027</td>
-                <td><a href="https://www.legislation.gov.uk/ukpga/2022/46/contents" target="_blank" rel="noopener noreferrer">PSTI Act 2022</a> product security requirements - in force April 2024; three baseline requirements for connectable products</td>
-                <td><a href="https://www.fcc.gov/cybersecurity-certification-mark" target="_blank" rel="noopener noreferrer">FCC Cyber Trust Mark</a> - voluntary for consumer IoT; <a href="https://www.nist.gov/cybersecurity" target="_blank" rel="noopener noreferrer">NIST framework</a> referenced; no mandatory federal IoT cybersecurity as of early 2026</td>
-              </tr>
-              <tr>
-                <td>E-waste / WEEE</td>
-                <td><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32012L0019" target="_blank" rel="noopener noreferrer">WEEE Directive 2012/19/EU</a> - producer registration per member state; collection targets; under Commission evaluation for revision</td>
-                <td><a href="https://www.legislation.gov.uk/uksi/2013/3113/contents" target="_blank" rel="noopener noreferrer">UK WEEE Regulations</a> - separate producer registration with approved compliance scheme; parallel to EU WEEE</td>
-                <td>No federal e-waste law - state programmes only (<a href="https://www.calrecycle.ca.gov/electronics/" target="_blank" rel="noopener noreferrer">California EWRA</a>, 25+ state recycling schemes)</td>
-              </tr>
-              <tr>
-                <td>Authorised representative</td>
-                <td>Non-EU manufacturers must appoint an EU Authorised Representative before CE-marked products are placed on the EU market</td>
-                <td>Non-UK manufacturers must appoint a UK Responsible Person for UKCA-covered products placed on the GB market</td>
-                <td>No equivalent requirement - responsible party must be identifiable via FCC records for certified devices</td>
-              </tr>
-              <tr>
-                <td>Technical documentation</td>
-                <td>Technical Construction File (TCF) + Declaration of Conformity; retained for 10 years; must cover all applicable directives</td>
-                <td>UK equivalent Technical Documentation + UK Declaration of Conformity; mirrored obligations to EU TCF</td>
-                <td>FCC lab reports + compliance information statement; retained for ongoing verification; no DoC equivalent</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h2>The Critical Differences That Create Compliance Risk</h2>
-
-        <h3>CE Marking Does Not Satisfy FCC Requirements - and Vice Versa</h3>
-        <p>The most common structural misunderstanding in electronics market entry planning is treating CE marking and FCC authorisation as equivalent or interchangeable. They are not. CE marking under EU directives certifies conformity with European harmonised standards. FCC authorisation under <a href="https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-15" target="_blank" rel="noopener noreferrer">47 CFR Part 15</a> certifies conformity with US radiofrequency emission limits and, for intentional radiators, requires pre-market approval through an FCC-recognised Telecommunications Certification Body. A product with CE marking cannot be placed on the US market without separate FCC authorisation. A product with FCC certification cannot be CE marked on that basis. Both processes must be completed independently, typically in parallel during product development.</p>
-
-        <h3>UK CE Recognition Has No Guaranteed End Date - But Is Not Permanent</h3>
-        <p>The UK government's indefinite extension of CE mark recognition for Great Britain is pragmatic but carries risk for long-term planning. "Indefinitely extended" does not mean permanently guaranteed - the government can change its position, and manufacturers who have relied entirely on CE marking without maintaining UKCA-compatible technical documentation could face a compliance gap if the policy changes. Northern Ireland requires CE marking under the <a href="https://www.gov.uk/government/publications/the-windsor-framework-a-new-way-forward" target="_blank" rel="noopener noreferrer">Windsor Framework</a> regardless of any GB policy changes. The safest approach is to maintain documentation that satisfies both CE and UKCA requirements simultaneously, even if only CE marking is currently required for the GB market.</p>
-
-        <h3>Cybersecurity Is Now Mandatory in the EU and UK, Voluntary in the US</h3>
-        <p>The EU RED cybersecurity requirements (<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R0030" target="_blank" rel="noopener noreferrer">Articles 3.3(d)(e)(f), activated by Delegated Regulation (EU) 2022/30</a>) entered into force on 1 August 2025 and are mandatory for all radio equipment newly placed on the EU market. The UK's <a href="https://www.legislation.gov.uk/ukpga/2022/46/contents" target="_blank" rel="noopener noreferrer">PSTI Act 2022</a> has imposed three baseline cybersecurity requirements on connectable consumer products since April 2024. By contrast, US federal IoT cybersecurity requirements remain largely voluntary as of early 2026 - the FCC Cyber Trust Mark is a market differentiation tool, not a compliance obligation. Manufacturers targeting the EU and UK markets must plan and budget for mandatory cybersecurity conformity assessment; those targeting only the US have significantly less prescriptive obligations at federal level.</p>
-
-        <h3>RoHS Has No US Federal Equivalent</h3>
-        <p><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32011L0065" target="_blank" rel="noopener noreferrer">EU RoHS (2011/65/EU)</a> restricts 10 hazardous substances in EEE, with mandatory compliance as part of CE marking. <a href="https://www.legislation.gov.uk/uksi/2012/3032/contents" target="_blank" rel="noopener noreferrer">UK RoHS (SI 2012/3032)</a> mirrors the EU framework with independent enforcement by OPSS. The United States has no equivalent federal legislation. California's Proposition 65 requires consumer warnings for products containing listed chemicals, and state-level electronic waste schemes impose take-back obligations, but there is no national RoHS-equivalent mandatory substance restriction. Manufacturers exporting to the EU and UK must maintain full RoHS compliance documentation; those selling only into the US do not face the same federal substance restriction framework, though state-level rules require monitoring.</p>
-
-        <h2>What Changes in 2025-2026</h2>
-
-        <p>The August 2025 RED cybersecurity enforcement date is the most significant recent change to the EU compliance landscape. Products with any radio functionality - Wi-Fi, Bluetooth, Zigbee, cellular, or other - that are newly placed on the EU market must now have cybersecurity conformity assessed and documented against harmonised standards <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202500138" target="_blank" rel="noopener noreferrer">EN 18031-1/2/3, published January 2025</a>. Products CE-marked before August 2025 that continue to be manufactured and sold require updated Declarations of Conformity to include the cybersecurity provisions.</p>
-
-        <p>The RoHS exemption non-renewals (<a href="https://eur-lex.europa.eu/eli/dir_del/2025/2364/oj/eng" target="_blank" rel="noopener noreferrer">Delegated Directive EU 2025/2364</a> — 6(a) for lead in steel, expiring December 2026; 6(b) for lead in aluminium, expiring through to June 2027) are the second most significant change, creating reformulation obligations for manufacturers using these materials in mainstream EEE product categories. The <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R2847" target="_blank" rel="noopener noreferrer">Cyber Resilience Act (Regulation EU 2024/2847)</a>'s December 2027 applicability date means that manufacturers investing in RED cybersecurity compliance now should plan that compliance programme with CRA transition in mind - the scope expands from radio equipment to all products with digital elements.</p>
-
-        <div class="blog-related-industry" style="margin-top:40px;">
-          <p>Planning entry into EU, UK, or US electronics markets and need a compliance roadmap mapped to your specific product? Our team can scope the obligations and sequence the work.</p>
-          <a href="electronics-compliance.html">View our Electronics Compliance services -></a>
-        </div>
-
-        <div class="cta-inline">
-          <h3>Entering a new market?</h3>
-          <p>We map the full compliance requirements for your electronics product across EU, UK, US, and APAC - identifying every applicable directive, standard, and registration obligation before you launch.</p>
-          <a href="contact-us.html" class="btn btn-gold">Talk to an expert -></a>
-          <a href="expedited-audit.html" class="btn btn-ghost">Book an audit</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-</div><!-- /.tgc-page -->
-
-<!-- FOOTER:START -->
+    <!-- FOOTER:START -->
     <footer
       id="tgc-site-footer"
       style="
@@ -354,8 +984,24 @@
         >
           <!-- brand -->
           <div>
-            <a href="homepage.html" style="display:inline-block;margin-bottom:14px;text-decoration:none;">
-              <img src="../assets/images/tgc-logo.png" alt="TecEx Global Compliance" style="height:96px;width:96px;border-radius:8px;display:block;">
+            <a
+              href="homepage.html"
+              style="
+                display: inline-block;
+                margin-bottom: 14px;
+                text-decoration: none;
+              "
+            >
+              <img
+                src="../assets/images/tgc-logo.png"
+                alt="TecEx Global Compliance"
+                style="
+                  height: 96px;
+                  width: 96px;
+                  border-radius: 8px;
+                  display: block;
+                "
+              />
             </a>
             <p
               style="
@@ -365,9 +1011,9 @@
                 margin: 0 0 18px;
               "
             >
-              Expert product compliance — label reviews, expedited audits, HS code
-              reviews, and end-to-end compliance programmes. Built by the team
-              behind TecEx.
+              Expert product compliance — label reviews, expedited audits, HS
+              code reviews, and end-to-end compliance programmes. Built by the
+              team behind TecEx.
             </p>
             <!-- social -->
             <div style="display: flex; gap: 10px">
@@ -447,7 +1093,7 @@
               </a>
             </div>
           </div>
-    
+
           <!-- services -->
           <div>
             <p
@@ -516,7 +1162,7 @@
               >Full Product Compliance</a
             >
           </div>
-    
+
           <!-- industries -->
           <div>
             <p
@@ -624,7 +1270,7 @@
               >Medical Devices</a
             >
           </div>
-    
+
           <!-- company -->
           <div>
             <p
@@ -682,7 +1328,7 @@
           </div>
         </div>
         <!-- /grid -->
-    
+
         <!-- bottom bar -->
         <div
           style="
@@ -697,8 +1343,8 @@
           "
         >
           <p style="margin: 0">
-            © 2026 TecEx Global Compliance. All rights reserved. Built by the team
-            behind TecEx.
+            © 2026 TecEx Global Compliance. All rights reserved. Built by the
+            team behind TecEx.
           </p>
           <p style="margin: 0">
             <a
@@ -720,27 +1366,33 @@
         </div>
       </div>
     </footer>
-    
+
     <script>
-    (function () {
-      var fades = document.querySelectorAll('.fade');
-      if (!fades.length) return;
-      if (!window.IntersectionObserver) {
-        fades.forEach(function (el) { el.classList.add('vis'); });
-        return;
-      }
-      var obs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('vis');
-            obs.unobserve(entry.target);
-          }
+      (function () {
+        var fades = document.querySelectorAll(".fade");
+        if (!fades.length) return;
+        if (!window.IntersectionObserver) {
+          fades.forEach(function (el) {
+            el.classList.add("vis");
+          });
+          return;
+        }
+        var obs = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("vis");
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+        );
+        fades.forEach(function (el) {
+          obs.observe(el);
         });
-      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-      fades.forEach(function (el) { obs.observe(el); });
-    }());
+      })();
     </script>
     <!-- FOOTER:END -->
-
-</body>
+  </body>
 </html>

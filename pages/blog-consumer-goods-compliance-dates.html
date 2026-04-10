@@ -44,15 +44,15 @@
 <!-- HEADER:START -->
     <header id="tgc-site-header" role="banner">
       <div class="tgc-hdr-inner">
-
+    
         <!-- Logo -->
         <a href="homepage.html" class="tgc-hdr-logo" aria-label="TecEx Global Compliance - Home">
           <img src="../assets/images/tgc-logo.png" alt="TecEx Global Compliance" class="tgc-hdr-logo-img">
         </a>
-
+    
         <!-- Desktop nav -->
         <nav class="tgc-hdr-nav" aria-label="Main navigation">
-
+    
           <div class="tgc-hdr-item">
             <button class="tgc-hdr-link" aria-haspopup="true" aria-expanded="false">
               Services
@@ -70,7 +70,7 @@
               <a href="full-product-compliance.html"    class="tgc-hdr-drop-link" role="menuitem">Full Product Compliance</a>
             </div>
           </div>
-
+    
           <div class="tgc-hdr-item">
             <button class="tgc-hdr-link" aria-haspopup="true" aria-expanded="false">
               Industries
@@ -88,7 +88,7 @@
               <a href="medical-devices-compliance.html"  class="tgc-hdr-drop-link" role="menuitem">Medical Devices</a>
             </div>
           </div>
-
+    
           <div class="tgc-hdr-item">
             <a href="pricing.html" class="tgc-hdr-link">Pricing</a>
           </div>
@@ -101,12 +101,12 @@
           <div class="tgc-hdr-item">
             <a href="contact-us.html" class="tgc-hdr-link">Contact</a>
           </div>
-
+    
         </nav>
-
+    
         <!-- CTA -->
         <a href="contact-us.html" class="tgc-hdr-cta">Get a quote &rarr;</a>
-
+    
         <!-- Hamburger (mobile) -->
         <button
           class="tgc-hdr-burger"
@@ -119,9 +119,9 @@
           <span></span>
           <span></span>
         </button>
-
+    
       </div>
-
+    
       <!-- Mobile menu -->
       <div class="tgc-hdr-mobile" id="tgc-hdr-mobile-menu" aria-hidden="true">
         <div class="tgc-mob-section">
@@ -333,8 +333,24 @@
         >
           <!-- brand -->
           <div>
-            <a href="homepage.html" style="display:inline-block;margin-bottom:14px;text-decoration:none;">
-              <img src="../assets/images/tgc-logo.png" alt="TecEx Global Compliance" style="height:96px;width:96px;border-radius:8px;display:block;">
+            <a
+              href="homepage.html"
+              style="
+                display: inline-block;
+                margin-bottom: 14px;
+                text-decoration: none;
+              "
+            >
+              <img
+                src="../assets/images/tgc-logo.png"
+                alt="TecEx Global Compliance"
+                style="
+                  height: 96px;
+                  width: 96px;
+                  border-radius: 8px;
+                  display: block;
+                "
+              />
             </a>
             <p
               style="
@@ -426,7 +442,7 @@
               </a>
             </div>
           </div>
-
+    
           <!-- services -->
           <div>
             <p
@@ -495,7 +511,7 @@
               >Full Product Compliance</a
             >
           </div>
-
+    
           <!-- industries -->
           <div>
             <p
@@ -603,7 +619,7 @@
               >Medical Devices</a
             >
           </div>
-
+    
           <!-- company -->
           <div>
             <p
@@ -661,7 +677,7 @@
           </div>
         </div>
         <!-- /grid -->
-
+    
         <!-- bottom bar -->
         <div
           style="
@@ -699,25 +715,32 @@
         </div>
       </div>
     </footer>
-
+    
     <script>
-    (function () {
-      var fades = document.querySelectorAll('.fade');
-      if (!fades.length) return;
-      if (!window.IntersectionObserver) {
-        fades.forEach(function (el) { el.classList.add('vis'); });
-        return;
-      }
-      var obs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('vis');
-            obs.unobserve(entry.target);
-          }
+      (function () {
+        var fades = document.querySelectorAll(".fade");
+        if (!fades.length) return;
+        if (!window.IntersectionObserver) {
+          fades.forEach(function (el) {
+            el.classList.add("vis");
+          });
+          return;
+        }
+        var obs = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("vis");
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+        );
+        fades.forEach(function (el) {
+          obs.observe(el);
         });
-      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-      fades.forEach(function (el) { obs.observe(el); });
-    }());
+      })();
     </script>
     <!-- FOOTER:END -->
 

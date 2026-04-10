@@ -1,99 +1,330 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Compliance Insights Blog | TecEx Global Compliance</title>
-<meta name="description" content="In-depth regulatory updates, compliance guides, and market intelligence for global product compliance teams. Covering cosmetics, chemicals, electronics, food, and medical devices.">
-<link rel="canonical" href="https://tecexglobalcompliance.com/blog/">
-<meta property="og:title" content="Compliance Insights Blog | TGC">
-<meta property="og:description" content="Regulatory updates and compliance guides across cosmetics, chemicals, electronics, food, and medical devices.">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../global.css">
-<style>
-  .blog-hero { background: var(--navy); padding: 80px 0 64px; text-align: center; }
-  .blog-hero .ey { display: block; margin-bottom: 12px; }
-  .blog-hero h1 { font-family: 'Sora', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: #fff; margin: 0 0 16px; }
-  .blog-hero p { color: #7A909F; font-size: 18px; max-width: 560px; margin: 0 auto; }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compliance Insights Blog | TecEx Global Compliance</title>
+    <meta
+      name="description"
+      content="In-depth regulatory updates, compliance guides, and market intelligence for global product compliance teams. Covering cosmetics, chemicals, electronics, food, and medical devices."
+    />
+    <link rel="canonical" href="https://tecexglobalcompliance.com/blog/" />
+    <meta property="og:title" content="Compliance Insights Blog | TGC" />
+    <meta
+      property="og:description"
+      content="Regulatory updates and compliance guides across cosmetics, chemicals, electronics, food, and medical devices."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../global.css" />
+    <style>
+      .blog-hero {
+        background: var(--navy);
+        padding: 80px 0 64px;
+        text-align: center;
+      }
+      .blog-hero .ey {
+        display: block;
+        margin-bottom: 12px;
+      }
+      .blog-hero h1 {
+        font-family: "Sora", sans-serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 800;
+        color: #fff;
+        margin: 0 0 16px;
+      }
+      .blog-hero p {
+        color: #7a909f;
+        font-size: 18px;
+        max-width: 560px;
+        margin: 0 auto;
+      }
 
-  .blog-filters { display: flex; gap: 10px; flex-wrap: wrap; margin: 0 0 40px; }
-  .blog-filter { padding: 6px 16px; border-radius: 999px; border: 1px solid var(--mist); background: transparent; color: var(--slate); font-size: 13px; font-weight: 500; cursor: pointer; transition: all .2s; font-family: 'DM Sans', sans-serif; }
-  .blog-filter.active, .blog-filter:hover { background: var(--gold); border-color: var(--gold); color: #fff; }
+      .blog-filters {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: 0 0 40px;
+      }
+      .blog-filter {
+        padding: 6px 16px;
+        border-radius: 999px;
+        border: 1px solid var(--mist);
+        background: transparent;
+        color: var(--slate);
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s;
+        font-family: "DM Sans", sans-serif;
+      }
+      .blog-filter.active,
+      .blog-filter:hover {
+        background: var(--gold);
+        border-color: var(--gold);
+        color: #000000;
+        font-weight: 1000;
+      }
 
-  .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; }
-  .blog-card { background: #fff; border: 1px solid var(--mist); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow .2s, transform .2s; }
-  .blog-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,.10); transform: translateY(-2px); }
-  .blog-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
-  .blog-card-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
-  .blog-tag { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; }
-  .blog-tag-cosmetics { background: #FFF3D4; color: #A07A00; }
-  .blog-tag-chemicals { background: #D4EEF5; color: #005F80; }
-  .blog-tag-electronics { background: #E8F4F0; color: #006B4E; }
-  .blog-tag-food { background: #F5E8D4; color: #7A4400; }
-  .blog-tag-supplements { background: rgba(16,140,120,0.12); color: #0a6b5e; }
-  .blog-tag-medical { background: #EEE4F5; color: #5A006B; }
-  .blog-tag-consumer-goods { background: #EAEEF5; color: #2D4080; }
-  .blog-date { font-size: 12px; color: #7A909F; }
-  .blog-card h2 { font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700; color: var(--navy); margin: 0 0 10px; line-height: 1.35; }
-  .blog-card p { font-size: 14px; color: var(--slate); line-height: 1.6; margin: 0 0 20px; flex: 1; }
-  .blog-card-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--gold); text-decoration: none; margin-top: auto; }
-  .blog-card-link:hover { color: var(--navy); }
-  .blog-read-time { font-size: 12px; color: #7A909F; margin-left: auto; }
-</style>
-</head>
-<body>
-<!-- HEADER:START -->
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 28px;
+      }
+      .blog-card {
+        background: #fff;
+        border: 1px solid var(--mist);
+        border-radius: 14px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition:
+          box-shadow 0.2s,
+          transform 0.2s;
+      }
+      .blog-card:hover {
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+      }
+      .blog-card-body {
+        padding: 24px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .blog-card-meta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+      .blog-tag {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 999px;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+      }
+      .blog-tag-cosmetics {
+        background: #fff3d4;
+        color: #a07a00;
+      }
+      .blog-tag-chemicals {
+        background: #d4eef5;
+        color: #005f80;
+      }
+      .blog-tag-electronics {
+        background: #e8f4f0;
+        color: #006b4e;
+      }
+      .blog-tag-food {
+        background: #f5e8d4;
+        color: #7a4400;
+      }
+      .blog-tag-supplements {
+        background: rgba(16, 140, 120, 0.12);
+        color: #0a6b5e;
+      }
+      .blog-tag-medical {
+        background: #eee4f5;
+        color: #5a006b;
+      }
+      .blog-tag-case-study {
+        background: #fff496;
+        color: #696b00;
+      }
+      .blog-tag-consumer-goods {
+        background: #eaeef5;
+        color: #2d4080;
+      }
+      .blog-date {
+        font-size: 12px;
+        color: #7a909f;
+      }
+      .blog-card h2 {
+        font-family: "Sora", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--navy);
+        margin: 0 0 10px;
+        line-height: 1.35;
+      }
+      .blog-card p {
+        font-size: 14px;
+        color: var(--slate);
+        line-height: 1.6;
+        margin: 0 0 20px;
+        flex: 1;
+      }
+      .blog-card-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--gold);
+        text-decoration: none;
+        margin-top: auto;
+      }
+      .blog-card-link:hover {
+        color: var(--navy);
+      }
+      .blog-read-time {
+        font-size: 12px;
+        color: #7a909f;
+        margin-left: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER:START -->
     <header id="tgc-site-header" role="banner">
       <div class="tgc-hdr-inner">
-    
         <!-- Logo -->
-        <a href="homepage.html" class="tgc-hdr-logo" aria-label="TecEx Global Compliance - Home">
-          <img src="../assets/images/tgc-logo.png" alt="TecEx Global Compliance" class="tgc-hdr-logo-img">
+        <a
+          href="homepage.html"
+          class="tgc-hdr-logo"
+          aria-label="TecEx Global Compliance - Home"
+        >
+          <img
+            src="../assets/images/tgc-logo.png"
+            alt="TecEx Global Compliance"
+            class="tgc-hdr-logo-img"
+          />
         </a>
-    
+
         <!-- Desktop nav -->
         <nav class="tgc-hdr-nav" aria-label="Main navigation">
-    
           <div class="tgc-hdr-item">
-            <button class="tgc-hdr-link" aria-haspopup="true" aria-expanded="false">
+            <button
+              class="tgc-hdr-link"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
               Services
-              <svg class="tgc-hdr-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                <path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <svg
+                class="tgc-hdr-chevron"
+                viewBox="0 0 12 12"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M2 4.5l4 4 4-4"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
               </svg>
             </button>
             <div class="tgc-hdr-drop" role="menu">
               <span class="tgc-hdr-drop-label">Fixed-Rate Services</span>
-              <a href="expedited-audit.html"            class="tgc-hdr-drop-link" role="menuitem">Expedited Audit</a>
-              <a href="label-reviews.html"              class="tgc-hdr-drop-link" role="menuitem">Label Reviews</a>
-              <a href="hs-code-review.html"             class="tgc-hdr-drop-link" role="menuitem">HS Code Reviews</a>
+              <a
+                href="expedited-audit.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >Expedited Audit</a
+              >
+              <a
+                href="label-reviews.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >Label Reviews</a
+              >
+              <a
+                href="hs-code-review.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >HS Code Reviews</a
+              >
               <div class="tgc-hdr-divider" aria-hidden="true"></div>
               <span class="tgc-hdr-drop-label">Custom Programmes</span>
-              <a href="full-product-compliance.html"    class="tgc-hdr-drop-link" role="menuitem">Full Product Compliance</a>
+              <a
+                href="full-product-compliance.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >Full Product Compliance</a
+              >
             </div>
           </div>
-    
+
           <div class="tgc-hdr-item">
-            <button class="tgc-hdr-link" aria-haspopup="true" aria-expanded="false">
+            <button
+              class="tgc-hdr-link"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
               Industries
-              <svg class="tgc-hdr-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                <path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <svg
+                class="tgc-hdr-chevron"
+                viewBox="0 0 12 12"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M2 4.5l4 4 4-4"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
               </svg>
             </button>
             <div class="tgc-hdr-drop" role="menu">
-              <a href="cosmetic-compliance.html"         class="tgc-hdr-drop-link" role="menuitem">Cosmetics</a>
-              <a href="food-beverage-compliance.html"    class="tgc-hdr-drop-link" role="menuitem">Food &amp; Beverage</a>
-              <a href="food-supplements-compliance.html" class="tgc-hdr-drop-link" role="menuitem">Food Supplements</a>
-              <a href="chemical-compliance.html"         class="tgc-hdr-drop-link" role="menuitem">Chemicals</a>
-              <a href="electronics-compliance.html"      class="tgc-hdr-drop-link" role="menuitem">Electronics</a>
-              <a href="consumer-goods-compliance.html"   class="tgc-hdr-drop-link" role="menuitem">Consumer Goods</a>
-              <a href="medical-devices-compliance.html"  class="tgc-hdr-drop-link" role="menuitem">Medical Devices</a>
+              <a
+                href="cosmetic-compliance.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >Cosmetics</a
+              >
+              <a
+                href="food-beverage-compliance.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >Food &amp; Beverage</a
+              >
+              <a
+                href="food-supplements-compliance.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >Food Supplements</a
+              >
+              <a
+                href="chemical-compliance.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >Chemicals</a
+              >
+              <a
+                href="electronics-compliance.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >Electronics</a
+              >
+              <a
+                href="consumer-goods-compliance.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >Consumer Goods</a
+              >
+              <a
+                href="medical-devices-compliance.html"
+                class="tgc-hdr-drop-link"
+                role="menuitem"
+                >Medical Devices</a
+              >
             </div>
           </div>
-    
+
           <div class="tgc-hdr-item">
             <a href="pricing.html" class="tgc-hdr-link">Pricing</a>
           </div>
@@ -106,12 +337,11 @@
           <div class="tgc-hdr-item">
             <a href="contact-us.html" class="tgc-hdr-link">Contact</a>
           </div>
-    
         </nav>
-    
+
         <!-- CTA -->
         <a href="contact-us.html" class="tgc-hdr-cta">Get a quote &rarr;</a>
-    
+
         <!-- Hamburger (mobile) -->
         <button
           class="tgc-hdr-burger"
@@ -124,33 +354,46 @@
           <span></span>
           <span></span>
         </button>
-    
       </div>
-    
+
       <!-- Mobile menu -->
       <div class="tgc-hdr-mobile" id="tgc-hdr-mobile-menu" aria-hidden="true">
         <div class="tgc-mob-section">
           <p class="tgc-mob-heading">Services</p>
-          <a href="expedited-audit.html"            class="tgc-mob-link">Expedited Audit</a>
-          <a href="label-reviews.html"              class="tgc-mob-link">Label Reviews</a>
-          <a href="hs-code-review.html"             class="tgc-mob-link">HS Code Reviews</a>
-          <a href="full-product-compliance.html"    class="tgc-mob-link">Full Product Compliance</a>
+          <a href="expedited-audit.html" class="tgc-mob-link"
+            >Expedited Audit</a
+          >
+          <a href="label-reviews.html" class="tgc-mob-link">Label Reviews</a>
+          <a href="hs-code-review.html" class="tgc-mob-link">HS Code Reviews</a>
+          <a href="full-product-compliance.html" class="tgc-mob-link"
+            >Full Product Compliance</a
+          >
         </div>
         <div class="tgc-mob-section">
           <p class="tgc-mob-heading">Industries</p>
-          <a href="cosmetic-compliance.html"         class="tgc-mob-link">Cosmetics</a>
-          <a href="food-beverage-compliance.html"    class="tgc-mob-link">Food &amp; Beverage</a>
-          <a href="food-supplements-compliance.html" class="tgc-mob-link">Food Supplements</a>
-          <a href="chemical-compliance.html"         class="tgc-mob-link">Chemicals</a>
-          <a href="electronics-compliance.html"      class="tgc-mob-link">Electronics</a>
-          <a href="consumer-goods-compliance.html"   class="tgc-mob-link">Consumer Goods</a>
-          <a href="medical-devices-compliance.html"  class="tgc-mob-link">Medical Devices</a>
+          <a href="cosmetic-compliance.html" class="tgc-mob-link">Cosmetics</a>
+          <a href="food-beverage-compliance.html" class="tgc-mob-link"
+            >Food &amp; Beverage</a
+          >
+          <a href="food-supplements-compliance.html" class="tgc-mob-link"
+            >Food Supplements</a
+          >
+          <a href="chemical-compliance.html" class="tgc-mob-link">Chemicals</a>
+          <a href="electronics-compliance.html" class="tgc-mob-link"
+            >Electronics</a
+          >
+          <a href="consumer-goods-compliance.html" class="tgc-mob-link"
+            >Consumer Goods</a
+          >
+          <a href="medical-devices-compliance.html" class="tgc-mob-link"
+            >Medical Devices</a
+          >
         </div>
         <div class="tgc-mob-section">
           <p class="tgc-mob-heading">Company</p>
-          <a href="pricing.html"    class="tgc-mob-link">Pricing</a>
-          <a href="blog.html"       class="tgc-mob-link">Blog</a>
-          <a href="about-us.html"   class="tgc-mob-link">About</a>
+          <a href="pricing.html" class="tgc-mob-link">Pricing</a>
+          <a href="blog.html" class="tgc-mob-link">Blog</a>
+          <a href="about-us.html" class="tgc-mob-link">About</a>
           <a href="contact-us.html" class="tgc-mob-link">Contact</a>
         </div>
         <a href="contact-us.html" class="tgc-mob-cta">Get a quote &rarr;</a>
@@ -159,380 +402,870 @@
     <script>
       (function () {
         /* Mobile burger toggle */
-        var burger = document.getElementById('tgc-hdr-burger');
-        var menu = document.getElementById('tgc-hdr-mobile-menu');
+        var burger = document.getElementById("tgc-hdr-burger");
+        var menu = document.getElementById("tgc-hdr-mobile-menu");
         if (burger && menu) {
-          burger.addEventListener('click', function () {
-            var open = menu.classList.toggle('tgc-mob-open');
-            burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-            menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+          burger.addEventListener("click", function () {
+            var open = menu.classList.toggle("tgc-mob-open");
+            burger.setAttribute("aria-expanded", open ? "true" : "false");
+            menu.setAttribute("aria-hidden", open ? "false" : "true");
           });
         }
         /* Active state — highlight the link matching the current page */
-        var page = window.location.pathname.split('/').pop() || 'homepage.html';
-        document.querySelectorAll('#tgc-site-header a').forEach(function (a) {
-          if ((a.getAttribute('href') || '').split('/').pop() === page) {
-            a.classList.add('tgc-hdr-active');
-            var parentBtn = a.closest('.tgc-hdr-item')
-              ? a.closest('.tgc-hdr-item').querySelector('button.tgc-hdr-link')
+        var page = window.location.pathname.split("/").pop() || "homepage.html";
+        document.querySelectorAll("#tgc-site-header a").forEach(function (a) {
+          if ((a.getAttribute("href") || "").split("/").pop() === page) {
+            a.classList.add("tgc-hdr-active");
+            var parentBtn = a.closest(".tgc-hdr-item")
+              ? a.closest(".tgc-hdr-item").querySelector("button.tgc-hdr-link")
               : null;
-            if (parentBtn) parentBtn.classList.add('tgc-hdr-active');
+            if (parentBtn) parentBtn.classList.add("tgc-hdr-active");
           }
         });
       })();
     </script>
     <!-- HEADER:END -->
 
-<div id="tgc-blog" class="tgc-page" style="margin-top:64px">
-
-  <div class="blog-hero">
-    <div class="wrap">
-      <span class="ey">Compliance Insights</span>
-      <h1>Regulatory Intelligence for Global Markets</h1>
-      <p>In-depth guides, deadline trackers, and market intelligence for compliance teams navigating global product regulations.</p>
-    </div>
-  </div>
-
-  <section class="s-white">
-    <div class="wrap">
-
-      <div class="blog-filters">
-        <button class="blog-filter active">All</button>
-        <button class="blog-filter">Cosmetics</button>
-        <button class="blog-filter">Chemicals</button>
-        <button class="blog-filter">Electronics</button>
-        <button class="blog-filter">Food &amp; Beverage</button>
-        <button class="blog-filter">Medical Devices</button>
-      </div>
-
-      <div class="blog-grid">
-
-        <!-- Post 1 -->
-        <article class="blog-card fade">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-cosmetics">Cosmetics</span>
-              <span class="blog-date">March 2026</span>
-              <span class="blog-read-time">8 min read</span>
-            </div>
-            <h2>What's Changing in Cosmetic Compliance: MoCRA, Omnibus VII &amp; VIII, and APAC Updates</h2>
-            <p>2025 and 2026 represent one of the most active regulatory periods for cosmetics in decades. We break down the key changes by region — what's already in force, what's coming, and what to do now.</p>
-            <a href="blog-cosmetic-regulation-updates.html" class="blog-card-link">Read article →</a>
-          </div>
-        </article>
-
-        <!-- Post 2 -->
-        <article class="blog-card fade d1">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-cosmetics">Cosmetics</span>
-              <span class="blog-date">March 2026</span>
-              <span class="blog-read-time">5 min read</span>
-            </div>
-            <h2>Critical Cosmetic Compliance Dates: 2025–2027 Enforcement Timeline</h2>
-            <p>The enforcement dates that should be driving reformulation, documentation updates, and label changes for any brand selling cosmetics in the EU or UK — with sources for each deadline.</p>
-            <a href="blog-cosmetic-compliance-dates.html" class="blog-card-link">Read article →</a>
-          </div>
-        </article>
-
-        <!-- Post 3 -->
-        <article class="blog-card fade d2">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-cosmetics">Cosmetics</span>
-              <span class="blog-date">March 2026</span>
-              <span class="blog-read-time">6 min read</span>
-            </div>
-            <h2>Cosmetic Regulation Compared: EU, UK &amp; US Side-by-Side</h2>
-            <p>A structured comparison of the core compliance obligations in the EU, UK, and US — covering Responsible Person requirements, product registration, safety assessments, labelling, and key 2026 deadlines.</p>
-            <a href="blog-cosmetic-regulation-comparison.html" class="blog-card-link">Read article →</a>
-          </div>
-        </article>
-
-        <!-- Post 4 — Case Study -->
-        <article class="blog-card fade d3">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-cosmetics">Cosmetics</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">6 min read</span>
-            </div>
-            <h2>The €240,000 Allergen Mistake: What One Formulation Change Cost a Personal Care Brand</h2>
-            <p>A fragrance allergen above threshold, products pulled from three EU markets, and a retail contract lost — none of it deliberate, all of it preventable. A breakdown of how this failure unfolded and what a quarterly review would have caught.</p>
-            <a href="blog-cosmetic-allergen-case-study.html" class="blog-card-link">Read case study →</a>
-          </div>
-        </article>
-
-        <article class="blog-card fade d5">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-food">Food &amp; Beverage</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">7 min read</span>
-            </div>
-            <h2>The $180,000 Supply Chain Failure: DON Mycotoxin Breach + FSVP Gap</h2>
-            <p>A mid-sized cereal exporter faced simultaneous EU border rejection and US importer suspension in Q1 2025 — both failures caused by regulatory changes the business hadn't tracked. A breakdown of what went wrong and what it cost.</p>
-            <a href="blog-food-beverage-case-study.html" class="blog-card-link">Read case study →</a>
-          </div>
-        </article>
-
-        <article class="blog-card fade d1">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-food">Food &amp; Beverage</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">9 min read</span>
-            </div>
-            <h2>What's Changing in Food and Beverage Compliance: EU Contaminants, UK HFSS, FSMA, and China's New GB Standards</h2>
-            <p>A region-by-region breakdown of the key regulatory developments in 2025 and 2026 — covering EU mycotoxin and nickel limit updates, UK HFSS advertising restrictions, FSMA FSVP enforcement, and China's mandatory new labelling standards.</p>
-            <a href="blog-food-beverage-regulation-updates.html" class="blog-card-link">Read regulatory breakdown →</a>
-          </div>
-        </article>
-
-        <article class="blog-card fade d2">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-food">Food &amp; Beverage</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">6 min read</span>
-            </div>
-            <h2>Food Regulation Compared: EU vs UK vs US vs China</h2>
-            <p>A structured side-by-side comparison of the core food compliance obligations across the four largest target markets — covering labelling frameworks, allergen rules, import verification, traceability requirements, contaminant limits, and the key changes coming in 2026 and 2027.</p>
-            <a href="blog-food-beverage-regulation-comparison.html" class="blog-card-link">View comparison →</a>
-          </div>
-        </article>
-
-        <article class="blog-card fade d3">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-supplements">Food Supplements</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">8 min read</span>
-            </div>
-            <h2>The $400,000 Compliance Failure: EU Botanical Claims Challenge + US NDI Gap</h2>
-            <p>A UK supplement brand launched into Germany using on-hold botanical health claims — and simultaneously had an unnotified NDI ingredient in the US. A case study in how two compliance gaps in two markets created over $400,000 in combined commercial losses.</p>
-            <a href="blog-food-supplements-case-study.html" class="blog-card-link">Read case study →</a>
-          </div>
-        </article>
-
-        <article class="blog-card fade d4">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-supplements">Food Supplements</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">10 min read</span>
-            </div>
-            <h2>What's Changing in Food Supplement Compliance: EU Botanical Claims, UK Divergence, NDI Notifications and China Blue Hat</h2>
-            <p>A region-by-region breakdown of the regulatory changes and active requirements supplement businesses need to understand across the EU, UK, US, China, and Australia in 2025–2026 — including the CJEU April 2025 ruling and its immediate commercial implications.</p>
-            <a href="blog-food-supplements-regulation-updates.html" class="blog-card-link">Read regulatory breakdown →</a>
-          </div>
-        </article>
-
-        <article class="blog-card fade d5">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-supplements">Food Supplements</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">7 min read</span>
-            </div>
-            <h2>Food Supplement Regulation Compared: EU vs UK vs US vs China</h2>
-            <p>A detailed side-by-side comparison of food supplement regulatory frameworks — ingredient permissions, health claims, pre-market requirements, labelling, manufacturing standards, and the key 2025–2027 changes across the four largest target markets.</p>
-            <a href="blog-food-supplements-regulation-comparison.html" class="blog-card-link">View comparison →</a>
-          </div>
-        </article>
-
-        <article class="blog-card fade d6">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-supplements">Food Supplements</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">8 min read</span>
-            </div>
-            <h2>Food Supplement Compliance Deadlines: The 2025–2026 Enforcement Calendar</h2>
-            <p>Six active regulatory requirements across the EU, UK, US, China, and Australia that supplement brands cannot afford to miss — from the botanical claim prohibition to Blue Hat pre-market approval windows and TGA ARTG listing requirements.</p>
-            <a href="blog-food-supplements-compliance-dates.html" class="blog-card-link">View compliance calendar →</a>
-          </div>
-        </article>
-
-        <article class="blog-card fade d7">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-chemicals">Chemicals</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">9 min read</span>
-            </div>
-            <h2>The €200,000 Port Detention: How Three Chemical Compliance Failures Stopped a Shipment for Six Weeks</h2>
-            <p>An industrial cleaning product containing formaldehyde shipped to the EU without CLP-compliant labelling, a valid SDS, or an Only Representative — and sat at a German port for six weeks as a result.</p>
-            <a href="blog-chemical-case-study.html" class="blog-card-link">Read case study →</a>
-          </div>
-        </article>
-
-        <article class="blog-card fade d8">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-chemicals">Chemicals</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">11 min read</span>
-            </div>
-            <h2>What's Changing in Chemical Compliance: TSCA, REACH 2.0, UK REACH and APAC</h2>
-            <p>A region-by-region breakdown of the regulatory changes and active requirements across the US, EU, UK, and Asia-Pacific in 2025–2026 — covering PFAS reporting, TCE phaseout, K-REACH SDS changes, and Japan ISHL.</p>
-            <a href="blog-chemical-regulation-updates.html" class="blog-card-link">Read regulation updates →</a>
-          </div>
-        </article>
-
-        <article class="blog-card fade d9">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-chemicals">Chemicals</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">8 min read</span>
-            </div>
-            <h2>Chemical Regulation Compared: REACH vs TSCA vs UK REACH vs K-REACH</h2>
-            <p>A detailed side-by-side comparison of the four major frameworks — covering registration triggers, SVHC obligations, SDS requirements, restricted substance controls, enforcement penalties, and key 2025–2026 changes.</p>
-            <a href="blog-chemical-regulation-comparison.html" class="blog-card-link">View comparison →</a>
-          </div>
-        </article>
-
-        <article class="blog-card fade d10">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-chemicals">Chemicals</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">9 min read</span>
-            </div>
-            <h2>Chemical Compliance Deadlines: The 2025–2026 Enforcement Calendar</h2>
-            <p>Seven active regulatory milestones across the US, EU, UK, and APAC — from the TSCA PFAS reporting window and TCE rule to K-REACH SDS changes, UK REACH registration phases, and Japan ISHL.</p>
-            <a href="blog-chemical-compliance-dates.html" class="blog-card-link">View compliance calendar →</a>
-          </div>
-        </article>
-
-        <article class="blog-card fade d1">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-electronics">Electronics</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">9 min read</span>
-            </div>
-            <h2>The 11-Week EU Market Suspension: RED Cybersecurity Gap in a Smart Home Gateway</h2>
-            <p>A consumer electronics brand launched a smart home gateway across four EU markets with valid CE marking — but without RED cybersecurity compliance. The result was an eleven-week voluntary suspension. A breakdown of what happened and what it cost.</p>
-            <a href="blog-electronics-case-study.html" class="blog-card-link">Read case study →</a>
-          </div>
-        </article>
-
-        <article class="blog-card fade d2">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-electronics">Electronics</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">12 min read</span>
-            </div>
-            <h2>What's Changing in Electronics Compliance: RED Cybersecurity, RoHS, FCC, and APAC Updates</h2>
-            <p>A region-by-region breakdown of the regulatory changes and active requirements electronics manufacturers need to understand across the EU, UK, US, and Asia-Pacific in 2025-2026 — from mandatory RED cybersecurity to RoHS exemption non-renewals and new APAC certification mandates.</p>
-            <a href="blog-electronics-regulation-updates.html" class="blog-card-link">Read regulation updates →</a>
-          </div>
-        </article>
-
-        <article class="blog-card fade d3">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-electronics">Electronics</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">8 min read</span>
-            </div>
-            <h2>Electronics Regulation Compared: EU vs UK vs US</h2>
-            <p>A structured side-by-side comparison of core electronics compliance obligations — covering conformity marks, hazardous substance restrictions, EMC, radio certification, cybersecurity frameworks, e-waste, and authorised representative requirements. Updated for 2025-2026.</p>
-            <a href="blog-electronics-regulation-comparison.html" class="blog-card-link">View comparison →</a>
-          </div>
-        </article>
-
-        <article class="blog-card fade d4">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-electronics">Electronics</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">10 min read</span>
-            </div>
-            <h2>Electronics Compliance Deadlines: The 2025-2027 Enforcement Calendar</h2>
-            <p>Eight active regulatory milestones across the EU, UK, and APAC — from RED cybersecurity enforcement and RoHS exemption expiries to the Korea USB-C mandate, WEEE labelling obligations, and the Cyber Resilience Act transition deadline.</p>
-            <a href="blog-electronics-compliance-dates.html" class="blog-card-link">View compliance calendar →</a>
-          </div>
-        </article>
-
-        <article class="blog-card fade d1">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-consumer-goods">Consumer Goods</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">10 min read</span>
-            </div>
-            <h2>What's Changing in Consumer Goods Compliance: GPSR, REACH, CPSIA and China CCC</h2>
-            <p>GPSR, REACH SVHC, RoHS, ESPR, UK UKCA, CPSIA, CCC certification updates affecting consumer goods manufacturers, importers, and online sellers across EU, UK, US, and China.</p>
-            <a href="blog-consumer-goods-regulation-updates.html" class="blog-card-link">Read regulation updates →</a>
-          </div>
-        </article>
-
-        <article class="blog-card fade d2">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-consumer-goods">Consumer Goods</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">9 min read</span>
-            </div>
-            <h2>Consumer Goods Regulation Compared: EU, UK, US and China</h2>
-            <p>A detailed side-by-side comparison of the four major consumer goods regulatory frameworks — covering general product safety, market access marking, chemical substance restrictions, third-party testing obligations, online marketplace rules, and key 2026–2030 changes.</p>
-            <a href="blog-consumer-goods-regulation-comparison.html" class="blog-card-link">View comparison →</a>
-          </div>
-        </article>
-
-        <article class="blog-card fade d3">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-consumer-goods">Consumer Goods</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">8 min read</span>
-            </div>
-            <h2>Consumer Goods Compliance Deadlines: The 2024–2030 Enforcement Calendar</h2>
-            <p>The active requirements and upcoming changes that consumer goods manufacturers, importers, and online sellers must track across the EU, UK, US, and China — from the GPSR Responsible Person obligation already in force to the new EU Toy Safety Regulation and ESPR's product destruction ban.</p>
-            <a href="blog-consumer-goods-compliance-dates.html" class="blog-card-link">View compliance calendar →</a>
-          </div>
-        </article>
-
-        <article class="blog-card fade d4">
-          <div class="blog-card-body">
-            <div class="blog-card-meta">
-              <span class="blog-tag blog-tag-consumer-goods">Consumer Goods</span>
-              <span class="blog-date">April 2026</span>
-              <span class="blog-read-time">10 min read</span>
-            </div>
-            <h2>The €220,000 EU Market Withdrawal: How GPSR, REACH Phthalates, and a Missing Technical File Collapsed a Toy Launch</h2>
-            <p>A children's toy manufacturer entered four EU markets without an EU Responsible Person, with SVHC phthalates above threshold in soft vinyl components, and without a valid Declaration of Conformity — resulting in a Safety Gate notification and full voluntary market withdrawal.</p>
-            <a href="blog-consumer-goods-case-study.html" class="blog-card-link">Read case study →</a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <div class="cta-band" role="complementary">
-    <div class="wrap">
-      <div class="cta-inner fade">
-        <div>
-          <h2 class="cta-h2 fade">Need compliance support now?</h2>
-          <p class="cta-sub">Our team covers cosmetics, chemicals, electronics, food, and medical devices across every major market.</p>
-        </div>
-        <div class="cta-btns">
-          <a href="contact-us.html" class="btn btn-gold btn-lg">Get a quote →</a>
-          <a href="pricing.html" class="btn btn-ghost btn-lg">See pricing</a>
+    <div id="tgc-blog" class="tgc-page" style="margin-top: 64px">
+      <div class="blog-hero">
+        <div class="wrap">
+          <span class="ey">Compliance Insights</span>
+          <h1>Regulatory Intelligence for Global Markets</h1>
+          <p>
+            In-depth guides, deadline trackers, and market intelligence for
+            compliance teams navigating global product regulations.
+          </p>
         </div>
       </div>
+
+      <section class="s-white">
+        <div class="wrap">
+          <div class="blog-filters">
+            <button class="blog-filter active" data-filter="all">All</button>
+            <button class="blog-filter" data-filter="cosmetics">
+              Cosmetics
+            </button>
+            <button class="blog-filter" data-filter="chemicals">
+              Chemicals
+            </button>
+            <button class="blog-filter" data-filter="electronics">
+              Electronics
+            </button>
+            <button class="blog-filter" data-filter="food">
+              Food &amp; Beverage
+            </button>
+            <button class="blog-filter" data-filter="supplements">
+              Food Supplements
+            </button>
+            <button class="blog-filter" data-filter="consumer-goods">
+              Consumer Goods
+            </button>
+            <button class="blog-filter" data-filter="medical">
+              Medical Devices
+            </button>
+            <button class="blog-filter" data-filter="case-study">
+              Case Study
+            </button>
+          </div>
+
+          <div class="blog-grid">
+            <!-- Post 1 -->
+            <article class="blog-card fade">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-cosmetics">Cosmetics</span>
+                  <span class="blog-date">March 2026</span>
+                  <span class="blog-read-time">8 min read</span>
+                </div>
+                <h2>
+                  What's Changing in Cosmetic Compliance: MoCRA, Omnibus VII
+                  &amp; VIII, and APAC Updates
+                </h2>
+                <p>
+                  2025 and 2026 represent one of the most active regulatory
+                  periods for cosmetics in decades. We break down the key
+                  changes by region — what's already in force, what's coming,
+                  and what to do now.
+                </p>
+                <a
+                  href="blog-cosmetic-regulation-updates.html"
+                  class="blog-card-link"
+                  >Read article →</a
+                >
+              </div>
+            </article>
+
+            <!-- Post 2 -->
+            <article class="blog-card fade d1">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-cosmetics">Cosmetics</span>
+                  <span class="blog-date">March 2026</span>
+                  <span class="blog-read-time">5 min read</span>
+                </div>
+                <h2>
+                  Critical Cosmetic Compliance Dates: 2025–2027 Enforcement
+                  Timeline
+                </h2>
+                <p>
+                  The enforcement dates that should be driving reformulation,
+                  documentation updates, and label changes for any brand selling
+                  cosmetics in the EU or UK — with sources for each deadline.
+                </p>
+                <a
+                  href="blog-cosmetic-compliance-dates.html"
+                  class="blog-card-link"
+                  >Read article →</a
+                >
+              </div>
+            </article>
+
+            <!-- Post 3 -->
+            <article class="blog-card fade d2">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-cosmetics">Cosmetics</span>
+                  <span class="blog-date">March 2026</span>
+                  <span class="blog-read-time">6 min read</span>
+                </div>
+                <h2>
+                  Cosmetic Regulation Compared: EU, UK &amp; US Side-by-Side
+                </h2>
+                <p>
+                  A structured comparison of the core compliance obligations in
+                  the EU, UK, and US — covering Responsible Person requirements,
+                  product registration, safety assessments, labelling, and key
+                  2026 deadlines.
+                </p>
+                <a
+                  href="blog-cosmetic-regulation-comparison.html"
+                  class="blog-card-link"
+                  >Read article →</a
+                >
+              </div>
+            </article>
+
+            <!-- Post 4 — Case Study -->
+            <article class="blog-card fade d3">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-cosmetics">Cosmetics</span>
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">6 min read</span>
+                </div>
+                <h2>
+                  The €240,000 Allergen Mistake: What One Formulation Change
+                  Cost a Personal Care Brand
+                </h2>
+                <p>
+                  A fragrance allergen above threshold, products pulled from
+                  three EU markets, and a retail contract lost — none of it
+                  deliberate, all of it preventable. A breakdown of how this
+                  failure unfolded and what a quarterly review would have
+                  caught.
+                </p>
+                <a
+                  href="blog-cosmetic-allergen-case-study.html"
+                  class="blog-card-link"
+                  >Read case study →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d5">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-food"
+                    >Food &amp; Beverage</span
+                  >
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">7 min read</span>
+                </div>
+                <h2>
+                  The $180,000 Supply Chain Failure: DON Mycotoxin Breach + FSVP
+                  Gap
+                </h2>
+                <p>
+                  A mid-sized cereal exporter faced simultaneous EU border
+                  rejection and US importer suspension in Q1 2025 — both
+                  failures caused by regulatory changes the business hadn't
+                  tracked. A breakdown of what went wrong and what it cost.
+                </p>
+                <a
+                  href="blog-food-beverage-case-study.html"
+                  class="blog-card-link"
+                  >Read case study →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d1">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-food"
+                    >Food &amp; Beverage</span
+                  >
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">9 min read</span>
+                </div>
+                <h2>
+                  What's Changing in Food and Beverage Compliance: EU
+                  Contaminants, UK HFSS, FSMA, and China's New GB Standards
+                </h2>
+                <p>
+                  A region-by-region breakdown of the key regulatory
+                  developments in 2025 and 2026 — covering EU mycotoxin and
+                  nickel limit updates, UK HFSS advertising restrictions, FSMA
+                  FSVP enforcement, and China's mandatory new labelling
+                  standards.
+                </p>
+                <a
+                  href="blog-food-beverage-regulation-updates.html"
+                  class="blog-card-link"
+                  >Read regulatory breakdown →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d2">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-food"
+                    >Food &amp; Beverage</span
+                  >
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">6 min read</span>
+                </div>
+                <h2>Food Regulation Compared: EU vs UK vs US vs China</h2>
+                <p>
+                  A structured side-by-side comparison of the core food
+                  compliance obligations across the four largest target markets
+                  — covering labelling frameworks, allergen rules, import
+                  verification, traceability requirements, contaminant limits,
+                  and the key changes coming in 2026 and 2027.
+                </p>
+                <a
+                  href="blog-food-beverage-regulation-comparison.html"
+                  class="blog-card-link"
+                  >View comparison →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d3">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-supplements"
+                    >Food Supplements</span
+                  >
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">8 min read</span>
+                </div>
+                <h2>
+                  The $400,000 Compliance Failure: EU Botanical Claims Challenge
+                  + US NDI Gap
+                </h2>
+                <p>
+                  A UK supplement brand launched into Germany using on-hold
+                  botanical health claims — and simultaneously had an unnotified
+                  NDI ingredient in the US. A case study in how two compliance
+                  gaps in two markets created over $400,000 in combined
+                  commercial losses.
+                </p>
+                <a
+                  href="blog-food-supplements-case-study.html"
+                  class="blog-card-link"
+                  >Read case study →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d4">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-supplements"
+                    >Food Supplements</span
+                  >
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">10 min read</span>
+                </div>
+                <h2>
+                  What's Changing in Food Supplement Compliance: EU Botanical
+                  Claims, UK Divergence, NDI Notifications and China Blue Hat
+                </h2>
+                <p>
+                  A region-by-region breakdown of the regulatory changes and
+                  active requirements supplement businesses need to understand
+                  across the EU, UK, US, China, and Australia in 2025–2026 —
+                  including the CJEU April 2025 ruling and its immediate
+                  commercial implications.
+                </p>
+                <a
+                  href="blog-food-supplements-regulation-updates.html"
+                  class="blog-card-link"
+                  >Read regulatory breakdown →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d5">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-supplements"
+                    >Food Supplements</span
+                  >
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">7 min read</span>
+                </div>
+                <h2>
+                  Food Supplement Regulation Compared: EU vs UK vs US vs China
+                </h2>
+                <p>
+                  A detailed side-by-side comparison of food supplement
+                  regulatory frameworks — ingredient permissions, health claims,
+                  pre-market requirements, labelling, manufacturing standards,
+                  and the key 2025–2027 changes across the four largest target
+                  markets.
+                </p>
+                <a
+                  href="blog-food-supplements-regulation-comparison.html"
+                  class="blog-card-link"
+                  >View comparison →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d6">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-supplements"
+                    >Food Supplements</span
+                  >
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">8 min read</span>
+                </div>
+                <h2>
+                  Food Supplement Compliance Deadlines: The 2025–2026
+                  Enforcement Calendar
+                </h2>
+                <p>
+                  Six active regulatory requirements across the EU, UK, US,
+                  China, and Australia that supplement brands cannot afford to
+                  miss — from the botanical claim prohibition to Blue Hat
+                  pre-market approval windows and TGA ARTG listing requirements.
+                </p>
+                <a
+                  href="blog-food-supplements-compliance-dates.html"
+                  class="blog-card-link"
+                  >View compliance calendar →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d7">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-chemicals">Chemicals</span>
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">9 min read</span>
+                </div>
+                <h2>
+                  The €200,000 Port Detention: How Three Chemical Compliance
+                  Failures Stopped a Shipment for Six Weeks
+                </h2>
+                <p>
+                  An industrial cleaning product containing formaldehyde shipped
+                  to the EU without CLP-compliant labelling, a valid SDS, or an
+                  Only Representative — and sat at a German port for six weeks
+                  as a result.
+                </p>
+                <a href="blog-chemical-case-study.html" class="blog-card-link"
+                  >Read case study →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d8">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-chemicals">Chemicals</span>
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">11 min read</span>
+                </div>
+                <h2>
+                  What's Changing in Chemical Compliance: TSCA, REACH 2.0, UK
+                  REACH and APAC
+                </h2>
+                <p>
+                  A region-by-region breakdown of the regulatory changes and
+                  active requirements across the US, EU, UK, and Asia-Pacific in
+                  2025–2026 — covering PFAS reporting, TCE phaseout, K-REACH SDS
+                  changes, and Japan ISHL.
+                </p>
+                <a
+                  href="blog-chemical-regulation-updates.html"
+                  class="blog-card-link"
+                  >Read regulation updates →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d9">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-chemicals">Chemicals</span>
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">8 min read</span>
+                </div>
+                <h2>
+                  Chemical Regulation Compared: REACH vs TSCA vs UK REACH vs
+                  K-REACH
+                </h2>
+                <p>
+                  A detailed side-by-side comparison of the four major
+                  frameworks — covering registration triggers, SVHC obligations,
+                  SDS requirements, restricted substance controls, enforcement
+                  penalties, and key 2025–2026 changes.
+                </p>
+                <a
+                  href="blog-chemical-regulation-comparison.html"
+                  class="blog-card-link"
+                  >View comparison →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d10">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-chemicals">Chemicals</span>
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">9 min read</span>
+                </div>
+                <h2>
+                  Chemical Compliance Deadlines: The 2025–2026 Enforcement
+                  Calendar
+                </h2>
+                <p>
+                  Seven active regulatory milestones across the US, EU, UK, and
+                  APAC — from the TSCA PFAS reporting window and TCE rule to
+                  K-REACH SDS changes, UK REACH registration phases, and Japan
+                  ISHL.
+                </p>
+                <a
+                  href="blog-chemical-compliance-dates.html"
+                  class="blog-card-link"
+                  >View compliance calendar →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d1">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-electronics">Electronics</span>
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">9 min read</span>
+                </div>
+                <h2>
+                  The 11-Week EU Market Suspension: RED Cybersecurity Gap in a
+                  Smart Home Gateway
+                </h2>
+                <p>
+                  A consumer electronics brand launched a smart home gateway
+                  across four EU markets with valid CE marking — but without RED
+                  cybersecurity compliance. The result was an eleven-week
+                  voluntary suspension. A breakdown of what happened and what it
+                  cost.
+                </p>
+                <a
+                  href="blog-electronics-case-study.html"
+                  class="blog-card-link"
+                  >Read case study →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d2">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-electronics">Electronics</span>
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">12 min read</span>
+                </div>
+                <h2>
+                  What's Changing in Electronics Compliance: RED Cybersecurity,
+                  RoHS, FCC, and APAC Updates
+                </h2>
+                <p>
+                  A region-by-region breakdown of the regulatory changes and
+                  active requirements electronics manufacturers need to
+                  understand across the EU, UK, US, and Asia-Pacific in
+                  2025-2026 — from mandatory RED cybersecurity to RoHS exemption
+                  non-renewals and new APAC certification mandates.
+                </p>
+                <a
+                  href="blog-electronics-regulation-updates.html"
+                  class="blog-card-link"
+                  >Read regulation updates →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d3">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-electronics">Electronics</span>
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">8 min read</span>
+                </div>
+                <h2>Electronics Regulation Compared: EU vs UK vs US</h2>
+                <p>
+                  A structured side-by-side comparison of core electronics
+                  compliance obligations — covering conformity marks, hazardous
+                  substance restrictions, EMC, radio certification,
+                  cybersecurity frameworks, e-waste, and authorised
+                  representative requirements. Updated for 2025-2026.
+                </p>
+                <a
+                  href="blog-electronics-regulation-comparison.html"
+                  class="blog-card-link"
+                  >View comparison →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d4">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-electronics">Electronics</span>
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">10 min read</span>
+                </div>
+                <h2>
+                  Electronics Compliance Deadlines: The 2025-2027 Enforcement
+                  Calendar
+                </h2>
+                <p>
+                  Eight active regulatory milestones across the EU, UK, and APAC
+                  — from RED cybersecurity enforcement and RoHS exemption
+                  expiries to the Korea USB-C mandate, WEEE labelling
+                  obligations, and the Cyber Resilience Act transition deadline.
+                </p>
+                <a
+                  href="blog-electronics-compliance-dates.html"
+                  class="blog-card-link"
+                  >View compliance calendar →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d1">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-consumer-goods"
+                    >Consumer Goods</span
+                  >
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">10 min read</span>
+                </div>
+                <h2>
+                  What's Changing in Consumer Goods Compliance: GPSR, REACH,
+                  CPSIA and China CCC
+                </h2>
+                <p>
+                  GPSR, REACH SVHC, RoHS, ESPR, UK UKCA, CPSIA, CCC
+                  certification updates affecting consumer goods manufacturers,
+                  importers, and online sellers across EU, UK, US, and China.
+                </p>
+                <a
+                  href="blog-consumer-goods-regulation-updates.html"
+                  class="blog-card-link"
+                  >Read regulation updates →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d2">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-consumer-goods"
+                    >Consumer Goods</span
+                  >
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">9 min read</span>
+                </div>
+                <h2>
+                  Consumer Goods Regulation Compared: EU, UK, US and China
+                </h2>
+                <p>
+                  A detailed side-by-side comparison of the four major consumer
+                  goods regulatory frameworks — covering general product safety,
+                  market access marking, chemical substance restrictions,
+                  third-party testing obligations, online marketplace rules, and
+                  key 2026–2030 changes.
+                </p>
+                <a
+                  href="blog-consumer-goods-regulation-comparison.html"
+                  class="blog-card-link"
+                  >View comparison →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d3">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-consumer-goods"
+                    >Consumer Goods</span
+                  >
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">8 min read</span>
+                </div>
+                <h2>
+                  Consumer Goods Compliance Deadlines: The 2024–2030 Enforcement
+                  Calendar
+                </h2>
+                <p>
+                  The active requirements and upcoming changes that consumer
+                  goods manufacturers, importers, and online sellers must track
+                  across the EU, UK, US, and China — from the GPSR Responsible
+                  Person obligation already in force to the new EU Toy Safety
+                  Regulation and ESPR's product destruction ban.
+                </p>
+                <a
+                  href="blog-consumer-goods-compliance-dates.html"
+                  class="blog-card-link"
+                  >View compliance calendar →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d4">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-consumer-goods"
+                    >Consumer Goods</span
+                  >
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">10 min read</span>
+                </div>
+                <h2>
+                  The €220,000 EU Market Withdrawal: How GPSR, REACH Phthalates,
+                  and a Missing Technical File Collapsed a Toy Launch
+                </h2>
+                <p>
+                  A children's toy manufacturer entered four EU markets without
+                  an EU Responsible Person, with SVHC phthalates above threshold
+                  in soft vinyl components, and without a valid Declaration of
+                  Conformity — resulting in a Safety Gate notification and full
+                  voluntary market withdrawal.
+                </p>
+                <a
+                  href="blog-consumer-goods-case-study.html"
+                  class="blog-card-link"
+                  >Read case study →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d1">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-medical">Medical Devices</span>
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">12 min read</span>
+                </div>
+                <h2>
+                  What's Changing in Medical Device Regulation: EU MDR, UK MHRA,
+                  FDA QMSR, and China NMPA
+                </h2>
+                <p>
+                  A region-by-region breakdown of the EU MDR transition, EUDAMED
+                  mandatory activation, IVDR phased deadlines, FDA QMSR
+                  effective February 2026, and China NMPA Order 739 requirements
+                  for device manufacturers in 2025–2026.
+                </p>
+                <a
+                  href="blog-medical-devices-regulation-updates.html"
+                  class="blog-card-link"
+                  >Read regulation updates →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d2">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-medical">Medical Devices</span>
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">10 min read</span>
+                </div>
+                <h2>
+                  Medical Device Compliance Deadlines: What Is Active and What
+                  Is Coming
+                </h2>
+                <p>
+                  The structured timeline of active requirements and upcoming
+                  deadlines that medical device manufacturers must plan for
+                  across the EU, UK, US, and China — from EUDAMED mandatory
+                  activation in May 2026 to MDR and IVDR transition cut-offs
+                  running to 2029.
+                </p>
+                <a
+                  href="blog-medical-devices-compliance-dates.html"
+                  class="blog-card-link"
+                  >View compliance calendar →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d3">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-medical">Medical Devices</span>
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">11 min read</span>
+                </div>
+                <h2>
+                  Medical Device Regulation Compared: EU MDR, UK MDR, US FDA,
+                  and China NMPA
+                </h2>
+                <p>
+                  A side-by-side comparison of the four major medical device
+                  regulatory frameworks — covering classification, market access
+                  routes, quality system requirements, local representative
+                  obligations, premarket pathways, and key changes in 2026–2029.
+                </p>
+                <a
+                  href="blog-medical-devices-regulation-comparison.html"
+                  class="blog-card-link"
+                  >View comparison →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d4">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-medical">Medical Devices</span>
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">12 min read</span>
+                </div>
+                <h2>
+                  The €380,000 EU Market Withdrawal: How Three Overlooked MDR
+                  Requirements Compounded Into a Multi-Market Crisis
+                </h2>
+                <p>
+                  A case study of how a South Korean surgical instrument
+                  manufacturer's failure to address EU MDR transition, EUDAMED
+                  registration, and FDA QMSR obligations simultaneously resulted
+                  in EU market withdrawal, US inspection findings, and a
+                  remediation programme totalling nearly €400,000.
+                </p>
+                <a
+                  href="blog-medical-devices-case-study.html"
+                  class="blog-card-link"
+                  >Read case study →</a
+                >
+              </div>
+            </article>
+
+            <article class="blog-card fade d4">
+              <div class="blog-card-body">
+                <div class="blog-card-meta">
+                  <span class="blog-tag blog-tag-case-study">Case Study</span>
+                  <span class="blog-date">April 2026</span>
+                  <span class="blog-read-time">10 min read</span>
+                </div>
+                <h2>
+                  How TGC resolved a food supplement compliance crisis - with
+                  products already on Australian shelves
+                </h2>
+                <p>
+                  A global supplement brand's products were listed under AICIS
+                  but exceeded allowable ingredient limits - meaning they should
+                  have been registered as therapeutic goods under the TGA. The
+                  products were already on shelves, listed on Amazon AU, and
+                  flagged as non-compliant by regulators.
+                </p>
+                <a
+                  href="blog-case-study-food-supplement-crisis.html"
+                  class="blog-card-link"
+                  >Read case study →</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <script>
+        (function () {
+          var filters = document.querySelectorAll(".blog-filter");
+          var cards = document.querySelectorAll(".blog-card");
+
+          filters.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+              filters.forEach(function (b) {
+                b.classList.remove("active");
+              });
+              btn.classList.add("active");
+
+              var filter = btn.getAttribute("data-filter");
+
+              cards.forEach(function (card) {
+                if (filter === "all") {
+                  card.style.display = "";
+                  return;
+                }
+
+                var tagEl = card.querySelector(".blog-tag");
+                var linkEl = card.querySelector(".blog-card-link");
+                var tagClass = tagEl ? tagEl.className : "";
+                var linkHref = linkEl ? linkEl.getAttribute("href") : "";
+                var matches = false;
+
+                if (filter === "case-study") {
+                  matches =
+                    linkHref.indexOf("case-study") !== -1 ||
+                    tagClass.indexOf("blog-tag-case-study") !== -1;
+                } else {
+                  matches = tagClass.indexOf("blog-tag-" + filter) !== -1;
+                }
+
+                card.style.display = matches ? "" : "none";
+              });
+            });
+          });
+        })();
+      </script>
+
+      <!-- CTA -->
+      <div class="cta-band" role="complementary">
+        <div class="wrap">
+          <div class="cta-inner fade">
+            <div>
+              <h2 class="cta-h2 fade">Need compliance support now?</h2>
+              <p class="cta-sub">
+                Our team covers cosmetics, chemicals, electronics, food, and
+                medical devices across every major market.
+              </p>
+            </div>
+            <div class="cta-btns">
+              <a href="contact-us.html" class="btn btn-gold btn-lg"
+                >Get a quote →</a
+              >
+              <a href="pricing.html" class="btn btn-ghost btn-lg"
+                >See pricing</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+    <!-- /.tgc-page -->
 
-</div><!-- /.tgc-page -->
-
-<!-- FOOTER:START -->
+    <!-- FOOTER:START -->
     <footer
       id="tgc-site-footer"
       style="
@@ -566,8 +1299,24 @@
         >
           <!-- brand -->
           <div>
-            <a href="homepage.html" style="display:inline-block;margin-bottom:14px;text-decoration:none;">
-              <img src="../assets/images/tgc-logo.png" alt="TecEx Global Compliance" style="height:96px;width:96px;border-radius:8px;display:block;">
+            <a
+              href="homepage.html"
+              style="
+                display: inline-block;
+                margin-bottom: 14px;
+                text-decoration: none;
+              "
+            >
+              <img
+                src="../assets/images/tgc-logo.png"
+                alt="TecEx Global Compliance"
+                style="
+                  height: 96px;
+                  width: 96px;
+                  border-radius: 8px;
+                  display: block;
+                "
+              />
             </a>
             <p
               style="
@@ -577,9 +1326,9 @@
                 margin: 0 0 18px;
               "
             >
-              Expert product compliance — label reviews, expedited audits, HS code
-              reviews, and end-to-end compliance programmes. Built by the team
-              behind TecEx.
+              Expert product compliance — label reviews, expedited audits, HS
+              code reviews, and end-to-end compliance programmes. Built by the
+              team behind TecEx.
             </p>
             <!-- social -->
             <div style="display: flex; gap: 10px">
@@ -659,7 +1408,7 @@
               </a>
             </div>
           </div>
-    
+
           <!-- services -->
           <div>
             <p
@@ -728,7 +1477,7 @@
               >Full Product Compliance</a
             >
           </div>
-    
+
           <!-- industries -->
           <div>
             <p
@@ -836,7 +1585,7 @@
               >Medical Devices</a
             >
           </div>
-    
+
           <!-- company -->
           <div>
             <p
@@ -894,7 +1643,7 @@
           </div>
         </div>
         <!-- /grid -->
-    
+
         <!-- bottom bar -->
         <div
           style="
@@ -909,8 +1658,8 @@
           "
         >
           <p style="margin: 0">
-            © 2026 TecEx Global Compliance. All rights reserved. Built by the team
-            behind TecEx.
+            © 2026 TecEx Global Compliance. All rights reserved. Built by the
+            team behind TecEx.
           </p>
           <p style="margin: 0">
             <a
@@ -932,26 +1681,33 @@
         </div>
       </div>
     </footer>
-    
+
     <script>
-    (function () {
-      var fades = document.querySelectorAll('.fade');
-      if (!fades.length) return;
-      if (!window.IntersectionObserver) {
-        fades.forEach(function (el) { el.classList.add('vis'); });
-        return;
-      }
-      var obs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('vis');
-            obs.unobserve(entry.target);
-          }
+      (function () {
+        var fades = document.querySelectorAll(".fade");
+        if (!fades.length) return;
+        if (!window.IntersectionObserver) {
+          fades.forEach(function (el) {
+            el.classList.add("vis");
+          });
+          return;
+        }
+        var obs = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("vis");
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+        );
+        fades.forEach(function (el) {
+          obs.observe(el);
         });
-      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-      fades.forEach(function (el) { obs.observe(el); });
-    }());
+      })();
     </script>
     <!-- FOOTER:END -->
-</body>
+  </body>
 </html>
