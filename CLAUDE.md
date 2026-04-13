@@ -67,11 +67,25 @@ Each page has a unique ID on its `.tgc-page` div (e.g. `id="tgc-hp"`, `id="tgc-c
 4. Keep the `<!-- HEADER:START/END -->` and `<!-- FOOTER:START/END -->` markers; run `npm run inject` to populate them
 5. Add a card to `index.html`
 
+## Pricing
+
+- **Expedited Audit** — from $300. Cheapest tier is General Consumer Goods (EU & UK / North America). Other categories (Food, Supplements, Electronics, Cosmetics, Chemicals) start at $400+. The pricing calculator in `pricing.html` holds the full per-category, per-region data.
+- **Label Reviews** — from $300 (EU & UK / North America); $400 for APAC, MEA, LATAM.
+- **HS Code Review** — from $40 flat rate across all regions.
+
+## Analytics / tracking (pending setup)
+
+The following tags need to be added to the site once accounts are created. All should be implemented via Google Tag Manager (GTM) so only one code change is needed:
+
+- **Google Tag Manager** — add GTM `<script>` snippet to `<head>` and GTM `<noscript>` snippet to `<body>` in `partials/header.html`. Provide the Container ID (`GTM-XXXXXXX`) and I can implement across all pages in one edit.
+- **Google Search Console** — add the verification `<meta name="google-site-verification" content="...">` tag to `<head>` on all pages. Provide the verification code.
+- **GA4** — configure inside GTM once GTM is live.
+- **Google Ads conversion tracking** — configure inside GTM, fire on contact form submit.
+
 ## Outstanding issues (as of April 2026)
 
-- **Expedited Audit** — Price discrepancy: title/copy says $300, homepage + schema say $400
-- **Label Reviews** — FAQ turnaround time blank: *"Standard label reviews are completed within ___."*
 - **HS Code Review** — Missing `og:image`/`twitter:image`; title tag 65 chars (too long); meta description 162 chars (too long)
 - **All pages** — OG images missing at `assets/images/og/` (1200×630px per page)
 - **All pages** — `margin-top` on `.tgc-page` wrappers is `64px` on many pages; should be `80px` to match the 80px fixed header
 - **Homepage** — Confirm LinkedIn URL and Twitter handle in schema JSON-LD are correct
+- **Analytics** — GTM, GA4, Google Ads conversion tracking, and Search Console verification not yet implemented (see section above)
