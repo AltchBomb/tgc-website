@@ -2586,10 +2586,11 @@ body {
   align-items: flex-start !important;
   background: rgba(255, 255, 255, 0.04) !important;
   transition: background 0.2s !important;
+  cursor: pointer !important;
 }
 
 .tgc-page .risk-item:hover {
-  background: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
 }
 
 .tgc-page .risk-icon {
@@ -2602,17 +2603,65 @@ body {
   align-items: center !important;
   justify-content: center !important;
   color: var(--gold) !important;
+  transition: background 0.2s !important;
+}
+
+.tgc-page .risk-item:hover .risk-icon {
+  background: rgba(211, 169, 17, 0.28) !important;
 }
 
 .tgc-page .risk-body h3 {
   color: var(--white) !important;
-  margin-bottom: 8px !important;
+  margin-bottom: 0 !important;
   font-size: 15px !important;
+  transition: color 0.2s !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 10px !important;
 }
+
+.tgc-page .risk-body h3::after {
+  content: "+" !important;
+  font-size: 22px !important;
+  font-weight: 300 !important;
+  font-family: sans-serif !important;
+  line-height: 1 !important;
+  color: var(--gold) !important;
+  opacity: 0.5 !important;
+  flex-shrink: 0 !important;
+  transition:
+    transform 0.6s ease,
+    opacity 0.4s !important;
+}
+
+.tgc-page .risk-item:hover .risk-body h3 {
+  color: var(--gold) !important;
+}
+
+.tgc-page .risk-item:hover .risk-body h3::after {
+  transform: rotate(45deg) !important;
+  opacity: 1 !important;
+}
+
 .tgc-page .risk-body p {
   font-size: 14px !important;
-  color: rgba(255, 255, 255, 0.6) !important;
+  color: rgba(255, 255, 255, 0.65) !important;
   line-height: 1.65 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  margin-top: 0 !important;
+  transition:
+    max-height 0.7s ease,
+    opacity 0.5s ease 0.1s,
+    margin-top 0.5s ease !important;
+}
+
+.tgc-page .risk-item:hover .risk-body p {
+  max-height: 200px !important;
+  opacity: 1 !important;
+  margin-top: 8px !important;
 }
 
 /* ================================================================
@@ -4219,12 +4268,55 @@ body {
 /* ── Detail list ─────────────────────────────────────────── */
 .tgc-page .cost-body h3 {
   color: var(--white) !important;
-  margin-bottom: 8px !important;
+  margin-bottom: 0 !important;
+  transition: color 0.2s !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 10px !important;
 }
+
+.tgc-page .cost-body h3::after {
+  content: "+" !important;
+  font-size: 22px !important;
+  font-weight: 300 !important;
+  font-family: sans-serif !important;
+  line-height: 1 !important;
+  color: var(--gold) !important;
+  opacity: 0.5 !important;
+  flex-shrink: 0 !important;
+  transition:
+    transform 0.6s ease,
+    opacity 0.4s !important;
+}
+
+.tgc-page .cost-item:hover .cost-body h3 {
+  color: var(--gold) !important;
+}
+
+.tgc-page .cost-item:hover .cost-body h3::after {
+  transform: rotate(45deg) !important;
+  opacity: 1 !important;
+}
+
 .tgc-page .cost-body p {
   font-size: 14px !important;
-  color: rgba(255, 255, 255, 0.6) !important;
+  color: rgba(255, 255, 255, 0.65) !important;
   line-height: 1.65 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  margin-top: 0 !important;
+  transition:
+    max-height 0.7s ease,
+    opacity 0.5s ease 0.1s,
+    margin-top 0.5s ease !important;
+}
+
+.tgc-page .cost-item:hover .cost-body p {
+  max-height: 200px !important;
+  opacity: 1 !important;
+  margin-top: 8px !important;
 }
 .tgc-page .cost-compare-audit {
   background: rgba(211, 169, 17, 0.15) !important;
@@ -4269,19 +4361,13 @@ body {
 }
 .tgc-page .cost-grid {
   display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
+  grid-template-columns: repeat(2, 1fr) !important;
   gap: 2px !important;
   background: rgba(255, 255, 255, 0.08) !important;
   border-radius: var(--radius-lg) !important;
   overflow: hidden !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
   margin-bottom: 40px !important;
-}
-.tgc-page .cost-grid {
-  grid-template-columns: repeat(2, 1fr) !important;
-}
-.tgc-page .cost-grid {
-  grid-template-columns: 1fr !important;
 }
 .tgc-page .cost-icon {
   width: 40px !important;
@@ -4293,6 +4379,10 @@ body {
   align-items: center !important;
   justify-content: center !important;
   color: var(--gold) !important;
+  transition: background 0.2s !important;
+}
+.tgc-page .cost-item:hover .cost-icon {
+  background: rgba(211, 169, 17, 0.28) !important;
 }
 .tgc-page .cost-item {
   padding: 28px 24px !important;
@@ -4301,16 +4391,15 @@ body {
   align-items: flex-start !important;
   background: rgba(255, 255, 255, 0.04) !important;
   transition: background 0.2s !important;
+  cursor: pointer !important;
 }
 .tgc-page .cost-item:hover {
-  background: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
 }
 .tgc-page .price-sel-btns {
   display: flex !important;
   flex-wrap: wrap !important;
   gap: 8px !important;
-}
-.tgc-page .price-sel-group {
 }
 .tgc-page .price-sel-label {
   display: block !important;
@@ -5244,8 +5333,8 @@ body {
 .tgc-hdr-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 clamp(20px, 3vw, 40px);
-  height: 64px;
+  padding: 0 clamp(12px, 4vw, 48px);
+  height: 80px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -5258,7 +5347,8 @@ body {
   gap: 9px;
   text-decoration: none;
   flex-shrink: 0;
-  margin-right: 12px;
+  margin-right: 24px;
+  align-self: center;
 }
 .tgc-hdr-logo-text {
   font-family: "Sora", "Helvetica Neue", Arial, sans-serif;
@@ -5274,6 +5364,7 @@ body {
 .tgc-hdr-nav {
   display: flex;
   align-items: center;
+  justify-content: left;
   gap: 0;
   flex: 1;
   min-width: 0;
@@ -5460,11 +5551,11 @@ body {
   background: #0f2236;
   border-top: 1px solid #1e3a52;
   padding: 20px clamp(20px, 3vw, 40px) 28px;
-  max-height: calc(100vh - 64px);
+  max-height: calc(100vh - 80px);
   overflow-y: auto;
 }
 .tgc-hdr-mobile.tgc-mob-open {
-  display: block;
+  display: block !important;
 }
 
 .tgc-mob-section {
@@ -5553,8 +5644,8 @@ body {
 /* ── Logo image ──────────────────────────────────────────────────────────────
    Replaces the placeholder SVG + text in the site header.                    */
 .tgc-hdr-logo-img {
-  height: 120px;
-  width: auto;
+  height: auto;
+  width: 200px;
   border-radius: 6px;
   display: block;
   object-fit: contain;
@@ -6807,4 +6898,30 @@ body {
   font-weight: 600;
   text-align: right;
   font-family: "Sora", sans-serif;
+}
+
+/* ── Footer grid ─────────────────────────────────────────────────────────── */
+.tgc-footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 56px 0;
+  border-bottom: 1px solid #1e3a52;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .tgc-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .tgc-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 32px 0;
+  }
 }
