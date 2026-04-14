@@ -49,7 +49,7 @@ The `#tgc-site-header` lives **outside** `.tgc-page`, so `.tgc-page *` rules do 
 
 - `partials/header.html` — full `<header id="tgc-site-header">` + inline `<script>` for burger toggle and active-state highlighting. Burger toggle adds/removes class `tgc-mob-open` on `#tgc-hdr-mobile-menu`.
 - `partials/footer.html` — full `<footer id="tgc-site-footer">` with inline styles + a `<script>` for the `.fade` intersection observer (this script is stripped when using the fetch approach since the page owns the observer).
-- `partials/footer.css` — a separate stylesheet with `#tgc-site-footer`-scoped rules that was the original footer spec. Current `footer.html` uses inline styles; responsive grid rules for the footer are in `global.css` as `.tgc-footer-grid`.
+- `partials/footer.css` — **unused/dead weight**. Was the original footer spec; footer styles now live in `global.css` (`.tgc-footer-grid`) and as inline styles in `footer.html`. Safe to delete.
 
 ### Blog filter (`pages/blog.html`)
 
@@ -58,6 +58,27 @@ The JS filter reads `blog-tag-*` classes on article cards and `"case-study"` in 
 ### Page wrapper IDs
 
 Each page has a unique ID on its `.tgc-page` div (e.g. `id="tgc-hp"`, `id="tgc-cosm"`) used to scope page-specific CSS rules without `!important` escalation.
+
+## WordPress handoff
+
+This project is a **visual prototype** for a WordPress theme, not a WordPress-ready codebase. What exists:
+- `.tgc-page { all: initial }` resets WordPress theme bleed — intentional
+- Partials map to `header.php` / `footer.php`
+- `canonical` URLs reference the live WordPress domain
+
+What a WordPress developer still needs to handle:
+- Split `global.css` into `style.css` + enqueued stylesheets via `functions.php`
+- Replace relative image paths (`../assets/images/`) with WordPress Media Library URLs
+- Map each page to a page template; identify which sections become `the_content()`, ACF fields, or hardcoded markup
+- Implement forms via a plugin (Gravity Forms, WPForms, etc.)
+- Register nav menus, enqueue fonts, and register scripts in `functions.php`
+- Blog posts are static HTML — decide whether these become standard posts or a CPT
+
+## Deployment (static hosting)
+
+The site deploys as-is to any static host. Recommended: **Netlify** — connect the GitHub repo, no build command, publish directory `/`. Auto-deploys on push to `main`.
+
+Run `npm run inject` before deploying so header/footer are embedded inline and don't rely on `fetch()`.
 
 ## Adding a new page
 
@@ -84,8 +105,10 @@ The following tags need to be added to the site once accounts are created. All s
 
 ## Outstanding issues (as of April 2026)
 
+- **All pages** — `canonical` URLs have a missing `/` (e.g. `tecexglobalcompliance.comexpedited-audit.html` instead of `tecexglobalcompliance.com/expedited-audit/`). Must be fixed before going live or Google will index malformed URLs.
 - **HS Code Review** — Missing `og:image`/`twitter:image`; title tag 65 chars (too long); meta description 162 chars (too long)
 - **All pages** — OG images missing at `assets/images/og/` (1200×630px per page)
 - **All pages** — `margin-top` on `.tgc-page` wrappers is `64px` on many pages; should be `80px` to match the 80px fixed header
 - **Homepage** — Confirm LinkedIn URL and Twitter handle in schema JSON-LD are correct
 - **Analytics** — GTM, GA4, Google Ads conversion tracking, and Search Console verification not yet implemented (see section above)
+- **`partials/footer.css`** — unused file, should be deleted

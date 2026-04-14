@@ -1,5 +1,5 @@
 /**
- * inject-header.js
+ * inject-partials.js
  *
  * Reads partials/header.html and partials/footer.html and injects
  * them into every HTML page in Pages/ between their marker comments:

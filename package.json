@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "TecEx Global Compliance — website redesign (HTML pages for WordPress)",
   "scripts": {
-    "inject": "node scripts/inject-header.js",
+    "inject": "node scripts/inject-partials.js",
     "start": "npm run inject && live-server --open=index.html --port=3000",
     "dev": "npm start"
   },
