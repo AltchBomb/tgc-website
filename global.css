@@ -498,11 +498,17 @@ body {
 .tgc-page .img-block {
   border-radius: var(--radius-md) !important;
   overflow: hidden !important;
-  background: var(--parchment) !important;
+  background: transparent !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   min-height: 320px !important;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 6%, black 94%, transparent 100%) !important;
+  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 6%, black 94%, transparent 100%) !important;
+  -webkit-mask-composite: destination-in !important;
+  mask-composite: intersect !important;
 }
 
 .tgc-page .img-block img {
