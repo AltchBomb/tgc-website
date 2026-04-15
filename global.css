@@ -3209,6 +3209,47 @@ body {
 }
 
 /* ================================================================
+   MEMBERSHIP BAR
+================================================================ */
+.tgc-page .membership-bar {
+  background: var(--navy) !important;
+  border-top: 1px solid var(--border-dk) !important;
+  border-bottom: 1px solid var(--border-dk) !important;
+  padding: 20px 0 !important;
+}
+.tgc-page .membership-inner {
+  display: flex !important;
+  align-items: center !important;
+  gap: 32px !important;
+  flex-wrap: wrap !important;
+}
+.tgc-page .membership-label {
+  font-family: "Sora", sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  color: var(--slate) !important;
+  white-space: nowrap !important;
+}
+.tgc-page .membership-logos {
+  display: flex !important;
+  align-items: center !important;
+  gap: 24px !important;
+  flex-wrap: wrap !important;
+}
+.tgc-page .membership-logo {
+  height: 40px !important;
+  width: auto !important;
+  opacity: 0.8 !important;
+  filter: brightness(0) invert(1) !important;
+  transition: opacity 0.2s !important;
+}
+.tgc-page .membership-logo:hover {
+  opacity: 1 !important;
+}
+
+/* ================================================================
    PROOF BAR
 ================================================================ */
 .tgc-page .proof {
