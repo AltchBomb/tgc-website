@@ -405,13 +405,17 @@
       (function () {
         var ph = document.getElementById("tgc-header-placeholder");
         fetch("../partials/header.html")
-          .then(function (r) { return r.text(); })
+          .then(function (r) {
+            return r.text();
+          })
           .then(function (html) {
             var wrap = document.createElement("div");
             wrap.innerHTML = html;
-            var scriptTexts = Array.from(wrap.querySelectorAll("script")).map(function (s) {
-              return s.textContent;
-            });
+            var scriptTexts = Array.from(wrap.querySelectorAll("script")).map(
+              function (s) {
+                return s.textContent;
+              },
+            );
             while (wrap.firstChild) {
               ph.parentNode.insertBefore(wrap.firstChild, ph);
             }
@@ -794,10 +798,7 @@
                   HS Code and ECCN classification per unique product SKU
                 </li>
                 <li class="rc-feature">Same flat rate across all regions</li>
-                <li class="rc-feature">
-                  Priced per line item, not per country - one classification
-                  covers all markets
-                </li>
+
                 <li class="rc-feature">Volume discounts from 21 line items</li>
               </ul>
               <a href="#estimate" class="rc-cta">Build an estimate &rarr;</a>
@@ -890,11 +891,15 @@
       (function () {
         var ph = document.getElementById("tgc-footer-placeholder");
         fetch("../partials/footer.html")
-          .then(function (r) { return r.text(); })
+          .then(function (r) {
+            return r.text();
+          })
           .then(function (html) {
             var wrap = document.createElement("div");
             wrap.innerHTML = html;
-            wrap.querySelectorAll("script").forEach(function (s) { s.remove(); });
+            wrap.querySelectorAll("script").forEach(function (s) {
+              s.remove();
+            });
             while (wrap.firstChild) {
               ph.parentNode.insertBefore(wrap.firstChild, ph);
             }
@@ -910,7 +915,9 @@
         var fades = document.querySelectorAll(".fade");
         if (!fades.length) return;
         if (!window.IntersectionObserver) {
-          fades.forEach(function (el) { el.classList.add("vis"); });
+          fades.forEach(function (el) {
+            el.classList.add("vis");
+          });
           return;
         }
         var obs = new IntersectionObserver(
@@ -922,9 +929,11 @@
               }
             });
           },
-          { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+          { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
         );
-        fades.forEach(function (el) { obs.observe(el); });
+        fades.forEach(function (el) {
+          obs.observe(el);
+        });
       })();
     </script>
 
