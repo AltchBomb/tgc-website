@@ -1541,28 +1541,64 @@
       })();
     </script>
 
+    <!-- ── SAMPLE MEMO — PREVIEW MODAL ─────────────────────── -->
+    <div id="sr-hs-report-modal" class="sr-gate-overlay sr-report-overlay" role="dialog" aria-modal="true" aria-label="Sample HS code review memo preview">
+      <div class="sr-report-pane">
+        <div class="sr-report-toolbar">
+          <span class="sr-report-toolbar-title">TGC — HS Code Review Sample Memo</span>
+          <div class="sr-report-toolbar-actions">
+            <button onclick="srHsDownloadPDF()" class="sr-toolbar-btn sr-toolbar-btn-primary">&#8595; Download PDF</button>
+            <button id="sr-hs-report-close" class="sr-toolbar-btn" aria-label="Close preview">&#10005; Close</button>
+          </div>
+        </div>
+        <iframe
+          id="sr-hs-iframe"
+          class="sr-report-iframe"
+          src="TGC_HSCodeReview_SampleMemo.html?unlocked=1"
+          title="TGC HS Code Review Sample Memo"
+        ></iframe>
+      </div>
+    </div>
+
     <script>
-      /* page-level fade observer */
-      (function () {
-        var fades = document.querySelectorAll(".fade");
-        if (!fades.length) return;
-        if (!window.IntersectionObserver) {
-          fades.forEach(function (el) { el.classList.add("vis"); });
-          return;
+    (function () {
+      var reportModal = document.getElementById('sr-hs-report-modal');
+      var iframe      = document.getElementById('sr-hs-iframe');
+
+      function openReportPreview() {
+        reportModal.classList.add('sr-open');
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeReportModal() {
+        reportModal.classList.remove('sr-open');
+        document.documentElement.style.overflow = '';
+        document.body.style.overflow = '';
+      }
+
+      /* Called by the "Send me the sample →" gate button in the inline memo panel */
+      window.tgcHsGateSubmit = function () {
+        var email = (document.getElementById('hs-gate-email') || {}).value || '';
+        if (email) localStorage.setItem('tgc-sr-unlocked', '1');
+        openReportPreview();
+      };
+
+      /* Trigger PDF download inside the iframe */
+      window.srHsDownloadPDF = function () {
+        try {
+          iframe.contentWindow.srDownloadPDF();
+        } catch (err) {
+          window.open('TGC_HSCodeReview_SampleMemo.html', '_blank');
         }
-        var obs = new IntersectionObserver(
-          function (entries) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("vis");
-                obs.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
-        );
-        fades.forEach(function (el) { obs.observe(el); });
-      })();
+      };
+
+      document.getElementById('sr-hs-report-close').addEventListener('click', closeReportModal);
+      reportModal.addEventListener('click', function (e) { if (e.target === reportModal) closeReportModal(); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && reportModal.classList.contains('sr-open')) closeReportModal();
+      });
+    })();
     </script>
 </body>
 </html>

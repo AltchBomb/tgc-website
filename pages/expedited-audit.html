@@ -1575,5 +1575,66 @@
         fades.forEach(function (el) { obs.observe(el); });
       })();
     </script>
+
+    <!-- ── SAMPLE REPORT — PREVIEW MODAL ────────────────────── -->
+    <div id="sr-ea-report-modal" class="sr-gate-overlay sr-report-overlay" role="dialog" aria-modal="true" aria-label="Sample audit report preview">
+      <div class="sr-report-pane">
+        <div class="sr-report-toolbar">
+          <span class="sr-report-toolbar-title">TGC — Expedited Audit Sample Report</span>
+          <div class="sr-report-toolbar-actions">
+            <button onclick="srEaDownloadPDF()" class="sr-toolbar-btn sr-toolbar-btn-primary">&#8595; Download PDF</button>
+            <button id="sr-ea-report-close" class="sr-toolbar-btn" aria-label="Close preview">&#10005; Close</button>
+          </div>
+        </div>
+        <iframe
+          id="sr-ea-iframe"
+          class="sr-report-iframe"
+          src="TGC_ExpeditedAudit_SampleReport.html?unlocked=1"
+          title="TGC Expedited Audit Sample Report"
+        ></iframe>
+      </div>
+    </div>
+
+    <script>
+    (function () {
+      var reportModal = document.getElementById('sr-ea-report-modal');
+      var iframe      = document.getElementById('sr-ea-iframe');
+
+      function openReportPreview() {
+        reportModal.classList.add('sr-open');
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeReportModal() {
+        reportModal.classList.remove('sr-open');
+        document.documentElement.style.overflow = '';
+        document.body.style.overflow = '';
+      }
+
+      // Called by the "Send me the sample →" button on the inline sample gate
+      window.tgcGateSubmit = function () {
+        var email = (document.getElementById('gate-email') || {}).value || '';
+        // TODO: submit email to HubSpot (or Netlify Forms) before opening preview
+        if (email) localStorage.setItem('tgc-sr-unlocked', '1');
+        openReportPreview();
+      };
+
+      // Trigger PDF download inside the iframe
+      window.srEaDownloadPDF = function () {
+        try {
+          iframe.contentWindow.srDownloadPDF();
+        } catch (err) {
+          window.open('TGC_ExpeditedAudit_SampleReport.html', '_blank');
+        }
+      };
+
+      document.getElementById('sr-ea-report-close').addEventListener('click', closeReportModal);
+      reportModal.addEventListener('click', function (e) { if (e.target === reportModal) closeReportModal(); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && reportModal.classList.contains('sr-open')) closeReportModal();
+      });
+    })();
+    </script>
 </body>
 </html>

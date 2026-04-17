@@ -503,10 +503,36 @@ body {
   align-items: center !important;
   justify-content: center !important;
   min-height: 320px !important;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%),
-    linear-gradient(to bottom, transparent 0%, black 6%, black 94%, transparent 100%) !important;
-  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%),
-    linear-gradient(to bottom, transparent 0%, black 6%, black 94%, transparent 100%) !important;
+  -webkit-mask-image:
+    linear-gradient(
+      to right,
+      transparent 0%,
+      black 6%,
+      black 94%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 6%,
+      black 94%,
+      transparent 100%
+    ) !important;
+  mask-image:
+    linear-gradient(
+      to right,
+      transparent 0%,
+      black 6%,
+      black 94%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 6%,
+      black 94%,
+      transparent 100%
+    ) !important;
   -webkit-mask-composite: destination-in !important;
   mask-composite: intersect !important;
 }
@@ -6970,5 +6996,1171 @@ body {
     grid-template-columns: 1fr;
     gap: 28px;
     padding: 32px 0;
+  }
+}
+
+/* ================================================================
+   30. STANDALONE SAMPLE REPORT (TGC_ExpeditedAudit_SampleReport.html)
+================================================================ */
+
+/* Page layout */
+.tgc-page#tgc-sample-report {
+  max-width: 860px !important;
+  margin: 0 auto !important;
+  padding: 0 20px 80px !important;
+}
+
+/* ── Cover ─────────────────────────────────────────────────── */
+.tgc-page .sr-cover {
+  background: var(--navy) !important;
+  border-radius: 0 0 12px 12px !important;
+  padding: 48px 48px 44px !important;
+  margin-bottom: 32px !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+.tgc-page .sr-cover::before {
+  content: "" !important;
+  position: absolute !important;
+  top: -60px !important;
+  right: -60px !important;
+  width: 320px !important;
+  height: 320px !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(211, 169, 17, 0.12) !important;
+  pointer-events: none !important;
+}
+.tgc-page .sr-cover::after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: -80px !important;
+  left: -40px !important;
+  width: 260px !important;
+  height: 260px !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(211, 169, 17, 0.07) !important;
+  pointer-events: none !important;
+}
+.tgc-page .sr-cover-top {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-bottom: 36px !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+}
+.tgc-page .sr-cover-brand {
+  font-family: "Sora", sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: var(--gold) !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+.tgc-page .sr-cover-tag {
+  font-family: "Sora", sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  color: var(--navy) !important;
+  background: var(--gold) !important;
+  padding: 4px 10px !important;
+  border-radius: 3px !important;
+}
+.tgc-page .sr-cover-rule {
+  height: 1px !important;
+  background: var(--border-dk) !important;
+  margin-bottom: 32px !important;
+}
+.tgc-page .sr-cover-title {
+  font-family: "Sora", sans-serif !important;
+  font-size: clamp(24px, 4vw, 36px) !important;
+  font-weight: 800 !important;
+  color: var(--white) !important;
+  line-height: 1.15 !important;
+  margin-bottom: 8px !important;
+}
+.tgc-page .sr-cover-sub {
+  font-size: 15px !important;
+  color: var(--muted) !important;
+  margin-bottom: 32px !important;
+}
+.tgc-page .sr-cover-meta {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)) !important;
+  gap: 16px !important;
+  margin-bottom: 32px !important;
+}
+.tgc-page .sr-cover-meta-field {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid var(--border-dk) !important;
+  border-radius: 6px !important;
+  padding: 12px 14px !important;
+}
+.tgc-page .sr-cover-meta-label {
+  font-family: "Sora", sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: var(--muted) !important;
+  display: block !important;
+  margin-bottom: 4px !important;
+}
+.tgc-page .sr-cover-meta-val {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: var(--white) !important;
+}
+.tgc-page .sr-cover-summary {
+  display: flex !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important;
+}
+.tgc-page .sr-cover-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  padding: 7px 14px !important;
+  border-radius: 20px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+.tgc-page .sr-cb-gap {
+  background: rgba(217, 48, 37, 0.15) !important;
+  color: #f08080 !important;
+}
+.tgc-page .sr-cb-flag {
+  background: rgba(212, 138, 0, 0.15) !important;
+  color: var(--gold-lt) !important;
+}
+.tgc-page .sr-cb-pass {
+  background: rgba(34, 167, 98, 0.15) !important;
+  color: #6fcf97 !important;
+}
+.tgc-page .sr-cover-badge-dot {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+}
+.tgc-page .sr-cbd-gap {
+  background: #d93025 !important;
+}
+.tgc-page .sr-cbd-flag {
+  background: var(--gold) !important;
+}
+.tgc-page .sr-cbd-pass {
+  background: #22a762 !important;
+}
+
+/* ── Disclaimer banner ─────────────────────────────────────── */
+.tgc-page .sr-disclaimer {
+  background: var(--gold-pale) !important;
+  border: 1px solid rgba(211, 169, 17, 0.25) !important;
+  border-radius: 8px !important;
+  padding: 14px 18px !important;
+  font-size: 13px !important;
+  color: var(--slate) !important;
+  margin-bottom: 32px !important;
+  display: flex !important;
+  gap: 10px !important;
+  align-items: flex-start !important;
+}
+.tgc-page .sr-disclaimer svg {
+  flex-shrink: 0 !important;
+  margin-top: 1px !important;
+  color: var(--gold) !important;
+}
+.tgc-page .sr-disclaimer strong {
+  color: var(--navy) !important;
+}
+
+/* ── Section header ────────────────────────────────────────── */
+.tgc-page .sr-section-header {
+  margin-bottom: 20px !important;
+  margin-top: 40px !important;
+}
+.tgc-page .sr-section-eyebrow {
+  font-family: "Sora", sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+  color: var(--gold) !important;
+  margin-bottom: 6px !important;
+}
+.tgc-page .sr-section-title {
+  font-family: "Sora", sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: var(--navy) !important;
+}
+
+/* ── Audit table ───────────────────────────────────────────── */
+.tgc-page .sr-audit-table {
+  width: 100% !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  border: 1px solid var(--border) !important;
+  background: var(--white) !important;
+  margin-bottom: 8px !important;
+}
+.tgc-page .sr-audit-thead {
+  display: grid !important;
+  grid-template-columns: 220px 160px 1fr !important;
+  background: var(--navy) !important;
+  padding: 12px 18px !important;
+  gap: 16px !important;
+}
+.tgc-page .sr-audit-thead-cell {
+  font-family: "Sora", sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  color: var(--muted) !important;
+}
+.tgc-page .sr-audit-row {
+  display: grid !important;
+  grid-template-columns: 220px 160px 1fr !important;
+  padding: 18px !important;
+  gap: 16px !important;
+  border-top: 1px solid var(--border) !important;
+  align-items: start !important;
+  transition: background 0.15s !important;
+}
+.tgc-page .sr-audit-row:hover {
+  background: #fafaf8 !important;
+}
+.tgc-page .sr-audit-row-critical {
+  background: #fffbf8 !important;
+}
+.tgc-page .sr-audit-row-critical:hover {
+  background: #fdf5ef !important;
+}
+.tgc-page .sr-audit-area-name {
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  color: var(--navy) !important;
+  margin-bottom: 5px !important;
+}
+.tgc-page .sr-priority-tag {
+  display: inline-block !important;
+  font-family: "Sora", sans-serif !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  padding: 2px 7px !important;
+  border-radius: 3px !important;
+  background: rgba(217, 48, 37, 0.1) !important;
+  color: #c0392b !important;
+}
+.tgc-page .sr-status-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 4px 10px !important;
+  border-radius: 4px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+}
+.tgc-page .sr-status-pass {
+  background: var(--status-pass-bg) !important;
+  color: var(--status-pass) !important;
+}
+.tgc-page .sr-status-flag {
+  background: var(--status-flag-bg) !important;
+  color: var(--status-flag) !important;
+}
+.tgc-page .sr-status-gap {
+  background: var(--status-gap-bg) !important;
+  color: var(--status-gap) !important;
+}
+.tgc-page .sr-status-dot {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  flex-shrink: 0 !important;
+}
+.tgc-page .sr-status-dot-pass {
+  background: #22a762 !important;
+}
+.tgc-page .sr-status-dot-flag {
+  background: #d48a00 !important;
+}
+.tgc-page .sr-status-dot-gap {
+  background: #d93025 !important;
+}
+.tgc-page .sr-finding-text {
+  font-size: 13px !important;
+  color: var(--slate) !important;
+  line-height: 1.65 !important;
+}
+.tgc-page .sr-reg-ref {
+  display: inline-block !important;
+  margin-top: 8px !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  color: var(--gold) !important;
+  background: var(--gold-pale) !important;
+  padding: 2px 8px !important;
+  border-radius: 3px !important;
+  font-family: "Sora", sans-serif !important;
+  letter-spacing: 0.03em !important;
+}
+
+/* ── Action plan ───────────────────────────────────────────── */
+.tgc-page .sr-action-plan {
+  background: var(--white) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  margin-top: 8px !important;
+}
+.tgc-page .sr-action-plan-header {
+  background: var(--navy) !important;
+  padding: 14px 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  font-family: "Sora", sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  color: var(--gold) !important;
+}
+.tgc-page .sr-action-row {
+  display: flex !important;
+  gap: 16px !important;
+  padding: 18px 20px !important;
+  border-top: 1px solid var(--border) !important;
+  align-items: flex-start !important;
+}
+.tgc-page .sr-action-num {
+  flex-shrink: 0 !important;
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50% !important;
+  background: var(--navy) !important;
+  color: var(--gold) !important;
+  font-family: "Sora", sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-top: 1px !important;
+}
+.tgc-page .sr-action-title {
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  color: var(--navy) !important;
+  margin-bottom: 4px !important;
+}
+.tgc-page .sr-action-detail {
+  font-size: 12px !important;
+  color: var(--slate) !important;
+  line-height: 1.6 !important;
+}
+.tgc-page .sr-action-tags {
+  display: flex !important;
+  gap: 6px !important;
+  flex-wrap: wrap !important;
+  margin-top: 6px !important;
+}
+.tgc-page .sr-atag {
+  font-family: "Sora", sans-serif !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  padding: 2px 7px !important;
+  border-radius: 3px !important;
+}
+.tgc-page .sr-atag-blocker {
+  background: rgba(217, 48, 37, 0.1) !important;
+  color: #c0392b !important;
+}
+.tgc-page .sr-atag-flag {
+  background: var(--status-flag-bg) !important;
+  color: var(--status-flag) !important;
+}
+.tgc-page .sr-atag-medium {
+  background: rgba(61, 81, 102, 0.1) !important;
+  color: var(--slate) !important;
+}
+
+/* ── CTA box ───────────────────────────────────────────────── */
+.tgc-page .sr-cta-box {
+  background: var(--navy) !important;
+  border-radius: 10px !important;
+  padding: 40px 48px !important;
+  margin-top: 40px !important;
+  text-align: center !important;
+}
+.tgc-page .sr-cta-eyebrow {
+  font-family: "Sora", sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+  color: var(--gold) !important;
+  margin-bottom: 12px !important;
+}
+.tgc-page .sr-cta-title {
+  font-family: "Sora", sans-serif !important;
+  font-size: clamp(20px, 3vw, 28px) !important;
+  font-weight: 800 !important;
+  color: var(--white) !important;
+  margin-bottom: 10px !important;
+  line-height: 1.2 !important;
+}
+.tgc-page .sr-cta-sub {
+  font-size: 14px !important;
+  color: var(--muted) !important;
+  margin-bottom: 28px !important;
+  max-width: 480px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.tgc-page .sr-cta-btns {
+  display: flex !important;
+  gap: 12px !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+}
+
+/* ── Report footer ─────────────────────────────────────────── */
+.tgc-page .sr-report-footer {
+  margin-top: 40px !important;
+  padding-top: 20px !important;
+  border-top: 1px solid var(--border) !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+}
+.tgc-page .sr-report-footer p {
+  font-size: 12px !important;
+  color: var(--muted) !important;
+}
+
+/* ── Download bar ──────────────────────────────────────────── */
+.tgc-page .sr-download-bar {
+  background: rgba(211, 169, 17, 0.07) !important;
+  border: 1px solid rgba(211, 169, 17, 0.2) !important;
+  border-radius: 8px !important;
+  padding: 12px 18px !important;
+  margin-bottom: 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+}
+.tgc-page .sr-download-bar-text {
+  font-size: 13px !important;
+  color: var(--slate) !important;
+}
+.tgc-page .sr-download-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: #d3a911 !important;
+  color: #0a1826 !important;
+  font-family: "Sora", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  padding: 10px 20px !important;
+  border-radius: 6px !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: background 0.15s, transform 0.1s !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+}
+.tgc-page .sr-download-btn:hover {
+  background: #f0cc5a !important;
+  transform: translateY(-1px) !important;
+}
+
+/* ── Mobile ────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .tgc-page .sr-cover {
+    padding: 32px 24px !important;
+  }
+  .tgc-page .sr-audit-thead {
+    display: none !important;
+  }
+  .tgc-page .sr-audit-row {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  .tgc-page .sr-cta-box {
+    padding: 32px 24px !important;
+  }
+  .tgc-page .sr-download-bar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
+
+/* ================================================================
+   SAMPLE REPORT — MODALS & PRINT
+   Not scoped to .tgc-page; these elements live outside the wrapper.
+================================================================ */
+
+/* ── Gate overlay (base for both modals) ─────────────────── */
+.sr-gate-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 24, 38, 0.82);
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  box-sizing: border-box;
+}
+.sr-gate-overlay.sr-open {
+  display: flex;
+}
+
+/* ── Email gate box ────────────────────────────────────────── */
+.sr-gate-box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 44px 40px 36px;
+  max-width: 440px;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 0 24px 64px rgba(10, 24, 38, 0.4);
+}
+.sr-gate-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #f0f2f5;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  color: #3d5166;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+.sr-gate-close:hover {
+  background: #e2e5ea;
+}
+.sr-gate-eyebrow {
+  font-family: "Sora", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #d3a911;
+  margin-bottom: 10px;
+}
+.sr-gate-title {
+  font-family: "Sora", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #0a1826;
+  margin: 0 0 10px;
+  line-height: 1.2;
+}
+.sr-gate-sub {
+  font-size: 14px;
+  color: #3d5166;
+  margin: 0 0 24px;
+  line-height: 1.5;
+}
+.sr-gate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.sr-gate-input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid #e2e8ee;
+  border-radius: 8px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  color: #0a1826;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  background: #fff;
+}
+.sr-gate-input:focus {
+  border-color: #d3a911;
+}
+.sr-gate-input::placeholder {
+  color: #7a909f;
+}
+.sr-gate-submit {
+  width: 100%;
+  padding: 14px;
+  background: #d3a911;
+  color: #0a1826;
+  border: none;
+  border-radius: 8px;
+  font-family: "Sora", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    transform 0.1s;
+}
+.sr-gate-submit:hover {
+  background: #f0cc5a;
+  transform: translateY(-1px);
+}
+.sr-gate-note {
+  font-size: 12px;
+  color: #7a909f;
+  text-align: center;
+  margin: 10px 0 0;
+}
+
+/* ── Report preview modal ──────────────────────────────────── */
+.sr-report-overlay {
+  background: rgba(10, 24, 38, 0.5);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 10001;
+}
+.sr-report-pane {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 920px;
+  height: 90vh;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(255, 255, 255, 0.07);
+}
+.sr-report-toolbar {
+  background: #0a1826;
+  border-bottom: 1px solid #21384d;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+.sr-report-toolbar-title {
+  font-family: "Sora", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sr-report-toolbar-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-shrink: 0;
+}
+.sr-toolbar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-family: "Sora", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: transparent;
+  color: #ffffff;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.sr-toolbar-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.sr-toolbar-btn.sr-toolbar-btn-primary {
+  background: #d3a911 !important;
+  color: #0a1826;
+  border-color: transparent !important;
+  box-shadow: 0 2px 10px rgba(211, 169, 17, 0.3);
+}
+.sr-toolbar-btn.sr-toolbar-btn-primary:hover {
+  background: #f0cc5a !important;
+  transform: translateY(-1px);
+}
+.sr-report-scroll {
+  flex: 1;
+  overflow-y: auto;
+  background: #f8f6f0;
+  padding-bottom: 60px;
+}
+/* Layout for the cloned report inside the scroll pane */
+.sr-report-scroll .tgc-page {
+  max-width: 860px !important;
+  margin: 0 auto !important;
+  padding: 0 20px 80px !important;
+}
+/* Suppress the download bar inside the preview clone */
+.sr-report-scroll .sr-download-bar {
+  display: none !important;
+}
+
+/* ── Print area ────────────────────────────────────────────── */
+#sr-print-area {
+  display: none;
+}
+
+@media print {
+  /* Only active when srDownloadPDF() sets this class */
+  body.sr-print-mode > * {
+    display: none !important;
+  }
+  body.sr-print-mode #sr-print-area {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+  }
+  body.sr-print-mode #sr-print-area .tgc-page {
+    max-width: 860px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+  }
+  /* Hide page elements that don't belong in the PDF */
+  body.sr-print-mode #sr-print-area .sr-download-bar,
+  body.sr-print-mode #sr-print-area .sr-cta-box,
+  body.sr-print-mode #sr-print-area .sr-report-footer {
+    display: none !important;
+  }
+}
+
+/* iframe variant of the report scroll area (used on expedited-audit.html) */
+.sr-report-iframe {
+  flex: 1;
+  width: 100%;
+  border: none;
+  display: block;
+  background: #f8f6f0;
+  min-height: 0;
+}
+
+/* ── Modal mobile ──────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .sr-gate-box {
+    padding: 32px 24px 28px;
+  }
+  .sr-report-toolbar {
+    flex-wrap: wrap;
+  }
+  .sr-report-toolbar-title {
+    font-size: 12px;
+  }
+}
+
+/* ================================================================
+   31. STANDALONE SAMPLE MEMO (TGC_HSCodeReview_SampleMemo.html)
+================================================================ */
+
+/* Page layout */
+.tgc-page#tgc-hs-sample-memo {
+  max-width: 860px !important;
+  margin: 0 auto !important;
+  padding: 0 20px 80px !important;
+}
+
+/* ── Cover outcome badge ────────────────────────────────────── */
+.tgc-page .sr-cover-outcome {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: rgba(34, 167, 98, 0.15) !important;
+  border: 1px solid rgba(34, 167, 98, 0.25) !important;
+  color: #6fcf97 !important;
+  font-family: "Sora", sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  padding: 8px 16px !important;
+  border-radius: 20px !important;
+}
+.tgc-page .sr-cover-outcome-dot {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: #22a762 !important;
+  flex-shrink: 0 !important;
+}
+
+/* ── Memo table (two-column label/content) ─────────────────── */
+.tgc-page .sr-hs-memo-table {
+  width: 100% !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  border: 1px solid var(--border) !important;
+  background: var(--white) !important;
+}
+.tgc-page .sr-hs-memo-row {
+  display: grid !important;
+  grid-template-columns: 200px 1fr !important;
+  border-top: 1px solid var(--border) !important;
+  align-items: start !important;
+}
+.tgc-page .sr-hs-memo-row:first-child {
+  border-top: none !important;
+}
+.tgc-page .sr-hs-memo-row-label {
+  padding: 18px 20px !important;
+  font-family: "Sora", sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: var(--muted) !important;
+  background: var(--offwhite) !important;
+  border-right: 1px solid var(--border) !important;
+}
+.tgc-page .sr-hs-memo-row-content {
+  padding: 18px 20px !important;
+  font-size: 13px !important;
+  color: var(--slate) !important;
+  line-height: 1.7 !important;
+}
+
+/* ── Code chip ─────────────────────────────────────────────── */
+.tgc-page .sr-code-chip {
+  display: inline-block !important;
+  font-family: "Sora", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: var(--navy) !important;
+  background: var(--gold-pale) !important;
+  border: 1px solid rgba(211, 169, 17, 0.3) !important;
+  padding: 4px 12px !important;
+  border-radius: 4px !important;
+  margin-right: 8px !important;
+  margin-bottom: 4px !important;
+}
+
+/* ── Text highlight ────────────────────────────────────────── */
+.tgc-page .sr-text-highlight {
+  font-weight: 700 !important;
+  color: var(--navy) !important;
+}
+
+/* ── Note / body text within memo rows ─────────────────────── */
+.tgc-page .sr-hs-note-text {
+  margin-top: 8px !important;
+  font-size: 12px !important;
+  color: var(--muted) !important;
+}
+.tgc-page .sr-hs-intro-text {
+  margin-bottom: 12px !important;
+  font-size: 13px !important;
+  color: var(--slate) !important;
+}
+.tgc-page .sr-hs-body-text {
+  margin-top: 10px !important;
+  font-size: 13px !important;
+  color: var(--slate) !important;
+  line-height: 1.65 !important;
+}
+.tgc-page .sr-hs-body-text strong {
+  color: var(--navy) !important;
+}
+
+/* ── Duty rate chips ───────────────────────────────────────── */
+.tgc-page .sr-rate-chip {
+  display: inline-block !important;
+  font-family: "Sora", sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  padding: 2px 10px !important;
+  border-radius: 4px !important;
+}
+.tgc-page .sr-rate-zero {
+  background: rgba(34, 167, 98, 0.1) !important;
+  color: #1a7a4a !important;
+}
+.tgc-page .sr-rate-low {
+  background: rgba(211, 169, 17, 0.1) !important;
+  color: #7a5c00 !important;
+}
+.tgc-page .sr-rate-medium {
+  background: rgba(217, 48, 37, 0.08) !important;
+  color: #8b2218 !important;
+}
+
+/* ── EAR99 chip ────────────────────────────────────────────── */
+.tgc-page .sr-ear99-chip {
+  display: inline-block !important;
+  font-family: "Sora", sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: #1a7a4a !important;
+  background: rgba(34, 167, 98, 0.1) !important;
+  border: 1px solid rgba(34, 167, 98, 0.2) !important;
+  padding: 3px 10px !important;
+  border-radius: 4px !important;
+}
+
+/* ── ECCN classification header ────────────────────────────── */
+.tgc-page .sr-eccn-classification {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-bottom: 12px !important;
+}
+.tgc-page .sr-eccn-label {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: var(--navy) !important;
+}
+
+/* ── Flag items list ───────────────────────────────────────── */
+.tgc-page .sr-flag-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  margin-bottom: 12px !important;
+}
+.tgc-page .sr-flag-item {
+  display: flex !important;
+  gap: 8px !important;
+  align-items: flex-start !important;
+}
+.tgc-page .sr-flag-dot {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  flex-shrink: 0 !important;
+  margin-top: 6px !important;
+}
+.tgc-page .sr-flag-dot-warn  { background: #d48a00 !important; }
+.tgc-page .sr-flag-dot-clear { background: #22a762 !important; }
+.tgc-page .sr-flag-dot-info  { background: var(--muted) !important; }
+.tgc-page .sr-flag-text {
+  font-size: 13px !important;
+  color: var(--slate) !important;
+  line-height: 1.6 !important;
+}
+.tgc-page .sr-flag-text strong {
+  color: var(--navy) !important;
+}
+
+/* ── GRI reasoning steps ───────────────────────────────────── */
+.tgc-page .sr-gri-steps {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  margin-bottom: 12px !important;
+}
+.tgc-page .sr-gri-step {
+  display: flex !important;
+  gap: 12px !important;
+  align-items: flex-start !important;
+}
+.tgc-page .sr-gri-badge {
+  font-family: "Sora", sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  color: var(--gold) !important;
+  background: var(--gold-pale) !important;
+  padding: 3px 8px !important;
+  border-radius: 3px !important;
+  flex-shrink: 0 !important;
+  margin-top: 1px !important;
+  white-space: nowrap !important;
+}
+.tgc-page .sr-gri-text {
+  font-size: 13px !important;
+  color: var(--slate) !important;
+  line-height: 1.6 !important;
+}
+.tgc-page .sr-gri-text strong {
+  color: var(--navy) !important;
+}
+
+/* ── Duty exposure rows ────────────────────────────────────── */
+.tgc-page .sr-duty-rows {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  margin-bottom: 12px !important;
+}
+.tgc-page .sr-duty-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 10px 14px !important;
+  background: var(--offwhite) !important;
+  border-radius: 6px !important;
+  border: 1px solid var(--border) !important;
+}
+.tgc-page .sr-duty-row-label {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: var(--navy) !important;
+}
+.tgc-page .sr-duty-row-vat {
+  font-size: 13px !important;
+  color: var(--slate) !important;
+}
+
+/* ── BTI status badge ──────────────────────────────────────── */
+.tgc-page .sr-bti-status {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-bottom: 12px !important;
+  padding: 6px 14px !important;
+  background: rgba(34, 167, 98, 0.08) !important;
+  border: 1px solid rgba(34, 167, 98, 0.2) !important;
+  border-radius: 6px !important;
+}
+.tgc-page .sr-bti-status-text {
+  font-family: "Sora", sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: #1a7a4a !important;
+}
+
+/* ── Conclusion box ────────────────────────────────────────── */
+.tgc-page .sr-hs-conclusion {
+  background: var(--navy) !important;
+  border-radius: 10px !important;
+  padding: 28px !important;
+  margin-top: 20px !important;
+  display: flex !important;
+  gap: 16px !important;
+  align-items: flex-start !important;
+}
+.tgc-page .sr-hs-conclusion-icon {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 8px !important;
+  background: rgba(211, 169, 17, 0.15) !important;
+  border: 1px solid rgba(211, 169, 17, 0.25) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--gold) !important;
+  flex-shrink: 0 !important;
+}
+.tgc-page .sr-hs-conclusion-body {
+  flex: 1 !important;
+}
+.tgc-page .sr-hs-conclusion-label {
+  font-family: "Sora", sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  color: var(--gold) !important;
+  margin-bottom: 6px !important;
+}
+.tgc-page .sr-hs-conclusion-text {
+  font-size: 13px !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  line-height: 1.7 !important;
+}
+.tgc-page .sr-hs-conclusion-text strong {
+  color: var(--white) !important;
+}
+
+/* ── CTA buttons ───────────────────────────────────────────── */
+.tgc-page .sr-cta-btn-primary {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: var(--gold) !important;
+  color: var(--navy) !important;
+  font-family: "Sora", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  padding: 13px 24px !important;
+  border-radius: 6px !important;
+  text-decoration: none !important;
+  transition: background 0.15s !important;
+}
+.tgc-page .sr-cta-btn-primary:hover {
+  background: var(--gold-lt) !important;
+}
+.tgc-page .sr-cta-btn-ghost {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: transparent !important;
+  color: var(--white) !important;
+  font-family: "Sora", sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  padding: 13px 24px !important;
+  border-radius: 6px !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  text-decoration: none !important;
+  transition: border-color 0.15s !important;
+}
+.tgc-page .sr-cta-btn-ghost:hover {
+  border-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* ── Report footer link ────────────────────────────────────── */
+.tgc-page .sr-report-footer a {
+  color: var(--muted) !important;
+  text-decoration: none !important;
+}
+
+/* ── Mobile (HS memo) ──────────────────────────────────────── */
+@media (max-width: 640px) {
+  .tgc-page#tgc-hs-sample-memo {
+    padding: 0 12px 60px !important;
+  }
+  .tgc-page .sr-hs-memo-row {
+    grid-template-columns: 1fr !important;
+  }
+  .tgc-page .sr-hs-memo-row-label {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border) !important;
+    padding: 12px 16px !important;
+  }
+  .tgc-page .sr-hs-memo-row-content {
+    padding: 14px 16px !important;
+  }
+  .tgc-page .sr-hs-conclusion {
+    flex-direction: column !important;
+  }
+}
+
+@media print {
+  .tgc-page#tgc-hs-sample-memo .sr-cta-box,
+  .tgc-page#tgc-hs-sample-memo .sr-report-footer {
+    display: none !important;
   }
 }
