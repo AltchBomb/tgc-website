@@ -338,7 +338,7 @@
       })();
     </script>
     <!-- HEADER:END -->
-    <div id="tgc-about" class="tgc-page" style="margin-top:64px">
+    <div id="tgc-about" class="tgc-page" style="margin-top: 64px">
       <!-- SVG icon sprite -->
       <svg
         aria-hidden="true"
@@ -556,14 +556,10 @@
                 supplements, consumer goods, and medical devices.
               </p>
               <div class="hero-ctas fade d3">
-                <a
-                  href="contact-us.html"
-                  class="btn btn-gold"
+                <a href="contact-us.html" class="btn btn-gold"
                   >Talk to Our Team</a
                 >
-                <a
-                  href="full-product-compliance.html"
-                  class="btn btn-ghost"
+                <a href="full-product-compliance.html" class="btn btn-ghost"
                   >Our Services</a
                 >
               </div>
@@ -709,13 +705,23 @@
                 the EU, UK, US, China, and other regulated markets worldwide.
               </p>
             </div>
-            <div class="img-block">
+            <div
+              style="
+                border-radius: var(--radius-md) !important;
+                overflow: hidden !important;
+                background: transparent !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                min-height: 320px !important;
+              "
+            >
               <img
-                src="https://tecexglobalcompliance.com/wp-content/uploads/2025/07/about-tgc.png"
+                src="../assets/images/tecex-logo.png"
                 alt="TecEx Global Compliance - TecEx Group's specialist global product compliance division serving manufacturers and importers across EU, UK, US, China, and 200+ global markets"
                 loading="lazy"
-                width="520"
-                height="420"
+                width="420"
+                height="auto"
               />
             </div>
           </div>
@@ -888,7 +894,10 @@
               <span class="arrow">&#x2192;</span>
             </a>
 
-            <a class="related-card fade d4" href="food-beverage-compliance.html">
+            <a
+              class="related-card fade d4"
+              href="food-beverage-compliance.html"
+            >
               <span class="ey fade">Food &amp; Beverage</span>
               <h3>Food &amp; Beverage Compliance</h3>
               <p>
@@ -913,7 +922,10 @@
               <span class="arrow">&#x2192;</span>
             </a>
 
-            <a class="related-card fade d2" href="consumer-goods-compliance.html">
+            <a
+              class="related-card fade d2"
+              href="consumer-goods-compliance.html"
+            >
               <span class="ey fade">Consumer Goods</span>
               <h3>Consumer Goods Compliance</h3>
               <p>
@@ -1109,7 +1121,9 @@
             <span class="ey fade" style="justify-content: center; display: flex"
               >Work with TGC</span
             >
-            <h2 id="cta-h2" class="cta-h2 fade">Ready to Talk to a Specialist?</h2>
+            <h2 id="cta-h2" class="cta-h2 fade">
+              Ready to Talk to a Specialist?
+            </h2>
             <p class="cta-sub">
               Whether you are entering a new market, resolving a compliance gap,
               or building a multi-market regulatory programme from the ground up
@@ -1117,16 +1131,10 @@
               infrastructure to deliver.
             </p>
             <div class="cta-actions">
-              <a
-                href="contact-us.html"
-                class="btn btn-gold"
+              <a href="contact-us.html" class="btn btn-gold"
                 >Talk to Our Team</a
               >
-              <a
-                href="contact-us.html"
-                class="btn btn-ghost"
-                >Get a Quote</a
-              >
+              <a href="contact-us.html" class="btn btn-ghost">Get a Quote</a>
             </div>
             <p class="cta-note">
               Backed by TecEx Group &middot; No obligation consultation
@@ -1261,6 +1269,35 @@
                     d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
                   />
                 </svg>
+              </a>
+            </div>
+            <!-- CRN membership -->
+            <div style="margin-top: 20px">
+              <p
+                style="
+                  font-size: 10px;
+                  font-weight: 700;
+                  color: #7a909f;
+                  text-transform: uppercase;
+                  letter-spacing: 0.1em;
+                  margin: 0 0 8px;
+                "
+              >
+                Industry Membership
+              </p>
+              <a
+                href="https://www.crnusa.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Council for Responsible Nutrition (CRN) Member"
+              >
+                <img
+                  src="../assets/images/crn-member-transparent.png"
+                  alt="Council for Responsible Nutrition (CRN) Member"
+                  style="height: 40px; width: auto; display: block; opacity: 0.7"
+                  onmouseover="this.style.opacity='1'"
+                  onmouseout="this.style.opacity='0.7'"
+                />
               </a>
             </div>
           </div>
@@ -1566,53 +1603,61 @@
     </script>
     <!-- FOOTER:END -->
 
-    <script>
-      /* page-level fade observer */
-      (function () {
-        var fades = document.querySelectorAll(".fade");
-        if (!fades.length) return;
-        if (!window.IntersectionObserver) {
-          fades.forEach(function (el) { el.classList.add("vis"); });
-          return;
-        }
-        var obs = new IntersectionObserver(
-          function (entries) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("vis");
-                obs.unobserve(entry.target);
-              }
+      <script>
+        /* page-level fade observer */
+        (function () {
+          var fades = document.querySelectorAll(".fade");
+          if (!fades.length) return;
+          if (!window.IntersectionObserver) {
+            fades.forEach(function (el) {
+              el.classList.add("vis");
             });
-          },
-          { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
-        );
-        fades.forEach(function (el) { obs.observe(el); });
-      })();
-    </script>
+            return;
+          }
+          var obs = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("vis");
+                  obs.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+          );
+          fades.forEach(function (el) {
+            obs.observe(el);
+          });
+        })();
+      </script>
 
-    <script>
-      /* page-level fade observer */
-      (function () {
-        var fades = document.querySelectorAll(".fade");
-        if (!fades.length) return;
-        if (!window.IntersectionObserver) {
-          fades.forEach(function (el) { el.classList.add("vis"); });
-          return;
-        }
-        var obs = new IntersectionObserver(
-          function (entries) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("vis");
-                obs.unobserve(entry.target);
-              }
+      <script>
+        /* page-level fade observer */
+        (function () {
+          var fades = document.querySelectorAll(".fade");
+          if (!fades.length) return;
+          if (!window.IntersectionObserver) {
+            fades.forEach(function (el) {
+              el.classList.add("vis");
             });
-          },
-          { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
-        );
-        fades.forEach(function (el) { obs.observe(el); });
-      })();
-    </script>
+            return;
+          }
+          var obs = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("vis");
+                  obs.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+          );
+          fades.forEach(function (el) {
+            obs.observe(el);
+          });
+        })();
+      </script>
     </div>
     <!-- /#tgc-about -->
   </body>

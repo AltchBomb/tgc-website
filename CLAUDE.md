@@ -6,10 +6,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```bash
 npm start          # Injects partials inline → starts live-server at localhost:3000
-npm run inject     # Runs scripts/inject-header.js only (no server)
+npm run inject     # Runs scripts/inject-partials.js only (no server)
 ```
 
-`npm start` is the recommended dev workflow. It runs `inject-header.js` first, which embeds the current contents of `partials/header.html` and `partials/footer.html` directly into every page between their `<!-- HEADER:START/END -->` and `<!-- FOOTER:START/END -->` marker comments. The live-server then watches for changes with auto-reload.
+`npm start` is the recommended dev workflow. It runs `inject-partials.js` first, which embeds the current contents of `partials/header.html` and `partials/footer.html` directly into every page between their `<!-- HEADER:START/END -->` and `<!-- FOOTER:START/END -->` marker comments. The live-server then watches for changes with auto-reload.
 
 There is no build step, test suite, or linter.
 
@@ -24,9 +24,9 @@ The site is a collection of plain HTML files in `pages/`. Each page:
 
 ### Two partial-loading strategies
 
-**Inject approach** (what `npm start` uses): `scripts/inject-header.js` reads the partial files and writes their HTML directly between the markers in every page. Pages become self-contained and work on `file://` as well as HTTP. This is the intended dev workflow.
+**Inject approach** (what `npm start` uses, and what all pages currently use): `scripts/inject-partials.js` reads the partial files and writes their HTML directly between the markers in every page. Pages become self-contained and work on `file://` as well as HTTP. This is the intended dev workflow.
 
-**Fetch approach** (currently in pages after recent session work): pages hold a placeholder `<div id="tgc-header-placeholder">` + a `fetch("../partials/header.html")` script between the markers instead of inline HTML. This requires an HTTP server. Running `npm run inject` will replace the fetch scripts with inline HTML, reverting to the inject approach.
+**Fetch approach** (alternative, not currently in use): pages hold a placeholder `<div id="tgc-header-placeholder">` + a `fetch("../partials/header.html")` script between the markers instead of inline HTML. This requires an HTTP server. Running `npm run inject` will replace the fetch scripts with inline HTML, reverting to the inject approach.
 
 > **Important**: If the pages currently contain the fetch block, running `npm run inject` will overwrite it with the inline HTML. Both approaches are intentional; choose one consistently.
 
@@ -112,3 +112,4 @@ The following tags need to be added to the site once accounts are created. All s
 - **Homepage** — Confirm LinkedIn URL and Twitter handle in schema JSON-LD are correct
 - **Analytics** — GTM, GA4, Google Ads conversion tracking, and Search Console verification not yet implemented (see section above)
 - **`partials/footer.css`** — unused file, should be deleted
+- **Food & Beverage blog** — missing `blog-food-beverage-compliance-dates.html`; every other industry has all 4 blog types (regulation updates, compliance dates, regulation comparison, case study) but food & beverage only has 3
